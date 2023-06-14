@@ -622,6 +622,10 @@ video {
   width: 100%;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .max-w-7xl {
   max-width: 80rem;
 }
@@ -678,6 +682,14 @@ video {
 
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-1\.5 {
+  gap: 0.375rem;
 }
 
 .rounded {
@@ -805,6 +817,11 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .pt-10 {
@@ -1070,6 +1087,12 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+@media (min-width: 640px) {
+  .sm\:gap-4 {
+    gap: 1rem;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:mx-10 {
     margin-left: 2.5rem;
@@ -1082,14 +1105,6 @@ video {
 
   .md\:flex {
     display: flex;
-  }
-
-  .md\:h-80 {
-    height: 20rem;
-  }
-
-  .md\:w-80 {
-    width: 20rem;
   }
 
   .md\:flex-row {
