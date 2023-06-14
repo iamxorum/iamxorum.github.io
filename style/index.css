@@ -4,6 +4,7 @@
 
 *{
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 .gradient-text {
@@ -14,6 +15,14 @@
 
 .timeline {
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    margin: 0 auto;
+    padding: 50px 0;
+    width: 80%;
+  }
 }
 
 .timeline-item {
@@ -124,3 +133,4 @@
   max-width: 500px;
   width: 90%;
 }
+
