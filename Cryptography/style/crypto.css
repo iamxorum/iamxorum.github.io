@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  max-width: auto;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgb(69, 74, 133); /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
+
+body {
+  background-color: rgb(69, 74, 133);
+}
+
+button {
+  width: 90vw;
+  height: 10vh;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  border: none;
+  margin: 0.8rem;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.8);
+}
+
+.tema {
+  background-color: rgb(79, 79, 255);
+  color: rgb(237, 237, 237);
+}
+
+.tema:hover {
+  cursor: pointer;
+  background-color: rgb(237, 237, 237);
+  color: rgb(79, 79, 255);
+  width: 95vw;
+  height: 12vh;
+  font-size: 1.7rem;
+}
+
+#back {
+  position: sticky;
+  bottom: 1rem;
+  background-color: rgb(255, 79, 79);
+  color: rgb(237, 237, 237);
+}
+
+#back:hover {
+  cursor: pointer;
+  background-color: rgb(237, 237, 237);
+  color: rgb(255, 79, 79);
+  width: 95vw;
+  height: 12vh;
+  font-size: 1.7rem;
+}
+
+.info {
+  min-height: 10vh;
+  border-bottom: 0.2rem solid whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 10%;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.8);
+}
+.info h1 {
+  color: whitesmoke;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container .buttons {
+  flex-basis: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=crypto.css.map */
