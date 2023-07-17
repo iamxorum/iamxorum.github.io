@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Service Feedback</title>
+    <link rel="stylesheet" type="text/css" href="./style/style.css">
+    <style>
+        .rating-value {
+          font-weight: bold;
+          margin-top: 5px;
+        }
+    </style>
+    <script>
+        function updateRatingValue() {
+            var ratingInput = document.getElementById("rating");
+            var ratingValue = document.getElementById("rating-value");
+            ratingValue.textContent = ratingInput.value;
+        }
+    </script>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="../img/altex.png" alt="ALTEX Logo">
+      </div>
+  <h1>ALTEX Anchor Plaza</h1>
+  <h2>Customer Service Feedback</h2>
+  <form action="https://formspree.io/f/mpzgwzoy" method="POST">
+    <label for="name">Name | Nume:</label>
+    <input type="text" id="name" name="name" required>
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+  
+    <label for="rating">Rating | Evaluare:</label>
+    <input type="range" id="rating" name="rating" min="0" max="10" step="0.1" oninput="updateRatingValue()" required>
+    <span class="rating-value" id="rating-value">5</span>
+  
+    <label for="feedback">Feedback:</label>
+    <textarea id="feedback" name="feedback" rows="4" required></textarea>
+  
+    <label for="date">Date | Data:</label>
+    <input type="date" id="date" name="date" required>
+  
+    <label for="hour">Hour | Ora:</label>
+    <input type="time" id="hour" name="hour" required>
+  
+    <label for="service-type">Type of Service | Tipul Serviciului:</label>
+    <select id="service-type" name="service-type" required>
+      <option value="">Select service type</option>
+      <option value="service-intake">Service Intake | Preluare din service</option>
+      <option value="service-dispatch">Service Dispatch | Trimitere în service</option>
+      <option value="information-request">Information Request | Cerere de informații</option>
+    </select>
+  
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
