@@ -157,4 +157,16 @@ input[type=submit]:hover {
 .logo-container img {
   width: 10rem; /* Adjust the width as needed */
   height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .logo-container {
+    display: none;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=style.css.map */
