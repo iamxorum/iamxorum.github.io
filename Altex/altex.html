@@ -1,59 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Customer Service Feedback</title>
-    <link rel="stylesheet" type="text/css" href="./style/style.css">
+    <!-- Add Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <style>
-        .rating-value {
-          font-weight: bold;
-          margin-top: 5px;
-        }
+      /* Style for the pop-up menu */
+      .popup-menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Initially off-screen */
+        bottom: 0;
+        width: 70%; /* Adjust as needed */
+        background-color: #f87171; /* Red color */
+        box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease;
+        z-index: 1000; /* Ensure it appears above other elements */
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .show-popup-menu {
+        right: 0; /* Slide in from the right when active */
+      }
+      /* Style for close button */
+      .close-button {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        cursor: pointer;
+      }
+      /* Style for the overlay */
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+        z-index: 999; /* Ensure it appears above other elements except the pop-up menu */
+        display: none; /* Initially hidden */
+      }
+      .show-overlay {
+        display: block; /* Show the overlay when the pop-up is active */
+      }
     </style>
     <script>
-        function updateRatingValue() {
-            var ratingInput = document.getElementById("rating");
-            var ratingValue = document.getElementById("rating-value");
-            ratingValue.textContent = ratingInput.value;
-        }
+      function updateRatingValue() {
+        var ratingInput = document.getElementById("rating");
+        var ratingValue = document.getElementById("rating-value");
+        ratingValue.textContent = ratingInput.value;
+      }
+
+      // JavaScript to handle mobile menu toggle
+      document.addEventListener("DOMContentLoaded", function () {
+        var menuButton = document.querySelector(".menu-button");
+        var popupMenu = document.querySelector(".popup-menu");
+        var closeButton = document.querySelector(".close-button");
+        var overlay = document.querySelector(".overlay");
+
+        menuButton.addEventListener("click", function () {
+          popupMenu.classList.toggle("show-popup-menu");
+          overlay.classList.toggle("show-overlay");
+        });
+
+        closeButton.addEventListener("click", function () {
+          popupMenu.classList.remove("show-popup-menu");
+          overlay.classList.remove("show-overlay");
+        });
+      });
     </script>
-</head>
-<body>
-    <div class="logo-container">
-        <img src="../img/altex.png" alt="ALTEX Logo">
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navigation Bar -->
+    <nav class="bg-red-700 p-4">
+      <div class="container mx-auto flex items-center justify-between">
+        <img src="../Altex/img/logo.png" alt="ALTEX Logo" class="w-19 h-11" />
+        <!-- Mobile menu button -->
+        <button class="block lg:hidden text-white menu-button">
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path
+              d="M4 6h16M4 12h16m-7 6h7"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+        </button>
       </div>
-  <h1>ALTEX Anchor Plaza</h1>
-  <h2>Customer Service Feedback</h2>
-  <form action="https://formspree.io/f/mpzgwzoy" method="POST">
-    <label for="name">Name | Nume:</label>
-    <input type="text" id="name" name="name" required>
-  
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-  
-    <label for="rating">Rating | Evaluare:</label>
-    <input type="range" id="rating" name="rating" min="0" max="10" step="0.1" oninput="updateRatingValue()" required>
-    <span class="rating-value" id="rating-value">5</span>
-  
-    <label for="feedback">Feedback:</label>
-    <textarea id="feedback" name="feedback" rows="4" required></textarea>
-  
-    <label for="date">Date | Data:</label>
-    <input type="date" id="date" name="date" required>
-  
-    <label for="hour">Hour | Ora:</label>
-    <input type="time" id="hour" name="hour" required>
-  
-    <label for="service-type">Type of Service | Tipul Serviciului:</label>
-    <select id="service-type" name="service-type" required>
-      <option value="">Select service type</option>
-      <option value="service-intake">Service Intake | Preluare din service</option>
-      <option value="service-dispatch">Service Dispatch | Trimitere în service</option>
-      <option value="information-request">Information Request | Cerere de informații</option>
-    </select>
-  
-    <input type="submit" value="Submit">
-  </form>
-</body>
+    </nav>
+
+    <!-- Pop-up Navigation Menu -->
+    <div class="popup-menu lg:hidden">
+      <button class="close-button text-white">
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+          <path
+            d="M18 6L6 18M6 6l12 12"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+      </button>
+      <ul class="flex flex-col items-center justify-center space-y-4 p-6">
+        <li class="w-full text-center">
+          <a
+            href="https://altex.ro/despre-noi/"
+            class="block text-white hover:text-blue-500"
+            >Despre Noi</a
+          >
+        </li>
+        <li class="w-full text-center">
+          <a
+            href="https://altex.ro/home/"
+            class="block text-white hover:text-blue-500"
+            >Home</a
+          >
+        </li>
+        <li class="w-full text-center">
+          <a
+            href="https://altex.ro/promo/"
+            class="block text-white hover:text-blue-500"
+            >Promotii</a
+          >
+        </li>
+        <li class="w-full text-center">
+          <a
+            href="https://altex.ro/magazine/"
+            class="block text-white hover:text-blue-500"
+            >Magazine</a
+          >
+        </li>
+        <li class="w-full text-center">
+          <a
+            href="https://altex.ro/suport-clienti/"
+            class="block text-white hover:text-blue-500"
+            >Suport Clienti</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="container mx-auto p-4">
+      <h1 class="text-3xl font-bold text-center mb-2">ALTEX Plaza Romania</h1>
+      <h2 class="text-xl font-semibold text-center mb-4">
+        Customer Service Feedback
+      </h2>
+      <form
+        action="https://formspree.io/f/mpzgwzoy"
+        method="POST"
+        class="max-w-l mx-auto bg-white p-6 rounded-lg shadow-md"
+      >
+        <label for="name" class="block mb-2">Name | Nume:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          class="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+        />
+
+        <label for="email" class="block mb-2">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          class="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+        />
+
+        <label for="phone" class="block mb-2">Phone | Telefon:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          class="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+        />
+
+        <label for="rating" class="block mb-2">Rating | Evaluare:</label>
+        <input
+          type="range"
+          id="rating"
+          name="rating"
+          min="0"
+          max="10"
+          step="0.1"
+          oninput="updateRatingValue()"
+          required
+          class="w-full mb-2"
+        />
+        <span class="font-bold mb-4"
+          >Rating: <span class="text-blue-500" id="rating-value">5</span></span
+        >
+
+        <label for="feedback" class="block mb-2">Feedback:</label>
+        <textarea
+          id="feedback"
+          name="feedback"
+          rows="4"
+          required
+          class="w-full px-4 py-2 mb-4 border rounded-lg resize-none focus:outline-none focus:ring focus:border-blue-300"
+        ></textarea>
+
+        <label for="date" class="block mb-2">Date | Data:</label>
+        <input
+          type="date"
+          id="date"
+          name="date"
+          required
+          class="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+        />
+
+        <label for="hour" class="block mb-2">Hour | Ora:</label>
+        <input
+          type="time"
+          id="hour"
+          name="hour"
+          required
+          class="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+        />
+
+        <label for="service-type" class="block mb-2"
+          >Type of Service | Tipul Serviciului:</label
+        >
+        <select
+          id="service-type"
+          name="service-type"
+          required
+          class="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+        >
+          <option value="">Select service type</option>
+          <option value="service-intake">
+            Service Intake | Preluare din service
+          </option>
+          <option value="service-dispatch">
+            Service Dispatch | Trimitere în service
+          </option>
+          <option value="information-request">
+            Information Request | Cerere de informații
+          </option>
+        </select>
+
+        <label for="issue-type" class="block mb-2"
+          >Issue Type | Tipul Problemei:</label
+        >
+        <select
+          id="issue-type"
+          name="issue-type"
+          required
+          class="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+        >
+          <option value="">Select issue type</option>
+          <option value="technical">Technical Issue | Problemă tehnică</option>
+          <option value="billing">Billing Inquiry | Cerere de facturare</option>
+          <option value="product">Product Inquiry | Cerere de produs</option>
+        </select>
+
+        <label for="comment" class="block mb-2"
+          >Additional Comments | Comentarii Suplimentare:</label
+        >
+        <textarea
+          id="comment"
+          name="comment"
+          rows="4"
+          class="w-full px-4 py-2 mb-4 border rounded-lg resize-none focus:outline-none focus:ring focus:border-blue-300"
+        ></textarea>
+
+        <!-- Additional fields can be added here -->
+
+        <input
+          type="submit"
+          value="Submit"
+          class="w-full px-4 py-2 mt-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 cursor-pointer"
+        />
+      </form>
+    </div>
+  </body>
 </html>
