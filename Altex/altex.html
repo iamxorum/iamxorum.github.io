@@ -52,37 +52,18 @@
         display: block; /* Show the overlay when the pop-up is active */
       }
     </style>
-    <script>
-      function updateRatingValue() {
-        var ratingInput = document.getElementById("rating");
-        var ratingValue = document.getElementById("rating-value");
-        ratingValue.textContent = ratingInput.value;
-      }
-
-      // JavaScript to handle mobile menu toggle
-      document.addEventListener("DOMContentLoaded", function () {
-        var menuButton = document.querySelector(".menu-button");
-        var popupMenu = document.querySelector(".popup-menu");
-        var closeButton = document.querySelector(".close-button");
-        var overlay = document.querySelector(".overlay");
-
-        menuButton.addEventListener("click", function () {
-          popupMenu.classList.toggle("show-popup-menu");
-          overlay.classList.toggle("show-overlay");
-        });
-
-        closeButton.addEventListener("click", function () {
-          popupMenu.classList.remove("show-popup-menu");
-          overlay.classList.remove("show-overlay");
-        });
-      });
-    </script>
   </head>
   <body class="bg-gray-100">
     <!-- Navigation Bar -->
     <nav class="bg-red-700 p-4">
       <div class="container mx-auto flex items-center justify-between">
-        <img src="../Altex/img/logo.png" alt="ALTEX Logo" class="w-19 h-11" />
+        <a href="https://altex.ro/home/"
+          ><img
+            src="../Altex/img/logo.png"
+            alt="ALTEX Logo"
+            class="w-19 h-11"
+            draggable="false"
+        /></a>
         <!-- Mobile menu button -->
         <button class="block lg:hidden text-white menu-button">
           <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
@@ -189,14 +170,14 @@
     <div class="container mx-auto p-4">
       <h1 class="text-3xl font-bold text-center mb-2">ALTEX Plaza Romania</h1>
       <h2 class="text-xl font-semibold text-center mb-4">
-        Customer Service Feedback
+        Customer Experience | Feedback
       </h2>
       <form
         action="https://formspree.io/f/mpzgwzoy"
         method="POST"
         class="max-w-l mx-auto bg-white p-6 rounded-lg shadow-md"
       >
-        <label for="name" class="block mb-2">Name | Nume:</label>
+        <label for="name" class="block mb-2">Nume:</label>
         <input
           type="text"
           id="name"
@@ -214,7 +195,7 @@
           class="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
         />
 
-        <label for="phone" class="block mb-2">Phone | Telefon:</label>
+        <label for="phone" class="block mb-2">Telefon:</label>
         <input
           type="tel"
           id="phone"
@@ -223,7 +204,7 @@
           class="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
         />
 
-        <label for="rating" class="block mb-2">Rating | Evaluare:</label>
+        <label for="rating" class="block mb-2">Evaluare:</label>
         <input
           type="range"
           id="rating"
@@ -235,12 +216,17 @@
           required
           class="w-full mb-2"
         />
-        <span class="font-bold mb-4"
-          >Rating: <span class="text-blue-500" id="rating-value">5</span></span
-        >
+        <div class="container mx-auto p-2 text-center">
+          <span
+            class="font-bold mb-4 text-blue-500 p-6 text-2xl"
+            id="rating-value"
+            >5</span
+          >
+        </div>
 
         <label for="feedback" class="block mb-2">Feedback:</label>
         <textarea
+          placeholder="Vă rugăm să scrieți feedback-ul aici."
           id="feedback"
           name="feedback"
           rows="4"
@@ -248,7 +234,7 @@
           class="w-full px-4 py-2 mb-4 border rounded-lg resize-none focus:outline-none focus:ring focus:border-blue-300"
         ></textarea>
 
-        <label for="date" class="block mb-2">Date | Data:</label>
+        <label for="date" class="block mb-2">Data:</label>
         <input
           type="date"
           id="date"
@@ -257,7 +243,7 @@
           class="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
         />
 
-        <label for="hour" class="block mb-2">Hour | Ora:</label>
+        <label for="hour" class="block mb-2">Ora:</label>
         <input
           type="time"
           id="hour"
@@ -266,46 +252,27 @@
           class="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
         />
 
-        <label for="service-type" class="block mb-2"
-          >Type of Service | Tipul Serviciului:</label
-        >
+        <label for="service-type" class="block mb-2">Tipul Serviciului:</label>
         <select
           id="service-type"
           name="service-type"
           required
           class="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
         >
-          <option value="">Select service type</option>
-          <option value="service-intake">
-            Service Intake | Preluare din service
-          </option>
-          <option value="service-dispatch">
-            Service Dispatch | Trimitere în service
-          </option>
-          <option value="information-request">
-            Information Request | Cerere de informații
-          </option>
-        </select>
-
-        <label for="issue-type" class="block mb-2"
-          >Issue Type | Tipul Problemei:</label
-        >
-        <select
-          id="issue-type"
-          name="issue-type"
-          required
-          class="w-full px-4 py-2 mb-4 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
-        >
-          <option value="">Select issue type</option>
-          <option value="technical">Technical Issue | Problemă tehnică</option>
-          <option value="billing">Billing Inquiry | Cerere de facturare</option>
-          <option value="product">Product Inquiry | Cerere de produs</option>
+          <option value="">Selectați un tip de serviciu</option>
+          <option value="service-intake">Service</option>
+          <option value="service-dispatch">Asistență la cumpărături</option>
+          <option value="information-request">Cerere de informații</option>
+          <option value="other">Retur</option>
+          <option value="other">Altele</option>
         </select>
 
         <label for="comment" class="block mb-2"
-          >Additional Comments | Comentarii Suplimentare:</label
+          ><span class="font-bold text-red-700 mb-4"> (Optional) </span
+          >Comentarii Suplimentare:</label
         >
         <textarea
+          placeholder="Dacă aveți sugestii sau comentarii, vă rugăm să le scrieți aici."
           id="comment"
           name="comment"
           rows="4"
@@ -322,4 +289,52 @@
       </form>
     </div>
   </body>
+  <script>
+    function updateRatingValue() {
+      var ratingInput = document.getElementById("rating");
+      var ratingValue = document.getElementById("rating-value");
+      ratingValue.textContent = ratingInput.value;
+    }
+
+    // JavaScript to handle mobile menu toggle
+    document.addEventListener("DOMContentLoaded", function () {
+      var menuButton = document.querySelector(".menu-button");
+      var popupMenu = document.querySelector(".popup-menu");
+      var closeButton = document.querySelector(".close-button");
+      var overlay = document.querySelector(".overlay");
+
+      menuButton.addEventListener("click", function () {
+        popupMenu.classList.toggle("show-popup-menu");
+        overlay.classList.toggle("show-overlay");
+      });
+
+      closeButton.addEventListener("click", function () {
+        popupMenu.classList.remove("show-popup-menu");
+        overlay.classList.remove("show-overlay");
+      });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      var hourInput = document.getElementById("hour");
+      var dateInput = document.getElementById("date");
+
+      // Get the current date in the format YYYY-MM-DD
+      var currentDate = new Date().toISOString().split("T")[0];
+
+      // Set the current date as the default value for the date input
+      dateInput.value = currentDate;
+
+      // Get the current time
+      var now = new Date();
+      var currentHour = now.getHours();
+      var currentMinute = now.getMinutes();
+
+      // Format the time as HH:MM
+      var formattedTime = `${currentHour
+        .toString()
+        .padStart(2, "0")}:${currentMinute.toString().padStart(2, "0")}`;
+
+      // Set the formatted time as the value of the input
+      hourInput.value = formattedTime;
+    });
+  </script>
 </html>
