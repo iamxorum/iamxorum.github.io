@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/Cryptography/Page 6/style/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Criptografie | Tema</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/Cryptography/crypto.html" id="back">Go Back</a>
+      <a href="#cipher">Cipher</a>
+    </nav>
+    <section class="sec1" id="cipher">
+      <main id="main">
+        <div class="insert">
+          <div class="info">
+            <h1 id="title">Galois Field generator</h1>
+          </div>
+          <form>
+            <div class="input-galois">
+              <h1>Insert Galois Field:</h1>
+              <div class="galois-number">
+                <input
+                  type="number"
+                  name="input-prime-galois"
+                  id="input-prime-galois"
+                  min="2"
+                  placeholder="Prime"
+                />
+                <input
+                  type="number"
+                  name="input-pow-galois"
+                  id="input-pow-galois"
+                  min="2"
+                  placeholder="Power"
+                />
+              </div>
+            </div>
+            <div class="insert-poly">
+              <h1>Primitve polynom:</h1>
+              <textarea
+                name="input-poly"
+                id="input-poly"
+                placeholder="t^4+3t^3-t^2-4t^1-6t^0=0"
+              ></textarea>
+            </div>
+            <button class="myBtn" id="submit">SUBMIT</button>
+            <button class="myBtn" id="delete">RESTART</button>
+          </form>
+        </div>
+      </main>
+    </section>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="/Cryptography/Page 6/src/index.js"></script>
+  </body>
+</html>

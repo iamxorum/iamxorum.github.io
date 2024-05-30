@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/Chomsky/Page 1/style/tema.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Chomsky Normal Form</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/index.html" id="back">Go Back</a>
+      <a href="#conversion">CNF Conversion</a>
+    </div>
+    <section class="sec1" id="conversion">
+      <main id="main">
+        <div class="insert">
+          <div class="info">
+            <h1 id="title">Converter</h1>
+            <h2>Chomsky Normal Form Conversion</h2>
+            <h3>
+              Example: S -> AB | BC | a | b | c | d | e | f | g | h | i | j | k
+              <button id="pop-up-btn">Info</button>
+            </h3>
+          </div>
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>
+                This web application can take the production rules of a context-free grammar and convert them to Chomsky Normal Form.<br />
+                <span
+                  >The application is case sensitive!!</span
+                >
+              </p>
+            </div>
+          </div>
+          <form>
+            <textarea
+              name="input-text"
+              id="input-text"
+              placeholder="Insert the production rules here... 
+Example: 
+
+S -> aBcDeF | HF | pHBc
+B -> b | p
+D -> d | p
+F -> G
+G -> f | g
+H -> p
+p (this is the epsilon symbol)"
+            ></textarea>
+            <button class="myBtn" id="submit">SUBMIT</button>
+            <button class="myBtn" id="delete">RESTART</button>
+          </form>
+        </div>
+      </main>
+    </section>
+    <section class="sec2 invisible" id="STEP 1">
+      <div class="info">
+        <h1 id="title">Start Form</h1>
+      </div>
+    </section>
+    <section class="sec3 invisible" id="STEP 2">
+      <div class="info">
+        <h1 id="title">Step 1</h1>
+      </div>
+    </section>
+    <section class="sec4 invisible" id="STEP 3">
+      <div class="info">
+        <h1 id="title">Step 2</h1>
+      </div>
+    </section>
+    <section class="sec5 invisible" id="STEP 4">
+      <div class="info">
+        <h1 id="title">Step 3</h1>
+      </div>
+    </section>
+    <section class="sec6 invisible" id="STEP 5">
+      <div class="info">
+        <h1 id="title">Final Form</h1>
+      </div>
+    </section>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="/Chomsky/Page 1/src/index.js"></script>
+  </body>
+</html>

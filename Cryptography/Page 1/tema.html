@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/Cryptography/Page 1/style/tema.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Criptografie | Tema</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/Cryptography/crypto.html" id="back">Go Back</a>
+      <a href="#counting">Counting</a>
+      <a href="#shannon-fano">Shannon-Fano Encoding</a>
+      <a href="#huffman-encoding">Huffman Encoding</a>
+      <a href="#huffman-stats">Stats</a>
+    </div>
+    <section class="sec1" id="counting">
+      <main id="main">
+        <div class="insert">
+          <div class="info">
+            <h1 id="title">Stage 1</h1>
+            <h2>Accounting for the appearances of the characters</h2>
+            <h3>
+              Alphabets accepted: Latin - Cyrillic - Nordic
+              <button id="pop-up-btn">Info</button>
+            </h3>
+          </div>
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>
+                This web application can recognise the following Alphabets:
+                Latin, Nordic and Cyrillic.<br />
+                <span
+                  >The rest of the characters will be counted as
+                  "Punctuation"!</span
+                >
+              </p>
+            </div>
+          </div>
+          <form>
+            <textarea
+              name="input-text"
+              id="input-text"
+              placeholder="Insert at least 10k characters..."
+            ></textarea>
+            <button class="myBtn" id="submit">SUBMIT</button>
+            <button class="myBtn" id="delete">RESTART</button>
+          </form>
+          <div class="wrapper">
+            <input type="radio" name="select" id="option-1" />
+            <input type="radio" name="select" id="option-2" />
+            <input type="radio" name="select" id="option-3" />
+            <input type="radio" name="select" id="option-4" checked />
+            <label for="option-1" class="option option-1">
+              <span>Letters</span>
+            </label>
+            <label for="option-2" class="option option-2">
+              <span>Numbers</span>
+            </label>
+            <label for="option-3" class="option option-3">
+              <span>Punctuation</span>
+            </label>
+            <label for="option-4" class="option option-4">
+              <span>Everything</span>
+            </label>
+          </div>
+        </div>
+      </main>
+    </section>
+    <section class="sec1_2 invisible">
+      <div class="info">
+        <h1 id="title">Probabilistic model</h1>
+      </div>
+    </section>
+    <section class="sec2 invisible" id="shannon-fano">
+      <div class="info">
+        <h1 id="title">Stage 2</h1>
+        <h2>Shannon-Fano Encoding</h2>
+      </div>
+    </section>
+    <section class="sec3 invisible" id="huffman-encoding">
+      <div class="info">
+        <h1 id="title">Stage 3</h1>
+        <h2>Huffman Encoding</h2>
+      </div>
+    </section>
+    <section class="sec4 invisible" id="huffman-stats">
+      <div class="info">
+        <h1 id="title">Stage 4</h1>
+        <h2>Stats</h2>
+      </div>
+    </section>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="/Cryptography/Page 1/src/index.js"></script>
+  </body>
+</html>

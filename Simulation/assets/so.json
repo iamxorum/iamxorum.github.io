@@ -1,0 +1,564 @@
+[
+  {
+    "id": 0,
+    "question": "Planificarea Round-Robin:",
+    "answers": [
+      "a. determină atribuirea unei cuante de timp în care procesului îi este permis să ruleze;",
+      "b. determină suspendarea unui proces într-un moment arbitrar;",
+      "c. determină atribuirea unei priorităţi fixe pentru execuţia unui proces;",
+      "d. determină lansarea în execuţie a unui proces dacă nu există altul mai prioritar în execuţie."
+    ],
+    "correctAnswerIndexes": [
+      0
+    ]
+  },
+  {
+    "id": 1,
+    "question": "La declanşarea unei întreruperi prima acţiune desfăşurată în sistemul de calcul este:",
+    "answers": [
+      "a. salvarea registrelor procesului întrerupt în tabela de procese;",
+      "b. încărcarea registrului program counter cu conţinutul vectorului de întrerupere;",
+      "c. salvarea stării programului întrerupt în stivă;",
+      "d. modificarea stării procesului interrupt."
+    ],
+    "correctAnswerIndexes": [
+      2
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Un proces este:",
+    "answers": [
+      "a. activitatea unităţii de prelucrare;",
+      "b. un program compilat;",
+      "c. un program în execuţie;",
+      "d. un program link-editat."
+    ],
+    "correctAnswerIndexes": [
+      2
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Registrul “contor program\" conţine:",
+    "answers": [
+      "a. adresele operanzilor operaţiei ce trebuie executată;",
+      "b. adresa următoarei instrucţiuni ce trebuie executată;",
+      "c. chiar operanzii operaţiei ce trebuie executată;",
+      "d. numărul instrucţiunii ce trebuie executată."
+    ],
+    "correctAnswerIndexes": [
+      1
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Secţiunile critice sunt:",
+    "answers": [
+      "a. secvenţe de program care trebuie tratate cu mare atenţie;",
+      "b. secvenţe de tratare a întreruperilor importante;",
+      "c. secvenţe din activitatea sistemului de calcul când resursele sunt insuficiente;",
+      "d. secvenţe de program unde se accesează date partajate."
+    ],
+    "correctAnswerIndexes": [
+      3
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Planificatorul este componenta sistemului de operare care decide:",
+    "answers": [
+      "a. care proces trece în starea de execuţie şi pentru cât timp;",
+      "b. care proces trebuie terminat şi care proces trebuie început;",
+      "c. care dispozitiv periferic va fi folosit de către program;",
+      "d. care dintre fişierele deschise trebuie închis la un moment dat."
+    ],
+    "correctAnswerIndexes": [
+      0
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Un sistem de operare asigură îndeplinirea următoarelor funcţii:",
+    "answers": [
+      "a. creşterea performanţelor unităţii de prelucrare;",
+      "b. un management eficient al resurselor fizice şi logice;",
+      "c. asistarea utilizatorului printr-un sistem dezvoltat de comunicaţie;",
+      "d. protecţia informaţiei."
+    ],
+    "correctAnswerIndexes": [1,2,3]
+  },
+  {
+    "id": 7,
+    "question": "Tranziţia unui proces din starea “în execuţie\" în starea “blocat\" are loc atunci când:",
+    "answers": [
+      "a. planificatorul decide suspendarea procesului pentru a lansa un altul mai prioritar;",
+      "b. planificatorul decide blocarea procesului din cauza unei erori;",
+      "c. procesul aşteaptă apariţia unor date de care depinde continuarea execuţiei;",
+      "d. procesul nu mai poate continua execuţia din cauza unei erori."
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 8,
+    "question": "În sistemele de operare de tip client-server nucleul acestuia realizează:",
+    "answers": [
+      "a. servirea proceselor server;",
+      "b. servirea proceselor client;",
+      "c. transportul mesajelor de la procesele client către procesele server;",
+      "d. accesul la resursele proceselor client şi ale proceselor server."
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 9,
+    "question": "Evacuarea-reîncărcarea proceselor (swapping) este procesul de:",
+    "answers": [
+      "a. terminare, respectiv începere a proceselor;",
+      "b. transfer al datelor în fişiere pe disc;",
+      "c. lansare în execuţie a programelor;",
+      "d. transfer al proceselor între memorie şi disc."
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 10,
+    "question": "Tranziţia unui proces din starea “în execuţie\" în starea “gata\" are loc atunci când:",
+    "answers": [
+      "a. planificatorul decide suspendarea procesului pentru că i-a expirat cuanta de timp alocată;",
+      "b. planificatorul, în urma analizei proceselor active stabileşte că un proces nu poate continua execuţia;",
+      "c. procesul nu mai are date de prelucrat şi trebuie să-şi termine execuţia;",
+      "d. procesul nu mai are date de transferat şi poate să-şi continue execuţia."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 11,
+    "question": "Într-un sistem de operare de tip client-server procesele server lucrează în modul de lucru:",
+    "answers": [
+      "a. supervisor;",
+      "b. kernel;",
+      "c. utilizator;",
+      "d. privilegiat."
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 12,
+    "question": "Care din următoarele tipuri nu reprezintă un sistem de fișiere:",
+    "answers": [
+      "a. Swap;",
+      "b. ext1;",
+      "c. NTFS;",
+      "d. FAT32."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 13,
+    "question": "În cadrul partiționării unui sistem Linux, reprezintă un tip de partiție?",
+    "answers": [
+      "a. Partiția logică;",
+      "b. Partiția primară;",
+      "c. Partiția virtuală;",
+      "d. Partiția extinsă."
+    ],
+    "correctAnswerIndexes": [0,1,3]
+  },
+  {
+    "id": 14,
+    "question": "RUID reprezintă:",
+    "answers": [
+      "a. Userul logat iniţial în sistem;",
+      "b. Userul devenit prin rularea comenzii su;",
+      "c. RUID nu există. Doar EUID si UID;",
+      "d. UID secundar."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 15,
+    "question": "EUID reprezintă:",
+    "answers": [
+      "a. Userul care s-a logat iniţial în sistem;",
+      "b. Userul devenit prin rularea comenzii su;",
+      "c. UID secundar al userului;",
+      "d. EUID nu exista, doar UID."
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 16,
+    "question": "Ce comandă se foloseşte pentru afişarea userilor logaţi în sistem?",
+    "answers": [
+      "a. login;",
+      "b. whosin;",
+      "c. who;",
+      "d. Whoami."
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 17,
+    "question": "Cum se află procesul programului care deschide portul 10000 pentru a asculta conexiuni ce folosesc protocolul tcp?",
+    "answers": [
+      "a. fuser -n tcp 10000;",
+      "b. grep 10000;",
+      "c. kill 10000;",
+      "d. fuser -n tcp."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 18,
+    "question": "Comanda su are drept scop:",
+    "answers": [
+      "a. Substituirea userului curent cu root şi încărcarea environmentului lui root;",
+      "b. Substituirea userului curent fără root şi încărcarea environmentului lui root;",
+      "c. O eroare fiindcă s-a specificat semnul minus dar nu şi opţiunea;",
+      "d. Modificarea informaţiilor despre un user."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 19,
+    "question": "Afişarea tuturor grupurilor din care face parte un utilizator numit user1 se realizează prin comanda:",
+    "answers": [
+      "a. groups;",
+      "b. show groups;",
+      "c. id;",
+      "d. show users."
+    ],
+    "correctAnswerIndexes": [0,2]
+  },
+  {
+    "id": 20,
+    "question": "Ce comandă crează un user numit user1?",
+    "answers": [
+      "a. useradd user1;",
+      "b. useradd user1 -c 'user normal' -d /home/user1 -s /bin/bash;",
+      "c. useradd -c 'user normal' -d /home/user1 -m -s /bin/bash user1;",
+      "d. adduser -group root user1."
+    ],
+    "correctAnswerIndexes": [0,2]
+  },
+  {
+    "id": 21,
+    "question": "Pentru fiecare user se pastrează în fisierul /etc/passwd următoarele informaţii:",
+    "answers": [
+      "a. username;",
+      "b. uid;",
+      "c. grupurile din care acesta face parte;",
+      "d. home directory."
+    ],
+    "correctAnswerIndexes": [0,1,3]
+  },
+  {
+    "id": 22,
+    "question": "Cum ajungem în directorul home al utilizatorului logat?",
+    "answers": [
+      "a. cd /;",
+      "b. cd ~;",
+      "c. cd home;",
+      "d. cd."
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 23,
+    "question": "În Linux în mod standard userii se găsesc în fişierul:",
+    "answers": [
+      "a. /etc/users;",
+      "b. /etc/shadow;",
+      "c. /etc/system-users;",
+      "d. /etc/passwd."
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 24,
+    "question": "Ce comandă folosim în linux pentru a afla adresa ip a placii de reţea?",
+    "answers": [
+      "a. ifconfig;",
+      "b. ipconfig;",
+      "c. route;",
+      "d. traceroute."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 25,
+    "question": "Afirmaţiile corecte sunt care se referă la echivalenţa dintre modul simbolic şi absolut:",
+    "answers": [
+      "a. 775=rwxrwxrwx;",
+      "b. 775=rwxrwxr-x;",
+      "c. 1001=--------t;",
+      "d. 664=rw-rw-r—."
+    ],
+    "correctAnswerIndexes": [1,2,3]
+  },
+  {
+    "id": 26,
+    "question": "Umask are rolul de a:",
+    "answers": [
+      "a. Stabili cu ce permisiuni “default” se crează noile fişiere şi directoare;",
+      "b. Stabili cu ce permisiuni default se crează fişierele daca ne referim la files umsk;",
+      "c. Stabili masca sistemului;",
+      "d. Stabili masca userului."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 27,
+    "question": "Daca se foloseste umask 0002 care dintre urmatoarele afirmaţii sunt corecte:",
+    "answers": [
+      "a. Fişierele se crează “default” cu permisiunile 664;",
+      "b. Fişierele se crează “default” cu permisiunile 440;",
+      "c. Directoarele se crează “default” cu permisiunile rwxrwxr-x;",
+      "d. Directoarele se crează “default” cu permisiunile 755."
+    ],
+    "correctAnswerIndexes": [0,2]
+  },
+  {
+    "id": 28,
+    "question": "Cum se închide procesul 2543?",
+    "answers": [
+      "a. kill -9 2543;",
+      "b. ps – aux | 2543;",
+      "c. grep 2543;",
+      "d. exit 2543."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 29,
+    "question": "În ce fişier se scriu comenzile ce se vor executate la pornirea calculatorului după pornirea tuturor proceselor?",
+    "answers": [
+      "a. /etc/rc.d/rc.local;",
+      "b. crontab;",
+      "c. /bin/sh;",
+      "d. /bin."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 30,
+    "question": "Ce se scrie în prima linie a unui script bash?",
+    "answers": [
+      "a. #!/bin/sh;",
+      "b. #!/usr/local/perl;",
+      "c. #!/sbin/perl;",
+      "d. #!/bin."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 31,
+    "question": "Ce defineşte directiva DirectoryIndex din fişierul de configurare a serverului Apache?",
+    "answers": [
+      "a. directorul în care trebuie pus fişierul index.html;",
+      "b. fişierele pe care le caută în Document Root pentru a le iniţializa ca primă pagină a site-ului;",
+      "c. indexul cuvintelor de căutare a paginii web folosind un motor ca www.google.com;",
+      "d. directorul în care intră doar root dacă furnizează parola."
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 32,
+    "question": "Cu ce comandă aflăm direct procesul folosit de un utilizator conectat prin ssh la server?",
+    "answers": [
+      "a. ps -aux | grep pts;",
+      "b. ps -aux | who;",
+      "c. ps -aux | grep last;",
+      "d. ps -aux | whoami."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 33,
+    "question": "Cum facem pentru a avea anumite servicii pornite automat la pornirea calculatorului?",
+    "answers": [
+      "a. folosim comanda setup, apoi din meniu alegem system services şi bifăm acele servicii;",
+      "b. edităm fişierul /etc/xinetd;",
+      "c. edităm fişierul /etc/inet.d/inetd;",
+      "d. edităm un fişier nou în care enumerăm serviciile."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 34,
+    "question": "Folosind interpretorul bash se creează următorul script denumit scr1:   # !/bin/bash   echo $#    , Care va fi rezultatul afisat, dacă scriptul se va executa cu comanda: # bash scr1 arg1 arg2 4:",
+    "answers": [
+      "a. 3;",
+      "b. arg1;",
+      "c. arg2;",
+      "d. 4."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 36,
+    "question": "Ce rezultat va produce execuția urmatorului script:<br>#!/bin/bash<br>s=0<br>for i în`ls -l | awk '{print $5}'` do<br>s=`expr $s + $i`<br>done<br>echo `expr $s / 1024`",
+    "answers": [
+      "a. scriptul afisează valoarea însumata, exprimată în Kb, a fișierelor din directorul current;",
+      "b. scriptul afisează o lista cu dimensiunea fișierelor, în octeti din directorul curent;",
+      "c. scriptul afisează valoarea insumata, exprimată înbiti, a fișierelor din directorul curent;",
+      "d. scriptul afisează o listă cu dimensiunea fișierelor din directorul curent exprimată în biți."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 37,
+    "question": "Se presupune că ați editat un script cu numele /root/scr1. Care este comanda ce trebuie introdusă pentru a face scriptul executabil?",
+    "answers": [
+      "a. chmod u+x /root/scr1;",
+      "b. chmod 744 /root/scr1;",
+      "c. chmod 666 /root/scr1;",
+      "d. chmod u-wx /root/scr1."
+    ],
+    "correctAnswerIndexes": [0,1]
+  },
+  {
+    "id": 38,
+    "question": "Care este rezultatul afișat în urma execuției comenzii:<br>ifconfig | grep \"inet addr\" | grep -v \"127.0.0.1\" | awk '{print $2;}' | awk -F':' '{print $2;}'",
+    "answers": [
+      "a. toate adresele ip mai puțin adresa interfeței loopback;",
+      "b. adresa ip a interfeței eth0;",
+      "c. adresa ip a interfeței loopback;",
+      "d. toate adresele ipv6."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 39,
+    "question": "Care este rezultatul afișat în urma execuției:<br>init 3",
+    "answers": [
+      "a. intrarea în nivelul 3, respectiv modul text, cu acces network;",
+      "b. intrarea înnivelul 3, respectiv modul grafic cu acces network;",
+      "c. crearea a 3 procese în memorie, subordonate procesului parinte init."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 40,
+    "question": "Care dintre urmatoarele comenzi are ca rezultat crearea unui fișier file2 care este identic cu fișierul file1, ignorând liniile goale?",
+    "answers": [
+      "a. grep -v \"^$\" file1 > file2;",
+      "b. sed -e '/^$/d' file1 > file2;",
+      "c. grep -v \"#^\" file1 > file2;",
+      "d. grep \"^$\" file1 > file2."
+    ],
+    "correctAnswerIndexes": [0,1]
+  },
+  {
+    "id": 41,
+    "question": "Cu ce comandă se poate obține lista rutelor cunoscute de sistem?",
+    "answers": [
+      "a. route;",
+      "b. netstat –r;",
+      "c. netstat –n;",
+      "d. ifconfig."
+    ],
+    "correctAnswerIndexes": [0,1]
+  },
+  {
+    "id": 42,
+    "question": "Care este rezultatul afișat în urma execuției următoarei comenzi:<br>ps -ef --no-heading | awk '{print $1}' | sort | uniq",
+    "answers": [
+      "a. numele tuturor userilor, fara valori duplicate, sub care sunt rulate procesele curente;",
+      "b. lista id-urilor aparținând proceselor curente, fară valori duplicate;",
+      "c. numarul de useri, fară valori duplicate, sub care sunt rulate procesele curente;",
+      "d. lista numelor proceselor curente, fară valori duplicate, sortate alfabetic."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 43,
+    "question": "Care este semnificația urmatoarei comenzi echo $ ?",
+    "answers": [
+      "a. se afișează codul de eroare al ultimei comenzi;",
+      "b. se afișează numarul de parametri ai scriptului curent;",
+      "c. se afișează numele scriptului curent;",
+      "d. se afișează variabila de sistem $HOME."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 44,
+    "question": "Care este comanda folosită pentru a porni serviciul network în sistemul de operare Linux ?",
+    "answers": [
+      "a. service network start;",
+      "b. /etc/init.d/network start;",
+      "c. chkconfig network start;",
+      "d. sc start network."
+    ],
+    "correctAnswerIndexes": [0,1]
+  },
+  {
+    "id": 45,
+    "question": "Ce nu se poate obține folosind comanda uname?",
+    "answers": [
+      "a. numarul de procesoare;",
+      "b. totalul de memorie disponibilă;",
+      "c. versiunea kernel-ului;",
+      "d. numele sistem;",
+      "e. denumirea kernel-ului."
+    ],
+    "correctAnswerIndexes": [0,1]
+  },
+  {
+    "id": 46,
+    "question": "Pentru a funcționa rezoluția de nume, ce fisier trebuie să existe și să conțină una sau mai multe adrese ale serverelor DNS?",
+    "answers": [
+      "a. /etc/resolv.conf;",
+      "b. /etc/sysconfig/network;",
+      "c. /etc/sysconfig/network-scripts/network-functions;",
+      "d. /etc/hosts."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 47,
+    "question": "Care sunt informațiile care nu se regăsesc în fișierul /etc/passwd?",
+    "answers": [
+      "a. Hash-urile parolelor utilizatorilor;",
+      "b. Directorul home al utilizatorului curent;",
+      "c. Interpretorul de comenzi (shell-ul);",
+      "d. Grupurile secundare ale utilizatorului curent."
+    ],
+    "correctAnswerIndexes": [0,3]
+  },
+  {
+    "id": 48,
+    "question": "Ce fișier este folosit pentru montarea automată a unui sistem de fișiere în sistemul de operare Linux?",
+    "answers": [
+      "a. /etc/fstab;",
+      "b. /dev/sda1;",
+      "c. /mnt/hda6;",
+      "d. /etc/fsck"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 49,
+    "question": "Care este rezultatul afișat în urma execuției următoarei comenzii:<br>cat /etc/passwd | grep nologin | cut –d: -f1",
+    "answers": [
+      "a. numele utilizatorilor care nu se pot loga în sistem;",
+      "b. numele utilizatorilor al căror cont a fost dezactivat;",
+      "c. numele grupului utilizatorilor al căror cont a fost dezactivat;",
+      "d. numele grupului utilizatorilor care nu se pot loga însistem."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 50,
+    "question": "Care este rezultatul afișat în urma execuției următoarei comenzii:<br>find -type f -atime -7",
+    "answers": [
+      "a. căutarea în directorul curent a fișierelor accesate în ultimele 7 zile;",
+      "b. căutarea în directorul radacină a fișierelor accesate în ultimele 7 ore;",
+      "c. căutarea în directorul radacină a fișierelor create în ultimele 7 ore;",
+      "d. căutarea în directorul curent a fișierelor create înultimele 7 zile."
+    ],
+    "correctAnswerIndexes": [0]
+  }
+]

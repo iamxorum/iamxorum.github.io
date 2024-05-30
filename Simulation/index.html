@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizzes | UTM</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: rgb(230, 230, 230);
+        padding: 20px 10px;
+        box-sizing: border-box;
+      }
+      .grid {
+        display: grid;
+        gap: 10px;
+        width: 100%;
+        max-width: 600px;
+        margin: 20px 0;
+      }
+      .grid-3 {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      }
+      .grid-4 {
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+      }
+      .grid-13 {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+      .grid button {
+        padding: 15px;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        background-color: #218a38;
+        color: white;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      .grid button:hover {
+        background-color: #0056b3;
+      }
+      .line {
+        width: 100%;
+        max-width: 600px;
+        height: 2px;
+        background-color: #4c4c4c;
+        margin: 20px 0;
+      }
+      .back {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 1rem 2rem;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        background-color: rgb(212, 55, 55);
+        color: white;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
+      .back:hover{
+        background-color: #ea5151;
+      }
+      @media (min-width: 900px) {
+        .grid-3 button, .grid-4 button, .grid-13 button {
+          padding: 20px;
+          font-size: 16px;
+        }
+      }
+      @media (max-width: 900px) {
+        .back {
+          position: static;
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="back" onclick="window.location.href = '../index.html';">Back</button>
+    <div class="grid grid-3">
+      <button onclick="location.href='simulate.html'">Simulation</button>
+    </div>
+    <div class="line"></div>
+    <div class="grid grid-4">
+      <button onclick="location.href='parts/module_1.html'">Modul 1</button>
+      <button onclick="location.href='parts/module_2.html'">Modul 2</button>
+      <button onclick="location.href='parts/module_3.html'">Modul 3</button>
+      <button onclick="location.href='parts/module_4.html'">Modul 4</button>
+    </div>
+    <div class="line"></div>
+    <div class="grid grid-13">
+      <button onclick="location.href='mini_parts/asd.html'">Algoritmi si Structuri de Date</button>
+      <button onclick="location.href='mini_parts/db.html'">Baze de Date</button>
+      <button onclick="location.href='mini_parts/crypto.html'">Criptografie</button>  
+      <button onclick="location.href='mini_parts/ce.html'">Comert Electronic</button>
+      <button onclick="location.href='mini_parts/cc.html'">Cloud Computing</button>
+      <button onclick="location.href='mini_parts/cpp.html'">C++</button>
+      <button onclick="location.href='mini_parts/java.html'">Java</button>
+      <button onclick="location.href='mini_parts/pp.html'">Programare Procedurala</button>
+      <button onclick="location.href='mini_parts/tap.html'">Tehnici Avansate de Programare</button>
+      <button onclick="location.href='mini_parts/web.html'">Tehnologii Web</button>
+      <button onclick="location.href='mini_parts/rc.html'">Retele de Calculatoare</button>
+      <button onclick="location.href='mini_parts/so.html'">Sisteme de Operare</button>
+      <button onclick="location.href='mini_parts/sgbd.html'">Sisteme de Gestiune a Bazelor de Date</button>
+    </div>
+  </body>
+</html>

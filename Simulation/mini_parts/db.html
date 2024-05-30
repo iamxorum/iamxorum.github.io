@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulation</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- Add a div button to navigate back to the index.html file -->
+    <button class="back" onclick="window.location.href = '../index.html';">Back</button>
+    <div class="app">
+      <div id="timer">00:00:00</div>
+      <h3 id="title">Baze de Date</h3>
+      <div class="quiz">
+        <h2 id="question">Question goes here.</h2>
+        <img class="image" src="" alt="">
+        <div id="answer-buttons"></div>
+        <button id="next-btn" style="display: none;">Next</button>
+        <button id="answer-btn" style="display: none;">Answer</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

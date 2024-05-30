@@ -1,0 +1,573 @@
+[
+  {
+    "id": 1,
+    "question": "Fie secvența:<br>class cls{<br>public:<br>cls(){ cout<<\"constructor\";}<br>cls(cls &c){cout<<\"constructor de copiere\";}<br>};<br>int f(cls c){ return 1;}<br>int main(){<br>cls c;<br>f(c);<br>return 0;<br>}<br>În momentul executării programului de mai sus:<br>",
+    "answers": [
+      "a) constructorul de clasă se apelează o dată, iar cel de copiere nu se apelează;",
+      "b) constructorul de clasă şi cel de copiere se apelează fiecare câte o dată;",
+      "c) constructorul de copiere se apelează o dată, iar cel de clasă nu se apelează;",
+      "d) constructorul de clasă se apelează de două ori, iar cel de copiere nicio dată;",
+      "e) constructorul de clasă și cel de copiere se apelează fiecare de câte două ori."
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 2,
+    "question": "Fie secvența:<br>class cls{<br>public:<br>cls(){ cout<<\"constructor\";}<br>cls(cls &c){cout<<\"constructor de copiere\";}<br>};<br>int f(cls &c){ return 1;}<br>int main(){<br>cls c;<br>f(c);<br>return 0;<br>}<br>În momentul executării programului de mai sus:<br>",
+    "answers": [
+      "a) constructorul clasei se apelează o dată, iar cel de copiere nu se apelează nicio dată;",
+      "b) constructorul de clasă şi cel de copiere se apelează fiecare câte o dată;",
+      "c) constructorul de copiere se apelează o dată, iar cel de clasă nu se apelează;",
+      "d) constructorul clasei se apelează de două ori, iar cel de copiere nicio dată;",
+      "e) constructorul de clasă și cel de copiere se apelează fiecare de câte două ori."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 3,
+    "question": "Fie secvența:<br>class C{<br>int a;<br>public:<br>virtual void metoda1()=0;<br>virtual void metoda2()=0;<br>};<br>int main(){<br>C *pob; //declarația 1<br>C ob; //declarația 2<br>C *vpob[5]; //declarația 3<br>C vob[5]; //declarația 4<br>return 0;<br>}<br>Declarațiile admise în acest caz sunt:<br>",
+    "answers": [
+      "a) Declarațiile 1 și 2;",
+      "b) Declarația 1;",
+      "c) Declarațiile 2 și 4;",
+      "d) Declarația 3;",
+      "e) Declarațiile 1, 2 și 3."
+    ],
+    "correctAnswerIndexes": [1,3]
+  },
+  {
+    "id": 4,
+    "question": "Fie clasa :<br>class c {<br>int a, b ;<br>public :<br>c (int , int ) ;<br>int det_a ( ) {return a ;}<br>~c () ;<br>};<br>Semnul ~ are rolul :<br>",
+    "answers": [
+      "a) de a nega pe biți rezultatul returnat de metoda c( );",
+      "b) de a preciza existența destructorului;",
+      "c) de a nega logic rezultatul returnat de metoda c( );",
+      "d) de a supraîncarca constructorul clasei;",
+      "e) de a supraîncarca operatorul ~"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 5,
+    "question": "Secvenţa următoare:<br>class c1{<br>public:<br>int a;<br>c1(int y){ a=y;cout<<\"constructor 1\";}<br>~c1(){cout<<\"destructor 2\";}<br>};<br>class c2:public c1{<br>public:<br>int b;<br>c2(int y, int x):c1(y) { b=x; cout<<\"constructor 2\";}<br>~c2(){cout<<\"destructor 2\";}<br>};<br>int main(){<br>c1 ob1(2);<br>c2 ob2(2,3);<br>return 0;<br>}<br>afișează:<br>",
+    "answers": [
+      "a) constructor 1 constructor 2 destructor 2 destructor 1",
+      "b) constructor 1 constructor 1 constructor 2 destructor 2 destructor 1 destructor 1",
+      "c) constructor 1 constructor 2 constructor 1 destructor 1 destructor 2 destructor 1",
+      "d) constructor 1 constructor 1 constructor 2 destructor 2 destructor 1"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 6,
+    "question": "Fie următorul program C++:<br>#include <iostream.h><br>class B{<br>public:<br>B(){cout<<\"B()\"<<endl;}<br>~B(){cout<<\"~B()\"<<endl;}<br>};<br>class D: public B{<br>public:<br>D(){cout<<\"D()\"<<endl;}<br>~D(){cout<<\"~D()\"<<endl;}<br>};<br>int main(){<br>B *b=new B();<br>delete b;<br>b=new D();<br>delete b;<br>return 0;<br>}<br>Programul afișează:<br>",
+    "answers": [
+      "a) B() ~B() B() D() ~D()",
+      "b) B() ~B() B() D() ~B()",
+      "c) B() ~B() B() ~B()",
+      "d) B() ~B() D() ~B()"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 7,
+    "question": "Fie programul:<br>#include <iostream.h><br>class B{<br>public:<br>B(){cout<<\"B()\"<<endl;}<br>B(B &b){cout<<\"B(B &b)\"<<endl;}<br>};<br>class D: public B{<br>public:<br>D(){cout<<\"D()\"<<endl;}<br>D(D &d){cout<<\"D(D &d)\"<<endl;}<br>};<br>int main(){<br>B b;<br>B b1(b);<br>D d;<br>D d1(d);<br>return 0;<br>}<br>Programul afișează:<br>",
+    "answers": [
+      "a) B() B(B&b) B() D() B(B &b) D(D &d)",
+      "b) B() B() B(B&b) B() D() B(B &b) D() B(B &b)",
+      "c) B() B(B&b) D() B(B &b) D() B(B &b)",
+      "d) B() B(B&b) B() D() B() D(D &d)"
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 8,
+    "question": "8. Fie clasa :<br>class c {<br>int a,b;<br>public:<br>float c (int, int)<br>int get_a {return a;}<br>c ();<br>};<br>Declaraţia float c(int, int) ar putea corespunde unui constructor al clasei?<br>",
+    "answers": [
+      "a) da, fiind o supraîncarcare a celui existent;",
+      "b) nu, deoarece crează ambiguitate;",
+      "c) nu, deoarece constructorul nu are tip returnat;",
+      "d) nu, deoarece nu este de tip friend."
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 9,
+    "question": "Fie secvenţa următoare:<br>class persoana{<br>int varsta;<br>public:<br>persoana(int v=18){varsta=v;}<br>persoana& operator++(int){varsta++; return *this;}<br>int get_varsta(){return varsta;}<br>};<br>int main(){<br>persoana p(20);<br>cout<<p++.get_varsta();<br>return 0;<br>}<br>Secvența afișează:",
+    "answers": [
+      "e) 21",
+      "f) 20",
+      "g) 18",
+      "h) 19"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 10,
+    "question": "O funcție declarată friend în clasa de bază:",
+    "answers": [
+      "a) rămâne friend în clasa derivată, pentru partea moștenită;",
+      "b) are acces pe toată clasa derivată;",
+      "c) nu are acces pe zonele private și protected ale clasei derivate;",
+      "d) nu are acces pe zona private a clasei derivate;",
+      "e) are acces pe zonele public și protected ale clasei derivate."
+    ],
+    "correctAnswerIndexes": [2,3]
+  },
+  {
+    "id": 11,
+    "question": "Se consideră următoarea secvență de program:<br>class B{<br>private:<br>int x,y;<br>public:<br>B(int a,int b){ x=a;y=b; }<br>B(const B &a){ x=a.x; y=a.y;}<br>};<br>În care dintre următoarele situații se realizează copierea unui obiect într-altul:",
+    "answers": [
+      "a) B c1(4,5);",
+      "b) B c2(0.0, 0,0);",
+      "c) B c1, c3=c1;",
+      "d) B c4(1);",
+      "e) B c1, c5(c1)."
+    ],
+    "correctAnswerIndexes": [2,4]
+  },
+  {
+    "id": 12,
+    "question": "Fie următorul program:<br>#include<iostream.h><br>class cls {<br>static int i;<br>int j;<br>public:<br>cls(int x=7) { j=x; }<br>static int imp(int k){ cls a; return i+k+a.j; } };<br>int cls::i;<br>int main()<br>{ int k=5;<br>cout<<cls::imp(k);<br>return 0;<br>}<br>Indicați ce se va afișa pe ecran în urma executării programului:",
+    "answers": [
+      "a) 11",
+      "b) 13",
+      "c) 12",
+      "d) 14"
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 13,
+    "question": "Fie următorul program:<br>#include <iostream.h><br>class B{<br>public:<br>virtual void f() { cout<<\"B::f() \";}<br>void g() { cout<<\"B::g() \";}<br>};<br>class D: public B{<br>public:<br>void f() { cout<<\"D::f() \";}<br>void g() { cout<<\"D::g() \";}<br>};<br>int main(){<br>int i;<br>B *a=new B();<br>B *b=new D();<br>a->f(); b->f();<br>a->g(); b->g();<br>return 0;<br>}<br>Indicați ce se va afișa pe ecran în urma executării programului:",
+    "answers": [
+      "a) D::f() B::f() B::g() B::g()",
+      "b) B::f() D::f() B::g() B::g()",
+      "c) B::f() D::f() B::g() D::g()",
+      "d) B::f() B::g() D::f() D::g()"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 14,
+    "question": "Fie următorul program:<br>#include <iostream.h><br>class B{<br>public:<br>virtual void f() { cout<<\"B::f() \";}<br>void g() { cout<<\"B::g() \";}<br>};<br>class D1: public B{<br>public:<br>void f() { cout<<\"D1::f() \";}<br>void g() { cout<<\"D1::g() \";}<br>};<br>class D2: public B{<br>public:<br>void g() { cout<<\"D2::g() \";}<br>};<br>int main(){<br>int i;<br>B *a=new B();<br>B *b=new D1();<br>B *c=new D2();<br>a->f(); b->f(); c->f();<br>a->g(); b->g(); c->g();<br>return 0;<br>}<br>Indicați ce se va afișa pe ecran în urma executării programului:",
+    "answers": [
+      "e) B::f() D1::f() B::f() B::g() B::g() B::g()",
+      "f) D2::f() D1::f() B::f() B::g() B::g() B::g()",
+      "g) B::f() D1::f() D::f() B::g() D1::g() D2::g()",
+      "h) B::f() D1::f() B::f() B::g() D1::g() D2::g()",
+      "i) B::f() B::f() D2::f() B::g() B::g() D2::g()"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 15,
+    "question": "Fie următorul program:<br>#include<iostream.h><br>class salariat{<br>int varsta;<br>public:<br>salariat (int v=20) {varsta =v;}<br>operator int() { return varsta;}<br>salariat& operator++(){varsta++; return *this;}<br>salariat operator++ (int) { varsta++; return *this;}<br>};<br>int main(){<br>salariat s(21);<br>int a=s++, b=++s;<br>cout<<a<<\" \"<<b<<endl;<br>return 0;<br>}<br>Programul afișează:",
+    "answers": [
+      "a) 20 21",
+      "b) 21 22",
+      "c) 22 23",
+      "d) 20 22",
+      "e) 21 23"
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 16,
+    "question": "Fie următorul program:<br>#include <iostream.h><br>class Cerc{<br>public:<br>float raza;<br>Cerc(float r){raza=r;}<br>float get_raza(){return raza;}<br>Cerc operator++(){raza++; return *this;}<br>Cerc operator--(){raza--; return *this;}<br>};<br>int main(){<br>Cerc c(3.5);<br>cout<<(++(++c)).get_raza()<<\" \";<br>cout<<c.get_raza()<<\" \";<br>cout<<(--(--c)).get_raza()<<\" \";<br>cout<<c.get_raza()<<\" \";<br>return 0;<br>}<br>Programul afișează:",
+    "answers": [
+      "a) 3.5 4.5 2.5 3.5",
+      "b) 5.5 4.5 2.5 2.5",
+      "c) 2.5 5.5 4.5 3.5",
+      "d) 5.5 4.5 2.5 3.5",
+      "e) 4.5 2.5 3.5 5.5"
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 17,
+    "question": "O metodă statică a unui obiect se caracterizează prin faptul că:",
+    "answers": [
+      "a) nu primește pointerul la obiect this;",
+      "b) folosește numai datele publice;",
+      "c) se poate apela prin numele clasei;",
+      "d) nu poate fi definită decât inline;",
+      "e) daca prelucrează obiecte, primește obiectele ca parametrii expliciți."
+    ],
+    "correctAnswerIndexes": [0,2,4]
+  },
+  {
+    "id": 18,
+    "question": "Fie secvența de program:<br>#include <iostream.h><br>class C{<br>public:<br>static int s;<br>};<br>int C::s=0;<br>int main(){<br>int a=7; C::s=a;<br>cout<<C::s;<br>return 0;<br>}<br>În secvența de mai sus, inițializarea lui s este:",
+    "answers": [
+      "a) ilegală, deoarece nu există niciun obiect creat;",
+      "b) ilegală, deoarece s este inițializat în afara clasei;",
+      "c) ilegală, deoarece s este dublu definit, în clasă și în afara ei;",
+      "d) ilegală, deoarece datele statice pot fi doar private;",
+      "e) corectă, deoarece membri statici există înainte de a se crea obiecte din clasă."
+    ],
+    "correctAnswerIndexes": [4]
+  },
+  {
+    "id": 19,
+    "question": "Fie secvența:<br>class complex{<br>double re;<br>double im;<br>public:<br>complex(double x=1.0,double y=6.80){re=x; im=y;}<br>complex( const complex &u){re=u.re;im=u.im;}<br>};<br>Precizaţi în ce situaţie se utilizează constructorul de copiere:",
+    "answers": [
+      "a) complex z1(5.2, 3.6);",
+      "b) complex z1(5.2, 3.6), z2=z1;",
+      "c) complex z3(0.1,1.0);",
+      "d) complex z1(5.2, 3.6), z4(z1);",
+      "e) complex z5(-0.1,28.7)."
+    ],
+    "correctAnswerIndexes": [1,3]
+  },
+  {
+    "id": 20,
+    "question": "Fie secvența :<br>class A1{<br>public:<br>A1(){cout << \"A1 \";}<br>};<br>class A2{<br>public:<br>A2(){cout << \"A2 \";}<br>};<br>class AA1 : public A1, virtual public A2{<br>public:<br>AA1(){cout << \"AA1 \";}<br>};<br>class AA2 : public A1, virtual A2{<br>public:<br>AA2(){cout << \"AA2 \";}<br>};<br>class B : public AA1, virtual public AA2{<br>public:<br>B(){cout << \"B \";}<br>};<br>int main(){<br>B ob1;<br>return 0;<br>}<br>Secvența afișează:",
+    "answers": [
+      "a) A1 A2 AA2 A1 AA1 B",
+      "b) A2 A2 AA2 AA1 A1 B",
+      "c) A1 A2 AA2 A1 B AA1",
+      "d) A2 A1 AA2 A1 AA1 B",
+      "e) A2 A1 A2 AA1 A1 B"
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 21,
+    "question": "Care dintre afirmațiile următoare sunt adevărate?",
+    "answers": [
+      "a) precedența unui operator poate fi modificată prin redefinire;",
+      "b) aritatea unui operator nu poate fi modificată prin redefinire;",
+      "c) asociativitatea unui operator poate fi modificată prin redefinire;",
+      "d) semnificația modului în care lucrează un operator asupra obiectelor de tipuri predefinite nu poate fi schimbată prin redefinire."
+    ],
+    "correctAnswerIndexes": [1,3]
+  },
+  {
+    "id": 22,
+    "question": "Care dintre afirmațiile următoare sunt adevărate?",
+    "answers": [
+      "a) funcțiile inline nu pot fi funcții virtuale;",
+      "b) constructorii pot fi funcții virtuale;",
+      "c) orice funcție membru statică este funcție virtuală;",
+      "d) destructorul poate fi funcție virtuală."
+    ],
+    "correctAnswerIndexes": [0,3]
+  },
+  {
+    "id": 23,
+    "question": "Fie programul:<br>#include <iostream.h><br>class Cerc{<br>float raza;<br>public:<br>Cerc(float r){raza=r;}<br>float get_raza(){return raza;}<br>void operator++(){raza++;}<br>};<br>class Cilindru : public Cerc{<br>float inaltime;<br>public:<br>Cilindru(float raza, float i):Cerc(raza){inaltime=i;}<br>void operator++(){inaltime++;}<br>float get_inaltime(){return inaltime;}<br>};<br>int main(){<br>Cerc *pc;<br>Cilindru c(2,6);<br>pc=&c;<br>++ *pc;<br>cout<<pc->get_raza()<<\" \"<<c.get_inaltime()<<endl;<br>return 0;<br>}<br>Programul afișează:",
+    "answers": [
+      "a) 2 5",
+      "b) 2 6",
+      "c) 3 6",
+      "d) 2 5"
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 24,
+    "question": "Care dintre afirmațiile următoare sunt false?",
+    "answers": [
+      "a) obiectele unei clase derivate au acces la membrii privați ai clasei sale de bază;",
+      "b) relația de moștenire este tranzitivă;",
+      "c) funcțiile friend ale clasei de bază se moștenesc de către clasa derivată;",
+      "d) constructorul și destructorul clasei de bază se moștenesc în clasa derivată."
+    ],
+    "correctAnswerIndexes": [0,2,3]
+  },
+  {
+    "id": 25,
+    "question": "Fie următorul program:<br>#include<ostream.h><br>class persoana{<br>int varsta, salariul;<br>friend ostream & operator<<(ostream &out,persoana p){<br>out<<p.varsta<<\" \"<<p.salariul; return out;<br>}<br>public:<br>persoana(int v){varsta=v;salariul=0;}<br>persoana(){varsta=0;salariul=0;}<br>};<br>int main(){<br>persoana p(1);cout<<p;<br>return 0;<br>}<br>Programul afișează:",
+    "answers": [
+      "a) 1 0",
+      "b) 0 0",
+      "c) 1 1",
+      "d) 0 1"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 26,
+    "question": "Supraîncărcarea unor operatori se poate realiza prin funcţii operator sau prin funcţii friend. Diferența dintre aceste două posibilități constă în:",
+    "answers": [
+      "a) lista de parametri;",
+      "b) obiectul returnat;",
+      "c) precedența operatorilor;",
+      "d) aritatea operatorului."
+    ],
+    "correctAnswerIndexes": [0,2]
+  },
+  {
+    "id": 27,
+    "question": "Fie programul:<br>class c{<br>int a;<br>public:<br>c(){};<br>c(const c&){};<br>void operator=(c&){};<br>};<br>int main(){<br>c a;<br>c b=a;<br>}<br>Linia de cod c b=a; determină:<br>",
+    "answers": [
+      "a) executarea constructorului de copiere;",
+      "b) executarea metodei prin care se supraîncărcă operatorul =;",
+      "c) executarea atât a constructorului de copiere, cât și a metodei operator =;",
+      "d) o eroare, deoarece nu este permisă combinarea atribuirii cu o declarație;",
+      "e) executarea constructorului implicit."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 28,
+    "question": "Fie următorul program:<br>#include<iostream.h><br>class cls{<br>public:<br>~cls(){cout<<\"<br> Destructor\";}<br>};<br>int main(){<br>cls *po=new cls[3];<br>delete []po;<br>}<br>Destructorul clasei:<br>",
+    "answers": [
+      "a) nu se apelează nicio dată;",
+      "b) se apelează o dată;",
+      "c) se apelează de trei ori;",
+      "d) se apelează de patru ori."
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 29,
+    "question": "O funcție independentă declarată friend în domeniul public dintr-o clasă și care primește ca parametru o referință la un obiect al clasei respective are acces:<br>",
+    "answers": [
+      "a) doar la membrii declarați public;",
+      "b) la toți membrii;",
+      "c) la membrii public și la cei protected;",
+      "d) la membrii protected."
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 30,
+    "question": "Fie următorul program:<br>#include<iostream.h><br>class A{<br>int a[3];<br>public:<br>A(int i, int j, int k){a[0]=i; a[1]=j; a[2]=k;}<br>int& operator[](int i){return a[i];}<br>};<br>int main(){<br>A ob(1,2,3); cout<<ob[1];<br>ob[1]=25; cout<<ob[1];<br>return 0;<br>}<br>Ce se poate afirma despre operator[]()?<br>",
+    "answers": [
+      "a) produce supraîncărcarea unei funcţii;",
+      "b) produce supraîncărcarea unui operator unar;",
+      "c) supraîncarcă operatorul [];",
+      "d) este o funcţie membru oarecare a clasei A, care nu produce supraîncărcarea unui operator;",
+      "e) reprezintă un operator ternar."
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 31,
+    "question": "Considerăm următorul program:<br>#include<iostream.h><br>class C{<br>public:<br>int x;<br>C(int v) { x=v;}<br>double operator+(C &c, double d){return c.x+d;}<br>double operator+(double d, C &c){return c.x+d;}<br>};<br>int main() {<br>C c(5);<br>cout<<2+c+3;<br>return 0;<br>}<br>Stabiliți care dintre următoarele afirmații sunt adevărate:<br>",
+    "answers": [
+      "a) supraîncărcările operator + () trebuie să fie friend;",
+      "b) supraîncărcările operator+() nu se justifică deoarece au același cod;",
+      "c) programul afișează 10;",
+      "d) supraîncărcările operator+() trebuie să returneze referințe."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 32,
+    "question": "Fie programul:<br>#include<iostream.h><br>class c1{ int a;};<br>class c2:public c1{<br>public:<br>int b;<br>void scrie_a( ) { cout<<a; }<br>};<br>int main(){<br>c2 ob; ob.scrie_a();<br>return 0;<br>}<br>Selectaţi afirmaţia corectă:<br>",
+    "answers": [
+      "a) funcția scrie_a( ) nu are acces asupra unui membru privat;",
+      "b) programul afișează valoarea lui a;",
+      "c) derivarea publică este incorect realizată;",
+      "d) prin derivare publică, accesul la membrii moşteniţi devine public."
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 33,
+    "question": "Fie programul următor:<br>#include<iostream.h><br>class B{<br>int x;<br>public:<br>B(int i=10) { x=i;}<br>int get_x() { return x; }<br>};<br>class D: public B{<br>public:<br>D(int i):B(i){}<br>D operator+(const D& a) {return x+a.x; }<br>};<br>int main(){<br>D ob1(7), ob2(-12);<br>cout<<(ob1+ob2).get_x();<br>return 0;<br>}<br>Programul afișează:<br>",
+    "answers": [
+      "a) eroare, clasa B nu poate fi moștenită de clasa D;",
+      "b) eroare, metoda operator nu are acces la un membru privat al clasei de bază;",
+      "c) programul afișează valoarea -5;",
+      "d) eroare, operatorul + nu se poate aplica pentru tipuri abstracte de date."
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 34,
+    "question": "Fie următorul program:<br>#include<iostream.h><br>class B1{int x;};<br>class B2{int y;};<br>class B3{int z;};<br>class B4{int t;};<br>class D: public B1, private B2, protected B3,B4 {public : int m;};<br>int main(){<br>D d;<br>cout<<d.m; //varianta 1<br>cout<<d.x; //varianta 2<br>cout<<d.y; //varianta 3<br>return 0;<br>}<br>Variantele care permit accesul la variabile pentru afișare sunt:<br>",
+    "answers": [
+      "a) 1+3;",
+      "b) 1+2;",
+      "c) 1+2+3;",
+      "d) 1"
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 35,
+    "question": "Considerăm următorul program:<br>class vector{<br>int * pe, nr_c;<br>public:<br>operator int (){return nr_c;}<br>vector(int);<br>};<br>vector::vector(int n){<br>pe=new int[n]; nr_c=n;<br>while(n--) pe[n]=n;<br>}<br>void f(int i){cout<<i<<endl;}<br>int main(){<br>vector x(10);<br>f(x);<br>return 0;<br>}<br>Programul afişează:<br>",
+    "answers": [
+      "a) 9",
+      "b) 10",
+      "c) numerele de la 1 la 10",
+      "d) numerele de la 0 la 9"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 36,
+    "question": "Considerăm următorul program:<br>class c{<br>int a;<br>public:<br>virtual void metoda1()=0;<br>virtual void metoda2(int)=0;<br>};<br>int main{<br>c *pob; //declaraţia 1<br>c ob; //declaraţia 2<br>c *vpob[3]; //declaraţia 3<br>c vob[3]; //declaraţia 4<br>return 0;<br>}<br>Declaraţiile admise:<br>",
+    "answers": [
+      "a) 1+2;",
+      "b) 1+2+3+4",
+      "c) nici una",
+      "d) 1+3;"
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 37,
+    "question": "Fie data următoarea ierarhie:<br>class B {… }<br>class D1:B{…}<br>class D2:B{…}<br>class M1:D1, public D2{…}<br>class M2:virtual D1, virtual D2 {…}<br>Considerăm următoarele afirmaţii:<br>1. clasa M1 va moşteni un obiect de tip B;<br>2. clasa M1 va moşteni două obiecte de tip B;<br>3. clasa M2 va va moşteni un obiect de tip B;<br>4. clasa M2 va moşteni două obiecte de tip B.<br>Precizaţi care dintre afirmaţiile de mai sus sunt corecte:<br>",
+    "answers": [
+      "a) 2+3",
+      "b) 1+2",
+      "c) 1+3",
+      "d) 2+4"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 38,
+    "question": "Fie următorul program:<br>#include<iostream.h><br>class B{<br>public:<br>int x;<br>B(int i=10) { x=i; }<br>B f(B ob) { return x+ob.x; }<br>};<br>class D: public B{<br>public:<br>D(int i=25) { x=i; }<br>B f(B ob) { return x+ob.x+1; }<br>void afisare(){ cout<<x; }<br>};<br>int main(){<br>B *p1=new D, *p2=new B, *p3=new B(p1->f(*p2));<br>cout<<p3->x;<br>return 0;<br>}<br>Programul afişează:<br>",
+    "answers": [
+      "a) 41",
+      "b) eroare, nu se poate instanţia un obiect al unei clase derivate printr-un pointer la un obiect de<br>tip clasa de bază;",
+      "c) 44",
+      "d) 45"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 39,
+    "question": "Fie următorul program:<br>#include<iostream.h><br>class B{<br>int i;<br>public:<br>static int x;<br>B() { x++; i=1; }<br>~B() { x--; }<br>static int get_x() { return x; }<br>int get_i() { return i; }<br>};<br>int B::x;<br>class D: public B{<br>public:<br>D() { x++; }<br>~D() { x--; }<br>};<br>int f(B *q){ return (q->get_i())+1;}<br>int main(){<br>B *p=new B;<br>cout<<f(p);<br>delete p;<br>p=new D;<br>cout<<f(p);<br>delete p;<br>cout<<D::get_x();<br>return 0;<br>}<br>Programul afişează:<br>",
+    "answers": [
+      "a) eroare, data membră statică x nu este iniţializată;",
+      "b) eroare, metoda get_x() nu poate fi declarată static;",
+      "c) programul afişează valoarea 221;",
+      "d) programul afişează valoarea 220."
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 40,
+    "question": "Fie următorul program:<br>#include <iostream.h><br>template<class T, class E><br>float f(T x, E y){ return x+y;}<br>float g(int x, float y){ return x-y;}<br>int main(){<br>int a=5;<br>float b=8.6;<br>cout<<g(a,b);<br>return 0;<br>}<br>Programul afişează:<br>",
+    "answers": [
+      "a) 3",
+      "b) eroare, parametrizarea clasei T este incorrect realizată",
+      "c) 13.6",
+      "d) -3.6"
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 41,
+    "question": "Fie următorul program:<br>#include <iostream.h><br>template<class T><br>int f(T x, T y){ return x+y;}<br>int f(int x, int y){ return x-y;}<br>int main(){<br>int a=5;<br>float b=8.6;<br>cout<<f(a,b);<br>return 0;<br>}<br>Programul afişează:<br>e) -3<br>f) eroare, parametrizarea clasei T este incorrect realizată<br>g) 13.6<br>h) 3.6",
+    "answers": [
+      "e) -3",
+      "f) eroare, parametrizarea clasei T este incorrect realizată",
+      "g) 13.6",
+      "h) 3.6"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 42,
+    "question": "Fie următorul program:<br>#include<iostream.h><br>class B{<br>int x;<br>public:<br>B(int i=10) { x=i; }<br>int get_x() { return x; }};<br>class D: public B{<br>public:<br>D(int i):B(i) {}<br>D operator+(const D& a) {return x+a.x; }};<br>int main()<br>{ D ob1(7), ob2(-12);<br>cout<<(ob1+ob2).get_x();<br>return 0;<br>}<br>Indicați ce se va afișa pe ecran în urma executării programului:<br>",
+    "answers": [
+      "a) -5",
+      "b) -4",
+      "c) eroare, în clasa derivată D nu se poate accesa data membră privată x a clasei B",
+      "d) -3"
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 43,
+    "question": "Fie următorul program:<br>#include<iostream.h><br>class B{<br>public:<br>int x;<br>B(int i=16) { x=i; }<br>B f(B ob) { return x+ob.x; } };<br>class D: public B{<br>public:<br>D(int i=25) { x=i; }<br>B f(B ob) { return x+ob.x+1; }<br>void afisare(){ cout<<x; } };<br>int main()<br>{<br>B *p1=new D, *p2=new B, *p3=new B(p1->f(*p2));<br>cout<<p3->x;<br>return 0;<br>}<br>Programul afişează:<br>",
+    "answers": [
+      "a) 41",
+      "b) eroare, în clasa derivată D nu se poate accesa data membră x a clasei B",
+      "c) 16",
+      "d) 25"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 44,
+    "question": "Fie următorul program:<br>#include<iostream.h><br>class cls1{<br>public:<br>int a;<br>cls1() { a=7; }<br>};<br>class cls2{<br>public:<br>int b;<br>cls2(int i) { b=i; }<br>cls2(cls1& x) { b=x.a; }<br>};<br>int main(){<br>cls1 x;<br>cout<<x.a;<br>cls2 y(x);<br>cout<<y.b;<br>return 0;<br>}<br>Programul afișează:",
+    "answers": [
+      "e) 7 7",
+      "f) eroare, constructorul de copiere nu este corect definit",
+      "g) eroare, constructorul de copiere nu poate accesa o dată publică a clasei cls1",
+      "h) 78"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 45,
+    "question": "O funcţie friend diferă de o metodă obişnuită a unei clase prin faptul că:",
+    "answers": [
+      "a) nu se poate defini inline;",
+      "b) nu primeşte pointerul implicit la obiect this;",
+      "c) nu poate accesa decât partea publică a obiectului;",
+      "d) se foloseşte doar pentru supraîncărcarea operatorilor;",
+      "e) nu poate returna valori."
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 46,
+    "question": "O funcţie independentă declarată friend în domeniul private dintr-o clasă și care primește ca parametru o referinţă la un obiect al clasei respective are acces:",
+    "answers": [
+      "a) doar la membrii publici;",
+      "b) la toți membrii;",
+      "c) la membrii public și protected;",
+      "d) la membrii private;",
+      "e) la toți membrii, dar îl poate doar consulta, nu și modifica."
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 47,
+    "question": "O funcţie independentă declarată friend în domeniul public dintr-o clasă și care primește ca parametru o referinţă la un obiect al clasei respective are acces:",
+    "answers": [
+      "a) doar la membrii publici;",
+      "b) la toți membrii;",
+      "c) la membrii public și protected;",
+      "d) la membrii private;",
+      "e) la toți membrii, dar îl poate doar consulta, nu și modifica."
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 48,
+    "question": "Fie următorul program:<br>#include <iostream><br>using namespace std;<br>class c{<br>int a;<br>public :<br>c() {}<br>c(const c&);<br>c& operator =(c&);};<br>c& c::operator=(c &c){ cout << endl << \"copiere cu egal\"; return c;}<br>c::c(const c &c) { cout << endl << \"Constructor de copiere\"; }<br>int main()<br>{<br>c x,y=x;<br>c b=x; x=y;<br>};<br>Programul:",
+    "answers": [
+      "a) apeleaza de doua ori operator=(), o data constructorul de copiere si o data constructorul implicit;",
+      "b) apeleaza de trei ori constructorul de copiere, o data constructorul implicit;",
+      "c) apeleaza de trei ori supraincarcarea operatorului =;",
+      "d) apeleaza de doua ori constructorul de copiere si de trei ori operator=();",
+      "e) apeleaza de doua ori constructorul de copiere, o data operator=() si o data constructorul implicit;"
+    ],
+    "correctAnswerIndexes": [4]
+  },
+  {
+    "id": 49,
+    "question": "De câte ori este apelat destructorul clasei Persoana în programul următor?<br>#include <iostream><br>using namespace std;<br>class Persoana{<br>public:<br>Persoana() {cout<<\"Constructor\"<<endl;}<br>~Persoana() {cout<<\"Destructor\"<<endl;}};<br>int main(){<br>Persoana** ppp;<br>ppp = new Persoana*[5];<br>for(int i=0; i<5; i++)<br>ppp[i] = new Persoana();<br>for(int i=0; i<5; i++)<br>delete ppp[i];<br>}<br>Răspuns:",
+    "answers": [
+      "a. 10;",
+      "b. 6;",
+      "c. 7;",
+      "d. 5;",
+      "e. niciunul din răspunsurile anterioare."
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 50,
+    "question": "În programul următor:<br>#include <iostream><br>using namespace std;<br>class Persoana{<br>int varsta;<br>char* nume;<br>public:<br>Persoana(int v=0, char* n=\"Oarecare\"):varsta(v){<br>this->nume = new char[strlen(n)+1];<br>strcpy(this->nume,n);<br>cout<<\"Constructor\"<<endl;}<br>Persoana(Persoana& p){<br>this->varsta = p.varsta;<br>this->nume = new char[strlen(p.nume)+1];<br>strcpy(this->nume, p.nume);<br>cout<<\"Constructor de copiere\"<<endl;}<br>void operator=(Persoana& p){<br>this->varsta = p.varsta;<br>delete[] this->nume;<br>this->nume = new char[strlen(p.nume)+1];<br>strcpy(this->nume, p.nume);<br>cout<<\"Operator=\"<<endl;}<br>~Persoana(){ cout<<\"Destructor\"<<endl;}};<br>int main()<br>{<br>Persoana p1, p2(20, \"Gigel\");<br>Persoana p3 = p1;<br>p3 = p2;<br>Persoana p4 = p1;<br>}<br>Sunt apelate următoarele:",
+    "answers": [
+      "a. constructor – de patru ori, constructor de copiere – o dată, destructor – de patru ori;",
+      "b. constructor – de trei ori, constructor de copiere - de două ori, destructor de cinci ori;",
+      "c. constructor – de două ori, constructor de copiere – de două ori, operator= - o dată, destructor – de patru ori;",
+      "d. constructor – de două ori, constructor de copiere – o dată, operator= - de două ori, destructor – de două ori;",
+      "e. constructor – de două ori, constructor de copiere – o dată, operator= - de două ori, destructor – de patru ori."
+    ],
+    "correctAnswerIndexes": [2]
+  }
+]

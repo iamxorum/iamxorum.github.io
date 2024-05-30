@@ -1,0 +1,24 @@
+[
+  {
+    "id": 0,
+    "question": "Primul fișier imagine încărcat într-o pagină HTML poate fi schimbat cu un alt fișier dacă se utilizează:",
+    "answers": [
+      "a. window.images[1].src=\"image.jpg\";",
+      "b. document.status.images[1].src=\"image.jpg\";",
+      "c. document.images[1].src=\"poza.jpg\";",
+      "d. document.images[0].src=\"poza.jpg\";"
+    ],
+    "correctAnswerIndexes": []
+  },
+  {
+    "id": 1,
+    "question": "Imaginea de fundal a unei pagini Web nu se stabilește folosind:",
+    "answers": [
+      "a. <img background=\"p.gif\">;",
+      "b. <body background-img=\"image/imagine.gif\">;",
+      "c. <body bgcolor=\"p.gif\">;",
+      "d. <body background-image=\"image/imagine.gif\">;"
+    ],
+    "correctAnswerIndexes": []
+  }
+]

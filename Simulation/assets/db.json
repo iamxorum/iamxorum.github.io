@@ -1,0 +1,598 @@
+[
+  {
+    "id": 1,
+    "question": "O bază de date reprezintă:",
+    "answers": [
+      "A. Un ansamblu de posturi de lucru, fişiere şi unităţi de prelucrare",
+      "B. Un ansamblu de articole secvenţiale accesate direct",
+      "C. Un ansamblu de înregistrări accesate în paralel",
+      "D. Un ansamblu integrat de înregistrări sau de fişiere interconectate în mod logic",
+      "E. Suportul pentru înregistrarea datelor"
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 2,
+    "question": "Depozitul de date reprezintă:",
+    "answers": [
+      "A. O colecţie de informaţii privind un sector dintr-o întreprindere sau o firmă",
+      "B. O bază de date împreună cu SGBD-ul asociat",
+      "C. O colecţie de date organizate secvenţial",
+      "D. O bază de date special concepută prin agregarea tuturor datelor dintr-o organizaţie sau întreprindere, în vederea sprijinirii procesului de luare a deciziilor",
+      "E. O bibliotecă de informaţii privind un anumit sector economic"
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 3,
+    "question": "Nivelul fizic de abstractizare a datelor permite:",
+    "answers": [
+      "A. Utilizarea concretă a posibilităţilor SGBD-ului",
+      "B. Proiectarea dicţionarului de date",
+      "C. Asigurarea securităţii datelor",
+      "D. Automatizarea operaţiilor de întreţinere şi dezvoltare a programelor",
+      "E. Descrierea structurii sub care datele se regăsesc pe suportul de memorare"
+    ],
+    "correctAnswerIndexes": [4]
+  },
+  {
+    "id": 4,
+    "question": "Când se recomandă să se introducă datele într-o baza de date?",
+    "answers": [
+      "A. După crearea fiecărei tabele în parte",
+      "B. După crearea tuturor tabelelor şi definirea restricţiilor",
+      "C. După crearea tuturor tabelelor",
+      "D. Oricând",
+      "E. Datele sunt introduse de către administrator. Utilizatorii doar interoghează baza de date"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 5,
+    "question": "Care dintre următoarele enunţuri caracterizează modelul relaţional?",
+    "answers": [
+      "A. Este singurul model în care structura datelor este definită prin normalizare",
+      "B. Asigură independenţa dintre date şi prelucrari",
+      "C. Este fundamentat pe teoria matematică a relaţiilor",
+      "D. Respectă restricţiile referenţiale",
+      "E. Trebuie să existe cel puţin o cheie secundară"
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 6,
+    "question": "Intersecţia a două relaţii:",
+    "answers": [
+      "A. Are ca rezultat o relaţie cu un număr dublu de linii",
+      "B. Are ca rezultat o relaţie cu un număr de două ori mai mic de linii",
+      "C. Este o operaţie unară",
+      "D. Cere ca acestea sa aibă aceeaşi schemă",
+      "E. Va avea ca rezultat o relaţie cu gradul egal cu suma gradelor relaţiilor iniţiale"
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 7,
+    "question": "Se dă tabelul:<br>ANGAJATI (CodAngaj, Nume, DataAngajare, Compartiment, Profesia, Salariu)<br>Care dintre următoarele instrucţiuni (Transact) SQL permite afişarea numărului de salariaţi pentru fiecare compartiment care incepe cu litera \"J\"?",
+    "answers": [
+      "A. SELECT COUNT(CodAngajat) AS Numar, Compartiment FROM ANGAJATI WHERE Compartiment LIKE ‘J%’ GROUP BY Compartiment",
+      "B. SELECT CodAngajat, Nume, Compartiment FROM ANGAJATI WHERE Nume LIKE ‘J%’",
+      "C. SELECT COUNT(CodAngajat) AS Numar, Nume, Compartiment FROM ANGAJATI WHERE Compartiment LIKE ‘J%’ GROUP BY Compartiment",
+      "D. SELECT CodAngajat, Nume, Compartiment FROM ANGAJATI WHERE Compartiment LIKE ‘J%’",
+      "E. Niciuna dintre cele de mai sus"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 8,
+    "question": "Ce se va obţine prin următoarea interogare (Transact) SQL:<br>SELECT Nume FROM STUDENTI INNER JOIN LOCALIT ON STUDENTI.CodLoc=LOCALIT.CodLoc WHERE CodLoc IN (SELECT CodLoc FROM STUDENTI WHERE Nume = ‘Ionescu M Petre’) ?",
+    "answers": [
+      "A. Numele studenţilor asemănătoare cu Ionescu M Petre",
+      "B. Codul localităţii din care este studentul Ionescu M Petre",
+      "C. Numărul studenţilor care sunt din aceeaşi localitate cu Ionescu M Petre",
+      "D. Fraza SELECT este scrisă greşit",
+      "E. Numele studenţilor care sunt din aceeaşi localitate cu Ionescu M Petre"
+    ],
+    "correctAnswerIndexes": [4]
+  },
+  {
+    "id": 9,
+    "question": "Se dă următoarea instrucțiune (Transact) SQL:<br>SELECT NrFactura FROM CLIENTI INNER JOIN FACTURIEMISE ON CLIENTI.CodClient=FACTURIEMISE.Codclient WHERE ValTot IN (100, 200)<br>În urma execuţiei acestei interogări se obţin:",
+    "answers": [
+      "A. Numai facturile emise cu valoare intre 100 şi 200, exclusiv capetele",
+      "B. Numai facturile emise cu valoare între 100 şi 200, inclusiv aceste valori",
+      "C. Numai facturile emise cu valoarea de 100 sau 200",
+      "D. Numai facturile emise cu valoare fie mai mică de 100, fie mai mare de 200",
+      "E. Nimic, interogarea este greşită"
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 10,
+    "question": "Se dă tabelul:<br>CHITANTE (NrChitanta, Suma, Data, NrGhiseu )<br>Care dintre următoarele instrucţiuni (Transact) SQL are ca efect afişarea zilelor in care s-au emis cel puţin 3 chitanţe?",
+    "answers": [
+      "A. SELECT Nrchitanta, Suma, Data FROM CHITANTE WHERE COUNT(NrChitanta)>=3",
+      "B. SELECT Nrchitanta, Suma, Data FROM CHITANTE HAVING COUNT(NrChitanta)>=3",
+      "C. SELECT COUNT(Data), COUNT(NrChitanta) FROM CHITANTE WHERE Data IS NULL",
+      "D. SELECT Data FROM CHITANTE WHERE COUNT(NrChitanta) >=3",
+      "E. SELECT CHITANTE.Data FROM CHITANTE GROUP BY CHITANTE.Data HAVING COUNT(NrChitanta) >= 3"
+    ],
+    "correctAnswerIndexes": [4]
+  },
+  {
+    "id": 11,
+    "question": "Se dă tabelul:<br>ANGAJATI (CodAngaj, Nume, DataAngajare, Compartiment, Profesia, Salariu)<br>Care dintre următoarele instrucţiuni (Transact) SQL permite majorarea salariului cu 3% pentru salariaţii angajaţi în anul 2010?",
+    "answers": [
+      "A. UPDATE Angajati SET Salariu = Salariu + 3% WHERE DataAngajare IN 2010",
+      "B. UPDATE Salariu FROM Angajati SET Salariu=Salariu + 3%* Salariu WHERE DataAngajare IN ('1/1/2010' , '31/12/2010')",
+      "C. UPDATE Angajati SET Salariu = Salariu*1.03 WHERE YEAR(DataAngajare)= 2010",
+      "D. UPDATE Salariu FROM Angajati SET Salariu = Salariu * 1.03 WHERE DataAngajare BETWEEN '1/1/2010' AND '31/12/2010'",
+      "E. Niciuna"
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 12,
+    "question": "Se dă entitatea ANGAJATI, cu următoarele atribute:<br>ANGAJATI (CodAngaj, Nume, DataAngajare, Compartiment, Profesia, Salariu)<br>Care dintre următoarele instrucţiuni (Transact) SQL permite ştergerea salariaţilor angajati înainte de începutul anului 2010, cu profesia \"informatician\"?",
+    "answers": [
+      "A. DELETE FROM Angajati WHERE DataAngajare < '1/12/2009' AND Profesia LIKE '%informatician%'",
+      "B. DELETE * FROM Angajati WHERE Profesia LIKE 'informatician' HAVING YEAR(DataAngajare) < 2010",
+      "C. UPDATE Angajati SET CodAngaj = Null WHERE DataAngajare <'1/1/2010' AND Profesia LIKE '%informatician%'",
+      "D. Niciuna",
+      "E. DELETE FROM Angajati WHERE DataAngajare < '1/1/2010' AND Profesia LIKE '%informatician%'"
+    ],
+    "correctAnswerIndexes": [4]
+  },
+  {
+    "id": 13,
+    "question": "Care dintre următoarele comenzi SQL sunt destinate manipulării datelor?",
+    "answers": [
+      "A. INSERT",
+      "B. CREATE TABLE",
+      "C. UPDATE",
+      "D. ROLLBACK",
+      "E. DELETE",
+      "F. COMMIT"
+    ],
+    "correctAnswerIndexes": [0,2,4]
+  },
+  {
+    "id": 14,
+    "question": "Pentru o baza de date relaţională algebra relaţională este:",
+    "answers": [
+      "A. Completa (permite să extrag orice informaţii din bază)",
+      "B. Procedurală (Arată şi modul cum se obţin informaţiile din baza de date)",
+      "C. Complexă (permite să extrag informaţii obiectuale)",
+      "D. Limbaj formal",
+      "E. Limbaj de definire a rapoartelor",
+      "F. Limbaj de interogare"
+    ],
+    "correctAnswerIndexes": [0,1,3,5]
+  },
+  {
+    "id": 15,
+    "question": "Când creaţi o bază de date, care sunt fişierele care trebuie create obligatoriu?",
+    "answers": [
+      "A. Un fişier de date primar",
+      "B. Un fişier de date primar şi un fişier de log",
+      "C. Un fişier de date primar, un fişier de date secundar şi un fişier de log",
+      "D. Un fişier de log primar"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 16,
+    "question": "Folosind tabela cadru_did(cod, nume, graddid, data_ang, sal_neg, sal_merit), creată şi populată cu date, se consideră următoarele exemple:<br>1. SELECT graddid, max(sal_neg)<br>FROM cadru_did<br>WHERE max(sal_neg) > 1600<br>GROUP BY graddid<br>2. SELECT graddid, max(sal_neg)<br>FROM cadru_did<br>GROUP BY graddid<br>HAVING max(sal_neg) > 1600<br>Să se aleagă răspunsul corect:",
+    "answers": [
+      "A. Exemplul (1) este corect",
+      "B. Exemplul (2) este corect",
+      "C. Exemplul (2) nu este corect",
+      "D. Exemplele (1) şi (2) sunt corecte",
+      "E. Exemplul (1) nu este corect",
+      "F. Nici un exemplu nu este corect"
+    ],
+    "correctAnswerIndexes": [1,4]
+  },
+  {
+    "id": 17,
+    "question": "Cu ajutorul comenzii SELECT :<br>A. Se poate realiza joncţiunea externă(outer-join) între tabele<br>B. Se poate realiza joncţiunea de egalitate(equi-join) între tabele<br>C. Nu se pot realiza joncţiuni între tabele<br>D. Se poate realiza joncţiunea de neegalitate(non-equi-join) între tabele<br>E. Se poate modifica structura unei tabele<br>F. Se poate lega o tabelă cu ea însăşi",
+    "answers": [
+      "A. Se poate realiza joncţiunea externă(outer-join) între tabele",
+      "B. Se poate realiza joncţiunea de egalitate(equi-join) între tabele",
+      "C. Nu se pot realiza joncţiuni între tabele",
+      "D. Se poate realiza joncţiunea de neegalitate(non-equi-join) între tabele",
+      "E. Se poate modifica structura unei tabele",
+      "F. Se poate lega o tabelă cu ea însăşi"
+    ],
+    "correctAnswerIndexes": [0,1,3,5]
+  },
+  {
+    "id": 18,
+    "question": "Următoarele interogări:<br>1. SELECT * FROM comenzi c<br>WHERE ‘penar’=(SELECT den_prod FROM produs p WHERE p.codp=c.codp)<br>2. SELECT c.nr_cda, c.codp, c.cant, c.data, c.codfisc<br>FROM comenzi c, produs p<br>WHERE p.codp=c.codp AND p.den_prod=’penar’",
+    "answers": [
+      "A. Sunt identice ca efect",
+      "B. Sunt diferite ca efect",
+      "C. Ar fi identice ca efect dacă în cererea 2 s-ar folosi operatorul OR în loc de AND",
+      "D. Afişează rezultate complet diferite"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 19,
+    "question": "Folosind relaţia cadru_did(cod, nume, graddid, data_ang, sal_neg, sal_merit), să se specifice care dintre următoarele exemple sunt corecte:<br>A. SELECT avg(sal_neg) FROM cadru_did<br>B. SELECT graddid, sum(sal_neg) FROM cadru_did<br>C. SELECT graddid, avg(sal_neg) FROM cadru_did GROUP BY graddid<br>D. SELECT graddid, sum(sal_neg), count(cod) FROM cadru_did GROUP BY data_ang<br>E. SELECT graddid, avg(sal_neg) FROM cadru_did WHERE avg(sal_neg) > 1800",
+    "answers": [
+      "A. SELECT avg(sal_neg) FROM cadru_did",
+      "B. SELECT graddid, sum(sal_neg) FROM cadru_did",
+      "C. SELECT graddid, avg(sal_neg) FROM cadru_did GROUP BY graddid",
+      "D. SELECT graddid, sum(sal_neg), count(cod) FROM cadru_did GROUP BY data_ang",
+      "E. SELECT graddid, avg(sal_neg) FROM cadru_did WHERE avg(sal_neg) > 1800"
+    ],
+    "correctAnswerIndexes": [0,2]
+  },
+  {
+    "id": 20,
+    "question": "Interogarea:<br>SELECT min(nume), sum(nume), count(*)<br>FROM tabela<br>WHERE salariu = max(salariu)",
+    "answers": [
+      "A. Este greşită deoarece funcţia min() nu se foloseşte cu şiruri de caractere",
+      "B. Este greşită deoarece funcţia sum() nu se foloseşte cu şiruri de caractere",
+      "C. Este corectă",
+      "D. Este greşită deoarece funcţia max() nu se foloseşte în clauza WHERE",
+      "E. Este greşită deoarece nu se foloseşte * în funcţia count()"
+    ],
+    "correctAnswerIndexes": [1,3]
+  },
+  {
+    "id": 21,
+    "question": "Se poate folosi acelaşi nume pentru mai multe tabele?",
+    "answers": [
+      "A. Da, dar să nu aparţină aceleeaşi baze de date",
+      "B. Da, dacă nu aparţin aceleeaşi scheme",
+      "C. Nu",
+      "D. Da, dacă nu aparţin aceluiaşi proprietar",
+      "E. Da, dacă aparţin aceleeaşi scheme",
+      "F. Da, dar să nu aparţină aceleaşi instanţe"
+    ],
+    "correctAnswerIndexes": [1,3]
+  },
+  {
+    "id": 22,
+    "question": "Interogările din SQL sunt la fel de expresive cu:",
+    "answers": [
+      "A. Algebra relationala",
+      "B. Calculul relational al domeniilor",
+      "C. Calculul procedural",
+      "D. Calculul relational al tuplurilor",
+      "E. Calculul bazat pe tablouri"
+    ],
+    "correctAnswerIndexes": [0,1,3]
+  },
+  {
+    "id": 23,
+    "question": "Avem apriori o multitudine de restricţii, dată de o mulţime de dependenţe funcţionale F. Aceasta este folosită la:",
+    "answers": [
+      "A. Normalizarea bazei de date",
+      "B. Crearea bazei de date",
+      "C. Crearea procedurilor de interogare",
+      "D. La validarea stării bazei de date",
+      "E. Construcţia algebrei relaţionale"
+    ],
+    "correctAnswerIndexes": [0,3]
+  },
+  {
+    "id": 24,
+    "question": "Fie tabelul METEO(localit varchar(30), tempmin numeric(3), tempmax numeric(4)). Să se stabilească în care dintre exemplele următoare se folosesc incorect operatorii aritmetici:",
+    "answers": [
+      "A. SELECT localit, -tempmin minim, +tempmax maxim FROM meteo",
+      "B. SELECT localit, (tempmax-tempmin) diferenta FROM meteo",
+      "C. SELECT -localit, -tempmin FROM meteo",
+      "D. SELECT localit, (tempmax-tempmin)-1 FROM meteo",
+      "E. SELECT localit*2, tempmax*2 FROM meteo"
+    ],
+    "correctAnswerIndexes": [2,4]
+  },
+  {
+    "id": 25,
+    "question": "Operatorul NOT se poate folosi cu:",
+    "answers": [
+      "A. Operatorul LIKE",
+      "B. Operatorul IS NULL",
+      "C. Operatorul >",
+      "D. Operatorul IN (lista)",
+      "E. Operatorul <>"
+    ],
+    "correctAnswerIndexes": [0,1,3]
+  },
+  {
+    "id": 26,
+    "question": "Fragmentarea verticală se obţine dintr-o relaţie prin:",
+    "answers": [
+      "A. Selecţii şi replicări",
+      "B. Selecţii şi proiecţii",
+      "C. Proiecţie",
+      "D. Unire (Join)",
+      "E. Introducerea de chei externe"
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 27,
+    "question": "Se dau tabelele:<br>PERSONAL(Marca, Numepren, Compart, Datasv, Salorar, Salorarco, Compart)<br>PONTAJE(Marca, Data, Orelucrate, Oreco, Orenoapte, Oreabsnem)<br>Ce afişează următoarea interogare?<br>SELECT ZILE1.Data AS Ziua<br>FROM (SELECT Data FROM PONTAJE po INNER JOIN PERSONAL pe ON<br>po.Marca=pe.Marca WHERE Numepren = 'Popescu') ZILE1<br>INNER JOIN (SELECT Data FROM PONTAJE po INNER JOIN PERSONAL pe ON<br>po.Marca =pe.Marca WHERE Numepren='Georgescu') ZILE2<br>ON ZILE1.Data=ZILE2.Data",
+    "answers": [
+      "A. Angajatul care a lucrat mai multe zile",
+      "B. Numărul total de zile în care au lucrat cei doi angajaţi",
+      "C. Numărul de zile lucrate de fiecare angajat",
+      "D. Zilele în care au lucrat simultan cei doi angajaţi",
+      "E. Numărul de zile în care nu au lucrat cei doi angajaţi"
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 28,
+    "question": "Se dau tabelele:<br>ANGAJATI(ID_Angajat, Nume, ID_Compart, Salariu)<br>COMPARTIMENT (ID_Compart, Nume_Compart)<br>şi următoarea interogare:<br>SELECT a.ID_Angajat, a.Nume, c.ID_Compart, c. Nume_Compart<br>FROM ANGAJATI a, COMPARTIMENT c<br>WHERE a. ID_Compart = c. ID_Compart<br>Ce operaţii implementează această interogare?",
+    "answers": [
+      "A. Diferenţa, proiecţia şi join",
+      "B. Selecţia, intersecţia şi join",
+      "C. Intersecţia, proiecţia şi join",
+      "D. Selecţia, proiecţia şi join",
+      "E. Diferenţa, intersecţia şi join"
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 29,
+    "question": "Se dau tabelele:<br>PERSONAL(Marca, Numepren, Compart, Datasv, Salorar, Salorarco, Compart)<br>PONTAJE(Marca, Data, Orelucrate, Oreco, Orenoapte, Oreabsnem)<br>Ce afişează următoarea interogare?<br>SELECT po1.Marca, pe1.Numepren,<br>COUNT(DISTINCT po1.Data) AS Zile_Lucrate,<br>COUNT(DISTINCT po2.Data) AS Zile_Lucrate_Pan<br>FROM (PONTAJE po1 INNER JOIN PERSONAL pe1 ON po1.Marca=pe1.Marca),<br>(PONTAJE po2 INNER JOIN PERSONAL pe2 ON po2.Marca=pe2.Marca)<br>WHERE po1.Orelucrate > 0 AND po2.Orelucrate > 0 AND pe2.Numepren='Ionescu'<br>GROUP BY po1.Marca, pe1.Numepren, po2.Marca<br>HAVING COUNT (DISTINCT po1.Data)> COUNT(DISTINCT po2.Data)",
+    "answers": [
+      "A. Numărul de ore lucrate pentru toţi angajaţii, mai puţin pentru ‘Ionescu’",
+      "B. Numărul angajaţilor care au aceleaşi zile lucrate cu ‘Ionescu’",
+      "C. Angajaţii care lucrează în acelaşi timp cu Ionescu",
+      "D. Angajaţii cu un număr de zile lucrate mai mare decât ale lui ‘Ionescu’",
+      "E. Angajaţii care au lucrat mai puţin decât ‘Ionescu’"
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 30,
+    "question": "O bază de date distribuită este:<br>A. O colecţie de date împărţită în mai multe fragmente<br>B. O colecţie de date împărţită în mai multe replici<br>C. O colecţie de date şi de scheme partajate şi interconectate logic, distribuite fizic pe calculatoarele unei reţele<br>D. O colecţie de fragmente mixte<br>E. Niciuna",
+    "answers": [
+      "A. O colecţie de date împărţită în mai multe fragmente",
+      "B. O colecţie de date împărţită în mai multe replici",
+      "C. O colecţie de date şi de scheme partajate şi interconectate logic, distribuite fizic pe calculatoarele unei reţele",
+      "D. O colecţie de fragmente mixte",
+      "E. Niciuna"
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 31,
+    "question": "Baza de date curentă include o tabelă numită Employees cu următoarele coloane:<br>- firstName, care păstrează prenumele unui angajat;<br>- lastName, care păstrează numele unui angajat;<br>- depID, care păsrează ID –ul departamentului în care lucrează angajaţii.<br>Aţi cerut să se afişeze o listă cu angajaţii sortată descrescător după ID departament, apoi după numele angajaţilor (prenume urmat de nume) în ordinea alfabetică.<br>Ce instrucţiune SELECT trebuie să folosiţi?",
+    "answers": [
+      "A. SELECT depID, (firstName + ' ' + lastName) AS 'Full Name'<br>FROM Employees<br>ORDER BY depID, lastName ASC",
+      "B. SELECT (firstName + ' ' + lastName) AS 'Full Name'<br>FROM Employees<br>ORDER BY depID DESC, 'Full Name'",
+      "C. SELECT lastName, (firstName + ' ' + lastName) AS 'Full Name'<br>FROM Employees<br>ORDER BY lastName, depID",
+      "D. SELECT (firstName + ' ' + lastName) AS 'Full Name'<br>FROM Employees<br>ORDER BY depID DESC, lastName",
+      "E. SELECT (firstName + ' ' + lastName) AS 'Full Name'<br>FROM Employees<br>ORDER BY depID DESC, lastName DESC"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 32,
+    "question": "Datorită mutării activităţii comerciale din Germania în SUA, trebuie să schimbăm collation data pentru baza de date Adventure Works. După modificarea collation pentru această bază de date, ce ar mai trebui să faceţi?",
+    "answers": [
+      "A. Nimic.",
+      "B. Ştergeţi indecşii şi constrângerile tabelelor existente pentru care collation cere să fie modificat. Modificaţi collation pentru coloanele acelor tabele.Recreaţi indecşii şi constrângerile.",
+      "C. Ştergeţi indecşii şi constrângerile pentru toate tabele existente din baza de date. Modificaţi collation pentru coloanele acelor tabele.Recreaţi indecşii şi constrângerile.",
+      "D. Modificaţi database collation şi selectaţi opţiunea auto-indexing.",
+      "E. Recreaţi toţi indecşii în această bază de date."
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 33,
+    "question": "Firma la care lucraţi foloseşte o tabelă numită Products pentru a stoca informaţii despre produsele pe care le vinde. Tabela include coloanele:<br>- price, care conţine preţul produsului vândut;<br>- volume, care păstrează volumul vânzărilor lunare medii pentru produsul respectiv;<br>- stock, care stochează numărul de bucăţi aflate în stoc pentru un produs.<br>La începutul fiecărei luni, firma dvs. reface stocul unui produs dacă una dintre condiţiile următoare este adevărată:<br>- Produsul costă 100$ sau mai mult şi numărul de bucăţi din stoc este mai mic decât volumul lunar mediu sau mai mic de 500.<br>- Produsul costă mai puţin de 100 $ şi sunt mai puţin de 1500 de bucăţi în stoc.<br>Dvs. trebuie să obţineţi informaţii despre toate produsele care trebuie să fie realimentate. Ce instrucţiune ar trebui folosită?",
+    "answers": [
+      "A. SELECT * FROM Products<br>WHERE<br>price >= 100.00<br>AND stock < 500<br>OR stock < volume<br>OR (price < 100.00<br>AND stock < 1500)",
+      "B. SELECT * FROM Products<br>WHERE<br>price >= 100.00<br>AND (stock < 500<br>OR stock < volume)<br>OR price < 100<br>AND stock < 1500",
+      "C. SELECT * FROM Products<br>WHERE<br>(price >= 100.00<br>AND stock < 500<br>OR stock < volume)<br>OR (price < 100.00<br>AND stock < 1500)",
+      "D. SELECT * FROM Products<br>WHERE<br>price >= 100.00<br>AND stock < 500<br>OR stock < volume<br>OR price < 100.00<br>AND stock < 1500",
+      "E. SELECT * FROM Products<br>WHERE<br>price >= 100.00<br>AND stock < 500<br>OR stock < volume<br>AND price < 100.00"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 34,
+    "question": "Pentru a afişa numele angajaţilor care au un salariu mai mare decât al cel puţin unui manager existent, ar trebui să folosiţi instrucţiunea:<br>SELECT name FROM Employees<br>WHERE salary > ANY (SELECT salary FROM Management).<br>Trebuie să creaţi o instrucţiune alternativă care să dea acelaşi rezultat şi care să se execute cel puţin la fel de rapid.<br>Ce instrucţiune ar trebui să folosiţi ?",
+    "answers": [
+      "A. SELECT name FROM Employees<br>WHERE NOT salary < ALL (SELECT salary FROM Management)",
+      "B. SELECT name FROM Employees<br>WHERE NOT EXISTS<br>(SELECT * FROM Management WHERE salary >= Employees.salary)",
+      "C. SELECT name FROM Employees<br>WHERE EXISTS<br>(SELECT * FROM Management WHERE salary < Employees.salary)",
+      "D. SELECT name FROM Employees<br>JOIN Management ON Employees.salary > Management.salary",
+      "E. Nici una."
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 35,
+    "question": "Aveţi o tabelă numită Employees, care include următoarele coloane:<br>- empName, care conţine numele angajatului;<br>- department, care conţine numele departmentului în care lucrează angajatul.<br>Pentru fiecare angajat care lucrează într-un departament cu mai mult de 10 angajaţi, trebuie să afişaţi numele angajatului, numele departamentului şi nr. de angajaţi din acel departament.<br>Trebuie să scrieţi o interogare care să extragă această informaţie în cel mai scurt timp. Ce instrucţiune ar trebui folosită ?",
+    "answers": [
+      "A. SELECT empName, department,<br>(SELECT COUNT(*) FROM Employees WHERE department = e.department)<br>FROM Employees AS e",
+      "B. SELECT department, COUNT(*) AS employees<br>INTO DepCounts<br>FROM Employees<br>GROUP BY department<br>SELECT e.empName, e.department, d.employees<br>FROM Employees AS e<br>JOIN DepCounts AS d ON e.department = d.department<br>WHERE d.employees > 10",
+      "C. SELECT empName, department,<br>(SELECT COUNT(*) FROM Employees WHERE department = e.department)<br>FROM Employees AS e WHERE 10 < (SELECT COUNT(*) FROM Employees<br>WHERE department = e.department)",
+      "D. SELECT empName, department,<br>(SELECT COUNT(*) FROM Employees WHERE (department = e.department) And count(*) >10) FROM Employees AS e",
+      "E. Nici una."
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 36,
+    "question": "Aţi scris o instrucţiune SELECT complexă care afişează date din mai multe tabele.<br>Trebuie să creaţi o tabelă nouă şi să o populaţi cu aceste date folosind cel mai mic număr de instrucţiuni posibil.<br>Ce ar trebui să faceţi ?",
+    "answers": [
+      "A. Creaţi tabela şi apoi folosiţi instrucţiunea INSERT INTO ... SELECT FROM pentru a o popula.",
+      "B. Folosiţi o instrucţiune SELECT INTO pentru a crea şi popula tabela.",
+      "C. Folosiţi o instrucţiune SELECT INTO pentru a crea şi popula o tabelă temporară, apoi creaţi tabela permanentă din tabela temporară.",
+      "D. Creaţi tabela, apoi folosiţi o instrucţiune SELECT INTO pentru a o popula.",
+      "E. Folosiţi două proceduri stocate: una pentru crearea tabelei şi alta pentru populare."
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 37,
+    "question": "Firma la care lucraţi vinde echipamente de la fabricanţi multipli care folosesc ID-uri de produse similare şi este nevoie să se urmărească ID produs, ID fabricant, nume produs, preţ produs pentru fiecare piesă de echipament din tabela Products.<br>Trebuie să vă asiguraţi că nu sunt permise intrări multiple pentru acelaşi produs. Ce instrucţiune ar trebui folosită ?",
+    "answers": [
+      "A. CREATE TABLE Products (<br>productID int PRIMARY KEY,<br>manufacturerID int,<br>productName varchar(50),<br>price decimal(7,2))",
+      "B. CREATE TABLE Products (<br>productID int UNIQUE,<br>manufacturerID int PRIMARY KEY,<br>productName varchar(50),<br>price decimal(7,2))",
+      "C. CREATE TABLE Products (<br>productID int,<br>manufacturerID int,<br>productName varchar(50) PRIMARY KEY,<br>price decimal(7,2))",
+      "D. CREATE TABLE Products (<br>productID int,<br>manufacturerID int,<br>productName varchar(50),<br>price decimal(7,2),<br>CONSTRAINT product_key PRIMARY KEY (productID, manufacturerID))",
+      "E. Nu este posibil de realizat această cerinţă."
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 38,
+    "question": "Comanda:<br>SELECT DISTINCT codp, denp FROM Produse<br>WHERE codp > 200<br>ORDER BY cantp<br>simulează implementarea operatorilor relaţionali de:",
+    "answers": [
+      "A. Proiecţie şi joncţiune",
+      "B. Selecţie şi intersecţie",
+      "C. Selecţie şi reuniune",
+      "D. Proiecţie şi selecţie",
+      "E. Reuniune şi joncţiune"
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 39,
+    "question": "Din categoria funcţiilor de grup fac parte:",
+    "answers": [
+      "A. Funcţia COUNT( )",
+      "B. Funcţia SUM( )",
+      "C. Funcţia ROUND( )",
+      "D. Funcţia RTRIM( )",
+      "E. Funcţia STDEV( )"
+    ],
+    "correctAnswerIndexes": [0,1,4]
+  },
+  {
+    "id": 40,
+    "question": "Dându-se tabelele Produse(codp, denp, pret ) şi Comenzi(nr_cda, codp, cant, data),<br>instrucţiunile SELECT:<br>SELECT *<br>FROM comenzi c<br>WHERE ‘Stilou’=(SELECT denp FROM produse p WHERE p.codp=c.codp)<br>şi<br>SELECT c.nr_cda, c.codp, c.cant, c.data<br>FROM comenzi c, produse p<br>WHERE p.codp=c.codp<br>AND p.denp = ‘Stilou’",
+    "answers": [
+      "A. Sunt diferite",
+      "B. Sunt identice",
+      "C. Ar fi identice dacă în al doilea SELECT s-ar folosi operatorul OR şi nu AND",
+      "D. Ar fi identice dacă în primul SELECT s-ar folosi operatorul IN şi nu =",
+      "E. Ar fi identice dacă în al doilea SELECT în clauza WHERE s-ar scrie condiţia de filtrare şi apoi cea de join."
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 41,
+    "question": "Comanda DROP nume_tabela este echivalentă cu comanda:",
+    "answers": [
+      "A. DELETE FROM nume_tabela",
+      "B. TRUNCATE",
+      "C. ALTER TABLE",
+      "D. ALTER DATABASE",
+      "E. Cu nici una"
+    ],
+    "correctAnswerIndexes": [4]
+  },
+  {
+    "id": 42,
+    "question": "Folosind tabela cadru_did(cod, nume, graddid, data_ang, sal_neg, sal_merit), creată şi populată cu date, să se specifice care dintre exemplele următoare sunt corecte:",
+    "answers": [
+      "A. SELECT SUM(sal_neg) FROM cadru_did",
+      "B. SELECT graddid, SUM(sal_neg) FROM cadru_did",
+      "C. SELECT graddid, SUM(sal_neg) FROM cadru_did GROUP BY graddid",
+      "D. SELECT graddid, SUM(sal_neg), COUNT(graddid) FROM cadru_did GROUP BY data_ang",
+      "E. SELECT graddid, SUM(sal_neg) FROM cadru_did WHERE SUM(sal_neg) > 10000"
+    ],
+    "correctAnswerIndexes": [0,2]
+  },
+  {
+    "id": 43,
+    "question": "Un utilizator a șters accidental o linie din tabela Produse, care conține o coloană IDENTITY numită id. Când încercați să reinserați aceleași date care au fost în linia ștearsă, primiți un mesaj de eroare. Ce ar trebui să faceți?",
+    "answers": [
+      "A. Puneți pe on proprietatea IDENTITY_INSERT folosind SQL Server Management Studio (SSMS) și apoi inserați linia.",
+      "B. Executați instrucțiunea SET IDENTITY_INSERT Produse ON și apoi inserați linia.",
+      "C. Ștergeți proprietatea IDENTITY pentru coloana id folosind SQL Server Management Studio (SSMS) și apoi inserați linia.",
+      "D. Reinițializați valoarea id cu cea a liniei șterse și apoi inserați linia."
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 44,
+    "question": "Scrieți o instrucțiune SELECT care extrage date din două tabele. Trebuie să returnați toate liniile din prima tabelă și numai liniile care îndeplinesc condiția din JOIN din a doua tabelă. Ce tip de JOIN ar trebui să folosiți?",
+    "answers": [
+      "A. LEFT",
+      "B. RIGHT",
+      "C. INNER",
+      "D. FULL"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 45,
+    "question": "Compania dumneavoastră are un număr de mașini care sunt folosite de angajați pentru o perioadă scurtă de timp. În acest scop aveți o tabelă numită Cars, care păstrează informații despre mașini și o tabelă numită CarAssignments, care stochează mașinile asignate fiecărui angajat. Trebuie să creați o constrângere care să vă asigure că toate valorile atribuite coloanei car_id din tabela CarAssignments corespund unei valori a coloanei id din tabela Cars. De asemenea, trebuie să vă asigurați că, dacă se șterge o linie din tabela Cars, se vor șterge și liniile din tabela CarAssignments care o referențiază. Ce instrucțiune ar trebui folosită?",
+    "answers": [
+      "A. ALTER TABLE CarAssignments<br>ADD CONSTRAINT FK_car_id FOREIGN KEY (car_id)<br>REFERENCES Cars (id) ON DELETE CASCADE;",
+      "B. ALTER TABLE CarAssignments<br>ADD CONSTRAINT FK_car_id FOREIGN KEY (car_id)<br>REFERENCES Cars (id) ON DELETE SET NULL;",
+      "C. ALTER TABLE CarAssignments<br>ADD CONSTRAINT FK_car_id FOREIGN KEY (car_id)<br>REFERENCES Cars (id);",
+      "D. ALTER TABLE CarAssignments<br>ADD CONSTRAINT FK_car_id FOREIGN KEY (car_id)<br>REFERENCES Cars (id) ON DELETE NO ACTION;"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 46,
+    "question": "Compania dumneavoastră folosește tabela WebSites pentru a urmări informația despre traficul zilnic al mai multor Web sites. Tabela include și următoarele coloane:<br>- id, care stochează ID Web site;<br>- hits, care păstrează numărul de accesări ale site-ului din acea zi.<br>Trebuie să afișați numărul mediu de accesări zilnice pentru fiecare Web site.<br>Ce instrucțiune ar trebui să folosiți?",
+    "answers": [
+      "A. SELECT SUM(hits)/COUNT(id)<br>FROM WebStats<br>GROUP BY id;",
+      "B. SELECT COUNT(*), AVG(hits)<br>FROM WebStats<br>GROUP BY hits;",
+      "C. SELECT id, AVG(hits)<br>FROM WebStats<br>GROUP BY id;",
+      "D. SELECT AVG(hits)<br>FROM WebStats;"
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 47,
+    "question": "Ați creat tabela Angajati cu instrucțiunea:<br>CREATE TABLE Angajati (nume varchar(20), departament varchar(20));<br>Se vor adăuga, apoi, patru persoane:<br>- ”Angajat unu” în departamentul Sales;<br>- “Angajat doi” în departamentul Sales;<br>- “Angajat trei” în departamentul Marketing;<br>- “Angajat patru” în departamentul HR.<br>Trebuie să adăugați acești angajați tabelei Angajati folosind cea mai mică secvență de cod.<br>Care interogare ar trebui executată în acest scop?",
+    "answers": [
+      "A. INSERT INTO Angajati (nume, departament)<br>VALUES ('Angajat unu', 'Sales');<br>INSERT INTO Angajati (nume, departament)<br>VALUES ('Angajat doi', 'Sales');<br>INSERT INTO Angajati (nume, departament)<br>VALUES ('Angajat trei', 'Marketing');<br>INSERT INTO Angajati (nume, departament)<br>VALUES ('Angajat patru', 'HR');",
+      "B. INSERT INTO Angajati (nume, departament)<br>VALUES ('Angajat unu', 'Sales'), ('Angajat doi', 'Sales'),<br>('Angajat trei', 'Marketing'), ('Angajat patru', 'HR');",
+      "C. INSERT INTO Angajati<br>VALUES ('Angajat unu', 'Sales');<br>INSERT INTO Angajati<br>VALUES ('Angajat doi', 'Sales');<br>INSERT INTO Angajati<br>VALUES ('Angajat trei', 'Marketing');<br>INSERT INTO Angajati<br>VALUES ('Angajat patru', 'HR');",
+      "D. INSERT INTO Angajati<br>VALUES ('Angajat unu', 'Sales'), ('Angajat doi', 'Sales'),<br>('Angajat trei', 'Marketing'), ('Angajat patru', 'HR');"
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 48,
+    "question": "Aveți o tabelă Employees, cu angajații unei firme, care include o coloană de tip nchar(30) numită NumeAng. Coloana NumeAng conține prenumele și numele unui angajat, separate de caracterul underscore (_). Trebuie să căutați în tabelă toți angajații al căror nume de familie este Popa. Ce expresie ar trebui să folosiți în clauza WHERE a instrucțiunii SELECT?",
+    "answers": [
+      "A. RTRIM(NumeAng) LIKE '%_Popa'",
+      "B. NumeAng LIKE '%!_Popa' ESCAPE '!'",
+      "C. RTRIM(NumeAng) LIKE '%!_Popa' ESCAPE '!'",
+      "D. NumeAng LIKE '%Popa%'"
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 49,
+    "question": "Ați creat tabela Angajati, în care păstrați informațiile despre angajații firmei unde lucrați, cu instrucțiunea:<br>CREATE TABLE Angajati ( nume varchar(50), telefon char(10), email varchar(20)).<br>Trebuie să vă asigurați că angajații vor putea fi introduși în tabelă cu valoarea NULL în coloana nume, dar fără valori de tip NULL în coloanele telefon și email(simultan). Cum ar trebui să modificați coloanele tabelei?",
+    "answers": [
+      "A. Adăugați o constrângere CHECK (telefon IS NOT NULL OR email IS NOT NULL) pe coloana telefon.",
+      "B. Adăugați NOT NULL la coloanele telefon și email.",
+      "C. Adăugați NULL la coloana nume.",
+      "D. Add constrângerea CHECK(telefon IS NOT NULL OR email IS NOT NULL) pe tabelă."
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 50,
+    "question": "Ați creat următoarea tabelă cu instrucțiunea:<br>CREATE TABLE dbo.Products (ID bigint IDENTITY(1,1) NOT NULL, Name nvarchar(100) NOT NULL, FirstProduction timestamp NOT NULL, Cost decimal(12, 4) NOT NULL, SalePrice decimal(12,4) NOT NULL, Volume bigint NOT NULL, Margin AS (SalePrice - Cost) / Cost);<br>Trebuie să modificați structura tabelei pentru a utiliza cel mai mic spațiu de stocare. Ce instrucțiuni ar trebui să folosiți?",
+    "answers": [
+      "A. ALTER TABLE dbo.Products ALTER COLUMN Margin AS (SalePrice - Cost);",
+      "B. ALTER TABLE dbo.Products REBUILD WITH (DATA_COMPRESSION = ROW);",
+      "C. ALTER TABLE dbo.Products ALTER COLUMN Name ADD SPARSE;",
+      "D. ALTER TABLE dbo.Products ALTER COLUMN Volume int;",
+      "E. ALTER TABLE dbo.Products ALTER COLUMN Cost decimal(10,2);"
+    ],
+    "correctAnswerIndexes": [1,3]
+  }
+]

@@ -1,0 +1,602 @@
+[
+  {
+    "isWeb": true,
+    "id": 1,
+    "question": "Primul fișier imagine încărcat într-o pagină HTML poate fi schimbat cu un alt fișier dacă se utilizează:",
+    "answers": [
+      "a. window.images[1].src=\"image.jpg\";",
+      "b. document.status.images[1].src=\"image.jpg\";",
+      "c. document.images[1].src=\"poza.jpg\";",
+      "d. document.images[0].src=\"poza.jpg\";"
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "isWeb": true,
+    "id": 2,
+    "question": "Imaginea de fundal a unei pagini Web nu se stabilește folosind:",
+    "answers": [
+      "a. <img background=\"p.gif\">;",
+      "b. <body background-img=\"image/imagine.gif\">;",
+      "c. <body bgcolor=\"p.gif\">;",
+      "d. <body background-image=\"image/imagine.gif\">;"
+    ],
+    "correctAnswerIndexes": [0,1,2,3]
+  },
+  {
+    "isWeb": true,
+    "id": 3,
+    "question": "Dimensionarea unei imagini se realizează folosind următoarele atribute ale tag-ului <img>?",
+    "answers": [
+      "a. width si align;",
+      "b. align si height;",
+      "c. width si height;",
+      "d. width si size;"
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "isWeb": true,
+    "id": 4,
+    "question": "Care din următoarele afirmații sunt adevărate?",
+    "answers": [
+      "a. Atributul href se poate asocia etichetelor a și img;",
+      "b. Atributul cellpadding aparține marcajului <table> si setează distanța dintre celule;",
+      "c. &nbsp; - introduce un spațiu;",
+      "d. Atributul ACTION al marcajului FORM stabilește adresa fișierului la care sunt trimise datele dintr-un formular;"
+    ],
+    "correctAnswerIndexes": [1,2,3]
+  },
+  {
+    "isWeb": true,
+    "id": 5,
+    "question": "Care este rolul tagului <keygen> din HTML 5?",
+    "answers": [
+      "a. marchează text evidențiat;",
+      "b. marchează un grup de elemente care au legătura unul cu celălalt;",
+      "c. marchează un cod generat automat într-un formular;",
+      "d. marchează diferite tipuri de rezultate ale unui script oarecare;"
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "isWeb": true,
+    "id": 6,
+    "question": "Care sunt atribute pentru tagul input din HTML 5?",
+    "answers": [
+      "a) accept;",
+      "b) autocomplete;",
+      "c) day_time ;",
+      "d) form_action;"
+    ],
+    "correctAnswerIndexes": [0,1]
+  },
+  {
+    "isWeb": true,
+    "id": 7,
+    "question": "Atributul name este utilizat pentru tagurile?",
+    "answers": [
+      "a) link, textarea, select;",
+      "b) form, input, map, a, img;",
+      "c) input, area, a, iframe;",
+      "d) radio, checkbox, frame;"
+    ],
+    "correctAnswerIndexes": [1,3]
+  },
+  {
+    "isWeb": true,
+    "id": 8,
+    "question": "Care din următoarele taguri sunt definite corect?",
+    "answers": [
+      "a. <link rel=”stylesheet” type=”text/css” href=”exemplu.css” /> ;",
+      "b. <?xml-stylesheet href=”exemplu.css” type=”text/css”?>;",
+      "c. <area shape=”polygon” coords=‘‘50,350,150,350,100,250,300” ”href=test.html” >;",
+      "d. <area shape=”circle” coords=”100,100,30” href=”cv.html” target=”_blank”>;"
+    ],
+    "correctAnswerIndexes": [0,1,3]
+  },
+  {
+    "isWeb": true,
+    "id": 9,
+    "question": "Transmiterea datelor dintr-un formular către un fişier de pe server, se realizează?",
+    "answers": [
+      "a. <input type=”reset” value=”trimite”>;",
+      "b. <input type=”button” value=”trimite”> ;",
+      "c. <input type=”submit” value=”apasa”> ;",
+      "d. <input name=”submit” value=”transmite”>;"
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "isWeb": true,
+    "id": 10,
+    "question": "Pentru a trimite valoarea „html” cu ajutorul unei casete de validare checkbox se foloseşte:",
+    "answers": [
+      "a. <input type=”checkbox” name=”c” />html ;",
+      "b. <input type=”checkbox” value=”html” name=”c” checked />trimite ;",
+      "c. <input value=”html”/>html ;",
+      "d. <input type=”checkbox” value=”html” name=”value_html” checked />html;"
+    ],
+    "correctAnswerIndexes": [1,3]
+  },
+  {
+    "isWeb": true,
+    "id": 11,
+    "question": "Care din următoarele afirmaţii sunt adevărate?",
+    "answers": [
+      "a. indexOf() returnează poziția primei apariții a unui subsir într-un șir sau valoarea -1 dacă șirul căutat nu există;",
+      "b. strike() returnează un șir tăiat cu două linii orizontale;",
+      "c. fromCharCode() este metoda care transformă valoarea unicode în caracter;",
+      "d. toCaselower() – convertește un șir în litere mici;"
+    ],
+    "correctAnswerIndexes": [0,2]
+  },
+  {
+    "isWeb": true,
+    "id": 12,
+    "question": "În JavaScript obiectul Date se creează?",
+    "answers": [
+      "a. data = new Array();",
+      "b. data = new Object();",
+      "c. data = new Date();",
+      "d. Date= new data();"
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "isWeb": true,
+    "id": 13,
+    "question": "În JavaScript, numărul zilei din lună se extrage apelând metoda?",
+    "answers": [
+      "a. getDate()",
+      "b. getDay()",
+      "c. getMonth()",
+      "d. setDay()"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "isWeb": true,
+    "id": 14,
+    "question": "Metodele și proprietățile obiectului String sunt:",
+    "answers": [
+      "a. substr()",
+      "b. replace()",
+      "c. length",
+      "d. charCodeAt()"
+    ],
+    "correctAnswerIndexes": [0,1,2,3]
+  },
+  {
+    "isWeb": true,
+    "id": 15,
+    "question": "Alegeţi evenimentele Javascript?",
+    "answers": [
+      "a. OnKeyDown",
+      "b. OnErrorFocus",
+      "c. onLoad",
+      "d. onUnload"
+    ],
+    "correctAnswerIndexes": [0,2,3]
+  },
+  {
+    "isWeb": true,
+    "id": 16,
+    "question": "Care sunt metodele şi proprietăţile pentru obiectul window din Javascript?",
+    "answers": [
+      "a. open()",
+      "b. status",
+      "c. alert()",
+      "d. write()"
+    ],
+    "correctAnswerIndexes": [0,1,2]
+  },
+  {
+    "isWeb": true,
+    "id": 17,
+    "question": "O clasă de stiluri se apelează prin?",
+    "answers": [
+      "a. <div id=”nume_clasa”>",
+      "b. <div class=”nume_clasa”>",
+      "c. <DIV STYLE=”nume-clasa”>",
+      "d. clasa_stil {........}"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "isWeb": true,
+    "id": 18,
+    "question": "Cum se defineşte un stil care afişează textul de mărime 10pt şi culoare albă?",
+    "answers": [
+      "a. .stil {font-size:10pt; color: white;}",
+      "b. # stil {text-size:10px; color: green;}",
+      "c. # stil {font-size:10pt; color: #FFFFFF;}",
+      "d. . stil {font-size:10px; color: #000000;}"
+    ],
+    "correctAnswerIndexes": [0,2]
+  },
+  {
+    "isWeb": true,
+    "id": 19,
+    "question": "Care afirmaţii sunt adevărate?",
+    "answers": [
+      "a. Un script JavaScript poate fi introdus în interiorul marcajelor <script></script>",
+      "b. Functiile JavaScript definite de utilizator pot fi si într-un fişier cu extensia .js",
+      "c. O clasa de stiluri este definita corect astfel:<br>#clasa { color:#ab1121;background-image:url(”poza.gif”);text-decoration:overline;}",
+      "d. <link rel=”stylesheet” type=”text/css” href=”exemplu.css” />"
+    ],
+    "correctAnswerIndexes": [0,1,3]
+  },
+  {
+    "isWeb": true,
+    "id": 20,
+    "question": "Care este rezultatul următoarei secvenţe din JavaScript \"1\" + 2 + 4 ?",
+    "answers": [
+      "a. 124",
+      "b. \"124\"",
+      "c. \"1\" si 24",
+      "d. \"1\" si 6"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "isWeb": true,
+    "id": 21,
+    "question": "Tipurile de date utilizate în PHP sunt?",
+    "answers": [
+      "a. String",
+      "b. Array",
+      "c. Null",
+      "d. Data"
+    ],
+    "correctAnswerIndexes": [0,1,2]
+  },
+  {
+    "isWeb": true,
+    "id": 22,
+    "question": "Un document XML:",
+    "answers": [
+      "a. este o colecţie de entităţi;",
+      "b. trebuie să fie construit corect;",
+      "c. nu este colecţie de date;",
+      "d. nu este sensibil la tipul literelor;"
+    ],
+    "correctAnswerIndexes": [0,1]
+  },
+  {
+    "isWeb": true,
+    "id": 23,
+    "question": "DTD-ul conţine:",
+    "answers": [
+      "a. numele efectiv al elementelor;",
+      "b. regulile utilizate pentru a determina care elemente se pot imbrica în alte elemente;",
+      "c. alte informaţii importante pentru prelucrarea şi redarea documentului;",
+      "d. codificările de limbă utilizate în document;"
+    ],
+    "correctAnswerIndexes": [0,1,2,3]
+  },
+  {
+    "isWeb": true,
+    "id": 24,
+    "question": "O schema XML se generează dintr-o schemă relaţională astfel:",
+    "answers": [
+      "a. pentru fiecare tabelă se generează un tip de element;",
+      "b. pentru fiecare coloană se adaugă la model un atribut la tipul elementului sau un element descendent ce conţine numai PCDATA;",
+      "c. pentru fiecare element se ataseaza o baza de date;",
+      "d. Nu se pot defini scheme XML decat dacă se utilizează şi PHP-ul;"
+    ],
+    "correctAnswerIndexes": [0,1]
+  },
+  {
+    "isWeb": true,
+    "id": 25,
+    "question": "Ce rol are argumnetul secure (sigur) pentru funcţia setcookie() din PHP?",
+    "answers": [
+      "a. indică dacă o variabilă cookie trebuie trimisă prin intermediul unei conexiuni HTTP;",
+      "b. indică dacă o variabilă cookie trebuie trimisă prin intermediul unei conexiuni sigure (HTTPS);",
+      "c. permite identificarea numelui de domeniu asociat, daca conexiunea nu este sigura;",
+      "d. variabila cookie este disponibilă indiferent de tipul de conexiune utilizată;"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "isWeb": true,
+    "id": 26,
+    "question": "Care din următoarele afirmaţii sunt adevărate?",
+    "answers": [
+      "a. $GLOBALS cuprinde referinţe spre orice variabilă globală care este accesibilă scriptului PHP curent;",
+      "b. $_SERVER conţine o serie de variabile ale căror valori sunt setate de server-ul web.",
+      "c. $_COOKIE conţine valorile variabilelor care cuprind informaţii referitoare la cookie-urile păstrate pe calculatorul utilizatorului care accesează pagina web.",
+      "d. $_SESSION cuprinde variabile disponibile prin intermediul oricărui tip de mecanism cu ajutorul căruia utilizatorul poate introduce date."
+    ],
+    "correctAnswerIndexes": [0,1,2]
+  },
+  {
+    "isWeb": true,
+    "id": 27,
+    "question": "Ce va afișa scriptul PHP?<br><?php<br>$i = 5.7; echo $i.\"<br />\";<br>$i = sprintf(\"%05.2f\", $i);<br>echo '<br />'. $i;<br>?>",
+    "answers": [
+      "a) 5.7;05.70",
+      "b) 5.7<br>05.70",
+      "c) 5.70<br>05.7",
+      "d) 5.7 05.7"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "isWeb": true,
+    "id": 28,
+    "question": "Care funcţii PHP acţionează asupra fişierelor?",
+    "answers": [
+      "a. fgetc ;",
+      "b. is_file ;",
+      "c. filesize;",
+      "d. is_close;"
+    ],
+    "correctAnswerIndexes": [0,1,2]
+  },
+  {
+    "isWeb": true,
+    "id": 29,
+    "question": "Menţionaţi metodele care nu fac parte din obiectul String pentru JavaScript?",
+    "answers": [
+      "a. toLowerCase();",
+      "b. setTimeout();",
+      "c. focus();",
+      "d. strike();"
+    ],
+    "correctAnswerIndexes": [1,2]
+  },
+  {
+    "isWeb": true,
+    "id": 30,
+    "question": "Cum se defineşte o constanta în PHP?",
+    "answers": [
+      "a. prin directiva define();",
+      "b. cu ajutorul cuvantului cheie const;",
+      "c. cu ajutorul cuvintelor cheie var const;",
+      "d. cu ajutorul cuvantului static;"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "isWeb": true,
+    "id": 31,
+    "question": "Ce rol are functia include() în PHP?",
+    "answers": [
+      "a. include în scriptul curent conţinutul unui fişier html o singura data;",
+      "b. include în scriptul curent conţinutul unui fişier html cu verificarea faptului ca acesta a fost introdus o singura dată ;",
+      "c. permite includerea fişierului html specificat, de mai multe ori;",
+      "d. este echivalenta cu functia require();"
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "isWeb": true,
+    "id": 32,
+    "question": "Care este sintaxa unei reguli CSS?",
+    "answers": [
+      "a. selector {proprietate : valoare;}",
+      "b. selector(proprietate, valoare)",
+      "c. selector.proprietate = valoare;",
+      "d. selector(proprietate) = valoare;"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "isWeb": true,
+    "id": 33,
+    "question": "Ce se afișează într-un browser care suportă SVG, după încărcarea codului?<br><!DOCTYPE html><br><html><br><body><br><svg width=\"400\" height=\"180\"><br><rect x=\"50\" y=\"50\" width=\"100\" height=\"100\" rx=\"10\" ry=\"10\"<br>style=\"fill:red;opacity:1\" /><br>Sorry, your browser does not support inline SVG.<br></svg><br></body></html>",
+    "answers": [
+      "a. un dreptunghi cu dimensiunea laturilor 50 px și colțuri rotunjite;",
+      "b. un dreptunghi cu laturile 100 px și colțuri nerotunjite;",
+      "c. un pătrat de culoare roșie cu latura 100 px și colțuri rotunjite;",
+      "d. un dreptunghi cu dimensiunea laturilor 100 px, cu laturile de culoare roșie."
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "isWeb": true,
+    "id": 34,
+    "question": "Care este secvența corectă pentru a ne conecta la o bază de date MySQL cu funcțiile PHP?",
+    "answers": [
+      "a. $mysqli = mysqli_connect($host, $user, $pass, $database_stud);",
+      "b. $mysqli = new mysqli($host, $user, $pass, $database_stud);<br>if ($mysqli->connect_errno)<br>{echo \"Failed to connect to MySQL: \" . $mysqli->connect_error;}",
+      "c. mysqli-connect($host, $user, $pass, $database_stud);",
+      "d. connect-mysqli (\"localhost\");"
+    ],
+    "correctAnswerIndexes": [0,1]
+  },
+  {
+    "isWeb": true,
+    "id": 35,
+    "question": "Care este sintaxa corectă JavaScript pentru a scrie \"Hello World\"?",
+    "answers": [
+      "a. document.write(\"Hello World \");",
+      "b. alert.write(\"Hello World\");",
+      "c. window.write(\"hello world\");",
+      "d. document.write(a=\" Hello World \");"
+    ],
+    "correctAnswerIndexes": [0,3]
+  },
+  {
+    "isWeb": true,
+    "id": 36,
+    "question": "Cum se scrie \"Hello World\" într-o fereastră alert?",
+    "answers": [
+      "a. alertBox=\"Hello World\";",
+      "b. alert=(\"Hello World\");",
+      "c. msgBox(\"Hello World\");",
+      "d. alert(\"Hello World\");"
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "isWeb": true,
+    "id": 37,
+    "question": "Cum se scrie \"Hello World\" în PHP?",
+    "answers": [
+      "a. Document.Write(\"Hello World\");",
+      "b. document.write(\"Hello World\");",
+      "c. echo \"Hello World\";",
+      "d. $mes=\"Hello World\";echo $mes;"
+    ],
+    "correctAnswerIndexes": [2,3]
+  },
+  {
+    "isWeb": true,
+    "id": 38,
+    "question": "Variabilele în PHP încep cu:",
+    "answers": [
+      "a. $",
+      "b. &",
+      "c. !",
+      "d. ?php"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "isWeb": true,
+    "id": 39,
+    "question": "Care este modul corect de a adăuga 1 la variabila $numara?",
+    "answers": [
+      "a. $numara =+1;",
+      "b. ++numara;",
+      "c. $numara++;",
+      "d. numara++;"
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "isWeb": true,
+    "id": 40,
+    "question": "Alegeți varianta corectă pentru definirea unei funcții JavaScript:",
+    "answers": [
+      "a. function suma nr() {….}",
+      "b. function suma_nr(){….}",
+      "c. suma_nr();",
+      "d. function suma_nr { ... };"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "isWeb": true,
+    "id": 41,
+    "question": "Care din următoarele afirmații este adevărată pentru sintaxa marcajului XML?",
+    "answers": [
+      "a. Pentru delimitatoarele secțiunii CDATA se folosește <![CDATA[ informații cdata]]>",
+      "b. Declarația XML se realizează cu <?Idprocesor date?>",
+      "c. Eticheta pentru definirea unui element vid este...</numeElement>",
+      "d. Referința unui caracter se realizează <!—referința - ->"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "isWeb": true,
+    "id": 42,
+    "question": "Care afirmații sunt adevărate?",
+    "answers": [
+      "a. XML-ul nu este un limbaj de programare;",
+      "b. Sunt compilatoare XML care să citească un document XML",
+      "c. XML nu este un protocol pentru transmiterea datelor în rețea;",
+      "d. Un document XML poate fi citit de orice parser."
+    ],
+    "correctAnswerIndexes": [0,2,3]
+  },
+  {
+    "isWeb": true,
+    "id": 43,
+    "question": "Conținutul unui câmp de text dintr-un formular poate fi accesat?",
+    "answers": [
+      "a. nume_formular.nume_camp.value",
+      "b. nume_camp.nume_formular.value",
+      "c. value.nume_formular.nume_camp",
+      "d. value.nume_camp.nume_formular"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "isWeb": true,
+    "id": 44,
+    "question": "Pentru a introduce un fișier RSS în paginile unui site trebuie specificat în partea de HEAD a documentului web o linie de forma:",
+    "answers": [
+      "a. <link rel=\"alternate\" type=\"application/rss+xml\" title=\"RSS\" href=http://cale...>",
+      "b. <link rel=”” type=”text/rss” href=”exemplu.css” />",
+      "c. <?xml-stylesheet href=”exemplu.css” type=”text/css”? />",
+      "d. <link rel=\"stylesheet\" type=\"application/rss+xml\" title=\"RSS\" href=http://cale.. .>"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "isWeb": true,
+    "id": 45,
+    "question": "Un fișier “script.js” este folosit într-un document HTML astfel:",
+    "answers": [
+      "a. <script type=\"text/javascript\" src=\"script.js\"></script>",
+      "b. <script href=\"text/javascript\" src=\"script.js\"></script>",
+      "c. <script type=\"text/javascript\" link=\"script.js\"></script>",
+      "d. <script rel=\"text/javascript\" src=\"script.js\"></script>"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "isWeb": true,
+    "id": 46,
+    "question": "Care sunt atributele etichetei <textarea>?",
+    "answers": [
+      "a. cols - specifică numărul de caractere afișate într-o linie;",
+      "b. rows - specifică numărul de linii afișate simultan;",
+      "c. name - permite atașarea unui nume câmpului de editare multilinie;",
+      "d. text-wrap - determină comportamentul câmpului de editare față de sfârșitul de linie."
+    ],
+    "correctAnswerIndexes": [0,1,2]
+  },
+  {
+    "isWeb": true,
+    "id": 47,
+    "question": "Care afirmații sunt adevărate cu privire la următoarele handlere de evenimente?",
+    "answers": [
+      "a. OnAbort – permite oprirea încărcării unei imagini",
+      "b. OnFocus - elementul primește focus",
+      "c. OnLoad – realizează încărcarea paginii în navigator",
+      "d. OnBlur - elementul primește focus"
+    ],
+    "correctAnswerIndexes": [0,1,2]
+  },
+  {
+    "isWeb": true,
+    "id": 48,
+    "question": "Ce rol are funcția explode($separator, $șir) în PHP?",
+    "answers": [
+      "a. preia valorile din variabila $șir în care acestea sunt delimitate prin variabila $separator și le plasează într-un tablou/vector;",
+      "b. preia valorile dintr-un vector și le reunește într-un șir;",
+      "c. afișează de câte ori apare variabila $separator în variabila $șir;",
+      "d. Concatenează variabilele $separator și $șir;"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "isWeb": true,
+    "id": 49,
+    "question": "Care este rolul butonului “submit” pentru codul de mai jos?<br><br><form action=\"test.php\" method=\"POST\"><br>Introduceți numele : <input type=\"text\" name=\"n\"><br><br><input type=\"submit\" value=\"Trimite\"><br></form>",
+    "answers": [
+      "a. Transmite la server variabila n din formular;",
+      "b. Transmite la fișierul test.php de pe server conținutul variabilei n;",
+      "c. Transmite cu metoda POST, la fișierul test.php de pe server conținutul variabilei n și readuce formularul la starea inițială;",
+      "d. Transmite cu metoda implicită POST, la fișierul test.php de pe server conținutul variabilei n și readuce formularul la starea inițială;"
+    ],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "isWeb": true,
+    "id": 50,
+    "question": "Proprietatea checked atașată unui element radio dintr-un formular are ca efect?",
+    "answers": [
+      "a. Bifarea implicită a respectivului element radio;",
+      "b. Nu există acest atribut;",
+      "c. Trebuie atașat obligatoriu la toate elementele radio din același grup;",
+      "d. Se folosește doar pentru elemente de tip checkbox;"
+    ],
+    "correctAnswerIndexes": [0]
+  }
+]

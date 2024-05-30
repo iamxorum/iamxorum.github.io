@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/Cryptography/Page 2/style/caesar.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Cryptography | Ceasar's Cypher</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/Cryptography/crypto.html" id="back">Go Back</a>
+      <a href="#cypher">Cypher</a>
+    </div>
+    <section class="sec1" id="cypher">
+      <main id="main">
+        <div class="insert">
+          <div class="info">
+            <h1 id="title">Caesar's Cypher</h1>
+          </div>
+          <div class="wrapper">
+            <input type="radio" name="select2" id="option-1_1" checked />
+            <input type="radio" name="select2" id="option-2_1" />
+            <input type="radio" name="select2" id="option-3_1" />
+
+            <label for="option-1_1" class="option option-1_1">
+              <div class="dot"></div>
+              <span>Romanian</span>
+            </label>
+            <label for="option-2_1" class="option option-2_1">
+              <div class="dot"></div>
+              <span>Russian</span>
+            </label>
+            <label for="option-3_1" class="option option-3_1">
+              <div class="dot"></div>
+              <span>General</span>
+            </label>
+          </div>
+          <form>
+            <div class="textareas">
+              <textarea
+                name="input-text"
+                id="input-text"
+                placeholder="Insert the text you want to encrypt/decrypt..."
+              ></textarea>
+              <textarea
+                name="input-text-2"
+                id="input-text-2"
+                placeholder="Insert shift..."
+              ></textarea>
+            </div>
+
+            <button class="myBtn" id="submit">SUBMIT</button>
+            <button class="myBtn" id="delete">RESTART</button>
+          </form>
+          <div class="wrapper">
+            <input type="radio" name="select" id="option-1" checked />
+            <input type="radio" name="select" id="option-2" />
+            <label for="option-1" class="option option-1">
+              <div class="dot"></div>
+              <span>Encrypt</span>
+            </label>
+            <label for="option-2" class="option option-2">
+              <div class="dot"></div>
+              <span>Decrypt</span>
+            </label>
+          </div>
+        </div>
+      </main>
+    </section>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="/Cryptography/Page 2/src/index.js"></script>
+  </body>
+</html>

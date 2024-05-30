@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/Cryptography/Page 5/style/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Criptografie | Tema</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/Cryptography/crypto.html" id="back">Go Back</a>
+      <a href="#cipher">Cipher</a>
+    </nav>
+    <section class="sec1" id="cipher">
+      <main id="main">
+        <div class="insert">
+          <div class="info">
+            <h1 id="title">
+              Encryption methods based on permutation functions
+            </h1>
+            <h2>Method used in the case of M=Pn+1</h2>
+          </div>
+          <form>
+            <div class="insert-text">
+              <h1>Insert text:</h1>
+              <textarea
+                name="input-text"
+                id="input-text"
+                placeholder="Insert at least 10k characters..."
+              ></textarea>
+            </div>
+            <div class="input-galois">
+              <h1>Insert Galois Field:</h1>
+              <div class="galois-number">
+                <input
+                  type="number"
+                  name="input-prime-galois"
+                  id="input-prime-galois"
+                  min="2"
+                  placeholder="Insert a prime number from 2"
+                />
+                <input
+                  type="number"
+                  name="input-pow-galois"
+                  id="input-pow-galois"
+                  min="2"
+                  placeholder="Insert a number from 2"
+                />
+              </div>
+            </div>
+            <div class="insert-poly">
+              <h1>Primitve polynom:</h1>
+              <textarea
+                name="input-poly"
+                id="input-poly"
+                placeholder="t^4+3t^3-t^2-4t^1-6t^0=0"
+              ></textarea>
+            </div>
+            <div class="insert-perm-poly">
+              <h1>Permutation polynom: y=ax+b</h1>
+            </div>
+            <div class="insert-first">
+              <div class="a0">
+                <label for="input-first-a">a0:</label>
+                <textarea
+                  name="input-first-a"
+                  id="input-first-a"
+                  placeholder="(1,2,3,4)"
+                ></textarea>
+              </div>
+              <div class="b0">
+                <label for="input-first-b">b0:</label>
+                <textarea
+                  name="input-first-b"
+                  id="input-first-b"
+                  placeholder="(1,2,3,4)"
+                ></textarea>
+              </div>
+              <div class="c0">
+                <label for="input-first-c">c0:</label>
+                <textarea
+                  name="input-first-c"
+                  id="input-first-c"
+                  placeholder="(1,2,3,4)"
+                ></textarea>
+              </div>
+              <div class="d0">
+                <label for="input-first-d">d1:</label>
+                <textarea
+                  name="input-first-d"
+                  id="input-first-d"
+                  placeholder="(1,2,3,4)"
+                ></textarea>
+              </div>
+            </div>
+            <div class="insert-second">
+              <div class="a1">
+                <label for="input-second-a">a1:</label>
+                <textarea
+                  name="input-second-a"
+                  id="input-second-a"
+                  placeholder="(1,2,3,4)"
+                ></textarea>
+              </div>
+              <div class="b1">
+                <label for="input-second-b">b1:</label>
+                <textarea
+                  name="input-second-b"
+                  id="input-second-b"
+                  placeholder="(1,2,3,4)"
+                ></textarea>
+              </div>
+              <div class="c1">
+                <label for="input-second-c">c1:</label>
+                <textarea
+                  name="input-second-c"
+                  id="input-second-c"
+                  placeholder="(1,2,3,4)"
+                ></textarea>
+              </div>
+              <div class="d1">
+                <label for="input-second-d">d1:</label>
+                <textarea
+                  name="input-second-d"
+                  id="input-second-d"
+                  placeholder="(1,2,3,4)"
+                ></textarea>
+              </div>
+            </div>
+            <button class="myBtn" id="submit">SUBMIT</button>
+            <button class="myBtn" id="delete">RESTART</button>
+          </form>
+        </div>
+      </main>
+    </section>
+    <section class="sec1_2 invisible">
+      <div class="encrypted_text">
+        <h1 id="title">Result</h1>
+      </div>
+    </section>
+    <section class="sec2 invisible" id="matrix">
+      <div class="info">
+        <h1 id="title">Cipher Matrix</h1>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Letter</th>
+              <th>Letters Array Index</th>
+              <th>Galois Field Vector</th>
+              <th>Y[i] Vector</th>
+              <th>Galois Field Y[i] Value</th>
+              <th>Encrypted letter</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </section>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="/Cryptography/Page 5/src/index.js"></script>
+  </body>
+</html>
