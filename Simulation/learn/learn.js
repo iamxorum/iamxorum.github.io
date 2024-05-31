@@ -71,7 +71,11 @@
         const answersList = document.createElement('ul');
         questionData.answers.forEach((answer, answerIndex) => {
           const answerItem = document.createElement('li');
-          answerItem.innerHTML = escapeHTML(answer);
+          if (isWeb) {
+            answerItem.innerHTML = escapeHTML(answer);
+          } else {
+            answerItem.textContent = answer;
+          }
           if (questionData.correctAnswerIndexes.includes(answerIndex)) {
             answerItem.classList.add('correct-answer');
           }

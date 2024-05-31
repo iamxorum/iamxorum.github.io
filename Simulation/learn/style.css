@@ -96,6 +96,7 @@ nav ul li button.active {
   color: #001e4d;
   font-weight: 600;
   margin-bottom: 10px;
+  word-wrap: break-word;
 }
 
 .question-block img {
