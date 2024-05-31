@@ -156,7 +156,7 @@ nav ul li button.active {
 }
 
 /* Add media query for smaller screens */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .nav-links {
     display: none;
     position: absolute;
@@ -181,8 +181,8 @@ nav ul li button.active {
     display: block;
     color: white;
     text-align: center;
-    margin-top: 0.6rem;
-    padding: 14px 16px;
+    font-size: 2rem;
+    padding: 0.5rem;
     cursor: pointer;
     background: none;
     border: none;
