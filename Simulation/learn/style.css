@@ -81,6 +81,7 @@ nav ul li button.active {
   border-bottom: 1px solid #222;
   padding-bottom: 30px;
   text-align: center;
+  word-wrap: break-word;
 }
 
 .question-block {
@@ -117,6 +118,7 @@ nav ul li button.active {
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
+  word-wrap: break-word;
 }
 
 .correct-answer {

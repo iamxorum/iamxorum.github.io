@@ -72,9 +72,9 @@
         questionData.answers.forEach((answer, answerIndex) => {
           const answerItem = document.createElement('li');
           if (isWeb) {
-            answerItem.innerHTML = escapeHTML(answer);
+            answerItem.textContent = escapeHTML(answer);
           } else {
-            answerItem.textContent = answer;
+            answerItem.innerHTML = answer;
           }
           if (questionData.correctAnswerIndexes.includes(answerIndex)) {
             answerItem.classList.add('correct-answer');

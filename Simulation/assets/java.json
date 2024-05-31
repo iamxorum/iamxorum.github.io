@@ -255,7 +255,7 @@
     "id": 24,
     "question": "Care este rolul declaraţiilor import?",
     "answers": [
-      "a) Permite referireaclaselorfărăutilizareade prefixe;",
+      "a) Permite referirea claselor fără utilizare ade prefixe;",
       "b) Permite importul imaginilor folosite;",
       "c) Elimină necesitatea declarării variabilelor;",
       "d) Elimină apelurile directe ale funcţiilor fără clase."
