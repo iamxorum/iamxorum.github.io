@@ -50,7 +50,7 @@
     }
 
     // Number of questions you want to choose randomly
-    const numberOfQuestions = allQuestionsArray.length;
+    const numberOfQuestions = 30;
 
     // Get random questions
     let randomlyChosenQuestions;
@@ -90,7 +90,7 @@
     
     let currentQuestionIndex = 0;
     let score = 0;
-    let timeLeft = 120 * 60; // 120 minutes
+    let timeLeft = 60 * 60; // 60 minutes
     let userAnswers = [];
 
     function startQuiz() {

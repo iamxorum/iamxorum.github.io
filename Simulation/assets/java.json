@@ -528,7 +528,7 @@
   },
   {
     "id": 49,
-    "question": "Considerăm următorul program Java:<br>class A{<br>public int x = 1;<br>public A() { x++; }<br>}<br>class B extends A{<br>public B() { x++; }<br>}<br>class C extends B{<br>public int x = 1;<br>public C() { x++; }<br>}<br>public class Test{<br>public static void main(String[] args){<br>B b = new B();<br>C c = new C();<br>System.out.println(b.x + \" \" + c.x);<br>}<br>}<br>După executarea programului, va fi afişată valoarea:<br>3 3<br>3 4<br>2 2<br>3 2",
+    "question": "Considerăm următorul program Java:<br>class A{<br>public int x = 1;<br>public A() { x++; }<br>}<br>class B extends A{<br>public B() { x++; }<br>}<br>class C extends B{<br>public int x = 1;<br>public C() { x++; }<br>}<br>public class Test{<br>public static void main(String[] args){<br>B b = new B();<br>C c = new C();<br>System.out.println(b.x + \" \" + c.x);<br>}<br>}<br>După executarea programului, va fi afişată valoarea:<br>",
     "answers": [
       "3 3",
       "3 4",

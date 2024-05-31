@@ -43,6 +43,11 @@
         border-radius: 5px;
         transition: background-color 0.3s;
       }
+
+      .learn button {
+        background-color: rgb(179, 134, 0);
+      }
+
       .grid button:hover {
         background-color: #0056b3;
       }
@@ -86,6 +91,10 @@
   </head>
   <body>
     <button class="back" onclick="window.location.href = '../index.html';">Back</button>
+    <div class="grid grid-3 learn">
+      <button onclick="location.href='learn/learn.html'">Learning Mode</button>
+    </div>
+    <div class="line"></div>
     <div class="grid grid-3">
       <button onclick="location.href='simulate.html'">Simulation</button>
     </div>
