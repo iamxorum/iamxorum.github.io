@@ -82,8 +82,9 @@
     questionNumber.style.margin = "10px auto 0";
     questionNumber.style.marginBottom = "10px";
     //make him like a button with a background: #7c2c47;; and color: white; padding: 10px;
-    questionNumber.style.backgroundColor = "#7c2c47";
-    questionNumber.style.color = "white";
+    questionNumber.style.backgroundColor = "#82dcff";
+    questionNumber.style.color = "black";
+    questionNumber.style.fontWeight = "bold";
     questionNumber.style.padding = "1rem";
     questionNumber.style.borderRadius = "5px";
     questionNumber.style.width = "100%";
@@ -162,7 +163,7 @@
       isWeb = currentQuestion.isWeb;
 
       if (!isWeb) {
-        questionElement.innerHTML = currentQuestion.question;
+        questionElement.innerHTML = `${currentQuestion.question}`;
       } else {
         // Escape html entities to prevent XSS attacks and display the question text
         const questionText = escape(currentQuestion.question).replace(/\n/g, '<br>');
