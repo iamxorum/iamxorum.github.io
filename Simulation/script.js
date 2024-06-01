@@ -68,7 +68,7 @@
     }
 
     // Number of questions you want to choose randomly
-    const numberOfQuestions = 36;
+    const numberOfQuestions = 1;
 
     // Get random questions
     let randomlyChosenQuestions;
@@ -393,7 +393,7 @@
 
       // Add event listener to the button to go to the result page
       goButton.addEventListener("click", () => {
-        window.location.href = "../results.html";
+        window.location.href = "./results.html";
       });
     }
     
