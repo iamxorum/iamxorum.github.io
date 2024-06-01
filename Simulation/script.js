@@ -68,7 +68,7 @@
     }
 
     // Number of questions you want to choose randomly
-    const numberOfQuestions = 1;
+    const numberOfQuestions = 36;
 
     // Get random questions
     let randomlyChosenQuestions;
