@@ -253,3 +253,26 @@
     }
   }
   
+  // Responsive design for mobile devices
+  @media screen and (max-width: 600px) {
+    .app {
+      width: 95%;
+      padding: 20px;
+    }
+  
+    .quiz {
+      padding: 10px 0px;
+  
+      h2 {
+        font-size: 1rem;
+      }
+    }
+  
+    #timer {
+      width: 100px;
+    }
+  
+    #next-btn, #answer-btn {
+      width: 120px;
+    }
+  }

@@ -4,6 +4,7 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
+
 body {
   background: rgb(230, 230, 230);
   height: 90vh;
@@ -22,8 +23,7 @@ body {
   border-radius: 5px;
   transition: background-color 0.3s;
 }
-
-.back:hover{
+.back:hover {
   background-color: #ea5184;
 }
 
@@ -32,7 +32,6 @@ nav {
   background-color: #333;
   padding: 10px 0;
 }
-
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -40,11 +39,9 @@ nav ul {
   display: flex;
   justify-content: center;
 }
-
 nav ul li {
   margin: 0 10px;
 }
-
 nav ul li button {
   background-color: #333;
   color: white;
@@ -55,13 +52,11 @@ nav ul li button {
   border-radius: 5px;
   transition: background-color 0.3s;
 }
-
 nav ul li button:hover {
   background-color: #7c2c47;
 }
-
 nav ul li button.active {
-  background-color: #6c3d91; 
+  background-color: #6c3d91;
 }
 
 .learn-container {
@@ -73,7 +68,6 @@ nav ul li button.active {
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .learn-container h3 {
   font-size: 25px;
   color: #001e4d;
@@ -91,7 +85,6 @@ nav ul li button.active {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 .question-block h4 {
   font-size: 18px;
   color: #001e4d;
@@ -99,20 +92,17 @@ nav ul li button.active {
   margin-bottom: 10px;
   word-wrap: break-word;
 }
-
 .question-block img {
   max-width: 100%;
   height: auto;
   display: block;
   margin: 10px 0;
 }
-
 .question-block ul {
   list-style-type: none;
   padding: 0;
 }
-
-.question-block li {
+.question-block ul li {
   padding: 10px;
   margin: 5px 0;
   background: #fff;
@@ -120,8 +110,7 @@ nav ul li button.active {
   border-radius: 5px;
   word-wrap: break-word;
 }
-
-.correct-answer {
+.question-block .correct-answer {
   background-color: #adffba !important;
   border-color: #76c7c0;
 }
@@ -131,11 +120,9 @@ nav ul li button.active {
   margin: 0;
   padding: 0;
 }
-
 .nav-links li {
   float: left;
 }
-
 .nav-links li button {
   display: block;
   color: white;
@@ -146,13 +133,58 @@ nav ul li button.active {
   background: none;
   cursor: pointer;
 }
-
 .nav-links li button:hover {
   background-color: #111;
 }
 
 .menu-toggle {
   display: none;
+}
+
+.tab {
+  margin-left: 20px;
+}
+
+.tab_2 {
+  margin-left: 40px;
+}
+
+.tab_3 {
+  margin-left: 60px;
+}
+
+.tab_4 {
+  margin-left: 80px;
+}
+
+.code {
+  background-color: #d8ffff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  font-family: "Courier New", Courier, monospace;
+  color: #333;
+  overflow-x: auto;
+  margin: 20px 0;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.code pre {
+  margin: 0;
+}
+
+.code_2 {
+  background-color: #ffefd8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  font-family: "Courier New", Courier, monospace;
+  color: #333;
+  overflow-x: auto;
+  margin: 20px 0;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.code_2 pre {
+  margin: 0;
 }
 
 /* Add media query for smaller screens */
@@ -164,19 +196,16 @@ nav ul li button.active {
     background-color: #333;
     padding: 0;
   }
-
   .nav-links li {
     margin: 0;
     float: none;
     width: 100%;
     border-bottom: 1px solid #555;
   }
-
   .nav-links li button {
     width: 100%;
     padding: 12px 0;
   }
-
   .menu-toggle {
     display: block;
     color: white;
@@ -187,12 +216,10 @@ nav ul li button.active {
     background: none;
     border: none;
   }
-
   .show {
     display: block;
   }
 }
-
 .app {
   background: #fff;
   width: 90%;
@@ -201,4 +228,4 @@ nav ul li button.active {
   margin-bottom: 20px;
   border-radius: 10px;
   padding: 30px;
-}
+}/*# sourceMappingURL=style.css.map */

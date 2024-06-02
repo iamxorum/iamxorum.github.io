@@ -356,7 +356,7 @@
 
       // Add event listener to the button to go back to the result page
       goButton.addEventListener("click", () => {
-        window.location.href = "../results.html";
+        window.location.href = "../result/results.html";
       });
     }
     

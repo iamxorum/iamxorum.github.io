@@ -61,7 +61,7 @@
   },
   {
     "id": 6,
-    "question": "Se dă tabelul STUDENT(CNP, Nume, Grupa, Adresa) şi următoarea secvenţă ce reprezintă o tranzacţie:<br>CREATE table STUDENT_NOU ( CNP NUMBER, Nume VARCHAR(30))<br>INSERT INTO STUDENT_NOU SELECT CNP, Nume from STUDENT<br>SGBD<br>Savepoint s1<br>UPDATE STUDENT_NOU SET Nume = UPPER(Nume)<br>Savepoint s2<br>DELETE FROM STUDENT_NOU<br>Rollback to s2<br>DELETE FROM STUDENT_NOU WHERE CNP=100<br>UPDATE STUDENT_NOU SET Nume = 'Ionescu'<br>Rollback to s2<br>UPDATE STUDENT_NOU SET Nume = 'Ionescu' WHERE CNP=100<br>Rollback<br><br>Care este rezultatul acestei tranzacţii pentru tabela STUDENT_NOU?",
+    "question": "Se dă tabelul <div class=\"code\">STUDENT(CNP, Nume, Grupa, Adresa)</div> şi următoarea secvenţă ce reprezintă o tranzacţie:<br><br><div class=\"code\">CREATE table STUDENT_NOU ( CNP NUMBER, Nume VARCHAR(30))<br>INSERT INTO STUDENT_NOU SELECT CNP, Nume from STUDENT<br>SGBD<br>Savepoint s1<br>UPDATE STUDENT_NOU SET Nume = UPPER(Nume)<br>Savepoint s2<br>DELETE FROM STUDENT_NOU<br>Rollback to s2<br>DELETE FROM STUDENT_NOU WHERE CNP=100<br>UPDATE STUDENT_NOU SET Nume = 'Ionescu'<br>Rollback to s2<br>UPDATE STUDENT_NOU SET Nume = 'Ionescu' WHERE CNP=100<br>Rollback</div><br><br>Care este rezultatul acestei tranzacţii pentru tabela STUDENT_NOU?",
     "answers": [
       "A. Avem un student cu numele ‘Ionescu’",
       "B. Nu avem linii în tabelă",
@@ -280,7 +280,7 @@
   },
   {
     "id": 25,
-    "question": "Secvenţa de comenzi:<br>SET AUTOCOMMIT OFF<br>DELETE FROM stoc<br>ROLLBACK<br>are ca efect:",
+    "question": "Secvenţa de comenzi:<br><div class=\"code\">SET AUTOCOMMIT OFF<br>DELETE FROM stoc<br>ROLLBACK<div class=\"code\"><br>are ca efect:",
     "answers": [
       "A. Nu execută nici o ştergere",
       "B. Şterge toate înregistrările din tabela stoc",
@@ -366,17 +366,17 @@
     "id": 32,
     "question": "Aţi creat o vedere folosind comanda:<br>CREATE VIEW dbo.Employee<br>WITH ENCRYPTION<br>AS SELECT Name FROM dbo.HumanResources<br>WHERE isEmployee = 1<br>WITH CHECK OPTION<br>Trebuie să împiedicaţi alţi utilizatori să copieze vederea. Ce instrucţiune ar trebui să folosiţi?",
     "answers": [
-      "A. ALTER VIEW dbo.Employee<br>WITH ENCRYPTION<br>AS SELECT Name FROM dbo.HumanResources<br>WHERE isEmployee = 1",
-      "B. DENY ALL ON dbo.Employee TO public",
-      "C. ALTER VIEW dbo.Employee<br>AS SELECT Name FROM dbo.HumanResources<br>WHERE isEmployee = 1<br>WITH CHECK OPTION",
-      "D. ALTER VIEW dbo.Employee<br>WITH SCHEMABINDING<br>AS SELECT Name FROM dbo.HumanResources<br>WHERE isEmployee = 1",
+      "A. <div class=\"code_2\">ALTER VIEW dbo.Employee<br>WITH ENCRYPTION<br>AS SELECT Name FROM dbo.HumanResources<br>WHERE isEmployee = 1</div>",
+      "B. <div class=\"code_2\">DENY ALL ON dbo.Employee TO public</div>",
+      "C. <div class=\"code_2\">ALTER VIEW dbo.Employee<br>AS SELECT Name FROM dbo.HumanResources<br>WHERE isEmployee = 1<br>WITH CHECK OPTION</div>",
+      "D. <div class=\"code_2\">ALTER VIEW dbo.Employee<br>WITH SCHEMABINDING<br>AS SELECT Name FROM dbo.HumanResources<br>WHERE isEmployee = 1</div>",
       "E. Nu exista o asemenea instrucţiune"
     ],
     "correctAnswerIndexes": [0]
   },
   {
     "id": 33,
-    "question": "Aţi executat trei proceduri stocate folosind următoarele instrucţiuni SQL:<br>BEGIN TRANSACTION<br>EXEC employeeStats<br>SAVE TRANSACTION SV_employee<br>EXEC productStats<br>SAVE TRANSACTION SV_product<br>EXEC webStats<br>A apărut o eroare în procedura stocată productStats şi este nevoie să se anuleze modificările făcute de acea procedură.<br>Ce instrucţiune ar trebui să executaţi?",
+    "question": "Aţi executat trei proceduri stocate folosind următoarele instrucţiuni SQL:<br><div class=\"code\">BEGIN TRANSACTION<br>EXEC employeeStats<br>SAVE TRANSACTION SV_employee<br>EXEC productStats<br>SAVE TRANSACTION SV_product<br>EXEC webStats</div><br>A apărut o eroare în procedura stocată productStats şi este nevoie să se anuleze modificările făcute de acea procedură.<br>Ce instrucţiune ar trebui să executaţi?",
     "answers": [
       "A. ROLLBACK TRANSACTION",
       "B. ROLLBACK TRANSACTION SV_employee",
@@ -390,11 +390,11 @@
     "id": 34,
     "question": "Folosiţi tabela Products pentru a stoca informaţii despre produse. Printre alte informaţii, tabela conţine numele şi preţul produselor. Creşteţi preţul produselor astfel:<br>- preţul produselor mai mic de 100$ va fi crescut cu 10% ;.<br>- preţul produselor cuprins în intervalul 100$ şi 1000$ va fi crescut cu 5%;<br>- preţul produselor mai mare de 1000$ va fi crescut cu 1%.<br>Trebuie să faceţi aceste modificări pentru toate produsele din tabela Products şi să afişaţi lista cu numele produselor, preţul original şi preţul crescut. Ce instrucţiune ar trebui folosită ?",
     "answers": [
-      "A. DECLARE @t1 table<br>(name varchar(30),<br>oldprice decimal(7,2),<br>newprice decimal(7,2));<br>UPDATE Products<br>SET price =<br>CASE<br>WHEN price < 100.00 THEN price*1.10<br>WHEN price BETWEEN 100.00 AND 1000.00 THEN price*1.05<br>ELSE price*1.01<br>END<br>OUTPUT DELETED.name, DELETED.price, INSERTED.price INTO @t1",
-      "B. UPDATE Products<br>SET price =<br>CASE<br>WHEN price < 100.00 THEN price*1.10<br>WHEN price BETWEEN 100.00 AND 1000.00 THEN price*1.05<br>ELSE price*1.01<br>END<br>OUTPUT DELETED.name, DELETED.price",
-      "C. UPDATE Products<br>SET price =<br>CASE<br>WHEN price < 100.00 THEN price*1.10<br>WHEN price BETWEEN 100.00 AND 1000.00 THEN price*1.05<br>ELSE price*1.01<br>END<br>OUTPUT DELETED.name, DELETED.price, INSERTED.price",
-      "D. UPDATE Products<br>SET price =<br>CASE<br>WHEN price < 100.00 THEN price*1.10<br>WHEN price BETWEEN 100.00 AND 1000.00 THEN price*1.05<br>ELSE price*1.01<br>END<br>OUTPUT DELETED.*, INSERTED.*",
-      "E. UPDATE Products<br>SET price =<br>CASE<br>WHEN price < 100.00 THEN price*1.10<br>WHEN price BETWEEN 100.00 AND 1000.00 THEN price*1.05<br>ELSE price*1.01<br>END<br>OUTPUT DELETED.name, DELETED.price, INSERTED.*"
+      "A. <div class=\"code_2\">DECLARE @t1 table<br>(name varchar(30),<br>oldprice decimal(7,2),<br>newprice decimal(7,2));<br>UPDATE Products<br>SET price =<br>CASE<br>WHEN price < 100.00 THEN price*1.10<br>WHEN price BETWEEN 100.00 AND 1000.00 THEN price*1.05<br>ELSE price*1.01<br>END<br>OUTPUT DELETED.name, DELETED.price, INSERTED.price INTO @t1</div>",
+      "B. <div class=\"code_2\">UPDATE Products<br>SET price =<br>CASE<br>WHEN price < 100.00 THEN price*1.10<br>WHEN price BETWEEN 100.00 AND 1000.00 THEN price*1.05<br>ELSE price*1.01<br>END<br>OUTPUT DELETED.name, DELETED.price</div>",
+      "C. <div class=\"code_2\">UPDATE Products<br>SET price =<br>CASE<br>WHEN price < 100.00 THEN price*1.10<br>WHEN price BETWEEN 100.00 AND 1000.00 THEN price*1.05<br>ELSE price*1.01<br>END<br>OUTPUT DELETED.name, DELETED.price, INSERTED.price</div>",
+      "D. <div class=\"code_2\">UPDATE Products<br>SET price =<br>CASE<br>WHEN price < 100.00 THEN price*1.10<br>WHEN price BETWEEN 100.00 AND 1000.00 THEN price*1.05<br>ELSE price*1.01<br>END<br>OUTPUT DELETED.*, INSERTED.*</div>",
+      "E. <div class=\"code_2\">UPDATE Products<br>SET price =<br>CASE<br>WHEN price < 100.00 THEN price*1.10<br>WHEN price BETWEEN 100.00 AND 1000.00 THEN price*1.05<br>ELSE price*1.01<br>END<br>OUTPUT DELETED.name, DELETED.price, INSERTED.*</div>"
     ],
     "correctAnswerIndexes": [2]
   },
@@ -484,7 +484,7 @@
   },
   {
     "id": 42,
-    "question": "Secvenţa de comenzi Microsoft SQL Server:<br>SET IMPLICIT_TRANSACTIONS OFF<br>BEGIN TRANSACTION<br>DELETE FROM Tabel_sursa<br>ROLLBACK<br>are ca efect:",
+    "question": "Secvenţa de comenzi Microsoft SQL Server:<br><div class=\"code\">SET IMPLICIT_TRANSACTIONS OFF<br>BEGIN TRANSACTION<br>DELETE FROM Tabel_sursa<br>ROLLBACK</div><br>are ca efect:",
     "answers": [
       "A. Şterge toate înregistrările din tabela “Tabel_sursa”",
       "B. Şterge doar înregistrarea curentă din “Tabel_sursa”",
@@ -498,10 +498,10 @@
     "id": 43,
     "question": "Compania dumneavoastră utilizează o procedură stocată numită webAnalysis pentru a analiza informația de pe un Web site. Procedura întoarce 1 dacă analiza a avut loc cu succes și 0 dacă a existat o problemă. Dumneavoastră creați o interogare care execută un grup de operații de întreținere zilnice, incluzând procedura webAnalysis. Trebuie să comiteți modificările făcute de procedură, dacă analiza a înregistrat succes, fără să afectați execuția altor task-uri executate de interogare. Care set de instrucțiuni ar trebui să folosiți?",
     "answers": [
-      "A. BEGIN TRANSACTION;<br>DECLARE @success int;<br>EXEC @success = webAnalysis;<br>IF @success = 0<br>ROLLBACK;<br>ELSE<br>COMMIT;",
-      "B. BEGIN TRANSACTION;<br>DECLARE @success int;<br>EXEC @success = webAnalysis;<br>IF @success = 0<br>ROLLBACK;",
-      "C. BEGIN TRANSACTION;<br>DECLARE @success int;<br>EXEC @success = webAnalysis;<br>COMMIT;<br>IF @success = 0<br>ROLLBACK;",
-      "D. DECLARE @success int;<br>EXEC @success = webAnalysis;<br>IF @success = 0<br>ROLLBACK;<br>ELSE<br>COMMIT;"
+      "A. <div class=\"code_2\">BEGIN TRANSACTION;<br>DECLARE @success int;<br>EXEC @success = webAnalysis;<br>IF @success = 0<br>ROLLBACK;<br>ELSE<br>COMMIT;</div>",
+      "B. <div class=\"code_2\">BEGIN TRANSACTION;<br>DECLARE @success int;<br>EXEC @success = webAnalysis;<br>IF @success = 0<br>ROLLBACK;</div>",
+      "C. <div class=\"code_2\">BEGIN TRANSACTION;<br>DECLARE @success int;<br>EXEC @success = webAnalysis;<br>COMMIT;<br>IF @success = 0<br>ROLLBACK;</div>",
+      "D. <div class=\"code_2\">DECLARE @success int;<br>EXEC @success = webAnalysis;<br>IF @success = 0<br>ROLLBACK;<br>ELSE<br>COMMIT;</div>"
     ],
     "correctAnswerIndexes": [0]
   },
@@ -518,12 +518,12 @@
   },
   {
     "id": 45,
-    "question": "Tabela Employees include următoarele coloane:<br>- id int UNIQUE;<br>- name nvarchar(50).<br>Trebuie să creați o procedură stocată care să permită utilizatorilor să transmită ID-ul unui angajat și să extragă numele angajatului pe care sa-l memoreze într-o variabilă nvarchar(50). Ce instrucțiune ar trebui să utilizați?",
+    "question": "Tabela Employees include următoarele coloane:<br><div class=\"code\">- id int UNIQUE;<br>- name nvarchar(50).</div><br>Trebuie să creați o procedură stocată care să permită utilizatorilor să transmită ID-ul unui angajat și să extragă numele angajatului pe care sa-l memoreze într-o variabilă nvarchar(50). Ce instrucțiune ar trebui să utilizați?",
     "answers": [
-      "A. CREATE PROCEDURE getName<br>@ID int<br>AS<br>DECLARE @outputName nvarchar(50);<br>SELECT @outputName = name FROM Employees WHERE id = @ID;<br>RETURN @outputName;",
-      "B. CREATE PROCEDURE getName<br>@ID int,<br>@Name nvarchar(50) OUTPUT<br>AS<br>SELECT @Name = name FROM Employees WHERE id = @ID;",
-      "C. CREATE PROCEDURE getName<br>@ID int,<br>@Name nvarchar(50)<br>AS<br>SELECT @Name = name FROM Employees WHERE id = @ID;",
-      "D. CREATE PROCEDURE getName<br>@ID int<br>AS<br>SELECT name FROM Employees WHERE id = @ID;"
+      "A. <div class=\"code_2\">CREATE PROCEDURE getName<br>@ID int<br>AS<br>DECLARE @outputName nvarchar(50);<br>SELECT @outputName = name FROM Employees WHERE id = @ID;<br>RETURN @outputName;</div>",
+      "B. <div class=\"code_2\">CREATE PROCEDURE getName<br>@ID int,<br>@Name nvarchar(50) OUTPUT<br>AS<br>SELECT @Name = name FROM Employees WHERE id = @ID;</div>",
+      "C. <div class=\"code_2\">CREATE PROCEDURE getName<br>@ID int,<br>@Name nvarchar(50)<br>AS<br>SELECT @Name = name FROM Employees WHERE id = @ID;</div>",
+      "D. <div class=\"code_2\">CREATE PROCEDURE getName<br>@ID int<br>AS<br>SELECT name FROM Employees WHERE id = @ID;</div>"
     ],
     "correctAnswerIndexes": [1]
   },
@@ -531,21 +531,21 @@
     "id": 46,
     "question": "Baza de date folosită de dumneavoastră conține o tabelă numită Employees, care are o coloană de tip nvarchar(MAX) numită lastName. Aveți deja un index clustered numit id_index pe coloana id a tabelei. Unul dintre utilizatorii dumneavoastră reclamă timpii de interogare lungi obținuți când folosește coloana lastName în clauza WHERE a instrucțiunii SELECT. Ce instrucțiune ar trebui să folosiți?",
     "answers": [
-      "A. ALTER INDEX id_index<br>ON Employees (id, lastName);",
-      "B. CREATE INDEX id_name_index<br>ON Employees (id)<br>INCLUDE (lastName);",
-      "C. CREATE CLUSTERED INDEX name_index<br>ON Employees (lastName);",
-      "D. CREATE INDEX name_index<br>ON Employees (lastName);"
+      "A. <div class=\"code_2\">ALTER INDEX id_index<br>ON Employees (id, lastName);</div>",
+      "B. <div class=\"code_2\">CREATE INDEX id_name_index<br>ON Employees (id)<br>INCLUDE (lastName);</div>",
+      "C. <div class=\"code_2\">CREATE CLUSTERED INDEX name_index<br>ON Employees (lastName);</div>",
+      "D. <div class=\"code_2\">CREATE INDEX name_index<br>ON Employees (lastName);</div>"
     ],
     "correctAnswerIndexes": [3]
   },
   {
     "id": 47,
-    "question": "O bază de date folosită de dumneavoastră include o tabelă numită Contractors. Aplicațiile folosesc frecvent următoarea instrucțiune pentru a accesa înregistrările actualizate după 1 ianuarie 2014:<br>SELECT id, name FROM Contractors<br>WHERE expertise = @searchWord<br>AND lastUpdated > '20140101';<br>Trebuie să reduceți timpul necesar execuției acestei instrucțiuni. Care este soluția optimă pentru a obține acest deziderat?",
+    "question": "O bază de date folosită de dumneavoastră include o tabelă numită Contractors. Aplicațiile folosesc frecvent următoarea instrucțiune pentru a accesa înregistrările actualizate după 1 ianuarie 2014:<br><div class=\"code\">SELECT id, name FROM Contractors<br>WHERE expertise = @searchWord<br>AND lastUpdated > '20140101';</div><br>Trebuie să reduceți timpul necesar execuției acestei instrucțiuni. Care este soluția optimă pentru a obține acest deziderat?",
     "answers": [
-      "A. CREATE INDEX expertise_index<br>ON Contractors (lastUpdated, expertise);",
-      "B. CREATE INDEX expertise_index<br>ON Contractors(lastUpdated)<br>INCLUDE (expertise);",
-      "C. CREATE INDEX expertise_index<br>ON Contractors (expertise)<br>WHERE lastUpdated > '20140101';",
-      "D. CREATE INDEX expertise_index<br>ON Constractors (expertise, lastUpdated);"
+      "A. <div class=\"code_2\">CREATE INDEX expertise_index<br>ON Contractors (lastUpdated, expertise);</div>",
+      "B. <div class=\"code_2\">CREATE INDEX expertise_index<br>ON Contractors(lastUpdated)<br>INCLUDE (expertise);</div>",
+      "C. <div class=\"code_2\">CREATE INDEX expertise_index<br>ON Contractors (expertise)<br>WHERE lastUpdated > '20140101';</div>",
+      "D. <div class=\"code_2\">CREATE INDEX expertise_index<br>ON Constractors (expertise, lastUpdated);</div>"
     ],
     "correctAnswerIndexes": [2]
   },
@@ -562,18 +562,18 @@
   },
   {
     "id": 49,
-    "question": "Ați creat o vedere folosind comanda:<br>CREATE VIEW dbo.AngajatiNoi<br>AS SELECT<br>Nume,<br>SalariuLunar,<br>(SalariuLunar * 12) AS SalariuAnual,<br>Data_Ang<br>FROM dbo.ResurseUmane<br>WHERE Nume IS NOT NULL<br>AND Data_Ang > '1/1/2014'<br>WITH CHECK OPTION;<br>Trebuie să inserați o linie folosind această vedere. Ce instrucțiune ar trebui să folosiți?",
+    "question": "Ați creat o vedere folosind comanda:<br><div class=\"code\">CREATE VIEW dbo.AngajatiNoi<br>AS SELECT<br>Nume,<br>SalariuLunar,<br>(SalariuLunar * 12) AS SalariuAnual,<br>Data_Ang<br>FROM dbo.ResurseUmane<br>WHERE Nume IS NOT NULL<br>AND Data_Ang > '1/1/2014'<br>WITH CHECK OPTION;</div><br>Trebuie să inserați o linie folosind această vedere. Ce instrucțiune ar trebui să folosiți?",
     "answers": [
-      "A. INSERT INTO dbo. AngajatiNoi (Nume, SalariuAnual, Data_Ang) VALUES ('Popa Ion', 50000, '3/12/2014');",
-      "B. INSERT INTO dbo. AngajatiNoi (Nume, SalariuLunar, Data_Ang) VALUES ('Mihnea George', 4000, '5/13/2014');",
-      "C. INSERT INTO dbo. AngajatiNoi (Nume, SalariuLunar, Data_Ang) VALUES ('Stan Remus’, 2500, '11/5/2010');",
-      "D. INSERT INTO dbo. AngajatiNoi (Nume) VALUES ('Tonoiu Petre');"
+      "A. <div class=\"code_2\">INSERT INTO dbo. AngajatiNoi (Nume, SalariuAnual, Data_Ang) VALUES ('Popa Ion', 50000, '3/12/2014');</div>",
+      "B. <div class=\"code_2\">INSERT INTO dbo. AngajatiNoi (Nume, SalariuLunar, Data_Ang) VALUES ('Mihnea George', 4000, '5/13/2014');</div>",
+      "C. <div class=\"code_2\">INSERT INTO dbo. AngajatiNoi (Nume, SalariuLunar, Data_Ang) VALUES ('Stan Remus’, 2500, '11/5/2010');</div>",
+      "D. <div class=\"code_2\">INSERT INTO dbo. AngajatiNoi (Nume) VALUES ('Tonoiu Petre');</div>"
     ],
     "correctAnswerIndexes": [1]
   },
   {
     "id": 50,
-    "question": "Ați creat o tabelă folosind instrucțiunea:<br>CREATE TABLE dbo.Products (ID int IDENTITY(1,1) NOT NULL, Name nvarchar(60) NOT NULL, Cost decimal(10,2), SalePrice decimal(10,2), CurrentStock bigint, NumberSold bigint)<br>Un utilizator necesită următoarele tipuri de acces:<br>- SELECT pe coloanele Name și SalePrice;<br>- SELECT pe stocul disponibil(diferența dintre CurrentStock și NumberSold );<br>- ALTER pe coloanele Name și SalePrice.<br>Trebuie să acordați permisiuni pentru a satisface aceste cerințe, fără a da permisiuni suplimentare sau a restricționa accesul. Ce ar trebui să faceți?",
+    "question": "Ați creat o tabelă folosind instrucțiunea:<br><div class=\"code\">CREATE TABLE dbo.Products (ID int IDENTITY(1,1) NOT NULL, Name nvarchar(60) NOT NULL, Cost decimal(10,2), SalePrice decimal(10,2), CurrentStock bigint, NumberSold bigint)</div><br>Un utilizator necesită următoarele tipuri de acces:<br><div class=\"code\">- SELECT pe coloanele Name și SalePrice;<br>- SELECT pe stocul disponibil(diferența dintre CurrentStock și NumberSold );<br>- ALTER pe coloanele Name și SalePrice.</div><br>Trebuie să acordați permisiuni pentru a satisface aceste cerințe, fără a da permisiuni suplimentare sau a restricționa accesul. Ce ar trebui să faceți?",
     "answers": [
       "A. Acordați utilizatorului permisiunile SELECT și ALTER pe vederea definită de instrucțiunea: CREATE VIEW dbo.CustomerProduct AS SELECT Name, SalePrice, (CurrentStock - NumberSold) AS AvailableStock FROM dbo.Products.",
       "B. Acordați utilizatorului permisiunea SELECT pe coloanele Name, SalePrice, CurrentStock și NumberSold și permisiunea ALTER pe coloanele Name și SalePrice din tabela Products.",

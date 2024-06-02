@@ -605,7 +605,7 @@
   },
   {
     "id": 56,
-    "question": "Un fir de executare în Java se poate defini:\n",
+    "question": "Ce se va afișa dupa executarea următorului program Java:\n\npublic class Test {\n   public static void main(String[] args) {\n        HashMap m = new HashMap();\n        m.put(\"a\", null);\n        m.put(\"b\", \"JavaSE\");\n        m.put(\"c\", \"Python\");\n        m.put(null, \"PHP\");\n        m.put(null, null);\n\n        System.out.println(m);\n\n    }\n}",
     "answers": [
       "a) {null=null, a=null, b=JavaSE, c=Python}",
       "b) {a=null, b=JavaSE, c=Python}",

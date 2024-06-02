@@ -235,4 +235,23 @@ body {
 }
 .code_2 pre {
   margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    width: 95%;
+    padding: 20px;
+  }
+  .quiz {
+    padding: 10px 0px;
+  }
+  .quiz h2 {
+    font-size: 1rem;
+  }
+  #timer {
+    width: 100px;
+  }
+  #next-btn, #answer-btn {
+    width: 120px;
+  }
 }/*# sourceMappingURL=style.css.map */

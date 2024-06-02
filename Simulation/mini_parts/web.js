@@ -323,7 +323,7 @@
 
         // Add event listener to the button to go to the result page
         goButton.addEventListener("click", () => {
-          location.href = "../results.html";
+          location.href = "../result/results.html";
         });
       }
       
