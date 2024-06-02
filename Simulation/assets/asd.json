@@ -279,7 +279,7 @@
   },
   {
     "id": 26,
-    "question": "Se consideră lista înlănțuită cu elemente numere întregi din Fig. 2. <br>Dată următoarea definiție a tipului de date ce corespunde unui nod al listei,<br><div class=\"code\">struct NOD {<br><span class=\"tab\"></span>int info;<br<span class=\"tab\"></span>>NOD *link;<br>};</div><br>ce va afișa următoarea funcție, dacă este apelată prin print(HEAD)?<br><br><div class=\"code\">void print(NOD *head) {<br><span class=\"tab\"></span>NOD *iter=head;<br><span class=\"tab\"></span>while(iter!=NULL) {<br><span class=\"tab_2\"></span>cout &lt;&lt; iter-&gt;info&lt;&lt;\", \";<br><span class=\"tab_2\"></span>iter=iter-&gt;link;<br><span class=\"tab\"></span>}<br>}</div><br>",
+    "question": "Se consideră lista înlănțuită cu elemente numere întregi din Fig. 2. <br>Dată următoarea definiție a tipului de date ce corespunde unui nod al listei,<br><div class=\"code\">struct NOD {<br><span class=\"tab\"></span>int info;<br><span class=\"tab\"></span>NOD *link;<br>};</div><br>ce va afișa următoarea funcție, dacă este apelată prin print(HEAD)?<br><br><div class=\"code\">void print(NOD *head) {<br><span class=\"tab\"></span>NOD *iter=head;<br><span class=\"tab\"></span>while(iter!=NULL) {<br><span class=\"tab_2\"></span>cout &lt;&lt; iter-&gt;info&lt;&lt;\", \";<br><span class=\"tab_2\"></span>iter=iter-&gt;link;<br><span class=\"tab\"></span>}<br>}</div><br>",
     "answers": [
       "10, 2, 8, 5, 7, 3",
       "3, 7, 5, 8, 2, 10",
