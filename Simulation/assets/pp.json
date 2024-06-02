@@ -17,10 +17,10 @@
     "id": 2,
     "question": "Care dintre următoarele expresii logice este adevărată (are o valoare nenulă) dacă şi numai dacă numărul real memorat în variabila 𝑥 nu aparţine intervalului (0,5]?",
     "answers": [
-      "<div class=\"code_2\">(x&lt;=0)||(x>5)</div>",
-      "<div class=\"code_2\">(x&lt;=0)&&(x>5)</div>",
-      "<div class=\"code_2\">(x<0)||(x&gt;=5)</div>",
-      "<div class=\"code_2\">(x&lt;=0)&&(x>5)</div>"
+      "<div class=\"code_2\">(x&lt;=0)||(x&gt;5)</div>",
+      "<div class=\"code_2\">(x&lt;=0)&&(x&gt;5)</div>",
+      "<div class=\"code_2\">(x&lt;0)||(x&gt;=5)</div>",
+      "<div class=\"code_2\">(x&lt;=0)&&(x&gt;5)</div>"
     ],
     "correctAnswerIndexes": [
       0
@@ -30,10 +30,10 @@
     "id": 3,
     "question": "Care dintre următoarele expresii este adevărată (are o valoare nenulă) dacă şi numai dacă numărul întreg memorat în variabila 𝑥 aparţine intervalului (1,6]?",
     "answers": [
-      "<div class=\"code_2\">(x&gt;=1)||(x<6)</div>",
-      "<div class=\"code_2\">(x>1)||(x&lt;=6)</div>",
-      "<div class=\"code_2\">(x>1)&&(x<6)</div>",
-      "<div class=\"code_2\">(x>1)&&(x&lt;=6)</div>"
+      "<div class=\"code_2\">(x&gt;=1)||(x&lt;6)</div>",
+      "<div class=\"code_2\">(x&gt;1)||(x&lt;=6)</div>",
+      "<div class=\"code_2\">(x&gt;1)&&(x&lt;6)</div>",
+      "<div class=\"code_2\">(x&gt;1)&&(x&lt;=6)</div>"
     ],
     "correctAnswerIndexes": [
       3
@@ -124,7 +124,7 @@
       "<div class=\"code_2\">int t=0;<br>while(a&gt;=b) {<br><span class=\"tab\"></span>a=a-b;<br><span class=\"tab\"></span>t++;<br>}<br>printf(\"%d %d\",t,a);</div>",
       "<div class=\"code_2\">int t=0;<br>do {<br><span class=\"tab\"></span>a=a-b;<br><span class=\"tab\"></span>t++;<br>} while(a&gt;=b);<br>printf(\"%d %d\",t,a);</div>",
       "<div class=\"code_2\">int t=0;<br>while(a!=b) {<br><span class=\"tab\"></span>a=a-b;<br><span class=\"tab\"></span>t++;<br>}<br>printf(\"%d %d\",t,b);</div>",
-      "<div class=\"code_2\">int t=0;<br>while(a%b==0) {<br><span class=\"tab\"></span>a=a-b;<span class=\"tab\"></span><br>t++;<br>}<br>printf(\"%d %d\",t,a);</div>"
+      "<div class=\"code_2\">int t=0;<br>while(a%b==0) {<br><span class=\"tab\"></span>a=a-b;<span class=\"tab\"></span><br><span class=\"tab\"></span>t++;<br>}<br>printf(\"%d %d\",t,a);</div>"
     ],
     "correctAnswerIndexes": [
       0
@@ -132,7 +132,7 @@
   },
   {
     "id": 11,
-    "question": "<div class=\"code\">#include <stdio.h><br>void sch(int a, int *b) {<br><span class=\"tab\"></span>int aux;<br><span class=\"tab\"></span>aux = a;<br><span class=\"tab\"></span>a = *b;<br><span class=\"tab\"></span>*b = aux;<br>}<br><br>int main() {<br><span class=\"tab\"></span>int x = 1,y = 2;<br><span class=\"tab\"></span>sch(x,&y);<br><span class=\"tab\"></span>printf(\"%d\",x+y);<br><span class=\"tab\"></span>return 0;<br>}</div><br><br>Ce valoare se va afişa pe ecran după executarea programului de mai sus?<br>",
+    "question": "<div class=\"code\">#include&lt;stdio.h&gt;<br>void sch(int a, int *b) {<br><span class=\"tab\"></span>int aux;<br><span class=\"tab\"></span>aux = a;<br><span class=\"tab\"></span>a = *b;<br><span class=\"tab\"></span>*b = aux;<br>}<br><br>int main() {<br><span class=\"tab\"></span>int x = 1,y = 2;<br><span class=\"tab\"></span>sch(x,&y);<br><span class=\"tab\"></span>printf(\"%d\",x+y);<br><span class=\"tab\"></span>return 0;<br>}</div><br><br>Ce valoare se va afişa pe ecran după executarea programului de mai sus?<br>",
     "answers": [
       "2",
       "1",
@@ -145,7 +145,7 @@
   },
   {
     "id": 12,
-    "question": "<div class=\"code\">#include <stdio.h><br>void sch(char a, char *b) {<br><span class=\"tab\"></span>char aux;<br><span class=\"tab\"></span>aux = a;<br><span class=\"tab\"></span>a = *b;<br><span class=\"tab\"></span>*b = aux;<br>}<br><br>int main() {<br><span class=\"tab\"></span>char x = '1',y = '2';<br><span class=\"tab\"></span>sch(x,&y);<br><span class=\"tab\"></span>printf(\"%c,%c\",x,y);<br><span class=\"tab\"></span>return 0;<br>}</div><br><br>Ce valori se vor afişa pe ecran după executarea programului de mai sus?<br>",
+    "question": "<div class=\"code\">#include&lt;stdio.h&gt;<br>void sch(char a, char *b) {<br><span class=\"tab\"></span>char aux;<br><span class=\"tab\"></span>aux = a;<br><span class=\"tab\"></span>a = *b;<br><span class=\"tab\"></span>*b = aux;<br>}<br><br>int main() {<br><span class=\"tab\"></span>char x = '1',y = '2';<br><span class=\"tab\"></span>sch(x,&y);<br><span class=\"tab\"></span>printf(\"%c,%c\",x,y);<br><span class=\"tab\"></span>return 0;<br>}</div><br><br>Ce valori se vor afişa pe ecran după executarea programului de mai sus?<br>",
     "answers": [
       "1,2",
       "2,1",
@@ -158,7 +158,7 @@
   },
   {
     "id": 13,
-    "question": "<div class=\"code\">#include <stdio.h><br>void sch(int *a, int b) {<br><span class=\"tab\"></span>int aux;<br><span class=\"tab\"></span>aux = *a;<br><span class=\"tab\"></span>*a = b;<br><span class=\"tab\"></span>b = aux;<br>}<br><br>int main() {<br><span class=\"tab\"></span>int x = 1,y = 2;<br><span class=\"tab\"></span>sch(&x,y);<br><span class=\"tab\"></span>printf(\"%d\",x*y);<br><span class=\"tab\"></span>return 0;<br>}</div><br><br>Ce valoare se va afişa pe ecran după executarea programului de mai sus?<br>",
+    "question": "<div class=\"code\">#include&lt;stdio.h&gt;<br>void sch(int *a, int b) {<br><span class=\"tab\"></span>int aux;<br><span class=\"tab\"></span>aux = *a;<br><span class=\"tab\"></span>*a = b;<br><span class=\"tab\"></span>b = aux;<br>}<br><br>int main() {<br><span class=\"tab\"></span>int x = 1,y = 2;<br><span class=\"tab\"></span>sch(&x,y);<br><span class=\"tab\"></span>printf(\"%d\",x*y);<br><span class=\"tab\"></span>return 0;<br>}</div><br><br>Ce valoare se va afişa pe ecran după executarea programului de mai sus?<br>",
     "answers": [
       "3",
       "2",
@@ -171,7 +171,7 @@
   },
   {
     "id": 14,
-    "question": "<div class=\"code\">#include<stdio.h><br>void f(int a,int *b) {<br><span class=\"tab\">a++;<br><span class=\"tab\">*b=a;<br><span class=\"tab\">(*b)++;<br>}<br><br>void g(int *a,int b) {<br><span class=\"tab\">b++;<br><span class=\"tab\">*a=b;<br><span class=\"tab\">(*a)++;<br>}<br><br>int main() {<br><span class=\"tab\">int x=4, y=-2;<br><span class=\"tab\">f(x,&y);<br><span class=\"tab\">g(&x,y);<br><span class=\"tab\">printf(\"%d %d\",x,y);<br><span class=\"tab\">return 0;<br>}</div><br><br>Ce valori se vor afişa pe ecran după executarea programului de mai sus?<br>",
+    "question": "<div class=\"code\">#include&lt;stdio.h&gt;<br>void f(int a,int *b) {<br><span class=\"tab\"></span>a++;<br><span class=\"tab\"></span>*b=a;<br><span class=\"tab\"></span>(*b)++;<br>}<br><br>void g(int *a,int b) {<br><span class=\"tab\"></span>b++;<br><span class=\"tab\"></span>*a=b;<br><span class=\"tab\"></span>(*a)++;<br>}<br><br>int main() {<br><span class=\"tab\"></span>int x=4, y=-2;<br><span class=\"tab\"></span>f(x,&y);<br><span class=\"tab\"></span>g(&x,y);<br><span class=\"tab\"></span>printf(\"%d %d\",x,y);<br><span class=\"tab\"></span>return 0;<br>}</div><br><br>Ce valori se vor afişa pe ecran după executarea programului de mai sus?<br>",
     "answers": [
       "4 8",
       "8 8",
@@ -186,10 +186,10 @@
     "id": 15,
     "question": "Care dintre următoarele secvenţe de instrucţiuni atribuie variabilei de tip întreg 𝑚𝑎𝑥 cea mai mare valoare din tabloul 𝑎, format din 𝑛 numere întregi?<br>",
     "answers": [
-      "<div class=\"code_2\"max=0;<br>for(i=0;i&lt;n;i++)<br>if(a[i]&gt;max) max=a[i];</div>",
-      "<div class=\"code_2\"max=a[0];<br>for(i=0;i&lt;n;i++)<br>if(a[i]&gt;a[i+1]) max=a[i];</div>",
-      "<div class=\"code_2\"max=a[0];<br>for(i=0;i&lt;n;i++)<br>if(a[i]&gt;max) max=a[i];</div>",
-      "<div class=\"code_2\"max=0;<br>for(i=0;i&lt;n;i++)<br>if(a[i]&lt;a[i+1]) max=a[i+1];</div>"
+      "<div class=\"code_2\"max=0;<br>for(i=0;i&lt;n;i++)<br><span class=\"tab\"></span>if(a[i]&gt;max) max=a[i];</div>",
+      "<div class=\"code_2\"max=a[0];<br>for(i=0;i&lt;n;i++)<br><span class=\"tab\"></span>if(a[i]&gt;a[i+1]) max=a[i];</div>",
+      "<div class=\"code_2\"max=a[0];<br>for(i=0;i&lt;n;i++)<br><span class=\"tab\"></span>if(a[i]&gt;max) max=a[i];</div>",
+      "<div class=\"code_2\"max=0;<br>for(i=0;i&lt;n;i++)<br><span class=\"tab\"></span>if(a[i]&lt;a[i+1]) max=a[i+1];</div>"
     ],
     "correctAnswerIndexes": [
       2
@@ -197,7 +197,7 @@
   },
   {
     "id": 16,
-    "question": "<div class=\"code\">np=0;<br>for(i=0;i&lt;n;i++)<br>if(…) np++;<br>printf(\"%d\",np);</div><br><br>Cu ce expresie dintre cele de mai jos trebuie înlocuite spaţiile punctate din secvenţă de instrucțiuni dată astfel încât aceasta să afişeze câte valori strict pozitive şi pare sunt în tabloul 𝑎, format din 𝑛 numere întregi?<br>",
+    "question": "<div class=\"code\">np=0;<br>for(i=0;i&lt;n;i++)<br><span class=\"tab\"></span>if(…) np++;<br>printf(\"%d\",np);</div><br><br>Cu ce expresie dintre cele de mai jos trebuie înlocuite spaţiile punctate din secvenţă de instrucțiuni dată astfel încât aceasta să afişeze câte valori strict pozitive şi pare sunt în tabloul 𝑎, format din 𝑛 numere întregi?<br>",
     "answers": [
       "<div class=\"code_2\">(a[i]&gt;0)&&(a[i]%2!=0)</div>",
       "<div class=\"code_2\">(a[i]&gt;0)&&(a[i]%2==0)</div>",
@@ -290,26 +290,26 @@
     "id": 23,
     "question": "Considerăm următoarele structuri:<br><br><div class=\"code\">typedef struct {<br><span class=\"tab\"></span>int zi,luna,an;<br>}Data;<br><br>typedef struct {<br><span class=\"tab\"></span>char nume[30];<br><span class=\"tab\"></span>Data data_nasterii;<br><span class=\"tab\"></span>float media;<br>}Student;</div><br><br>Știind că variabila st este de tip Student, indicați instrucţiunea de mai jos prin care luna<br>naşterii studentului respectiv primește valoarea 12:<br>",
     "answers": [
-      "<div class=\"code_2\">st->data_nasterii->luna=12;</div>",
+      "<div class=\"code_2\">st-&gt;data_nasterii-&gt;luna=12;</div>",
       "<div class=\"code_2\">st.data_nasterii.luna=12;</div>",
       "<div class=\"code_2\">data_nasterii.luna=12;</div>",
       "<div class=\"code_2\">st.luna=12;</div>"
     ],
     "correctAnswerIndexes": [
-      0
+      1
     ]
   },
   {
     "id": 24,
     "question": "Considerăm următoarele structuri:<br><br><div class=\"code\">typedef struct {<br><span class=\"tab\"></span>int zi,luna,an;<br>}Data;<br><br>typedef struct {<br><span class=\"tab\"></span>char nume[30];<br><span class=\"tab\"></span>Data data_nasterii;<br><span class=\"tab\"></span>float media;<br>}Student;</div><br><br>Știind că variabila st este de tip Student, indicați instrucţiunea de mai jos prin care anul<br>naşterii studentului respectiv primește valoarea 1990:<br>",
     "answers": [
-      "<div class=\"code_2\">st->data_nasterii->an=1990;</div>",
+      "<div class=\"code_2\">st-&gt;data_nasterii-&gt;an=1990;</div>",
       "<div class=\"code_2\">st.data_nasterii.an=1990;</div>",
       "<div class=\"code_2\">data_nasterii.an=1990;</div>",
       "<div class=\"code_2\">st.an=1990;</div>"
     ],
     "correctAnswerIndexes": [
-      0
+      1
     ]
   },
   {
@@ -409,9 +409,9 @@
     "id": 32,
     "question": "Care dintre următoarele funcții returnează suma elementelor tabloului unidimensional de<br>numere întregi transmis ca parametru?",
     "answers": [
-      "<div class=\"code_2\">int suma(int v[],int n) {<br><span class=\"tab\"></span>int s=0,k=0;<br><span class=\"tab\"></span>while(k<n) s+=v[k++];<br><span class=\"tab\"></span>return s;<br>}</div>",
-      "<div class=\"code_2\">int suma(int v[],int n) {<br><span class=\"tab\"></span>int s=0,k=0;<br><span class=\"tab\"></span>while(k++<n) s+=v[k];<br><span class=\"tab\"></span>return s;<br>}</div>",
-      "<div class=\"code_2\">int suma(int v[],int n) {<br><span class=\"tab\"></span>int s,k;<br><span class=\"tab\"></span>for(k=s=0;k<n;s+=v[k++]);<br><span class=\"tab\"></span>return s;<br>}</div>",
+      "<div class=\"code_2\">int suma(int v[],int n) {<br><span class=\"tab\"></span>int s=0,k=0;<br><span class=\"tab\"></span>while(k&lt;n) s+=v[k++];<br><span class=\"tab\"></span>return s;<br>}</div>",
+      "<div class=\"code_2\">int suma(int v[],int n) {<br><span class=\"tab\"></span>int s=0,k=0;<br><span class=\"tab\"></span>while(k++&lt;n) s+=v[k];<br><span class=\"tab\"></span>return s;<br>}</div>",
+      "<div class=\"code_2\">int suma(int v[],int n) {<br><span class=\"tab\"></span>int s,k;<br><span class=\"tab\"></span>for(k=s=0;k&lt;n;s+=v[k++]);<br><span class=\"tab\"></span>return s;<br>}</div>",
       "<div class=\"code_2\">int suma(int v[],int n) {<br><span class=\"tab\"></span>int s=0;<br><span class=\"tab\"></span>for(int k=n-1;k&gt;=0;k--) s+=v[n-k-1];<br><span class=\"tab\"></span>return s;<br>}</div>"
     ],
     "correctAnswerIndexes": [
@@ -480,10 +480,10 @@
     "id": 37,
     "question": "Care dintre următoarele secvențe de cod poate fi utilizată pentru a aloca dinamic un tablou bidimensional 𝑎 format din 10 de linii și 20 de coloane de numere întregi?",
     "answers": [
-      "<div class=\"code_2\">int **a = (int **)malloc(10*sizeof(int *));<br>for(int i=0;i&lt;10;i++)<br>a[i]=(int *)malloc(20*sizeof(int));</div>",
+      "<div class=\"code_2\">int **a = (int **)malloc(10*sizeof(int *));<br>for(int i=0;i&lt;10;i++)<br><span class=\"tab\"></span>a[i]=(int *)malloc(20*sizeof(int));</div>",
       "<div class=\"code_2\">int **a = (int **)calloc(10*sizeof(int *),20*sizeof(int));</div>",
-      "<div class=\"code_2\">int *a = (int *)malloc(20*sizeof(int *));<br>for(int i=0;i&lt;20;i++)<br>a[i]=(int *)malloc(10*sizeof(int));</div>",
-      "<div class=\"code_2\">int **a = (int **)calloc(10,sizeof(int*));<br>for(int i=0;i&lt;10;i++)<br>a[i]=(int *)calloc(20,sizeof(int));</div>"
+      "<div class=\"code_2\">int *a = (int *)malloc(20*sizeof(int *));<br>for(int i=0;i&lt;20;i++)<br><span class=\"tab\"></span>a[i]=(int *)malloc(10*sizeof(int));</div>",
+      "<div class=\"code_2\">int **a = (int **)calloc(10,sizeof(int*));<br>for(int i=0;i&lt;10;i++)<br><span class=\"tab\"></span>a[i]=(int *)calloc(20,sizeof(int));</div>"
     ],
     "correctAnswerIndexes": [0,3]
   },
@@ -558,7 +558,7 @@
     "question": "Care dintre următoarele funcții returnează numărul de linii dintr-un fișier text a cărui cale este transmisă prin parametrul de intrare 𝑛𝑓 (se presupune că fișierul nu conține linii vide)?",
     "answers": [
       "<div class=\"code_2\">int nb(char *nf) {<br><span class=\"tab\"></span>char s[1001];<br><span class=\"tab\"></span>FILE *f=fopen(nf,\"r\");<br><span class=\"tab\"></span>int n=0;<br><span class=\"tab\"></span>while(fscanf(f,\"%s\",s)==1)<br><span class=\"tab_2\"></span>n++;<br><span class=\"tab\"></span>fclose(f);<br><span class=\"tab\"></span>return n;<br>}</div>",
-      "<div class=\"code_2\">int nb(char *nf) {<br><span class=\"tab\"></span>char c;<br><span class=\"tab\"></span>FILE *f=fopen(nf,\"r\");<br><span class=\"tab\"></span>int n=0;<br><span class=\"tab\"></span>while(fscanf(f,\"%c\",&c)==1)<br><span class=\"tab_2\"></span>if(c=='<br>') n++;<br><span class=\"tab\"></span>fclose(f);<br><span class=\"tab\"></span>return n;<br>}</div>",
+      "<div class=\"code_2\">int nb(char *nf) {<br><span class=\"tab\"></span>char c;<br><span class=\"tab\"></span>FILE *f=fopen(nf,\"r\");<br><span class=\"tab\"></span>int n=0;<br><span class=\"tab\"></span>while(fscanf(f,\"%c\",&c)==1)<br><span class=\"tab_2\"></span>if(c=='\\n') n++;<br><span class=\"tab\"></span>fclose(f);<br><span class=\"tab\"></span>return n;<br>}</div>",
       "<div class=\"code_2\">int nb(char *nf) {<br><span class=\"tab\"></span>FILE *f=fopen(nf,\"r\");<br><span class=\"tab\"></span>int n=sizeof(f);<br><span class=\"tab\"></span>fclose (f);<br><span class=\"tab\"></span>return n/sizeof(char *);<br>}</div>",
       "<div class=\"code_2\">int nb(char *nf) {<br><span class=\"tab\"></span>char s[1001];<br><span class=\"tab\"></span>FILE *f=fopen(nf,\"r\");<br><span class=\"tab\"></span>int n=0;<br><span class=\"tab\"></span>while(fgets(s,1000,f))<br><span class=\"tab_2\"></span>n++;<br><span class=\"tab\"></span>fclose (f);<br><span class=\"tab\"></span>return n;<br>}</div>"
     ],
@@ -566,7 +566,7 @@
   },
   {
     "id": 45,
-    "question": "Considerăm următorul program:<br><br><div class=\"code\">#include<stdio.h><br>#include<string.h><br>int main() {<br><span class=\"tab\"></span>FILE *f=fopen(\"test.txt\",\"r\");<br><span class=\"tab\"></span>char s[101],t[101];<br><span class=\"tab\"></span>while(fgets(s,100,f))<br><span class=\"tab_2\"></span>strcpy(t,s);<br><span class=\"tab\"></span>printf(\"%s\",t);<br><span class=\"tab\"></span>fclose(f);<br><span class=\"tab\"></span>return 0;<br>}</div><br><br>Știind ca lungimea maximă a unei linii din fișierul text test.txt este de 100 de caractere, ce se va afișa după executarea programului de mai sus?",
+    "question": "Considerăm următorul program:<br><br><div class=\"code\">#include&lt;stdio.h&gt;<br>#include&lt;stdio.h&gt;<br>int main() {<br><span class=\"tab\"></span>FILE *f=fopen(\"test.txt\",\"r\");<br><span class=\"tab\"></span>char s[101],t[101];<br><span class=\"tab\"></span>while(fgets(s,100,f))<br><span class=\"tab_2\"></span>strcpy(t,s);<br><span class=\"tab\"></span>printf(\"%s\",t);<br><span class=\"tab\"></span>fclose(f);<br><span class=\"tab\"></span>return 0;<br>}</div><br><br>Știind ca lungimea maximă a unei linii din fișierul text test.txt este de 100 de caractere, ce se va afișa după executarea programului de mai sus?",
     "answers": [
       "fiecare linie din fișier;",
       "penultima linie din fișier;",
@@ -577,7 +577,7 @@
   },
   {
     "id": 46,
-    "question": "Considerăm următorul program:<br><br><div class=\"code\">#include<stdio.h><br>#include<string.h><br>int main() {<br><span class=\"tab\"></span>char s[21],aux[11];<br><span class=\"tab\"></span>strcpy(s,\"\");<br><span class=\"tab\"></span>for(int i=1;i&lt;=5;i++) {<br><span class=\"tab_2\"></span>printf(\"Sirul %d: \",i);<br><span class=\"tab_2\"></span>gets(aux);<br><span class=\"tab_2\"></span>…………………………………………………………<br><span class=\"tab\"></span>}<br><span class=\"tab\"></span>printf(\"%s\",s);<br><span class=\"tab\"></span>return 0;<br>}</div><br><br>Presupunând că fiecare dintre cele 5 șiruri care vor fi citite de la tastatură vor fi formate din minim două caractere și maxim 10, stabiliți cu care dintre instrucțiunile de mai jos trebuie înlocuite spațiile punctate din program astfel încât acesta să afișeze șirul format din ultimele două caractere din fiecare dintre cele 5 șiruri citite:",
+    "question": "Considerăm următorul program:<br><br><div class=\"code\">#include&lt;stdio.h&gt;<br>#include&lt;stdio.h&gt;<br>int main() {<br><span class=\"tab\"></span>char s[21],aux[11];<br><span class=\"tab\"></span>strcpy(s,\"\");<br><span class=\"tab\"></span>for(int i=1;i&lt;=5;i++) {<br><span class=\"tab_2\"></span>printf(\"Sirul %d: \",i);<br><span class=\"tab_2\"></span>gets(aux);<br><span class=\"tab_2\"></span>…………………………………………………………<br><span class=\"tab\"></span>}<br><span class=\"tab\"></span>printf(\"%s\",s);<br><span class=\"tab\"></span>return 0;<br>}</div><br><br>Presupunând că fiecare dintre cele 5 șiruri care vor fi citite de la tastatură vor fi formate din minim două caractere și maxim 10, stabiliți cu care dintre instrucțiunile de mai jos trebuie înlocuite spațiile punctate din program astfel încât acesta să afișeze șirul format din ultimele două caractere din fiecare dintre cele 5 șiruri citite:",
     "answers": [
       "<div class=\"code_2\">strcat(s,aux+9);</div>",
       "<div class=\"code_2\">strcat(s,aux[strlen(aux)-1]);</div>",
@@ -610,7 +610,7 @@
   },
   {
     "id": 49,
-    "question": "Considerăm următoarea secvență de cod:<br><br><div class=\"code\">int a, b, p=1;<br>scanf(\"%d %d\", &a, &b);<br>while(p &lt; a)<br><span class=\"tab\"></span>p = p*2;<br>while(p &lt;= b) {<br><span class=\"tab\"></span>printf(\"%d<br>\", p);<br><span class=\"tab\"></span>p = p*2;<br>}</div><br><br>Dacă valorile introduse pentru variabilele a și b vor fi două numere naturale nenule cu proprietatea că a &lt; b, atunci pe ecran se vor afișa:",
+    "question": "Considerăm următoarea secvență de cod:<br><br><div class=\"code\">int a, b, p=1;<br>scanf(\"%d %d\", &a, &b);<br>while(p &lt; a)<br><span class=\"tab\"></span>p = p*2;<br>while(p &lt;= b) {<br><span class=\"tab\"></span>printf(\"%d\", p);<br><span class=\"tab\"></span>p = p*2;<br>}</div><br><br>Dacă valorile introduse pentru variabilele a și b vor fi două numere naturale nenule cu proprietatea că a &lt; b, atunci pe ecran se vor afișa:",
     "answers": [
       "toate puterile lui 2 din intervalul [a,b];",
       "toate puterile lui 2 din intervalul (a,b];",
@@ -621,7 +621,7 @@
   },
   {
     "id": 50,
-    "question": "Considerăm următorul program:<br><br><div class=\"code\">#include<stdio.h><br>void p(int v[],int *n) {<br><span class=\"tab\"></span>int i,j,g;<br><span class=\"tab\"></span>do {<br><span class=\"tab_2\"></span>g=0;<br><span class=\"tab_2\"></span>for(i=0;i&lt;*n;i++)<br><span class=\"tab_3\"></span>if(v[i]&lt;0) {<br><span class=\"tab_4\"></span>for(j=i;j&lt;*n-1;j++) v[j]=v[j+1];<br><span class=\"tab_4\"></span>(*n)--;<br><span class=\"tab_4\"></span>g=1;<br><span class=\"tab_3\"></span>}<br><span class=\"tab_2\"></span>}<br><span class=\"tab\"></span>while(g);<br>}<br><br>int main() {<br><span class=\"tab\"></span>int i,v[]={-1,2,-3,-4,5},n=5;<br><span class=\"tab\"></span>p(v,&n);<br><span class=\"tab\"></span>for(i=0;i&lt;n;i++)<br><span class=\"tab_2\"></span>printf(\"%d \",v[i]);<br><span class=\"tab\"></span>return 0;<br>}</div><br><br>Ce valori vor fi afișate pe ecran după executarea programului de mai sus?",
+    "question": "Considerăm următorul program:<br><br><div class=\"code\">#include&lt;stdio.h&gt;<br>void p(int v[],int *n) {<br><span class=\"tab\"></span>int i,j,g;<br><span class=\"tab\"></span>do {<br><span class=\"tab_2\"></span>g=0;<br><span class=\"tab_2\"></span>for(i=0;i&lt;*n;i++)<br><span class=\"tab_3\"></span>if(v[i]&lt;0) {<br><span class=\"tab_4\"></span>for(j=i;j&lt;*n-1;j++) v[j]=v[j+1];<br><span class=\"tab_4\"></span>(*n)--;<br><span class=\"tab_4\"></span>g=1;<br><span class=\"tab_3\"></span>}<br><span class=\"tab_2\"></span>}<br><span class=\"tab\"></span>while(g);<br>}<br><br>int main() {<br><span class=\"tab\"></span>int i,v[]={-1,2,-3,-4,5},n=5;<br><span class=\"tab\"></span>p(v,&n);<br><span class=\"tab\"></span>for(i=0;i&lt;n;i++)<br><span class=\"tab_2\"></span>printf(\"%d \",v[i]);<br><span class=\"tab\"></span>return 0;<br>}</div><br><br>Ce valori vor fi afișate pe ecran după executarea programului de mai sus?",
     "answers": [
       "–1 -3 -4",
       "2 5",

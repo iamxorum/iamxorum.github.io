@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "question": "Se dă următorul algoritm:<br>for i = 1, n<br>poz[i] = 1<br>endfor<br>for i = 1, n-1<br>for j = i+1, n<br>if x[j] < x[i] then poz[i] = poz[i] + 1<br>else poz[j] = poz[j] + 1<br>endif<br>endfor<br>endfor<br>Știind că datele de intrare sunt n = 7 și vectorul x = (9, 15, 23, 2, 5, 4, 8) care vor fi valorile<br>vectorului poz la sfârșitul algoritmului?",
+    "question": "Se dă următorul algoritm:<br><br><div class=\"code\">for i = 1, n<br><span class=\"tab\"></span>poz[i] = 1<br>endfor<br>for i = 1, n-1<br><span class=\"tab\"></span>for j = i+1, n<br><span class=\"tab_2\"></span>if x[j] &lt; x[i] then poz[i] = poz[i] + 1<br><span class=\"tab_2\"></span>else poz[j] = poz[j] + 1<br><span class=\"tab_2\"></span>endif<br><span class=\"tab\"></span>endfor<br>endfor</div><br><br>Știind că datele de intrare sunt n = 7 și vectorul x = (9, 15, 23, 2, 5, 4, 8) care vor fi valorile<br>vectorului poz la sfârșitul algoritmului?",
     "answers": [
       "(5, 6, 7, 1, 2, 3, 4)",
       "(5, 6, 7, 1, 3, 2, 4)",
@@ -12,18 +12,18 @@
   },
   {
     "id": 2,
-    "question": "Se dă următoarea funcție recursivă<br>1) int inaltime(NodArb *rad)<br>2) // returneaza inaltimea unui arbore binar<br>3) {<br>4) if(rad == NULL) return 0;<br>5) ....................................................................<br>6) return 1 + max(inaltime(rad->stang), inaltime(rad->drept));<br>7)<br>8) }<br>Ce instrucțiuni trebuie scrise în linia de cod 5) pentru ca funcția să returneze înălțimea unui arbore<br>binar?",
+    "question": "Se dă următoarea funcție recursivă<br><br><div class=\"code\">1) int inaltime(NodArb *rad)<br>2) // returneaza inaltimea unui arbore binar<br>3) {<br>4)<span class=\"tab\"></span> if(rad == NULL) return 0;<br>5) <span class=\"tab\"></span>..................<br>6) <span class=\"tab\"></span>return 1 + max(inaltime(rad-&gt;stang), inaltime(rad-&gt;drept));<br>7)<br>8) }</div><br><br>Ce instrucțiuni trebuie scrise în linia de cod 5) pentru ca funcția să returneze înălțimea unui arbore<br>binar?",
     "answers": [
       "instrucțiunea vidă",
-      "int inaltime =0;",
-      "else if(rad->stang == NULL && rad->drept == NULL) return 0;",
+      "int inaltime = 0;",
+      "else if(rad-&gt;stang == NULL && rad-&gt;drept == NULL) return 0;",
       "else"
     ],
     "correctAnswerIndexes": [2]
   },
   {
     "id": 3,
-    "question": "Se dă următoarea funcție<br>int cautare(int x[], int first, int last, int value)<br>{ int mid;<br>if(first > last) return -1;<br>mid = (first + last) / 2;<br>if (x[mid] == value) return mid;<br>if(x[mid] < value) return cautare(x, mid + 1, last, value);<br>else return cautare(x, first, mid - 1, value);<br>}<br>Dacă vectorul x = (2, 4, 5, 8, 9, 15, 23), care va fi rezultatul apelării funcției cautare (x, 2, 6, 8) ?",
+    "question": "Se dă următoarea funcție<br><br><div class=\"code\">int cautare(int x[], int first, int last, int value) { <br><span class=\"tab\"></span>int mid;<br><span class=\"tab\"></span>if(first &gt; last) return -1;<br><span class=\"tab\"></span>mid = (first + last) / 2;<br><span class=\"tab\"></span>if (x[mid] == value) return mid;<br><span class=\"tab\"></span>if(x[mid] &lt; value) return cautare(x, mid + 1, last, value);<br><span class=\"tab\"></span>else return cautare(x, first, mid - 1, value);<br>}</div><br><br>Dacă vectorul x = (2, 4, 5, 8, 9, 15, 23), care va fi rezultatul apelării funcției cautare (x, 2, 6, 8) ?",
     "answers": [
       "-1",
       "2",
@@ -70,7 +70,7 @@
   },
   {
     "id": 7,
-    "question": "Ce returnează următoarea funcție dacă rad este pointer la rădăcina unui arbore binar nenul?<br>int fct(NodArb *rad)<br>{<br>if(rad == NULL) return 0;<br>return 1 + fct(rad->stang) + fct(rad->drept);<br>}",
+    "question": "Ce returnează următoarea funcție dacă rad este pointer la rădăcina unui arbore binar nenul?<br><br><div class=\"code\">int fct(NodArb *rad) {<br><span class=\"tab\"></span>if(rad == NULL) return 0;<br><span class=\"tab\"></span>return 1 + fct(rad-&gt;stang) + fct(rad-&gt;drept);<br>}</div><br>",
     "answers": [
       "0",
       "1",
@@ -191,7 +191,7 @@
   },
   {
     "id": 18,
-    "question": "Se dă următorul algoritm:<br><br>for i = 1, n -1<br>index_min = i<br>for j = i + 1, n<br>if x[index_min] > x[j] then index_min = j<br>endif<br>endfor<br>if i ≠ index_min then<br>temp=x[i]<br>x[i]=x[index_min]<br>x[index_min]=temp<br>endif<br>endfor<br><br>Care vor fi valorile vectorului x după terminarea pasului i = 3 știind că la intrare avem valorile n = 7 și vectorul x = (9, 15, 23, 2, 5, 4, 8)?",
+    "question": "Se dă următorul algoritm:<br><br><div class=\"code\">for i = 1, n -1<br><span class=\"tab\"></span>index_min = i<br><span class=\"tab\"></span>for j = i + 1, n<br><span class=\"tab_2\"></span>if x[index_min] &gt; x[j] then index_min = j<br><span class=\"tab_2\"></span>endif<br><span class=\"tab\"></span>endfor<br><span class=\"tab\"></span>if i ≠ index_min then<br><span class=\"tab_2\"></span>temp=x[i]<br><span class=\"tab_2\"></span>x[i]=x[index_min]<br><span class=\"tab_2\"></span>x[index_min]=temp<br><span class=\"tab\"></span>endif<br>endfor</div><br><br>Care vor fi valorile vectorului x după terminarea pasului i = 3 știind că la intrare avem valorile n = 7 și vectorul x = (9, 15, 23, 2, 5, 4, 8)?",
     "answers": [
       "(2, 4, 5, 9, 15, 23, 8)",
       "(2, 5, 9, 15, 23, 4, 8)",
@@ -202,7 +202,7 @@
   },
   {
     "id": 19,
-    "question": "Se dă următorul algoritm. Care vor fi valorile vectorului x după terminarea pasului i = 5, știind că la intrare avem valorile n = 7 și x = (9, 15, 23, 2, 5, 4, 8)?<br><br>for i = 2, n<br>elem = x[i]<br>j = i -1<br>while j >= 1 and x[j] > x[i]<br>j = j –1<br>endwhile<br>pozitie = j +1<br>for j= i, pozitie+1, -1<br>x[j] = x[j -1]<br>endfor<br>x[pozitie] = elem<br>endfor",
+    "question": "Se dă următorul algoritm. Care vor fi valorile vectorului x după terminarea pasului i = 5, știind că la intrare avem valorile n = 7 și x = (9, 15, 23, 2, 5, 4, 8)?<br><br><di class=\"code\">for i = 2, n<br><span class=\"tab\"></span>elem = x[i]<br><span class=\"tab\"></span>j = i -1<br><span class=\"tab\"></span>while j &gt;= 1 and x[j] &gt; x[i]<br><span class=\"tab_2\"></span>j = j –1<br><span class=\"tab\"></span>endwhile<br><span class=\"tab\"></span>pozitie = j +1<br><span class=\"tab\"></span>for j= i, pozitie+1, -1<br><span class=\"tab_2\"></span>x[j] = x[j -1]<br><span class=\"tab\"></span>endfor<br><span class=\"tab\"></span>x[pozitie] = elem<br>endfor</div><br>",
     "answers": [
       "(2, 4, 5, 9, 15, 23, 8)",
       "(2, 5, 9, 15, 23, 4, 8)",
@@ -213,7 +213,7 @@
   },
   {
     "id": 20,
-    "question": "Se consideră următoarea secvență de operații într-o stivă: push(2), push(10), push(8), pop(), push(9), push(6), pop(), pop(), push(7), push(3), pop(), pop(), pop(), pop(). În ce ordine vor fi scoase din stivă elementele? (push = inserare, pop = ștergere)",
+    "question": "Se consideră următoarea secvență de operații într-o stivă:<br><br><div class=\"code\"> push(2), push(10), push(8), pop(), push(9), push(6), pop(), pop(), push(7), push(3), pop(), pop(), pop(), pop().</div><br> În ce ordine vor fi scoase din stivă elementele? (push = inserare, pop = ștergere)",
     "answers": [
       "(2, 10, 8, 9, 6, 7, 3)",
       "(3, 7, 6, 9, 8, 10, 2)",
@@ -224,7 +224,7 @@
   },
   {
     "id": 21,
-    "question": "Se consideră următoarea secvență de operații într-o coadă: enqueue(2), enqueue(10), enqueue(8), dequeue(), enqueue(9), enqueue(6), dequeue(), dequeue(), enqueue(7), enqueue(3), dequeue(), dequeue(),dequeue(), dequeue(). În ce ordine vor fi scoase din coadă elementele? (enqueue = inserare, dequeue = ștergere)",
+    "question": "Se consideră următoarea secvență de operații într-o coadă:<br><br><div class=\"code\"> enqueue(2), enqueue(10), enqueue(8), dequeue(), enqueue(9), enqueue(6), dequeue(), dequeue(), enqueue(7), enqueue(3), dequeue(), dequeue(),dequeue(), dequeue().</div><br> În ce ordine vor fi scoase din coadă elementele? (enqueue = inserare, dequeue = ștergere)",
     "answers": [
       "(2, 10, 8, 9, 6, 7, 3)",
       "(3, 7, 6, 9, 8, 10, 2)",
@@ -235,18 +235,18 @@
   },
   {
     "id": 22,
-    "question": "Se consideră următoarea funcție care caută o valoare dată într-o listă înlănțuită. val este variabila a cărei valoare este căutată, iar head este un pointer la capul listei în care se face căutarea.<br>1) NOD *cauta(NOD *head, int val)<br>2) {<br>3) NOD *iter = head; int gasit=0;<br>4) while (.......................)<br>5) {<br>6) if (iter -> info == val) gasit = 1;<br>7) else iter = iter -> link;<br>8) }<br>9) if(gasit) return iter;<br>10) else return NULL;<br>11) }<br>Cum trebuie completată linia de cod 4 astfel încât funcția să ruleze corect și să returneze un pointer la nodul cu valoarea căutată sau NULL dacă valoarea nu a fost găsită în listă?",
+    "question": "Se consideră următoarea funcție care caută o valoare dată într-o listă înlănțuită. val este variabila a cărei valoare este căutată, iar head este un pointer la capul listei în care se face căutarea.<br><br><div class=\"code\">1) NOD *cauta(NOD *head, int val)<br>2) {<br>3) <span class=\"tab\"></span>NOD *iter = head; int gasit=0;<br>4) <span class=\"tab\"></span>while (.......................)<br>5) <span class=\"tab\"></span>{<br>6) <span class=\"tab_2\"></span>if (iter -&gt; info == val) gasit = 1;<br>7) <span class=\"tab_2\"></span>else iter = iter -&gt; link;<br>8) <span class=\"tab\"></span>}<br>9) <span class=\"tab\"></span>if(gasit) return iter;<br>10) <span class=\"tab\"></span>else return NULL;<br>11) }</div><br><br>Cum trebuie completată linia de cod 4 astfel încât funcția să ruleze corect și să returneze un pointer la nodul cu valoarea căutată sau NULL dacă valoarea nu a fost găsită în listă?",
     "answers": [
-      "!gasit && iter != NULL",
-      "!gasit",
-      "iter!=NULL && !gasit",
-      "gasit ==0"
+      "<div class=\"code_2\">!gasit && iter != NULL</div>",
+      "<div class=\"code_2\">!gasit</div>",
+      "<div class=\"code_2\">iter!=NULL && !gasit</div>",
+      "<div class=\"code_2\">gasit ==0</div>"
     ],
     "correctAnswerIndexes": [0,2]
   },
   {
     "id": 23,
-    "question": "Se consideră următoarea funcție care are drept variabilă de intrare un pointer la capul unei liste înlănțuite. Ce face această funcție?<br>1) NOD *fct(NOD *head)<br>2) {<br>3) if (head == NULL) return NULL;<br>4) head = head -> link;<br>5) return head;<br>6) }",
+    "question": "Se consideră următoarea funcție care are drept variabilă de intrare un pointer la capul unei liste înlănțuite. Ce face această funcție?<br><br><div class=\"code\">1) NOD *fct(NOD *head)<br>2) {<br>3) <span class=\"tab\"></span>if (head == NULL) return NULL;<br>4) <span class=\"tab\"></span>head = head -&gt; link;<br>5) <span class=\"tab\"></span>return head;<br>6) }</div><br>",
     "answers": [
       "returnează NULL",
       "returnează un pointer la capul listei",
@@ -279,7 +279,7 @@
   },
   {
     "id": 26,
-    "question": "Se consideră lista înlănțuită cu elemente numere întregi din Fig. 2:<br>Fig. 2<br>Dată următoarea definiție a tipului de date ce corespunde unui nod al listei,<br>struct NOD<br>{<br>int info;<br>NOD *link;<br>};<br>ce va afișa următoarea funcție, dacă este apelată prin print(HEAD)?<br>void print(NOD *head)<br>{<br>NOD *iter=head;<br>while(iter!=NULL)<br>{<br>cout << iter->info<<\", \";<br>iter=iter->link;<br>}<br>}",
+    "question": "Se consideră lista înlănțuită cu elemente numere întregi din Fig. 2. <br>Dată următoarea definiție a tipului de date ce corespunde unui nod al listei,<br><div class=\"code\">struct NOD {<br><span class=\"tab\"></span>int info;<br<span class=\"tab\"></span>>NOD *link;<br>};</div><br>ce va afișa următoarea funcție, dacă este apelată prin print(HEAD)?<br><br><div class=\"code\">void print(NOD *head) {<br><span class=\"tab\"></span>NOD *iter=head;<br><span class=\"tab\"></span>while(iter!=NULL) {<br><span class=\"tab_2\"></span>cout &lt;&lt; iter-&gt;info&lt;&lt;\", \";<br><span class=\"tab_2\"></span>iter=iter-&gt;link;<br><span class=\"tab\"></span>}<br>}</div><br>",
     "answers": [
       "10, 2, 8, 5, 7, 3",
       "3, 7, 5, 8, 2, 10",
@@ -291,7 +291,7 @@
   },
   {
     "id": 27,
-    "question": "Se consideră lista înlănțuită cu elemente numere întregi din Fig. 2. Dată următoarea definiție a tipului de date ce corespunde unui nod al listei,<br><br>struct NOD<br>{<br>int info;<br>NOD *link;<br>};<br>ce va afișa următoarea funcție, dacă este apelată prin print(HEAD)?<br><br>void print(NOD *head)<br>{<br>NOD *iter=head;<br>while(iter->link !=NULL)<br>{<br>cout << iter->info<<\", \";<br>iter=iter->link;<br>}<br>}",
+    "question": "Se consideră lista înlănțuită cu elemente numere întregi din Fig. 2. Dată următoarea definiție a tipului de date ce corespunde unui nod al listei,<br><div class=\"code\">struct NOD {<br><span class=\"tab\"></span>int info;<br><span class=\"tab\"></span>NOD *link;<br>};</div><br>ce va afișa următoarea funcție, dacă este apelată prin print(HEAD)?<br><br><div class=\"code\">void print(NOD *head) {<br><span class=\"tab\"></span>NOD *iter=head;<br><span class=\"tab\"></span>while(iter-&gt;link !=NULL) {<br><span class=\"tab_2\"></span>cout &lt;&lt; iter-&gt;info&lt;&lt;\", \";<br><span class=\"tab_2\"></span>iter=iter-&gt;link;<br><span class=\"tab\"></span>}<br>}</div><br>",
     "answers": [
       "10, 2, 8, 5, 7, 3",
       "10, 2, 8, 5, 7",
@@ -303,7 +303,7 @@
   },
   {
     "id": 28,
-    "question": "Se consideră lista înlănțuită cu elemente numere întregi din Fig. 2. Dată următoarea definiție a tipului de date ce corespunde unui nod al listei,<br><br>struct NOD<br>{<br>int info;<br>NOD *link;<br>};<br>ce va afișa următoarea funcție, dacă este apelată prin print(HEAD)?<br><br>void print(NOD *head)<br>{<br>NOD *iter=head;<br>while(iter->link !=NULL)<br>{<br>iter=iter->link;<br>if ((iter-> info)%2) cout << iter->info<<\", \";<br>}<br>}",
+    "question": "Se consideră lista înlănțuită cu elemente numere întregi din Fig. 2. Dată următoarea definiție a tipului de date ce corespunde unui nod al listei,<br><div class=\"code\">struct NOD {<br><span class=\"tab\"></span>int info;<br><span class=\"tab\"></span>NOD *link;<br>};</div><br>ce va afișa următoarea funcție, dacă este apelată prin print(HEAD)?<br><br><div class=\"code\">void print(NOD *head) {<br><span class=\"tab\"></span>NOD *iter=head;<br><span class=\"tab\"></span>while(iter-&gt;link !=NULL) {<br><span class=\"tab_2\"></span>iter=iter-&gt;link;<br><span class=\"tab_2\"></span>if ((iter-&gt; info)%2) cout &lt;&lt; iter-&gt;info&lt;&lt;\", \";<br><span class=\"tab\"></span>}<br>}</div><br>",
     "answers": [
       "10, 2, 8, 5, 7, 3",
       "10, 3, 7, 5, 8, 2",
@@ -315,7 +315,7 @@
   },
   {
     "id": 29,
-    "question": "Se dă următoarea funcție<br><br>void interclasare(int x[], int prim, int mijloc, int ultim, int C[])<br>{<br>// lista A: x[prim ..mijloc]<br>// lista B: x[mijloc+1 ..ultim]<br>// lista C: C[0.. ultim - prim]<br>int iterA = prim, iterB = mijloc+1, iterC = 0;<br>while (iterA <= mijloc && iterB <=ultim)<br>if (x[iterA] < x[iterB])<br>C[iterC ++]= x[iterA ++];<br>else C[iterC ++]= x[iterB ++];<br>while (iterA <= mijloc)<br>C[iterC ++]= x[iterA ++];<br>while (iterB <= ultim)<br>C[iterC ++]= x[iterB ++];<br>}<br><br>Dacă vectorul x = (9, 15, 23, 25, 4, 5, 8), care va fi vectorul C la apelarea funcției interclasare (x, 0, 3, 6, C)?",
+    "question": "Se dă următoarea funcție<br><br><div class=\"code\">void interclasare(int x[], int prim, int mijloc, int ultim, int C[]) {<br><span class=\"tab\"></span>// lista A: x[prim ..mijloc]<br><span class=\"tab\"></span>// lista B: x[mijloc+1 ..ultim]<br><span class=\"tab\"></span>// lista C: C[0.. ultim - prim]<br><span class=\"tab\"></span>int iterA = prim, iterB = mijloc+1, iterC = 0;<br><span class=\"tab\"></span>while (iterA &lt;= mijloc && iterB &lt;=ultim)<br><span class=\"tab_2\"></span>if (x[iterA] &lt; x[iterB])<br><span class=\"tab_3\"></span>C[iterC ++]= x[iterA ++];<br><span class=\"tab_2\"></span>else C[iterC ++]= x[iterB ++];<br><span class=\"tab\"></span>while (iterA &lt;= mijloc)<br><span class=\"tab_2\"></span>C[iterC ++]= x[iterA ++];<br><span class=\"tab\"></span>while (iterB &lt;= ultim)<br><span class=\"tab_2\"></span>C[iterC ++]= x[iterB ++];<br>}</div><br><br>Dacă vectorul x = (9, 15, 23, 25, 4, 5, 8), care va fi vectorul C la apelarea funcției interclasare (x, 0, 3, 6, C)?",
     "answers": [
       "4, 5, 8, 9, 15, 23, 25",
       "0, 0, 0, 0, 0, 0, 0",
@@ -326,7 +326,7 @@
   },
   {
     "id": 30,
-    "question": "Se dă următoarea funcție, care apelează funcția interclasare descrisă la exercițiul 29.<br><br>void mergesort(int x[], int prim, int ultim)<br>{<br>if (prim < ultim)<br>{<br>int mijloc = (prim + ultim)/2;<br>mergesort(x, prim, mijloc);<br>mergesort(x, mijloc + 1, ultim);<br>int C[ultim - prim +1];<br>interclasare(x, prim, mijloc, ultim, C);<br>for (int i = prim; i <= ultim; i++)<br>x[i]=C[i-prim];<br>}<br>}<br><br>La apelul funcției mergesort(x, 0, 6) unde vectorul x = (9, 15, 23, 2, 4, 5, 8), de câte ori va fi apelată funcția mergesort (incluzând apelul inițial)?",
+    "question": "Se dă următoarea funcție, care apelează funcția interclasare descrisă la exercițiul 29.<br><br><div class=\"code\">void mergesort(int x[], int prim, int ultim) {<br><span class=\"tab\"></span>if (prim &lt; ultim) {<br><span class=\"tab_2\"></span>int mijloc = (prim + ultim)/2;<br><span class=\"tab\"></span>mergesort(x, prim, mijloc);<br><span class=\"tab\"></span>mergesort(x, mijloc + 1, ultim);<br><span class=\"tab\"></span>int C[ultim - prim +1];<br><span class=\"tab\"></span>interclasare(x, prim, mijloc, ultim, C);<br><span class=\"tab\"></span>for (int i = prim; i &lt;= ultim; i++)<br><span class=\"tab_2\"></span>x[i]=C[i-prim];<br><span class=\"tab\"></span>}<br>}</div><br><br>La apelul funcției mergesort(x, 0, 6) unde vectorul x = (9, 15, 23, 2, 4, 5, 8), de câte ori va fi apelată funcția mergesort (incluzând apelul inițial)?",
     "answers": [
       "1",
       "3",
@@ -381,7 +381,7 @@
   },
   {
     "id": 35,
-    "question": "Se dă următoarea funcție în care front și rear sunt variabile globale și reprezintă pointeri la nodurile unei liste liniare reprezentate simplu înlănțuit, front la primul nod al listei, iar rear pointer la ultimul nod.<br><br>void fct(int a)<br>{<br>nod *p = new nod;<br>if (p != NULL)<br>{<br>p ->info = a;<br>p ->link = NULL;<br>if(rear!=NULL) rear->link=p;<br>else front=p;<br>rear = p;<br>}<br>else cout << \"OVERFLOW\"<<endl;<br>}<br><br>Ce face această funcție?",
+    "question": "Se dă următoarea funcție în care front și rear sunt variabile globale și reprezintă pointeri la nodurile unei liste liniare reprezentate simplu înlănțuit, front la primul nod al listei, iar rear pointer la ultimul nod.<br><br><div class=\"code\">void fct(int a) {<br><span class=\"tab\"></span>nod *p = new nod;<br><span class=\"tab\"></span>if (p != NULL) {<br><span class=\"tab_2\"></span>p -&gt;info = a;<br><span class=\"tab_2\"></span>p -&gt;link = NULL;<br><span class=\"tab_2\"></span>if(rear!=NULL) rear-&gt;link=p;<br><span class=\"tab_2\"></span>else front=p;<br><span class=\"tab_2\"></span>rear = p;<br><span class=\"tab\"></span>}<br><span class=\"tab\"></span>else cout &lt;&lt; \"OVERFLOW\"&lt;&lt;endl;<br>}</div><br><br>Ce face această funcție?",
     "answers": [
       "Inserează un nod la începutul listei.",
       "Inserează un nod la sfârșitul listei.",
