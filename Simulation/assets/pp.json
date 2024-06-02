@@ -186,10 +186,10 @@
     "id": 15,
     "question": "Care dintre următoarele secvenţe de instrucţiuni atribuie variabilei de tip întreg 𝑚𝑎𝑥 cea mai mare valoare din tabloul 𝑎, format din 𝑛 numere întregi?<br>",
     "answers": [
-      "<div class=\"code_2\"max=0;<br>for(i=0;i&lt;n;i++)<br><span class=\"tab\"></span>if(a[i]&gt;max) max=a[i];</div>",
-      "<div class=\"code_2\"max=a[0];<br>for(i=0;i&lt;n;i++)<br><span class=\"tab\"></span>if(a[i]&gt;a[i+1]) max=a[i];</div>",
-      "<div class=\"code_2\"max=a[0];<br>for(i=0;i&lt;n;i++)<br><span class=\"tab\"></span>if(a[i]&gt;max) max=a[i];</div>",
-      "<div class=\"code_2\"max=0;<br>for(i=0;i&lt;n;i++)<br><span class=\"tab\"></span>if(a[i]&lt;a[i+1]) max=a[i+1];</div>"
+      "<div class=\"code_2\">max=0;<br>for(i=0;i&lt;n;i++)<br><span class=\"tab\"></span>if(a[i]&gt;max) max=a[i];</div>",
+      "<div class=\"code_2\">max=a[0];<br>for(i=0;i&lt;n;i++)<br><span class=\"tab\"></span>if(a[i]&gt;a[i+1]) max=a[i];</div>",
+      "<div class=\"code_2\">max=a[0];<br>for(i=0;i&lt;n;i++)<br><span class=\"tab\"></span>if(a[i]&gt;max) max=a[i];</div>",
+      "<div class=\"code_2\">max=0;<br>for(i=0;i&lt;n;i++)<br><span class=\"tab\"></span>if(a[i]&lt;a[i+1]) max=a[i+1];</div>"
     ],
     "correctAnswerIndexes": [
       2
