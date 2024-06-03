@@ -202,7 +202,7 @@
   },
   {
     "id": 19,
-    "question": "Se dă următorul algoritm. Care vor fi valorile vectorului x după terminarea pasului i = 5, știind că la intrare avem valorile n = 7 și x = (9, 15, 23, 2, 5, 4, 8)?<br><br><di class=\"code\">for i = 2, n<br><span class=\"tab\"></span>elem = x[i]<br><span class=\"tab\"></span>j = i -1<br><span class=\"tab\"></span>while j &gt;= 1 and x[j] &gt; x[i]<br><span class=\"tab_2\"></span>j = j –1<br><span class=\"tab\"></span>endwhile<br><span class=\"tab\"></span>pozitie = j +1<br><span class=\"tab\"></span>for j= i, pozitie+1, -1<br><span class=\"tab_2\"></span>x[j] = x[j -1]<br><span class=\"tab\"></span>endfor<br><span class=\"tab\"></span>x[pozitie] = elem<br>endfor</div><br>",
+    "question": "Se dă următorul algoritm. Care vor fi valorile vectorului x după terminarea pasului i = 5, știind că la intrare avem valorile n = 7 și x = (9, 15, 23, 2, 5, 4, 8)?<br><br><div class=\"code\">for i = 2, n<br><span class=\"tab\"></span>elem = x[i]<br><span class=\"tab\"></span>j = i -1<br><span class=\"tab\"></span>while j &gt;= 1 and x[j] &gt; x[i]<br><span class=\"tab_2\"></span>j = j –1<br><span class=\"tab\"></span>endwhile<br><span class=\"tab\"></span>pozitie = j +1<br><span class=\"tab\"></span>for j= i, pozitie+1, -1<br><span class=\"tab_2\"></span>x[j] = x[j -1]<br><span class=\"tab\"></span>endfor<br><span class=\"tab\"></span>x[pozitie] = elem<br>endfor</div><br>",
     "answers": [
       "(2, 4, 5, 9, 15, 23, 8)",
       "(2, 5, 9, 15, 23, 4, 8)",
