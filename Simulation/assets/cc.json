@@ -31,7 +31,8 @@
       "d) O adresa IP v4 si o adresa IP v6 pentru a asigura interconectivitatea",
       "e) AWS VPC nu asigneaza adrese IP la creare"
     ],
-    "correctAnswerIndexes": [1]
+    "correctAnswerIndexes": [3],
+    "tobereviewd": "true"
   },
   {
     "id": 4,
@@ -53,7 +54,8 @@
       "c) Hybrid cloud",
       "d) Private cloud"
     ],
-    "correctAnswerIndexes": [0,1,2,3]
+    "correctAnswerIndexes": [0,2,3],
+    "tobereviewd": "true"
   },
   {
     "id": 6,

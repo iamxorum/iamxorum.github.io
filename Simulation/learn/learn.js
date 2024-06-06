@@ -41,7 +41,36 @@
       questionsContainer.innerHTML = '';
 
       const subjectTitle = document.createElement('h2');
-      subjectTitle.textContent = `${subject}`;
+      // Change the text content of the subject title to the selected subject
+      if (subject === "WEB") {
+        subjectTitle.textContent = `WEB - Tehnologii Web`;
+      } else if (subject === "ASD") {
+        subjectTitle.textContent = `ASD - Algoritmi și Structuri de Date`;
+      } else if (subject === "CC") {
+        subjectTitle.textContent = `CC - Cloud Computing`;
+      } else if (subject === "CE") {
+        subjectTitle.textContent = `CE - Comerț Electronic`;
+      } else if (subject === "C++") {
+        subjectTitle.textContent = `Programare C++`;
+      } else if (subject === "CRIPTO") {
+        subjectTitle.textContent = `CRIPTO - Criptografie`;
+      } else if (subject === "DB") {
+        subjectTitle.textContent = `DB - Baze de Date`;
+      } else if (subject === "JAVA") {
+        subjectTitle.textContent = `Programare Java`;
+      } else if (subject === "PP") {
+        subjectTitle.textContent = `PP - Programare Procedurală`;
+      } else if (subject === "RC") {
+        subjectTitle.textContent = `RC - Rețele de Calculatoare`;
+      } else if (subject === "SGDB") {
+        subjectTitle.textContent = `SGDB - Sisteme de Gestiune a Bazelor de Date`;
+      } else if (subject === "SO") {
+        subjectTitle.textContent = `SO - Sisteme de Operare`;
+      } else if (subject === "TAP") {
+        subjectTitle.textContent = `TAP - Tehnici Avansate de Programare`;
+      } else {
+        subjectTitle.textContent = `${subject}`;
+      }
       subjectTitle.id = `subject-${subject}`;
       //center and margin 2rem 
       subjectTitle.style.textAlign = 'center';
@@ -52,6 +81,20 @@
       questions.forEach((questionData, index) => {
         const questionDiv = document.createElement('div');
         questionDiv.classList.add('question-block');
+        if (questionData.tobereviewd) {
+          questionDiv.classList.add('tobereviewed');
+          // Add a a text block that says "To be reviewed by the teacher" to the question block in caps
+          const reviewText = document.createElement('p');
+          reviewText.textContent = 'TREBUIE REVIZUIT DE PROFESOR';
+          questionDiv.appendChild(reviewText);
+
+          // add style to the reviewText
+          reviewText.style.textAlign = 'center';
+          reviewText.style.color = 'red';
+          reviewText.style.fontWeight = 'bold';
+          reviewText.style.marginTop = '1rem';
+          reviewText.style.marginBottom = '1rem';
+        }
 
         const questionText = document.createElement('h4');
         if (isWeb) {
@@ -118,6 +161,8 @@
 
     // Add event listener for menu toggle (if clicked again, hide the navigation bar not delete it)
     const menuToggle = document.querySelector('.menu-toggle');
+    // set by default the navLinks to be hidden
+    navLinks.classList.toggle('show');
     menuToggle.addEventListener('click', function () {
       // Toggle the 'show' class to display or hide the navigation bar
       navLinks.classList.toggle('show');

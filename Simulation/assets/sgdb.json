@@ -384,7 +384,8 @@
       "D. ROLLBACK<br>ROLLBACK",
       "E. ROLLBACK TRANSACTION SV_product"
     ],
-    "correctAnswerIndexes": [1]
+    "correctAnswerIndexes": [1],
+    "tobereviewd": "true"
   },
   {
     "id": 34,

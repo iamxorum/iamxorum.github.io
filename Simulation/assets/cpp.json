@@ -56,7 +56,8 @@
       "c) constructor 1 constructor 2 constructor 1 destructor 1 destructor 2 destructor 1",
       "d) constructor 1 constructor 1 constructor 2 destructor 2 destructor 1"
     ],
-    "correctAnswerIndexes": [1]
+    "correctAnswerIndexes": [1],
+    "tobereviewd": "true"
   },
   {
     "id": 6,
@@ -252,7 +253,8 @@
       "c) orice funcție membru statică este funcție virtuală;",
       "d) destructorul poate fi funcție virtuală."
     ],
-    "correctAnswerIndexes": [0,3]
+    "correctAnswerIndexes": [0,3],
+    "tobereviewd": "true"
   },
   {
     "id": 23,
@@ -342,7 +344,8 @@
       "d) este o funcţie membru oarecare a clasei A, care nu produce supraîncărcarea unui operator;",
       "e) reprezintă un operator ternar."
     ],
-    "correctAnswerIndexes": [3]
+    "correctAnswerIndexes": [3],
+    "tobereviewd": "true"
   },
   {
     "id": 31,

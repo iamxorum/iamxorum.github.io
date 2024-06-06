@@ -19,7 +19,8 @@
       "else if(rad-&gt;stang == NULL && rad-&gt;drept == NULL) return 0;",
       "else"
     ],
-    "correctAnswerIndexes": [2]
+    "correctAnswerIndexes": [2],
+    "tobereviewd": "true"
   },
   {
     "id": 3,

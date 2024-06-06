@@ -11,9 +11,10 @@
   }
   
   .back {
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 10px;
+    z-index: 1;
     padding: 1rem 2rem;
     font-size: 14px;
     border: none;
@@ -29,8 +30,10 @@
   }
   
   nav {
+    position: fixed;
+    top: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #221b49;
     padding: 10px 0;
   
     ul {
@@ -44,7 +47,7 @@
         margin: 0 10px;
   
         button {
-          background-color: #333;
+          background-color: #221b49;
           color: white;
           padding: 14px 20px;
           border: none;
@@ -173,12 +176,12 @@
   }
 
   .code {
-    background-color: #d8ffff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    background-color: #221b49;
+    border: 1px solid #2b466e;
+    border-radius: 1rem;
     padding: 15px;
     font-family: "Courier New", Courier, monospace;
-    color: #333;
+    color: rgb(255, 217, 93);
     overflow-x: auto;
     margin: 20px 0;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -189,7 +192,23 @@
   }
 
   .code_2 {
-    background-color: #ffefd8;
+    background-color: #1b3749;
+    border: 0.2rem solid #2b6e6b;
+    border-radius: 1rem;
+    padding: 15px;
+    font-family: "Courier New", Courier, monospace;
+    color: rgb(255, 217, 93);
+    overflow-x: auto;
+    margin: 20px 0;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    
+    pre {
+      margin: 0;
+    }
+  }
+
+  .tobereviewed {
+    background-color: #ffe089;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 15px;
@@ -210,7 +229,7 @@
       display: none;
       position: absolute;
       width: 100%;
-      background-color: #333;
+      background-color: #221b49;
       padding: 0;
   
       li {

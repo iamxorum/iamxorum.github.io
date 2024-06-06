@@ -115,7 +115,8 @@
     ],
     "correctAnswerIndexes": [
       0
-    ]
+    ],
+    "tobereviewd": "true"
   },
   {
     "id": 10,
@@ -297,7 +298,8 @@
     ],
     "correctAnswerIndexes": [
       1
-    ]
+    ],
+    "tobereviewd": "true"
   },
   {
     "id": 24,
@@ -309,8 +311,9 @@
       "<div class=\"code_2\">st.an=1990;</div>"
     ],
     "correctAnswerIndexes": [
-      1
-    ]
+      0
+    ],
+    "tobereviewd": "true"
   },
   {
     "id": 25,

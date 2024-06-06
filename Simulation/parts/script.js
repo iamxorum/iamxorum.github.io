@@ -116,6 +116,7 @@
             text: String.raw`${answer}`,
             correct: questionData.correctAnswerIndexes.includes(questionData.answers.indexOf(answer)),
           })),
+          tobereviewd: questionData.tobereviewd
         }));
 
       // Shuffle the answers for each question and update the correct answer indexes
@@ -199,6 +200,23 @@
   
           button.addEventListener("click", () => toggleAnswer(button));
       });
+
+      if (currentQuestion.tobereviewd == "true") {
+        questionElement.classList.add('tobereviewed');
+        // Add a a text block that says "To be reviewed by the teacher" to the question block in caps
+        const reviewText = document.createElement('p');
+        reviewText.textContent = 'TREBUIE REVIZUIT DE PROFESOR';
+        questionElement.appendChild(reviewText);
+
+        // add style to the reviewText
+        reviewText.style.textAlign = 'center';
+        reviewText.style.color = 'red';
+        reviewText.style.fontWeight = 'bold';
+        reviewText.style.marginTop = '1rem';
+        reviewText.style.marginBottom = '1rem';
+      } else {
+        questionElement.classList.remove('tobereviewed');
+      }
       
       // Show the answer button for every question
       answerButton.style.display = "block";

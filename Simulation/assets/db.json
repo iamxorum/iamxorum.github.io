@@ -420,7 +420,8 @@
       "D. SELECT empName, department,<br>(SELECT COUNT(*) FROM Employees WHERE (department = e.department) And count(*) >10) FROM Employees AS e",
       "E. Nici una."
     ],
-    "correctAnswerIndexes": [1]
+    "correctAnswerIndexes": [1],
+    "tobereviewd": "true"
   },
   {
     "id": 36,
