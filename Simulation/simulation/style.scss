@@ -252,6 +252,22 @@
       margin: 0;
     }
   }
+
+  .tobereviewed {
+    background-color: #ffe089;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    font-family: "Courier New", Courier, monospace;
+    color: #333;
+    overflow-x: auto;
+    margin: 20px 0;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    
+    pre {
+      margin: 0;
+    }
+  }
   
   // Responsive design for mobile devices
   @media screen and (max-width: 600px) {
