@@ -396,7 +396,7 @@
   },
   {
     "id": 37,
-    "question": "O subclasă a unei clase abstracte poate fi instanţiată numai dacă:<br><br><div class=\"code\">a",
+    "question": "O subclasă a unei clase abstracte poate fi instanţiată numai dacă:",
     "answers": [
       "a) Se foloseşte cuvantul cheie abstract;",
       "b) Suprascrie fiecare metodă declarată abstractă în superclasa sa, şi furnizeaza implementari pentru toate acestea;",

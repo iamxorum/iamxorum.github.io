@@ -4,7 +4,9 @@
     async function fetchJSONFile(filePath) {
       const response = await fetch(filePath);
       if (!response.ok) {
-        throw new Error(`Failed to fetch ${filePath}: ${response.status} ${response.statusText}`);
+        throw new Error(
+          `Failed to fetch ${filePath}: ${response.status} ${response.statusText}`
+        );
       }
       return await response.json();
     }
@@ -19,27 +21,27 @@
 
     // create condition which titile is (if 'Module 1'or 'Module 2)
     if (quizTitle.textContent === "Module 1") {
-      json1 = await fetchJSONFile('../assets/pp.json');
-      json2 = await fetchJSONFile('../assets/cpp.json');
-      json3 = await fetchJSONFile('../assets/java.json');
-      json4 = await fetchJSONFile('../assets/tap.json');
-      json5 = await fetchJSONFile('../assets/asd.json');
+      json1 = await fetchJSONFile("../assets/pp.json");
+      json2 = await fetchJSONFile("../assets/cpp.json");
+      json3 = await fetchJSONFile("../assets/java.json");
+      json4 = await fetchJSONFile("../assets/tap.json");
+      json5 = await fetchJSONFile("../assets/asd.json");
       allQuestions = [...json1, ...json2, ...json3, ...json4, ...json5];
     } else if (quizTitle.textContent === "Module 2") {
-      json1 = await fetchJSONFile('../assets/db.json');
-      json2 = await fetchJSONFile('../assets/sgdb.json');
+      json1 = await fetchJSONFile("../assets/db.json");
+      json2 = await fetchJSONFile("../assets/sgdb.json");
       allQuestions = [...json1, ...json2];
     } else if (quizTitle.textContent === "Module 3") {
-      json1 = await fetchJSONFile('../assets/so.json');
-      json2 = await fetchJSONFile('../assets/rc.json');
-      json3 = await fetchJSONFile('../assets/crypto.json');
+      json1 = await fetchJSONFile("../assets/so.json");
+      json2 = await fetchJSONFile("../assets/rc.json");
+      json3 = await fetchJSONFile("../assets/crypto.json");
       allQuestions = [...json1, ...json2, ...json3];
     } else if (quizTitle.textContent === "Module 4") {
-      json1 = await fetchJSONFile('../assets/web.json');
-      json2 = await fetchJSONFile('../assets/cc.json');
-      json3 = await fetchJSONFile('../assets/ce.json');
+      json1 = await fetchJSONFile("../assets/web.json");
+      json2 = await fetchJSONFile("../assets/cc.json");
+      json3 = await fetchJSONFile("../assets/ce.json");
       allQuestions = [...json1, ...json2, ...json3];
-    } 
+    }
 
     const allQuestionsArray = allQuestions.flat();
 
@@ -54,7 +56,7 @@
 
     // Get random questions
     let randomlyChosenQuestions;
-    
+
     let questions;
     const questionElement = document.getElementById("question");
     const answerButtons = document.getElementById("answer-buttons");
@@ -62,16 +64,27 @@
     const answerButton = document.getElementById("answer-btn");
     const timerElement = document.getElementById("timer"); // Moved here
 
-    // Create a new element to display the count of correct answers in a div
-    const correctAnswers_div = document.createElement("div");
-    correctAnswers_div.id = "correct-answers";
-    correctAnswers_div.style.textAlign = "center";
-    correctAnswers_div.style.margin = "10px auto 0";
-    correctAnswers_div.style.marginBottom = "10px";
-    // after the timer
-    timerElement.insertAdjacentElement("afterend", correctAnswers_div);
-    //add the correct answers count to the DOM
-    const correctAnswers = document.getElementById("correct-answers");
+    // Create a new element to display the count of correct and wrong answers
+    const answerCountsDiv = document.createElement("div");
+    // Create elements for correct and wrong answer counts
+    const correctAnswersDiv = document.createElement("div");
+    const wrongAnswersDiv = document.createElement("div");
+    // Set IDs and initial text content for the correct and wrong answer counts
+    correctAnswersDiv.id = "correct-answers";
+    correctAnswersDiv.textContent = `0`;
+    wrongAnswersDiv.id = "wrong-answers";
+    wrongAnswersDiv.textContent = `0`;
+    // Append the correct and wrong answer divs to the answerCountsDiv
+    answerCountsDiv.appendChild(correctAnswersDiv);
+    answerCountsDiv.appendChild(wrongAnswersDiv);
+    // Style the answerCountsDiv
+    answerCountsDiv.style.textAlign = "center";
+    answerCountsDiv.style.margin = "10px auto";
+    answerCountsDiv.style.display = "flex";
+    answerCountsDiv.style.flexDirection = "row";
+    answerCountsDiv.style.justifyContent = "space-around";
+    // Insert the answerCountsDiv after the timer element
+    timerElement.insertAdjacentElement("afterend", answerCountsDiv);
 
     // Add question number element before the question (question number will be displayed above the question)
     const questionNumber = document.createElement("div");
@@ -82,19 +95,24 @@
     questionNumber.style.margin = "10px auto 0";
     questionNumber.style.marginBottom = "10px";
     //make him like a button with a background: #7c2c47;; and color: white; padding: 10px;
-    questionNumber.style.backgroundColor = "#82dcff";
-    questionNumber.style.color = "black";
+    questionNumber.style.backgroundColor = "#4447f1";
+    questionNumber.style.color = "#fafafa";
     questionNumber.style.fontWeight = "bold";
     questionNumber.style.padding = "1rem";
     questionNumber.style.borderRadius = "5px";
     questionNumber.style.width = "100%";
-    
+
     let currentQuestionIndex = 0;
     let score = 0;
+    let wrong = 0;
     let timeLeft = 60 * 60; // 60 minutes
     let userAnswers = [];
 
     function startQuiz() {
+      //empty the userAnswers array before starting the quiz
+      userAnswers = [];
+      //empyt local storage before starting the quiz
+      localStorage.removeItem("results");
       // remove the result div if it exists
       const result_div = document.getElementById("result");
       if (result_div) {
@@ -106,57 +124,65 @@
       if (goButton) {
         goButton.remove();
       }
-      randomlyChosenQuestions = getRandomQuestions(allQuestionsArray, numberOfQuestions);
-      questions = randomlyChosenQuestions
-        .map(questionData => ({
-          isWeb: questionData.isWeb || false,
-          question: String.raw`${questionData.question}`,
-          img: questionData.img,
-          answers: questionData.answers.map(answer => ({
-            text: String.raw`${answer}`,
-            correct: questionData.correctAnswerIndexes.includes(questionData.answers.indexOf(answer)),
-          })),
-          tobereviewd: questionData.tobereviewd
-        }));
+      randomlyChosenQuestions = getRandomQuestions(
+        allQuestionsArray,
+        numberOfQuestions
+      );
+      questions = randomlyChosenQuestions.map((questionData) => ({
+        isWeb: questionData.isWeb || false,
+        question: String.raw`${questionData.question}`,
+        img: questionData.img,
+        answers: questionData.answers.map((answer) => ({
+          text: String.raw`${answer}`,
+          correct: questionData.correctAnswerIndexes.includes(
+            questionData.answers.indexOf(answer)
+          ),
+        })),
+        tobereviewd: questionData.tobereviewd,
+      }));
 
       // Shuffle the answers for each question and update the correct answer indexes
       questions.forEach((question) => {
         question.answers = question.answers.sort(() => 0.5 - Math.random());
-        question.correctAnswerIndexes = question.answers.reduce((indexes, answer, index) => {
-          if (answer.correct) {
-            indexes.push(index);
-          }
-          return indexes;
-        }, []);
+        question.correctAnswerIndexes = question.answers.reduce(
+          (indexes, answer, index) => {
+            if (answer.correct) {
+              indexes.push(index);
+            }
+            return indexes;
+          },
+          []
+        );
       });
-      
+
       currentQuestionIndex = 0;
       score = 0;
       nextButton.innerHTML = "Next";
       // Add count of correct answers
-      correctAnswers.id = "correct-answers";
-      correctAnswers.textContent = `Correct Answers: ${score}`;
+      correctAnswersDiv.id = "correct-answers";
+      correctAnswersDiv.textContent = `0`;
+      // Add count of wrong answers
+      wrongAnswersDiv.id = "wrong-answers";
+      wrongAnswersDiv.textContent = `0`;
       // Add correct answers count to the DOM below the timer
-      timerElement.insertAdjacentElement("afterend", correctAnswers);
+      timerElement.insertAdjacentElement("afterend", answerCountsDiv);
       showQuestion();
-
     }
 
     function toggleAnswer(button) {
       // Toggle the selected state of the clicked button
       button.classList.toggle("selected");
     }
-    
+
     function escape(htmlStr) {
-      return htmlStr.replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#39;");        
-   
+      return htmlStr
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
     }
-  
-    
+
     function showQuestion() {
       resetState();
       let currentQuestion = questions[currentQuestionIndex];
@@ -167,7 +193,10 @@
         questionElement.innerHTML = `${currentQuestion.question}`;
       } else {
         // Escape html entities to prevent XSS attacks and display the question text
-        const questionText = escape(currentQuestion.question).replace(/\n/g, '<br>');
+        const questionText = escape(currentQuestion.question).replace(
+          /\n/g,
+          "<br>"
+        );
         // Replace \n with <br> to display line breaks
         questionElement.innerHTML = `${questionText}`;
       }
@@ -177,47 +206,48 @@
       // Check if there is an image path specified in the JSON record
       const imgElement = document.getElementsByClassName("image")[0];
       if (currentQuestion.img) {
-          imgElement.src = currentQuestion.img;
-          imgElement.style.display = "block";
+        imgElement.src = currentQuestion.img;
+        imgElement.style.display = "block";
       } else {
-          imgElement.src = "";
-          imgElement.style.display = "none";
+        imgElement.src = "";
+        imgElement.style.display = "none";
       }
-  
+
       currentQuestion.answers.forEach((answer) => {
-          const button = document.createElement("button");
-          if (isWeb){
-            button.textContent = answer.text;
-          } else {
-            button.innerHTML = answer.text;
-          }
-          button.classList.add("btn");
-          answerButtons.appendChild(button);
-  
-          if (answer.correct) {
-              button.dataset.correct = answer.correct;
-          }
-  
-          button.addEventListener("click", () => toggleAnswer(button));
+        const button = document.createElement("button");
+        if (isWeb) {
+          button.textContent = answer.text;
+        } else {
+          button.innerHTML = answer.text;
+        }
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
+
+        if (answer.correct) {
+          button.dataset.correct = answer.correct;
+        }
+
+        button.addEventListener("click", () => toggleAnswer(button));
       });
 
       if (currentQuestion.tobereviewd == "true") {
-        questionElement.classList.add('tobereviewed');
+        questionElement.classList.add("tobereviewed");
         // Add a a text block that says "To be reviewed by the teacher" to the question block in caps
-        const reviewText = document.createElement('p');
-        reviewText.textContent = 'TREBUIE REVIZUIT DE PROFESOR';
+        const reviewText = document.createElement("p");
+        reviewText.textContent = "TREBUIE REVIZUIT DE PROFESOR";
         questionElement.appendChild(reviewText);
 
         // add style to the reviewText
-        reviewText.style.textAlign = 'center';
-        reviewText.style.color = 'red';
-        reviewText.style.fontWeight = 'bold';
-        reviewText.style.marginTop = '1rem';
-        reviewText.style.marginBottom = '1rem';
+        reviewText.style.textAlign = "center";
+        reviewText.style.color = "#000";
+        reviewText.style.fontSize = "1.5rem";
+        reviewText.style.fontWeight = "bold";
+        reviewText.style.marginTop = "1rem";
+        reviewText.style.marginBottom = "1rem";
       } else {
-        questionElement.classList.remove('tobereviewed');
+        questionElement.classList.remove("tobereviewed");
       }
-      
+
       // Show the answer button for every question
       answerButton.style.display = "block";
       answerButton.addEventListener("click", showCorrectAnswers);
@@ -225,71 +255,88 @@
 
     function showCorrectAnswers() {
       // Ensure at least one answer is selected
-      const selectedButtons = Array.from(answerButtons.getElementsByClassName("selected"));
+      const selectedButtons = Array.from(
+        answerButtons.getElementsByClassName("selected")
+      );
       if (selectedButtons.length === 0) {
-          return;
+        return;
       }
-  
+
       // Remove answer button after showing correct answers
       answerButton.style.display = "none";
-  
+
       // Count the number of correct answers
-      const correctCount = Array.from(answerButtons.children).reduce((count, button) => {
+      const correctCount = Array.from(answerButtons.children).reduce(
+        (count, button) => {
           if (button.dataset.correct === "true") {
-              return count + 1;
+            return count + 1;
           }
           return count;
-      }, 0);
-  
+        },
+        0
+      );
+
       let countSelected = 0;
       let allSelectedCorrect = true;
       let error = 0;
-  
+      let alreadyIncrementedError = false;
+
       Array.from(answerButtons.children).forEach((button) => {
-          const isCorrect = button.dataset.correct === "true";
-          const isSelected = button.classList.contains("selected");
-  
-          // If it's correct and selected, mark as correct
-          if (isCorrect && isSelected) {
-              button.classList.add("correct");
-              button.classList.remove("selected");
-              countSelected++;
-          } else if (!isCorrect && isSelected) {
-              // If a wrong answer is selected, mark as incorrect and indicate not all selected are correct
-              button.classList.add("incorrect");
-              button.classList.remove("selected");
-              allSelectedCorrect = false;
-          } else if (isCorrect && !isSelected) {
-              // Mark correct answers that were not selected
-              button.classList.add("correct");
+        const isCorrect = button.dataset.correct === "true";
+        const isSelected = button.classList.contains("selected");
+
+        // If it's correct and selected, mark as correct
+        if (isCorrect && isSelected) {
+          button.classList.add("correct");
+          button.classList.remove("selected");
+          countSelected++;
+        } else if (!isCorrect && isSelected) {
+          // If a wrong answer is selected, mark as incorrect and indicate not all selected are correct
+          button.classList.add("incorrect");
+          button.classList.remove("selected");
+          allSelectedCorrect = false;
+          if (!alreadyIncrementedError) {
+            wrong++;
+            alreadyIncrementedError = true;
           }
-  
-          // Disable buttons after showing correct answers
-          button.disabled = true;
+        } else if (isCorrect && !isSelected) {
+          // Mark correct answers that were not selected
+          button.classList.add("correct");
+          if (!alreadyIncrementedError) {
+            wrong++;
+            alreadyIncrementedError = true;
+          }
+        }
+
+        // Disable buttons after showing correct answers
+        button.disabled = true;
       });
-  
+
       // Increment score only if all selected answers are correct
       if (allSelectedCorrect && countSelected === correctCount) {
-          score++;
+        score++;
       } else if (countSelected > 0 && !allSelectedCorrect) {
-          error++;
+        error++;
       }
 
       // selected answers and correct answers to the userAnswers array
-      
+
       userAnswers.push({
         question: questions[currentQuestionIndex].question,
         selectedAnswer: selectedButtons.map((button) => button.textContent),
-        correctAnswers: questions[currentQuestionIndex].answers.filter(answer => answer.correct).map(answer => answer.text),
-        isCorrect: allSelectedCorrect && countSelected === correctCount
+        correctAnswers: questions[currentQuestionIndex].answers
+          .filter((answer) => answer.correct)
+          .map((answer) => answer.text),
+        isCorrect: allSelectedCorrect && countSelected === correctCount,
       });
-  
+
       // Update score
-      correctAnswers.textContent = `Correct Answers: ${score}`;
-  
+      correctAnswersDiv.textContent = `${score}`;
+      wrongAnswersDiv.textContent = `${wrong}`;
+
       nextButton.style.display = "block";
       if (currentQuestionIndex === questions.length - 1) {
-          nextButton.textContent = "Finish";
+        nextButton.textContent = "Finish";
       }
     }
 
@@ -299,12 +346,14 @@
         answerButtons.removeChild(answerButtons.firstChild);
       }
     }
-    
+
     function showScore() {
       resetState();
       stopTimer();
       //remove correct answers count from the DOM
-      correctAnswers.remove();
+      correctAnswersDiv.remove();
+      //remove wrong answers count from the DOM
+      wrongAnswersDiv.remove();
       timerElement.textContent = "00:00:00";
       questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
       nextButton.innerHTML = "Play Again";
@@ -347,7 +396,7 @@
       result_div.style.borderRadius = "5px";
       result_div.style.width = "90%";
       result_div.style.maxWidth = "80rem";
-      result_div.style.display = "block";    
+      result_div.style.display = "block";
 
       if (grade >= 5) {
         result_div.style.backgroundColor = "green";
@@ -359,7 +408,7 @@
 
       // Add the result div to the DOM
       document.body.appendChild(result_div);
-      
+
       // Remove existing event listeners before adding a new one
       nextButton.removeEventListener("click", handleNextButtonClick);
       nextButton.addEventListener("click", handleNextButtonClick);
@@ -377,13 +426,13 @@
         window.location.href = "../result/results.html";
       });
     }
-    
+
     function handleNextButton() {
       currentQuestionIndex++;
       if (currentQuestionIndex < questions.length) {
         showQuestion();
       } else {
-        localStorage.setItem('results', JSON.stringify(userAnswers));
+        localStorage.setItem("results", JSON.stringify(userAnswers));
         showScore();
       }
     }
@@ -396,7 +445,7 @@
         startQuiz();
       }
     }
-    
+
     nextButton.addEventListener("click", () => {
       if (currentQuestionIndex < questions.length) {
         handleNextButton();
@@ -414,16 +463,18 @@
       const hours = Math.floor(timeLeft / 3600);
       const minutes = Math.floor((timeLeft % 3600) / 60);
       const seconds = timeLeft % 60;
-      const formattedTime = `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
+      const formattedTime = `${padZero(hours)}:${padZero(minutes)}:${padZero(
+        seconds
+      )}`;
       timerElement.textContent = `${formattedTime}`;
       return timeLeft;
     }
-    
+
     // Function to pad zero for single digits
     function padZero(num) {
       return num < 10 ? `0${num}` : num;
     }
-    
+
     // Function to start the timer
     function startTimer() {
       updateTimer();

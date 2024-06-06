@@ -76,6 +76,8 @@
       subjectTitle.style.textAlign = 'center';
       subjectTitle.style.marginTop = '2rem';
       subjectTitle.style.marginBottom = '2rem';
+      subjectTitle.style.fontWeight = 'bold';
+      subjectTitle.style.color = '#fafafa';
       questionsContainer.appendChild(subjectTitle);
 
       questions.forEach((questionData, index) => {
@@ -90,7 +92,8 @@
 
           // add style to the reviewText
           reviewText.style.textAlign = 'center';
-          reviewText.style.color = 'red';
+          reviewText.style.color = '#000';
+          reviewText.style.fontSize = '1.5rem';
           reviewText.style.fontWeight = 'bold';
           reviewText.style.marginTop = '1rem';
           reviewText.style.marginBottom = '1rem';

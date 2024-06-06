@@ -6,7 +6,7 @@
 }
 
 body {
-  background: rgb(230, 230, 230);
+  background: #0d0a20;
   height: 90vh;
 }
 
@@ -34,6 +34,7 @@ nav {
   width: 100%;
   background-color: #221b49;
   padding: 10px 0;
+  border-bottom: 0.3rem solid #fafafa;
 }
 nav ul {
   list-style-type: none;
@@ -65,7 +66,7 @@ nav ul li button.active {
 .learn-container {
   width: 90%;
   max-width: 80rem;
-  background-color: white;
+  background-color: #221b49;
   padding: 30px;
   margin: 100px auto 20px;
   border-radius: 10px;
@@ -84,13 +85,14 @@ nav ul li button.active {
 .question-block {
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #221b49;
+  border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .question-block h4 {
   font-size: 18px;
-  color: #001e4d;
+  color: #fafafa;
   font-weight: 600;
   margin-bottom: 10px;
   word-wrap: break-word;
@@ -161,7 +163,7 @@ nav ul li button.active {
 }
 
 .code {
-  background-color: #221b49;
+  background-color: #5c50a5;
   border: 1px solid #2b466e;
   border-radius: 1rem;
   padding: 15px;
@@ -176,12 +178,12 @@ nav ul li button.active {
 }
 
 .code_2 {
-  background-color: #1b3749;
-  border: 0.2rem solid #2b6e6b;
+  background-color: #506ea5;
+  border: 0.2rem solid #2b4a6e;
   border-radius: 1rem;
   padding: 15px;
   font-family: "Courier New", Courier, monospace;
-  color: rgb(255, 217, 93);
+  color: rgb(255, 255, 255);
   overflow-x: auto;
   margin: 20px 0;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -191,11 +193,10 @@ nav ul li button.active {
 }
 
 .tobereviewed {
-  background-color: #ffe089;
+  background-color: #be8c00;
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 15px;
-  font-family: "Courier New", Courier, monospace;
   color: #333;
   overflow-x: auto;
   margin: 20px 0;
@@ -239,11 +240,12 @@ nav ul li button.active {
   }
 }
 .app {
-  background: #fff;
+  background: #15112e;
   width: 90%;
   max-width: 80rem;
   margin: 100px auto 0;
   margin-bottom: 20px;
   border-radius: 10px;
   padding: 30px;
+  border: 0.15rem solid #fafafa;
 }/*# sourceMappingURL=style.css.map */
