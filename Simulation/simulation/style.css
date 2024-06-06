@@ -208,12 +208,12 @@ body {
 }
 
 .code {
-  background-color: #d8ffff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  background-color: #221b49;
+  border: 1px solid #2b466e;
+  border-radius: 1rem;
   padding: 15px;
   font-family: "Courier New", Courier, monospace;
-  color: #333;
+  color: rgb(255, 217, 93);
   overflow-x: auto;
   margin: 20px 0;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -223,12 +223,12 @@ body {
 }
 
 .code_2 {
-  background-color: #ffefd8;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  background-color: #1b3749;
+  border: 0.2rem solid #2b6e6b;
+  border-radius: 1rem;
   padding: 15px;
   font-family: "Courier New", Courier, monospace;
-  color: #333;
+  color: rgb(255, 217, 93);
   overflow-x: auto;
   margin: 20px 0;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
