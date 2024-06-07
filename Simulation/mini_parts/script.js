@@ -129,6 +129,10 @@
         result_div.remove();
       }
 
+      // If questionNumber and timer are hidden, show them
+      timerElement.style.display = "block";
+      questionNumber.style.display = "block";
+
       // Remove the goButton if it exists before starting the quiz
       let goButton = document.getElementById("go-btn");
       if (goButton) {
@@ -343,6 +347,9 @@
       //remove wrong answers count from the DOM
       wrongAnswersDiv.remove();
       timerElement.textContent = "00:00:00";
+      // If questionNumber and timer are hidden, show them
+      timerElement.style.display = "none";
+      questionNumber.style.display = "none";
       questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
       nextButton.innerHTML = "Play Again";
       nextButton.style.display = "block";

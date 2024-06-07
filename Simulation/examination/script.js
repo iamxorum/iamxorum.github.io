@@ -41,10 +41,20 @@
       return shuffled.slice(0, n);
     }
 
+    // shuffle the array
     function shuffleArray(array) {
-      for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+      let currentIndex = array.length;
+    
+      // While there remain elements to shuffle...
+      while (currentIndex != 0) {
+    
+        // Pick a remaining element...
+        let randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+    
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [
+          array[randomIndex], array[currentIndex]];
       }
       return array;
     }
@@ -81,6 +91,9 @@
           json12.slice(0, 3),
           json13.slice(0, 3)
         );
+
+      // shuffle the array
+      allQuestionsArray = shuffleArray(allQuestionsArray);
     }
 
     // Number of questions you want to choose randomly
@@ -126,6 +139,10 @@
       if (result_div) {
         result_div.remove();
       }
+
+      // If questionNumber and timer are hidden, show them
+      timerElement.style.display = "block";
+      questionNumber.style.display = "block";
 
       // Remove the goButton if it exists before starting the quiz
       let goButton = document.getElementById("go-btn");
@@ -346,6 +363,9 @@
       resetState();
       stopTimer();
       timerElement.textContent = "00:00:00";
+      // Hide timer and question number
+      timerElement.style.display = "none";
+      questionNumber.style.display = "none";
       questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
       nextButton.innerHTML = "Play Again";
       nextButton.style.display = "block";
