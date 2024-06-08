@@ -2,12 +2,7 @@
   {
     "id": 1,
     "question": "Produsul NoSQL oferit de AWS este:",
-    "answers": [
-      "a) DynamoDB",
-      "b) MongoDB",
-      "c) RDS",
-      "d) CloudWatch"
-    ],
+    "answers": ["a) DynamoDB", "b) MongoDB", "c) RDS", "d) CloudWatch"],
     "correctAnswerIndexes": [0]
   },
   {
@@ -31,19 +26,13 @@
       "d) O adresa IP v4 si o adresa IP v6 pentru a asigura interconectivitatea",
       "e) AWS VPC nu asigneaza adrese IP la creare"
     ],
-    "correctAnswerIndexes": [3],
-    "tobereviewd": "true"
+    "correctAnswerIndexes": [1]
   },
   {
     "id": 4,
     "question": "Care sunt modelele de servicii funizate “cloud computing”?",
-    "answers": [
-      "a) IaaS",
-      "b) HaaS",
-      "c) PaaS",
-      "d) SaaS"
-    ],
-    "correctAnswerIndexes": [0,2,3]
+    "answers": ["a) IaaS", "b) HaaS", "c) PaaS", "d) SaaS"],
+    "correctAnswerIndexes": [0, 2, 3]
   },
   {
     "id": 5,
@@ -54,8 +43,7 @@
       "c) Hybrid cloud",
       "d) Private cloud"
     ],
-    "correctAnswerIndexes": [0,2,3],
-    "tobereviewd": "true"
+    "correctAnswerIndexes": [0, 1, 2, 3]
   },
   {
     "id": 6,
@@ -67,17 +55,12 @@
       "d) AWS IAM",
       "e) Amazon S3"
     ],
-    "correctAnswerIndexes": [1,2,3,4]
+    "correctAnswerIndexes": [1, 2, 3, 4]
   },
   {
     "id": 7,
     "question": "Autentificarea multifactor se poate face in AWS folosind:",
-    "answers": [
-      "a) RDS",
-      "b) IAM",
-      "c) DynamoDB",
-      "d) Accout Settings"
-    ],
+    "answers": ["a) RDS", "b) IAM", "c) DynamoDB", "d) Accout Settings"],
     "correctAnswerIndexes": [1]
   },
   {
@@ -105,12 +88,7 @@
   {
     "id": 10,
     "question": "In AWS S3 durabilitatea fisierelor este de:",
-    "answers": [
-      "a) 99,99 %",
-      "b) 99,999999999 %",
-      "c) 100 %",
-      "d) 99 %"
-    ],
+    "answers": ["a) 99,99 %", "b) 99,999999999 %", "c) 100 %", "d) 99 %"],
     "correctAnswerIndexes": [1]
   },
   {
@@ -138,12 +116,7 @@
   {
     "id": 13,
     "question": "Produsul NoSQL oferit de platforma AWS este:",
-    "answers": [
-      "a) RDS",
-      "b) MangoDB",
-      "c) MySQL",
-      "d) DynamoDB"
-    ],
+    "answers": ["a) RDS", "b) MangoDB", "c) MySQL", "d) DynamoDB"],
     "correctAnswerIndexes": [3]
   },
   {
@@ -160,12 +133,7 @@
   {
     "id": 15,
     "question": "Produsul DNS oferit de platforma AWS este:",
-    "answers": [
-      "a) CloudDNS",
-      "b) CloudFront",
-      "c) CloudTrial",
-      "d) Route 53"
-    ],
+    "answers": ["a) CloudDNS", "b) CloudFront", "c) CloudTrial", "d) Route 53"],
     "correctAnswerIndexes": [3]
   },
   {
@@ -188,7 +156,7 @@
       "c) Reserved Instances",
       "d) Spot Instances"
     ],
-    "correctAnswerIndexes": [0,1,2,3]
+    "correctAnswerIndexes": [0, 1, 2, 3]
   },
   {
     "id": 18,
@@ -215,12 +183,7 @@
   {
     "id": 20,
     "question": "Ce reprezinta icon-ul in AWS:",
-    "answers": [
-      "a) DynamoDB",
-      "b) Route 53",
-      "c) S3",
-      "d) EC2"
-    ],
+    "answers": ["a) DynamoDB", "b) Route 53", "c) S3", "d) EC2"],
     "correctAnswerIndexes": [1],
     "img": "../drawable/img3.png"
   }
