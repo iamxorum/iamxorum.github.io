@@ -8,16 +8,27 @@
   </head>
   <body>
     <!-- Add a div button to navigate back to the index.html file -->
-    <button class="back" onclick="window.location.href = '../index.html';">Back</button>
+    <button class="back" onclick="window.location.href = '../index.html';">
+      Back
+    </button>
+    <div class="loader_container">
+      <h2 id="pulse">Loading</h2>
+      <div class="content">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </div>
     <div class="app">
       <div id="timer">00:00:00</div>
       <h3>Simulation</h3>
       <div class="quiz">
         <h2 id="question">Question goes here.</h2>
-        <img class="image" src="" alt="">
+        <img class="image" src="" alt="" />
         <div id="answer-buttons"></div>
-        <button id="next-btn" style="display: none;">Next</button>
-        <button id="answer-btn" style="display: none;">Answer</button>
+        <button id="next-btn" style="display: none">Next</button>
+        <button id="answer-btn" style="display: none">Answer</button>
       </div>
     </div>
     <script src="script.js"></script>

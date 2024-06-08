@@ -1,4 +1,6 @@
 (async () => {
+  const loadingScreen = document.getElementsByClassName("loader_container");
+  const quizContainer = document.getElementsByClassName("app");
   try {
     // Function to fetch JSON from a file
     async function fetchJSONFile(filePath) {
@@ -27,6 +29,18 @@
     let json13 = await fetchJSONFile("../assets/web.json");
     // Load more JSON files as needed
 
+    // display the loading screen
+    loadingScreen[0].style.display = "flex";
+    quizContainer[0].style.display = "none";
+
+    //sleep randomize betwwen 1 and 5 seconds
+    function sleep(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    //sleep for 1 second
+    await sleep(Math.floor(Math.random() * 5000) + 2000);
+
     let allQuestionsArray;
 
     // Combine all JSON files into one array
@@ -44,17 +58,18 @@
     // shuffle the array
     function shuffleArray(array) {
       let currentIndex = array.length;
-    
+
       // While there remain elements to shuffle...
       while (currentIndex != 0) {
-    
         // Pick a remaining element...
         let randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex--;
-    
+
         // And swap it with the current element.
         [array[currentIndex], array[randomIndex]] = [
-          array[randomIndex], array[currentIndex]];
+          array[randomIndex],
+          array[currentIndex],
+        ];
       }
       return array;
     }
@@ -101,6 +116,9 @@
 
     // Get random questions
     let randomlyChosenQuestions;
+
+    loadingScreen[0].style.display = "none";
+    quizContainer[0].style.display = "block";
 
     let questions;
     const questionElement = document.getElementById("question");
@@ -348,7 +366,7 @@
       if (currentQuestionIndex === questions.length - 1) {
         nextButton.textContent = "Finish";
       }
-      // click automatically the next button 
+      // click automatically the next button
       nextButton.click();
     }
 

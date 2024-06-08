@@ -48,8 +48,12 @@
         background-color: #77212b;
       }
 
+      #exam_btn:hover {
+        background-color: #9c632d;
+      }
+
       .learn button {
-        background-color: rgb(179, 134, 0);
+        background-color: rgb(27, 146, 27);
       }
 
       .grid button:hover {
@@ -76,11 +80,13 @@
         transition: background-color 0.3s;
       }
 
-      .back:hover{
+      .back:hover {
         background-color: #ea5151;
       }
       @media (min-width: 900px) {
-        .grid-3 button, .grid-4 button, .grid-13 button {
+        .grid-3 button,
+        .grid-4 button,
+        .grid-13 button {
           padding: 20px;
           font-size: 16px;
         }
@@ -94,14 +100,20 @@
     </style>
   </head>
   <body>
-    <button class="back" onclick="window.location.href = '../index.html';">Back</button>
+    <button class="back" onclick="window.location.href = '../index.html';">
+      Back
+    </button>
     <div class="grid grid-3 learn">
       <button onclick="location.href='learn/learn.html'">Learning Mode</button>
     </div>
     <div class="line"></div>
     <div class="grid grid-3">
-      <button onclick="location.href='simulation/simulate.html'">Simulation</button>
-      <button id="exam_btn" onclick="location.href='examination/exam.html'">Exam</button>
+      <button onclick="location.href='simulation/simulate.html'">
+        Simulation
+      </button>
+      <button id="exam_btn" onclick="location.href='examination/exam.html'">
+        Exam
+      </button>
     </div>
     <div class="line"></div>
     <div class="grid grid-4">
@@ -112,19 +124,39 @@
     </div>
     <div class="line"></div>
     <div class="grid grid-13">
-      <button onclick="location.href='mini_parts/asd.html'">Algoritmi si Structuri de Date</button>
+      <button onclick="location.href='mini_parts/asd.html'">
+        Algoritmi si Structuri de Date
+      </button>
       <button onclick="location.href='mini_parts/db.html'">Baze de Date</button>
-      <button onclick="location.href='mini_parts/crypto.html'">Criptografie</button>  
-      <button onclick="location.href='mini_parts/ce.html'">Comert Electronic</button>
-      <button onclick="location.href='mini_parts/cc.html'">Cloud Computing</button>
+      <button onclick="location.href='mini_parts/crypto.html'">
+        Criptografie
+      </button>
+      <button onclick="location.href='mini_parts/ce.html'">
+        Comert Electronic
+      </button>
+      <button onclick="location.href='mini_parts/cc.html'">
+        Cloud Computing
+      </button>
       <button onclick="location.href='mini_parts/cpp.html'">C++</button>
       <button onclick="location.href='mini_parts/java.html'">Java</button>
-      <button onclick="location.href='mini_parts/pp.html'">Programare Procedurala</button>
-      <button onclick="location.href='mini_parts/tap.html'">Tehnici Avansate de Programare</button>
-      <button onclick="location.href='mini_parts/web.html'">Tehnologii Web</button>
-      <button onclick="location.href='mini_parts/rc.html'">Retele de Calculatoare</button>
-      <button onclick="location.href='mini_parts/so.html'">Sisteme de Operare</button>
-      <button onclick="location.href='mini_parts/sgbd.html'">Sisteme de Gestiune a Bazelor de Date</button>
+      <button onclick="location.href='mini_parts/pp.html'">
+        Programare Procedurala
+      </button>
+      <button onclick="location.href='mini_parts/tap.html'">
+        Tehnici Avansate de Programare
+      </button>
+      <button onclick="location.href='mini_parts/web.html'">
+        Tehnologii Web
+      </button>
+      <button onclick="location.href='mini_parts/rc.html'">
+        Retele de Calculatoare
+      </button>
+      <button onclick="location.href='mini_parts/so.html'">
+        Sisteme de Operare
+      </button>
+      <button onclick="location.href='mini_parts/sgbd.html'">
+        Sisteme de Gestiune a Bazelor de Date
+      </button>
     </div>
   </body>
 </html>

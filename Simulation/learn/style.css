@@ -66,7 +66,7 @@ nav ul li button.active {
 .learn-container {
   width: 90%;
   max-width: 80rem;
-  background-color: #221b49;
+  background: linear-gradient(45deg, #221b49 0%, #320036 100%);
   padding: 30px;
   margin: 100px auto 20px;
   border-radius: 10px;
@@ -248,4 +248,158 @@ nav ul li button.active {
   border-radius: 10px;
   padding: 30px;
   border: 0.15rem solid #fafafa;
+}
+
+:root {
+  --sp: 2.5s; /* change speed */
+}
+
+.content {
+  width: 50vmin;
+  height: 50vmin;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.65);
+  animation: spin-all calc(var(--sp) * 2) linear 0s infinite;
+}
+
+.circle {
+  --in: 80%;
+  --ar: #8400ff;
+  --dt: #ffea34;
+  --shadow: drop-shadow(0vmin 0vmin 0.5vmin #000)
+    drop-shadow(0vmin 1vmin 0.5vmin #0004);
+  --cross: linear-gradient(
+      0deg,
+      #fff0 calc(50% - 2px),
+      #000 calc(50% - 1px) calc(50% + 1px),
+      #fff0 calc(50% + 2px)
+    ),
+    linear-gradient(
+      90deg,
+      #fff0 calc(50% - 2px),
+      #000 calc(50% - 1px) calc(50% + 1px),
+      #fff0 calc(50% + 2px)
+    );
+  border: 6vmin solid var(--ar);
+  width: var(--in);
+  height: var(--in);
+  border-radius: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  border-top-color: rgba(255, 255, 255, 0);
+  border-left-color: rgba(255, 255, 255, 0);
+  top: 15vmin;
+  right: -10vmin;
+  animation: spin-bot var(--sp) ease 0s infinite;
+  background-image: var(--cross), radial-gradient(var(--dt) 5.5vmin, rgba(255, 255, 255, 0) calc(5.5vmin + 1px));
+  background-repeat: no-repeat;
+  background-size: 3vmin 1vmin, 1vmin 3vmin, 100% 100%;
+  background-position: center center;
+  filter: var(--shadow);
+}
+
+.circle:nth-child(2) {
+  --in: 60%;
+  top: -2vmin;
+  animation: spin-top var(--sp) ease 0s infinite;
+  transform: rotate(-45deg);
+  background-image: var(--cross), radial-gradient(var(--dt) 1.25vmin, rgba(255, 255, 255, 0) calc(1.25vmin + 1px));
+  right: -4vmin;
+  filter: hue-rotate(10deg) var(--shadow);
+  background-size: 1.4vmin 1vmin, 1vmin 1.4vmin, 100% 100%;
+}
+
+.circle:nth-child(3) {
+  --in: 100%;
+  top: -5vmin;
+  left: -13vmin;
+  transform: rotate(175deg);
+  animation: spin-left var(--sp) ease calc(var(--sp) / 4) infinite;
+  background-image: var(--cross), radial-gradient(var(--dt) 9vmin, rgba(255, 255, 255, 0) calc(9vmin + 1px));
+  filter: hue-rotate(20deg) var(--shadow);
+  background-size: 5vmin 1vmin, 1vmin 5vmin, 100% 100%;
+}
+
+.circle:nth-child(4) {
+  --in: 60%;
+  top: 35vmin;
+  left: -6vmin;
+  transform: rotate(-280deg);
+  animation: spin-last var(--sp) ease calc((var(--sp) / 4 + var(--sp)) * -1) infinite;
+  background-image: var(--cross), radial-gradient(var(--dt) 2.5vmin, rgba(255, 255, 255, 0) calc(2.5vmin + 1px));
+  filter: hue-rotate(30deg) var(--shadow);
+  background-size: 2vmin 1vmin, 1vmin 2vmin, 100% 100%;
+}
+
+@keyframes spin-all {
+  0% {
+    transform: rotate(0deg) scale(0.65);
+  }
+  100% {
+    transform: rotate(360deg) scale(0.65);
+  }
+}
+@keyframes spin-top {
+  0% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(315deg);
+  }
+}
+@keyframes spin-bot {
+  0%, 35% {
+    transform: rotate(0deg);
+  }
+  80%, 100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes spin-left {
+  0%, 35% {
+    transform: rotate(175deg);
+  }
+  80%, 100% {
+    transform: rotate(535deg);
+  }
+}
+@keyframes spin-last {
+  0%, 10% {
+    transform: rotate(-280deg);
+  }
+  90%, 100% {
+    transform: rotate(-640deg);
+  }
+}
+.loader_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.loader_container #pulse {
+  color: #fafafa;
+  font-size: 2rem;
+  margin-bottom: 10rem;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    color: rgba(250, 250, 250, 0.6784313725);
+  }
+  50% {
+    transform: scale(1.2);
+    color: #fafafa;
+  }
+  100% {
+    transform: scale(1);
+    color: rgba(250, 250, 250, 0.6784313725);
+  }
 }/*# sourceMappingURL=style.css.map */

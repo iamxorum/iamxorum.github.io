@@ -1,4 +1,6 @@
 (async () => {
+  const loadingScreen = document.getElementsByClassName("loader_container");
+  const quizContainer = document.getElementsByClassName("app");
   try {
     // Function to fetch JSON from a file
     async function fetchJSONFile(filePath) {
@@ -10,6 +12,18 @@
       }
       return await response.json();
     }
+
+    // display the loading screen
+    loadingScreen[0].style.display = "flex";
+    quizContainer[0].style.display = "none";
+
+    //sleep randomize betwwen 1 and 5 seconds
+    function sleep(ms) {
+      return new Promise((resolve) => setTimeout(resolve, ms));
+    }
+
+    //sleep for 1 second
+    await sleep(Math.floor(Math.random() * 5000) + 2000);
 
     let json1;
 
@@ -29,6 +43,9 @@
 
     // Get random questions
     let randomlyChosenQuestions;
+
+    loadingScreen[0].style.display = "none";
+    quizContainer[0].style.display = "block";
 
     let questions;
     const questionElement = document.getElementById("question");
