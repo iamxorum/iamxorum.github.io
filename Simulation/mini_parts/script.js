@@ -75,6 +75,28 @@
 
     const allQuestionsArray = allQuestions.flat();
 
+    // shuffle the array
+    function shuffleArray(array) {
+      let currentIndex = array.length;
+
+      // While there remain elements to shuffle...
+      while (currentIndex != 0) {
+        // Pick a remaining element...
+        let randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [
+          array[randomIndex],
+          array[currentIndex],
+        ];
+      }
+      return array;
+    }
+
+    // Shuffle the questions
+    shuffleArray(allQuestionsArray);
+
     // Function to randomly select 'n' questions from the combined array
     function getRandomQuestions(questions, n) {
       const shuffled = questions.sort(() => 0.5 - Math.random());
