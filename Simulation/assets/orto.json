@@ -2275,7 +2275,7 @@
       "d) Procesul mezodermizarii ca proces unic;",
       "e) Lipsa mezodermizarii;"
     ],
-    "correctAnswerIndex": [1, 2]
+    "correctAnswerIndexes": [1, 2]
   },
   {
     "id": 216,
@@ -2287,7 +2287,7 @@
       "d) Dimensiune prea mica a dintilor temporari;",
       "e) Spatiu suficient pentru eruptia dintilor permanenti;"
     ],
-    "correctAnswerIndex": [2, 4]
+    "correctAnswerIndexes": [2, 4]
   },
   {
     "id": 217,
@@ -2311,7 +2311,7 @@
       "D. Cand un dinte din seria normala din vecinatatea dintelui supranumerar este compromis",
       "E. Dinte supranumerar anastrofic"
     ],
-    "correctAnswerIndex": [0, 3]
+    "correctAnswerIndexes": [0, 3]
   },
   {
     "id": 219,
@@ -2388,7 +2388,7 @@
       "d) Pct cel mai lat si inf de pe unghiul mand",
       "e) Pct cel mai inferior, posterior si lateral de pe unghiul mand"
     ],
-    "correctAnswerIndex": [0, 4]
+    "correctAnswerIndexes": [0, 4]
   },
   {
     "id": 225,
@@ -2424,7 +2424,7 @@
       "d) Pct subnazale se afla posterior de planul nazo-frontal",
       "e) Punctul pogonion e in 1/3 mijlocie a campului ant de profil facial"
     ],
-    "correctAnswerIndex": [0, 2, 3]
+    "correctAnswerIndexes": [0, 2, 3]
   },
   {
     "id": 228,
@@ -2436,7 +2436,7 @@
       "d) Punctul Gnathion in 1/3 medie;",
       "e) Buza inferioara in 1/3 posterioara;"
     ],
-    "correctAnswerIndex": [0, 1, 2]
+    "correctAnswerIndexes": [0, 1, 2]
   },
   {
     "id": 229,
@@ -2472,7 +2472,7 @@
       "d) maxilarul",
       "e) scheletul gatului"
     ],
-    "correctAnswerIndex": [2, 3, 4]
+    "correctAnswerIndexes": [2, 3, 4]
   },
   {
     "id": 232,
@@ -2496,7 +2496,7 @@
       "d) cu perioade de repaus relative",
       "e) dinspre pulpa spre exterior"
     ],
-    "correctAnswerIndex": [0, 1, 2, 3]
+    "correctAnswerIndexes": [0, 1, 2, 3]
   },
   {
     "id": 234,
@@ -2508,7 +2508,7 @@
       "d) se realizeaza din mugurii maxilari superiori",
       "e) presupune mezodermizatia dinspre anterior spre posterior"
     ],
-    "correctAnswerIndex": [3, 4]
+    "correctAnswerIndexes": [3, 4]
   },
   {
     "id": 235,
@@ -2520,7 +2520,7 @@
       "d) malpozitii dentare",
       "e) modificari de structura ale vecinilor"
     ],
-    "correctAnswerIndex": [2, 4]
+    "correctAnswerIndexes": [2, 4]
   },
   {
     "id": 236,
@@ -2532,7 +2532,7 @@
       "d) Actiune directa a aerului inspirat asupra boltii palatine",
       "e) Prin modificari ce favorizeaza pozitia anterioara a mandibulei si limbii"
     ],
-    "correctAnswerIndex": [0, 2, 3]
+    "correctAnswerIndexes": [0, 2, 3]
   },
   {
     "id": 237,
@@ -2544,7 +2544,7 @@
       "d) Deglutitia tranzitorie",
       "e) Deglutitia dismetabolica"
     ],
-    "correctAnswerIndex": [0, 2, 3]
+    "correctAnswerIndexes": [0, 2, 3]
   },
   {
     "id": 238,
@@ -2556,7 +2556,7 @@
       "d) Diastema datorata",
       "e) Diastema tranzitorie"
     ],
-    "correctAnswerIndex": [0, 2, 4]
+    "correctAnswerIndexes": [0, 2, 4]
   },
   {
     "id": 239,
@@ -2568,7 +2568,7 @@
       "d) In cazul unei fibromucoase foarte dure pe linia med",
       "e) In anomaliile dentare de numar"
     ],
-    "correctAnswerIndex": [0, 2, 3, 4]
+    "correctAnswerIndexes": [0, 2, 3, 4]
   },
   {
     "id": 240,
@@ -2580,7 +2580,7 @@
       "d) Raport cap la cap",
       "e) Relatii inverse"
     ],
-    "correctAnswerIndex": [1, 2, 3]
+    "correctAnswerIndexes": [1, 2, 3]
   },
   {
     "id": 241,
@@ -2592,7 +2592,7 @@
       "d) Se reduce intotdeauna spontan",
       "e) Beneficiaza numai de trat chirurgical"
     ],
-    "correctAnswerIndex": [0, 1, 2]
+    "correctAnswerIndexes": [0, 1, 2]
   },
   {
     "id": 242,
@@ -2604,6 +2604,6 @@
       "d) Se insoteste de modificari de volum ale celorlalti dinti",
       "e) Se intalneste doar la DP"
     ],
-    "correctAnswerIndex": [0, 1]
+    "correctAnswerIndexes": [0, 1]
   }
 ]
