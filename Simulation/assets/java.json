@@ -90,34 +90,19 @@
   {
     "id": 9,
     "question": "Fie următorul program Java:<br><br><div class=\"code\">class A<br>{<br>public A() { System.out.print(\"A\"); }<br>}<br>class B extends A<br>{<br>public B() { System.out.print(\"B\"); }<br>}<br>class C extends B<br>{<br>public C() { System.out.println(\"C\"); }<br>}<br>public class test<br>{<br>public static void main(String[] args)<br>{<br>C ob=new C();<br>}<br>}</div><br><br>După executarea programului, se va afişa:",
-    "answers": [
-      "a) A B C",
-      "b) A",
-      "c) C B A",
-      "d) C"
-    ],
+    "answers": ["a) A B C", "b) A", "c) C B A", "d) C"],
     "correctAnswerIndexes": [0]
   },
   {
     "id": 10,
     "question": "Fie următorul program Java:<br><br><div class=\"code\">class A<br>{<br>public int x=1;<br>public A() { x++; }<br>}<br>class B extends A<br>{<br>public B() { x++; }<br>}<br>class C extends B<br>{<br>public int x=1;<br>public C() { x++; }<br>}<br>public class test<br>{<br>public static void main(String[] args)<br>{<br>B b=new B();<br>C c=new C();<br>System.out.println(b.x+\" \"+c.x);<br>}<br>}</div><br><br>După executarea programului, se va afişa:",
-    "answers": [
-      "a) 3 4",
-      "b) 3 2",
-      "c) 2 2",
-      "d) 3 3"
-    ],
+    "answers": ["a) 3 4", "b) 3 2", "c) 2 2", "d) 3 3"],
     "correctAnswerIndexes": [1]
   },
   {
     "id": 11,
     "question": "Fie următorul program Java:<br><br><div class=\"code\">class A<br>{<br>int x=0;<br>public A(int n) { x=n; }<br>}<br>class B extends A<br>{<br>int x=1;<br>public B(int n) { super(n); }<br>}<br>public class test<br>{<br>public static void main(String[] args)<br>{<br>A a=new A(5);<br>B b=new B(7);<br>System.out.println(a.x+\" \"+b.x);<br>}<br>}</div><br><br>După executarea programului, se va afişa:",
-    "answers": [
-      "a) 05",
-      "b) 51",
-      "c) 57",
-      "d) 01"
-    ],
+    "answers": ["a) 05", "b) 51", "c) 57", "d) 01"],
     "correctAnswerIndexes": [1]
   },
   {
@@ -133,12 +118,7 @@
   {
     "id": 13,
     "question": "Program următor:<br><br><div class=\"code\">class A<br>{<br>int x=10;<br>static int y=20;<br>}<br>class B extends A<br>{<br>int x=30;<br>static int y=40;<br>}<br>public class Test<br>{<br>public static void main(String[] args) {<br>A ob = new B();<br>System.out.println(ob.x+\" \"+ob.y);<br>}<br>}</div><br><br>Afișează",
-    "answers": [
-      "a) 10 20",
-      "b) 30 40",
-      "c) 30 20",
-      "d) eroare la executare"
-    ],
+    "answers": ["a) 10 20", "b) 30 40", "c) 30 20", "d) eroare la executare"],
     "correctAnswerIndexes": [0]
   },
   {
@@ -166,34 +146,19 @@
   {
     "id": 16,
     "question": "Considerăm următorul program Java:<br><br><div class=\"code\">class C<br>{<br>int a,b;<br>public C(int x, int y){a=x; b=y;}<br>void f()<br>{<br>if(a<b) { a++; b--; g(); }<br>}<br>void g()<br>{<br>if(b>=a) { a++; b--; f(); }<br>}<br>void afisare() { System.out.println(a+\" \"+b);}<br>}<br>public class teste_grila<br>{<br>public static void main(String[] args)<br>{<br>C ob = new C(2,10);<br>ob.f(); ob.g();<br>ob.afisare();<br>}<br>}</div><br><br>După executarea programului, pe ecran se va afişa:",
-    "answers": [
-      "a) 57",
-      "b) 6 6",
-      "c) 2 10",
-      "d) 7 5"
-    ],
+    "answers": ["a) 57", "b) 6 6", "c) 2 10", "d) 7 5"],
     "correctAnswerIndexes": [3]
   },
   {
     "id": 17,
     "question": "Considerăm următorul program Java:<br><br><div class=\"code\">class C<br>{<br>static int x = 0;<br>static int f() { return (++x)*(x--); }<br>}<br>public class teste_grila<br>{<br>public static void main(String[] args)<br>{<br>System.out.println(C.f()+\" \"+C.f()+\" \"+C.f());<br>}<br>}</div><br><br>După executarea programului, pe ecran se va afişa:",
-    "answers": [
-      "a) 1 1 1",
-      "b) 1 2 3",
-      "c) 1 2 6",
-      "d) 0 0 0"
-    ],
+    "answers": ["a) 1 1 1", "b) 1 2 3", "c) 1 2 6", "d) 0 0 0"],
     "correctAnswerIndexes": [0]
   },
   {
     "id": 18,
     "question": "Considerăm următorul program Java:<br><br><div class=\"code\">class C<br>{<br>static int x=0;<br>static void f()<br>{<br>x = (++x)*(x--);<br>System.out.print(x+\" \");<br>}<br>}<br>public class teste_grila<br>{<br>public static void main(String[] args)<br>{<br>C.f();C.f();C.f();<br>}<br>}</div><br><br>După executarea programului, pe ecran se va afişa:",
-    "answers": [
-      "a) 0 0 0",
-      "b) 1 4 25",
-      "c) 1 -1 1",
-      "d) 2 4 16"
-    ],
+    "answers": ["a) 0 0 0", "b) 1 4 25", "c) 1 -1 1", "d) 2 4 16"],
     "correctAnswerIndexes": [1]
   },
   {
@@ -205,7 +170,7 @@
       "c) prin apelul metodei block();",
       "d) prin apelul metodei wait()."
     ],
-    "correctAnswerIndexes": [0,3]
+    "correctAnswerIndexes": [0, 3]
   },
   {
     "id": 20,
@@ -221,12 +186,7 @@
   {
     "id": 21,
     "question": "Considerăm următorul program Java:<br><br><div class=\"code\">class Sir{<br>private String sir;<br>public Sir(String sir){<br>this.sir = sir;<br>}<br>public void modificaSir(String sir){<br>this.sir = sir;<br>}<br>public void modificaSir(Sir sir){<br>sir = new Sir(\"Mihai\");<br>}<br>public String getSir(){<br>return sir;<br>}<br>}<br>public class Test {<br>public static void main(String[] args){<br>Sir s = new Sir(\"Ion\");<br>Sir t = new Sir(\"Alex\");<br>s.modificaSir(\"Matei\");<br>t.modificaSir(new Sir(\"Dan\"));<br>s.modificaSir(t);<br>System.out.println(s.getSir() + \" \" + t.getSir());<br>}<br>}</div><br><br>După executarea programului, va fi afişată valoarea:",
-    "answers": [
-      "a) Matei Dan",
-      "b) Dan Dan",
-      "c) Matei Alex",
-      "d) Alex Dan"
-    ],
+    "answers": ["a) Matei Dan", "b) Dan Dan", "c) Matei Alex", "d) Alex Dan"],
     "correctAnswerIndexes": [2]
   },
   {
@@ -238,7 +198,7 @@
       "c) propagarea unei erori pâna la un analizor de excepţii corespunzător;",
       "d) gruparea erorilor dupa tipul lor."
     ],
-    "correctAnswerIndexes": [1,2,3]
+    "correctAnswerIndexes": [1, 2, 3]
   },
   {
     "id": 23,
@@ -265,12 +225,7 @@
   {
     "id": 25,
     "question": "Considerăm următorul program Java:<br><br><div class=\"code\">class Calcul_1{<br>void calcul(int a, int b){<br>System.out.print(a + b + \" \");<br>}<br>}<br>class Calcul_2 extends Calcul_1{<br>void calcul(int a, int b){<br>System.out.print(a - b + \" \");<br>}<br>}<br>class Calcul_3 extends Calcul_2{<br>void calcul(int a, int b){<br>System.out.print(a * b + \" \");<br>}<br>}<br>public class Test{<br>public static void main(String[] args){<br>Calcul_1 x = new Calcul_3();<br>x.calcul(1, 2);<br>Calcul_2 y = (Calcul_2) x;<br>y.calcul(3, 4);<br>Calcul_3 z = (Calcul_3) y;<br>z.calcul(5, 6);<br>}<br>}</div><br><br>După executarea programului, va fi afişată valoarea:",
-    "answers": [
-      "a) 2 12 30",
-      "b) 3 -1 30",
-      "c) 3 7 11",
-      "d) 2 7 11"
-    ],
+    "answers": ["a) 2 12 30", "b) 3 -1 30", "c) 3 7 11", "d) 2 7 11"],
     "correctAnswerIndexes": [0]
   },
   {
@@ -282,7 +237,7 @@
       "c) new String s = \"Hello Java\";",
       "d) String s = new String(\"Hello Java\");"
     ],
-    "correctAnswerIndexes": [0,3]
+    "correctAnswerIndexes": [0, 3]
   },
   {
     "id": 27,
@@ -314,7 +269,7 @@
       "b) O instanţă a unei clase care implementează interfaţa Runnable",
       "c) Fie un obiect al unei clase a carei superclasă este clasa Thread, fie un obiect al unei clase care implementează interfata Runnable"
     ],
-    "correctAnswerIndexes": [0,1,2],
+    "correctAnswerIndexes": [0, 1, 2],
     "tobereviewd": "true"
   },
   {
@@ -342,12 +297,7 @@
   {
     "id": 32,
     "question": "Considerăm următorul program Java:<br><br><div class=\"code\">public class test<br>{<br>public static void main(String args[])<br>{<br>int v[ ]={-2,4,-5,-6,0,2},suma=0,i;<br>for(i=0;i<5;i++)<br>if(v[i]<-2) suma+=v[i];<br>System.out.println(suma);<br>}<br>}</div><br><br>După executarea programului, pe ecran se va afişa:",
-    "answers": [
-      "a) -7",
-      "b) 0",
-      "c) -11",
-      "d) -13"
-    ],
+    "answers": ["a) -7", "b) 0", "c) -11", "d) -13"],
     "correctAnswerIndexes": [2]
   },
   {
@@ -430,35 +380,20 @@
   {
     "id": 40,
     "question": "Secvența următoare:<br><br><div class=\"code\">public class numar_43_nou {<br>public static void main(String args[])<br>{<br>String sir=\"Examen\";<br>sir.toUpperCase();<br>System.out.println(sir);<br>}<br>}</div><br><br>Afișează:",
-    "answers": [
-      "a) EXAMEN",
-      "b) Examen",
-      "c) eXamen",
-      "d) Examen"
-    ],
+    "answers": ["a) EXAMEN", "b) Examen", "c) eXamen", "d) Examen"],
     "correctAnswerIndexes": [3],
     "tobereviewd": "true"
   },
   {
     "id": 41,
     "question": "Secvența urătoare:<br><br><div class=\"code\">public class numar_44_nou {<br>public static void main(String args[])<br>{<br>String sir1=\"Programare in Java\";<br>String sir2 =sir1.substring(4,8);<br>System.out.println(sir2.toUpperCase());<br>}<br>}</div><br><br>Afișează:",
-    "answers": [
-      "a) ogramare",
-      "b) rama",
-      "c) RAMA",
-      "d) Java"
-    ],
+    "answers": ["a) ogramare", "b) rama", "c) RAMA", "d) Java"],
     "correctAnswerIndexes": [2]
   },
   {
     "id": 42,
     "question": "Secvența urătoare:<br><br><div class=\"code\">public class Test {<br>public static void main(String args[])<br>{<br>int numar = 1;<br>for (int x = 0; x < 4; x++)<br>numar = numar << 1;<br>System.out.println(numar);}<br>}</div><br><br>Afișează:",
-    "answers": [
-      "a) 16",
-      "b) 32",
-      "c) 8",
-      "d) 3"
-    ],
+    "answers": ["a) 16", "b) 32", "c) 8", "d) 3"],
     "correctAnswerIndexes": [0]
   },
   {
@@ -470,7 +405,7 @@
       "c) poate fi instanțiată",
       "d) nu poate fi instanțiată, dar se pot definii referințe către acesta"
     ],
-    "correctAnswerIndexes": [1,3]
+    "correctAnswerIndexes": [1, 3]
   },
   {
     "id": 44,
@@ -515,50 +450,30 @@
       "d) i=1 j=0",
       "e) i=1 j=1"
     ],
-    "correctAnswerIndexes": [1,2,3]
+    "correctAnswerIndexes": [1, 2, 3]
   },
   {
     "id": 48,
     "question": "Fie următorul program Java:<br><br><div class=\"code\">class Tablou{<br>int[] met(int []a){<br>a[0] = -a[0];<br>a = new int[a.length];<br>a[0] = 1;<br>return a;<br>}<br>}<br>public class Test{<br>public static void main(String[] args){<br>int a[] = {1,2,3,4,5};<br>int b[] = new Tablou().met(a);<br>int s = 0;<br>for(int i = 0; i < a.length; i++) s = s + a[i] + b[i];<br>System.out.println(s);<br>}<br>}</div><br><br>După executarea programului, va fi afişată valoarea:",
-    "answers": [
-      "a) 30",
-      "b) 14",
-      "c) 28",
-      "d) 15"
-    ],
-    "correctAnswerIndexes": [2]
+    "answers": ["a) 30", "b) 14", "c) 28", "d) 15"],
+    "correctAnswerIndexes": [1]
   },
   {
     "id": 49,
     "question": "Considerăm următorul program Java:<br><br><div class=\"code\">class A{<br>public int x = 1;<br>public A() { x++; }<br>}<br>class B extends A{<br>public B() { x++; }<br>}<br>class C extends B{<br>public int x = 1;<br>public C() { x++; }<br>}<br>public class Test{<br>public static void main(String[] args){<br>B b = new B();<br>C c = new C();<br>System.out.println(b.x + \" \" + c.x);<br>}<br>}</div><br><br>După executarea programului, va fi afişată valoarea:",
-    "answers": [
-      "3 3",
-      "3 4",
-      "2 2",
-      "3 2"
-    ],
+    "answers": ["3 3", "3 4", "2 2", "3 2"],
     "correctAnswerIndexes": [3]
   },
   {
     "id": 50,
     "question": "Considerăm următorul program Java:<br><br><div class=\"code\">class C1{<br>int x = 1;<br>int f(int x) { return this.x + x; }<br>int f(int x, int y) { return this.x + y; }<br>}<br>class C2 extends C1{<br>int f(int x) { return this.x; }<br>}<br>public class Test{<br>public static void main(String[] args){<br>C1 ob = new C2();<br>System.out.println(ob.f(1) + ob.f(2,2));<br>}<br>}</div><br><br>După executarea programului, va fi afişată valoarea:",
-    "answers": [
-      "a) 3",
-      "b) 6",
-      "c) 5",
-      "d) 4"
-    ],
+    "answers": ["a) 3", "b) 6", "c) 5", "d) 4"],
     "correctAnswerIndexes": [3]
   },
   {
     "id": 51,
     "question": "După executarea secvenței de cod<br>String s = \"Examen\", t = \"Examen\";<br>if (s == t) System.out.print(\"A\");<br>else System.out.print(\"B\");<br>if (s.equals(t)) System.out.print(\"C\");<br>else System.out.print(\"D\");<br>se va afişa:<br><br><div class=\"code\">",
-    "answers": [
-      "a) AD",
-      "b) BC",
-      "c) AC",
-      "d) BD"
-    ],
+    "answers": ["a) AD", "b) BC", "c) AC", "d) BD"],
     "correctAnswerIndexes": [2]
   },
   {
@@ -586,12 +501,7 @@
   {
     "id": 54,
     "question": "Fie următorul program Java:<br><br><div class=\"code\">class A {<br>public static String f(String x) { return x+\"A\"; }<br>public String g(String x) { return x+\"B\"; }<br>}<br>class B extends A {<br>public static String f(String x) { return x+\"C\"; }<br>public String g(String x) { return x+\"D\"; }<br>}<br>public class Test {<br>public static void main(String[] args) {<br>A a = new B();<br>System.out.println(a.f(\"A\") + a.g(\"C\"));<br>}<br>}</div><br><br>După executarea programului, se va afişa:",
-    "answers": [
-      "a) AACD",
-      "b) ACCD",
-      "c) AACB",
-      "d) ACDC"
-    ],
+    "answers": ["a) AACD", "b) ACCD", "c) AACB", "d) ACDC"],
     "correctAnswerIndexes": [0]
   },
   {

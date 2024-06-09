@@ -382,7 +382,7 @@
   },
   {
     "id": 42,
-    "question": "Cel mai frecvent in ocluzie sunt",
+    "question": "Cel mai frecvent in infraocluzie sunt",
     "answers": ["a) M3 si C superior, PM inf, M1 si M2"],
     "correctAnswerIndexes": [0]
   },
@@ -419,7 +419,7 @@
     "id": 46,
     "question": "Anomalii cu raport distal si marirea unghiului interincisivt",
     "answers": ["a) II/1", "b) II/2", "c) III", "d) -II/1", "e) I/2 subdiv."],
-    "correctAnswerIndexes": [1, 4]
+    "correctAnswerIndexes": [0, 4]
   },
   {
     "id": 47,
@@ -520,7 +520,7 @@
       "b) Prodentie maxilara",
       "c) Retrodentie mandibulara"
     ],
-    "correctAnswerIndexes": [21]
+    "correctAnswerIndexes": [1, 2]
   },
   {
     "id": 56,
@@ -574,7 +574,7 @@
       "c) Retroalveolie",
       "d) Endoalveolie"
     ],
-    "correctAnswerIndexes": [1]
+    "correctAnswerIndexes": [1, 2, 3]
   },
   {
     "id": 62,
@@ -701,5 +701,1909 @@
       "e) Profil accentuat concav"
     ],
     "correctAnswerIndexes": [2, 4]
+  },
+  {
+    "id": 73,
+    "question": "Pentru aprecierea pozitiei V/O a dd inclusi se folosesc urm tipuri de rx",
+    "answers": [
+      "a) Rx retroalveolara",
+      "b) Teleradiografia",
+      "c) OPG",
+      "d) Rx excentrica",
+      "e) Cu film ocluzal"
+    ],
+    "correctAnswerIndexes": [3, 4]
+  },
+  {
+    "id": 74,
+    "question": "In campul de profil facial se afla",
+    "answers": [
+      "a) Buza superioara in 1/3 ant",
+      "b) Buza inferioara in 1/3 mijl",
+      "c) Punctul Pogonion in 1/3 posterioara",
+      "d) Santul labio-mentonier in 1/3 posterioara",
+      "e) Punctul Gnathion in 1/3 posterioara"
+    ],
+    "correctAnswerIndexes": [0, 3]
+  },
+  {
+    "id": 75,
+    "question": "Profilul pacientului este acc convex cand",
+    "answers": [
+      "a) Pct Gnathion se afla posterior de planul nazo-frontal",
+      "b) Pct Subnazale se afla anterior de planul Dreyfuss",
+      "c) Pct Gnathion se afla posterior de planul Simon",
+      "d) Procheilie superioara",
+      "e) Retrocheilie inferioara"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3]
+  },
+  {
+    "id": 76,
+    "question": "Tangenta mandib intersect scuama occipitala, indreptandu-se catre vertex, cand",
+    "answers": [
+      "a) Unghiul mand este marit",
+      "b) Unghiul mand este micsorat",
+      "c) Etajul inf este micsorat",
+      "d) Etajul inf este marit",
+      "e) Ramul orizontal al mand este micsorat/lung"
+    ],
+    "correctAnswerIndexes": [0, 3]
+  },
+  {
+    "id": 77,
+    "question": "In reg ant in plan sagital se pot intalni urmatoarele raporturi de ocluzie",
+    "answers": [
+      "a) Inocluzie sagitala",
+      "b) Ocluzie inversa",
+      "c) Inocluzie verticala",
+      "d) Supraocluzie frontala",
+      "e) Raport lingualizat"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 78,
+    "question": "Anomaliile dento-maxilare",
+    "answers": [
+      "a) Sunt tulburari ale organogenezei",
+      "b) Sunt tulburari ale morfodiferentierii",
+      "c) Pot fi det de factori ereditari",
+      "d) Pot fi consecinta unor tulburari functionale",
+      "e) Se mai numesc si malformatii congenitale"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3]
+  },
+  {
+    "id": 79,
+    "question": "Dintre cauzele incluziei",
+    "answers": [
+      "a) Pozitia",
+      "b) Migrarea verticala in grup a dd lat",
+      "c) Microdontia",
+      "d) Conformatii anatomice nefavorabile dintelui respectiv",
+      "e) Existenta unor dd supranumerari"
+    ],
+    "correctAnswerIndexes": [0, 3, 4]
+  },
+  {
+    "id": 80,
+    "question": "Printre cauzele reincluziei",
+    "answers": [
+      "a) Lipsa dd succesionali",
+      "b) Cauze mecanice",
+      "c) Anchiloza",
+      "d) Reintoarcerea dintelui in profunzimea maxilarului ca o etapa suplimentara si anormala"
+    ],
+    "correctAnswerIndexes": [1, 2, 3]
+  },
+  {
+    "id": 81,
+    "question": "Oasele de membrana sunt:",
+    "answers": [
+      "a) Maxilarele",
+      "b) Oasele nazale",
+      "c) Osul frontal",
+      "d) Corpul sfenoidului",
+      "e) Mezetmoidul",
+      "f) Parietal",
+      "g) Lacrimal"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 5, 6]
+  },
+  {
+    "id": 82,
+    "question": "Procesele evolutive ale organului dentar sunt",
+    "answers": [
+      "a) Cresterea celulara",
+      "b) Diferentierea celulara",
+      "c) Proliferarea epiteliala",
+      "d) Organogeneza",
+      "e) Calcifierea"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3, 4]
+  },
+  {
+    "id": 83,
+    "question": "Primul arc branhial este",
+    "answers": [
+      "a) Situat cranial",
+      "b) Situat caudal",
+      "c) Cel mai mic",
+      "d) Cel mai voluminos",
+      "e) Denumit si arc mandibular"
+    ],
+    "correctAnswerIndexes": [0, 3, 4]
+  },
+  {
+    "id": 84,
+    "question": "Ophrion este",
+    "answers": [
+      "a) Situat la inters LM cu tg la marg inf a conturului orbitar osos sup",
+      "b) Un pct antr median ant situat la intersectia liniei mediene cu arcada sprancenoasa",
+      "c) Situat la inters LM cu ...."
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 85,
+    "question": "Dg dif al diastemei vera se face cu",
+    "answers": [
+      "a) Diastemele fiziologice din DT",
+      "b) Diastema consecutiva anod de IL",
+      "c) Diastema din prodentie",
+      "d) Diastema dat meziodensului",
+      "e) Diastema tranzitorie"
+    ],
+    "correctAnswerIndexes": [0, 2, 4]
+  },
+  {
+    "id": 86,
+    "question": "Suma incisiva in cazul ind Pont nu se masoara",
+    "answers": [
+      "a) In dentitia mixta",
+      "b) In dentitia temporara",
+      "c) La arcada inferioara",
+      "d) Cand nu au erupt toti inc perm"
+    ],
+    "correctAnswerIndexes": [1, 2]
+  },
+  {
+    "id": 87,
+    "question": "Planul postlacteal este un raport de ocluzie",
+    "answers": [
+      "a) In dentitia temporara",
+      "b) In dentitia mixta",
+      "c) La niv m1 temporari",
+      "d) La niv m2 temporari",
+      "e) In sens sagital"
+    ],
+    "correctAnswerIndexes": [0, 3, 4]
+  },
+  {
+    "id": 88,
+    "question": "Formarea palatului este un proces",
+    "answers": [
+      "a) Al per de ontogeneza??",
+      "b) Ce se desf in etape",
+      "c) Ce are drept cons pat anomalii dento max",
+      "d) De septare si mezodermizare",
+      "e) Fara consecinte majore asupra ADM"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 89,
+    "question": "Evolutia filogenetica se caract prin",
+    "answers": [
+      "a) Reducerea oaselor viscerocr",
+      "b) Reducerea oaselor maxilare",
+      "c) Reducerea nr de dd",
+      "d) Reducerea sensib parodontale",
+      "e) Reducerea calitatii musculare"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 90,
+    "question": "Anomaliile dento-max",
+    "answers": [
+      "a) Reprezinta modif morf si str ale org",
+      "b) Apartin morfogenezei",
+      "c) Sunt det de cauze variate care act in primele 3luni de VIU",
+      "d) Se mai numesc si malform congenitale",
+      "e) Se dat proc de mezodermizare"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 91,
+    "question": "Au transmitere predominant ereditara",
+    "answers": [
+      "a) Prognatism mandib",
+      "b) Compresia de max",
+      "c) Macrodontia",
+      "d) Ocluzia adanca acoperita",
+      "e) Anodontia"
+    ],
+    "correctAnswerIndexes": [0, 2, 3, 4]
+  },
+  {
+    "id": 92,
+    "question": "In deglutitia infantila limba se sprijina",
+    "answers": [
+      "a) Intre arc dentare, zona ant",
+      "b) 1/3 ant a boltii palat",
+      "c) 1/3 colet I sup (degl normala)",
+      "d) La niv inc inf"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 93,
+    "question": "Asimetriile faciale sunt det de:",
+    "answers": [
+      "a) Dormitul cu mana sub obraz",
+      "b) Dormit cu capul in hiperflexie",
+      "c) Dormit cu capul in hiperextensie"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 94,
+    "question": "Pe OPG in ocluzie fata de cea in propulsie se pot decela",
+    "answers": [
+      "a) Gr de acoperire dentar in zona F",
+      "b) Cheia Angle",
+      "c) Curba Spec"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 95,
+    "question": "OPG in propulsie se indica pt observarea in conditii mai bune a",
+    "answers": ["a) Zonei mand ant/medii/ post", "b) Zonei max ant/medii/post"],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 96,
+    "question": "In anomaliile cls 1 Angle se pot observa",
+    "answers": ["a) Proalveolie", "b) Rap mezializate", "c) Rap distalizate"],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 97,
+    "question": "In anodontia forma partial redusa sunt incriminati de regula:",
+    "answers": ["a) ILS", "b) ICI", "c) PM2 inf si sup", "d) M3", "e) Altele"],
+    "correctAnswerIndexes": [0, 2, 3]
+  },
+  {
+    "id": 98,
+    "question": "Dg de anodontie se pune pe",
+    "answers": [
+      "a) Ex clinic + RX",
+      "b) Anamneza si ex pe model",
+      "c) Ex clinic si al modelului"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 99,
+    "question": "Tulburarile cele mai imp prov de dd supranumerari",
+    "answers": ["a) Blocarea dd perm aflati in eruptie"],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 100,
+    "question": "Cauzele incluziei:",
+    "answers": [
+      "a) Pozitia inalta de form a mugurelui",
+      "b) Conformatia anatomica defavorabila",
+      "c) Ax modifical sagital/ transversal",
+      "d) Pierderea potentialului de eruptie"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3]
+  },
+  {
+    "id": 101,
+    "question": "Teorii etiopat ale reincl dent:",
+    "answers": [
+      "a) Teoria cauzelor mecanice",
+      "b) Teoria anchilozei osteodentare",
+      "c) etapa suplim, anomalie in ev dent"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 102,
+    "question": "Cauzele ectopiei sunt legate de",
+    "answers": [
+      "a) Pozitia mug dentari",
+      "b) Sp micsorat",
+      "c) Existenta obstacolelor",
+      "d) Persistenta caninului temp"
+    ],
+    "correctAnswerIndexes": [1, 2, 3]
+  },
+  {
+    "id": 103,
+    "question": "Micsorarea sp in ectopia de C poate fi cauza",
+    "answers": [
+      "a) Macrodontiei",
+      "b) Dezv insuf a max",
+      "c) Repozitionare  .....ralizata"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 104,
+    "question": "Ectopia de canin poate provoca",
+    "answers": ["a) Tulb ocluzo-articulare"],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 105,
+    "question": "Etiopatogenia diastemei interinc:",
+    "answers": [
+      "a) Tp de fren 1,2,3",
+      "b) Sept fibros pe linia mediana",
+      "c) Fibromucoasa abundenta intre cei doi Ic",
+      "d) Prodentie cu diastema"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 106,
+    "question": "Transpozitia dentara este o anom caract prin",
+    "answers": ["a) Inversarea locului de eruptie pe arc cu un dt vecin"],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 107,
+    "question": "Dd cei mai interesati in transpozitia dentara sunt",
+    "answers": ["a) C sup", "b) I lat", "c) Pm1 sup"],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 108,
+    "question": "Cauzele transp dentare",
+    "answers": [
+      "a) Eruptie mezializata",
+      "b) Pierderea precoce a DT",
+      "c) Pozitia de formare",
+      "d) Cronologia de eruptie",
+      "e) Modif ale sist dent temp"
+    ],
+    "correctAnswerIndexes": [1, 2, 3, 4]
+  },
+  {
+    "id": 109,
+    "question": "Anom dento-max cu inghesuire cu forma primara are ca etiol",
+    "answers": [
+      "a) Macrodontia SI&gt;36mm",
+      "b) Maxilar mai mic",
+      "c) Mezioegresiunea generalizata a dd",
+      "d) Tulb de crestere la niv proc alv sau max generate prin pierderea timpurie a DT"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 110,
+    "question": "Anom dento-max cu spatiere in forma primara:",
+    "answers": [
+      "a) Prin microdentie",
+      "b) Prin anodontie",
+      "c) Marirea dimens max sup"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 111,
+    "question": "Etiol ocl deschise e repr de",
+    "answers": [
+      "a) Fact genetici",
+      "b) Fact dismetabolici",
+      "c) Tulb locale",
+      "d) Fact funct",
+      "e) Fact iatrogeni"
+    ],
+    "correctAnswerIndexes": [1, 3]
+  },
+  {
+    "id": 112,
+    "question": "Fact funct ai ocl deschise",
+    "answers": ["a) Deglutitie de tip infantil", "b) Tulb fonetice"],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 113,
+    "question": "Fact locali imp in geneza ocl deschise",
+    "answers": [
+      "a) Eruptie f lenta a fr frontal",
+      "b) Afectarea reumatica a ATM",
+      "c) Existenta unui sp prin pierderea precoce a DT",
+      "d) Cicatrici cheloide"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3]
+  },
+  {
+    "id": 114,
+    "question": "Tulb funct prez in ocl desch",
+    "answers": [
+      "a) Fanta labiala interdeschisa",
+      "b) Scurtarea ram asc",
+      "c) Cudarea ram oriz mand"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 115,
+    "question": "In ocluzia deschisa sunt prezente",
+    "answers": [
+      "a) Hipoplazia dentara",
+      "b) Afectarea spastica a pterig ext",
+      "c) Proalveolodentie sup",
+      "d) fonatie"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3]
+  },
+  {
+    "id": 116,
+    "question": "Trat ocluziei deschise",
+    "answers": [
+      "a) Expansiunea arcului dento-alveolar",
+      "b) Placi cu surub ancorate pe gutiere"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 117,
+    "question": "Semne faciale in ocl deschisa",
+    "answers": [
+      "a) Fanta labiala e mult deschisa",
+      "b) Et inf al fetei e mult marit",
+      "c) Sant labio-menton sters",
+      "d) Profil facial accentuat convex",
+      "e) Oblicitate acc a ram oriz al mandib"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3, 4]
+  },
+  {
+    "id": 118,
+    "question": "Semne orale in ocl deschisa",
+    "answers": [
+      "a) Displazii de smalt",
+      "b) Ingustarea arcului sup",
+      "c) Bolta palat ingusta si adanca",
+      "d) Spatiu inocl fiziologica"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3]
+  },
+  {
+    "id": 119,
+    "question": "Trat ocl deschise",
+    "answers": ["a) Interv chirurgicale"],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 120,
+    "question": "Terapia anom cls 2-a",
+    "answers": [
+      "a) Largirea max, alinierea gr fr",
+      "b) Propulsia mandib",
+      "c) Reducerea masei dent"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 121,
+    "question": "Forme anormale ale arc in compresia de max",
+    "answers": ["a) V, U, omega, trapez"],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 122,
+    "question": "Manif fac in compres de max",
+    "answers": [
+      "a) Fata prelunga si ingusta",
+      "b) Fanta labiala deschisa in repaus",
+      "c) Procheilie sup",
+      "d) Semnul lui Budin",
+      "e) Semnul oglinzii"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 123,
+    "question": "Semne faciale in ocl adanca acop 2/2",
+    "answers": [
+      "a) Etaj inf micsorat",
+      "b) Pct nazo spinal sit ant",
+      "c) Unghiul mand acc",
+      "d) Sant labio-mentonier sters"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 124,
+    "question": "Semne orale in ocluzia adanca acop",
+    "answers": [
+      "a) Versant ant abrupt",
+      "b) Supraocluzie a incisiv acc",
+      "c) SIF=  crescut",
+      "d) Frecv rap ocl distalizate"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3]
+  },
+  {
+    "id": 125,
+    "question": "Semne faciale in prognatia mandib",
+    "answers": [
+      "a) Prognatie mandib cu micrognatie",
+      "b) Sant labio-menton sters",
+      "c) Profilul facial acc convex"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 126,
+    "question": "In prognatiile mand de conducere cusp, profilul",
+    "answers": [
+      "a) Acc concav",
+      "b) Drept sau usor concav",
+      "c) Etaj inf usor marit",
+      "d) Treapta buzelor usor inversata",
+      "e) Unghiul mand nemodificat"
+    ],
+    "correctAnswerIndexes": [1, 2, 3, 4]
+  },
+  {
+    "id": 127,
+    "question": "Modificari ce semnif un exces de dezv mand",
+    "answers": [
+      "a) Precocitate in eruptia DP",
+      "b) Spatii intre DP erupti: in sect laterale",
+      "c) Mariri sagitale si transv ale arcadei inf",
+      "d) Existenta unor diasteme foarte mari in per DT la arc inf",
+      "e) Eruptia dd mai intai inferiori"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3, 4]
+  },
+  {
+    "id": 128,
+    "question": "Testul de retropulsie mand negativ",
+    "answers": [
+      "a) Angrenaj invers",
+      "b) Ocl inversa prin modif de ax de ii",
+      "c) Macrognatie",
+      "d) Ocl inversa de conducerea cusp",
+      "e) Pseudoprognatie produsa prin deficit de dezv?"
+    ],
+    "correctAnswerIndexes": [0, 1, 3]
+  },
+  {
+    "id": 129,
+    "question": "Semne RX ale prognatiei mand ale def de dezv a max sup",
+    "answers": [
+      "a) Micsorarea unghiului SNA",
+      "b) Cresterea unghiului mand",
+      "c) Micsorarea dif SNA"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 130,
+    "question": "Etiopatog progn mand",
+    "answers": [
+      "a) Predominant ereditara",
+      "b) Postura hiperextensie",
+      "c) Interpunerea buzei sup",
+      "d) Angrenaj invers dd sup",
+      "e) Interp buzei inf"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 131,
+    "question": "Trat prognatiei adultului",
+    "answers": [
+      "a) Asig unei supraocl sufic",
+      "b) Constructii protetice",
+      "c) Inaltarea provizorie a ocl",
+      "d) Deplasarea post a mand",
+      "e) Recoborarea treptata a ocluziei dupa efectuarea saltului articular",
+      "f) Stabilirea noului plan de ocluzie fata de care se vor face restaurarile"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3, 4, 5]
+  },
+  {
+    "id": 132,
+    "question": "Particularitatile primului arc branhial sunt:",
+    "answers": [
+      "a) Este cel mai mic",
+      "b) Este cel mai voluminos",
+      "c) Se formeaza ultimul",
+      "d) Se formeaza primul",
+      "e) Se mai numeste si arc hioidian"
+    ],
+    "correctAnswerIndexes": [1, 3]
+  },
+  {
+    "id": 133,
+    "question": "Oasele de membrana ale extremitatii cefalice sunt:",
+    "answers": [
+      "a) Maxilarul",
+      "b) Mandibula",
+      "c) Malarul",
+      "d) Vomerul",
+      "e) Cornetul inferior"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 134,
+    "question": "Printre efectele evolutiei filogenetice se numara:",
+    "answers": [
+      "a) Reducerea viscerocraniului",
+      "b) Cresterea neurocraniului",
+      "c) Reducerea volumului dentar",
+      "d) Scaderea numarului de dinti",
+      "e) Cresterea sensibilitatii parodontale",
+      "f) Reducerea oaselor maxilare",
+      "g) Discrepante intre viteza de reducere a oaselor si dintilor"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3, 5, 6]
+  },
+  {
+    "id": 135,
+    "question": "Formarea palatului se caracterizeaza prin:",
+    "answers": [
+      "a) Formarea initiala a palatului secundar",
+      "b) Formarea palatului primar, urmata de formarea palatului secundar",
+      "c) Procese de septare si mezodermizare",
+      "d) Procesul mezodermizarii ca proces unic",
+      "e) Lipsa mezodermizarii"
+    ],
+    "correctAnswerIndexes": [1, 2]
+  },
+  {
+    "id": 136,
+    "question": "In mixedemul juvenil, printre simptome se numara:",
+    "answers": [
+      "a) Intarzierea cresterii somatice",
+      "b) Intarzierea eruptiei dentare",
+      "c) Accelerarea eruptiei dentare",
+      "d) Macroglosia",
+      "e) Parodontopatia marginala"
+    ],
+    "correctAnswerIndexes": [0, 1, 3]
+  },
+  {
+    "id": 137,
+    "question": "Semne de rotatie anterioara pe OPG",
+    "answers": [
+      "a) Directie crestere condil sus si anter",
+      "b) Ram vertical lat",
+      "c) Simfiza menton bine dezvoltata",
+      "d) ... ingust",
+      "e) ... "
+    ],
+    "correctAnswerIndexes": [0, 1, 3]
+  },
+  {
+    "id": 138,
+    "question": "etiopatogenia/cauzele incluziei dd:",
+    "answers": [
+      "a) pozitia foarte inalta de formare a mugurilor",
+      "b) conformatia anoatomica defavorabila",
+      "c) ax modificat sagital/transversal",
+      "d) pierderea provizorie/definitiva a potentialului de eruptie a dintelui"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3]
+  },
+  {
+    "id": 139,
+    "question": "incidenta Schlesinger (RX perpendic pe film) e folosita pt",
+    "answers": [
+      "a) identificarea sediului vestibular/oral",
+      "b) identifica existenta unui obstacol pe traiectul de eruptie"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 140,
+    "question": "incidenta clark foloseste",
+    "answers": ["a) doua Rx in inicdentele: otognata si excentrica"],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 141,
+    "question": "trat incluziei dentare cuprinde",
+    "answers": [
+      "a) obtinerea spatiului necesar",
+      "b) descoperirea chirurgicala si ancorarea dd",
+      "c) tractionarea lenta si alinierea dd pe arcada"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 142,
+    "question": "cauza cea mai frecventa a ectopiei de C:",
+    "answers": ["a) reducerea sau absenta spatiului"],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 143,
+    "question": "in ectopia de canin, pentru crearea spatiului:",
+    "answers": [
+      "a) avansarea gr incisiv",
+      "b) distalizarea gr PM, M",
+      "c) largirea arcadei (dezv transversala)"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 144,
+    "question": "contentia in tratamentul diastemei:",
+    "answers": ["a) 6-8 sapt de ligatura in 8 in jurul celor 2 IC"],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 145,
+    "question": "factori functionali ai ocluziei deschise",
+    "answers": ["a) deglutitie de tip infantil", "b) tulb fonetice"],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 146,
+    "question": "rapoarte distalizate ale mandibulei si protruzia proceselor alveolare",
+    "answers": [
+      "a) cls aIIa subdiviziunea I",
+      "b) cls aIIa diviziunea I",
+      "c) se inscrie in compresie de maxilar"
+    ],
+    "correctAnswerIndexes": [1, 2]
+  },
+  {
+    "id": 147,
+    "question": "in anomaliile dento max II/I",
+    "answers": [
+      "a) de obicei etajul inf al fetei e micsorat",
+      "b) curba lui Spee e accentuata",
+      "c) inocluzie sagitala frontala"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 148,
+    "question": "semne radiologice",
+    "answers": [
+      "a) releve modificari sagitale si verticale ale anomaliei",
+      "b) diferenta SNA-SNU e crescuta"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 149,
+    "question": "etiopatogenia in Anom Dento max II/I:",
+    "answers": ["a) presiune directa asupra IC + succiune"],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 150,
+    "question": "dg dif al II/I se face cu :",
+    "answers": [
+      "a) ocluziile distale ....",
+      "b) macrodontie absoluta",
+      "c) meziopozitie generalizata",
+      "d) constrictii, anchiloze ATM",
+      "e) Biprodentia"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3, 4]
+  },
+  {
+    "id": 151,
+    "question": "Formele ocluziei cu supraacoperire frontala",
+    "answers": [
+      "a) IC retrudati iar cei L V-inclinati",
+      "b) Grup frontal retrudat"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 152,
+    "question": "Semnele dezvoltarii insuficiente a maxilarului si arcului superior:",
+    "answers": [
+      "a) Baza apicala micsorata transversal",
+      "b) Apar in conducerea cuspidiana",
+      "c) Sunt evidente in ocluzia frontala inversa de conducere",
+      "d) Baza apicala micsorata sagital"
+    ],
+    "correctAnswerIndexes": [0, 1, 3]
+  },
+  {
+    "id": 153,
+    "question": "Modificari ocluzare in prognatia mandibulara",
+    "answers": [
+      "a) Plan postlacteal in trapta meziala",
+      "b) Subdiv cand rapoartele sunt modificare unilaeral",
+      "c) Mezializata",
+      "d) Distalizata"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 154,
+    "question": "Spatierile la 4-6",
+    "answers": ["a) arata dezv normala a max cu spatiu suf pt dd perm"],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 155,
+    "question": "Mezodermizarea",
+    "answers": [
+      "a) este proces din organogeneza, nu morfogeneza, proces de coalescenta, nu de spatiere, duce la distrugerea epiteliului"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 156,
+    "question": "Palatul primar",
+    "answers": [
+      "a) se formeaza cu material din mug nazal int si max sup, prin mezodermizare, dinspre post spre ant"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 157,
+    "question": "Muguri faciali pereche sunt:",
+    "answers": [
+      "a) nazal ext",
+      "b) max sup",
+      "c) md",
+      "d) nu mug dentari",
+      "e) nu mug frontal"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 158,
+    "question": "Planul Dreyfuss este:",
+    "answers": [
+      "a) Perpendiculara din punctul Nasion pe orizontala de la Frankfurt",
+      "b) Perpendiculara din punctul Orbitale pe orizontala de la Frankfurt",
+      "c) Planul orbito-frontal",
+      "d) Planul naso-frontal",
+      "e) Niciun raspuns nu este corect"
+    ],
+    "correctAnswerIndexes": [0, 3]
+  },
+  {
+    "id": 159,
+    "question": "Eruptia dintilor permanenti inferiori se particularizeaza prin:",
+    "answers": [
+      "a) In majoritatea cazurilor erup inaintea celor superiori",
+      "b) Erup dupa cei superiori",
+      "c) Intervalul de eruptie intre grupele de dinti este de 6 luni",
+      "d) Erup pe grupe de dinti",
+      "e) Caninul erupe ultimul in grupul dintilor succesionali"
+    ],
+    "correctAnswerIndexes": [0, 3]
+  },
+  {
+    "id": 160,
+    "question": "Malpozitiile dentare se apreciaza fata de:",
+    "answers": [
+      "a) Linia interincisiva",
+      "b) Hemiarcada opusa",
+      "c) Planul de ocluzie",
+      "d) Linia mediana",
+      "e) Curbura normala a arcadei"
+    ],
+    "correctAnswerIndexes": [2, 3, 4]
+  },
+  {
+    "id": 161,
+    "question": "Printre anomaliile dento-maxilare cu transmitere ereditara se numara:",
+    "answers": [
+      "a) Prognatismul mandibular adevarat",
+      "b) Macrodontia",
+      "c) Microdontia",
+      "d) Ocluzia adanca acoperita",
+      "e) Unele forme de compresie de maxilar si ocluzie dechisa"
+    ],
+    "correctAnswerIndexes": [0, 3, 4]
+  },
+  {
+    "id": 162,
+    "question": "Regiunea anterioara in plan sagital se pot gasi urmatoarele raporturi de ocluzie:",
+    "answers": [
+      "a) inocluzie sagitala",
+      "b) ocluzie inversa",
+      "c) inocluzie verticala",
+      "d) ?ocluzie frontala",
+      "e) Raport lingualizat"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 163,
+    "question": "Etapele evolutive ale oganului dentar sunt:",
+    "answers": [
+      "a) Mineralizarea tesuturilor dentare",
+      "b) Cresterea si diferentierea celulara",
+      "c) Abraziunea",
+      "d) Eruptia dentara",
+      "e) Diferentierea morfologica"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3, 4]
+  },
+  {
+    "id": 164,
+    "question": "In evolutia pe scara filogenetica se evidentieaza:",
+    "answers": [
+      "a) Cresterea viscerocraniului",
+      "b) Cresterea neurocraniului",
+      "c) Reducerea oaselor maxilare",
+      "d) Scaderea numarului de dinti",
+      "e) Discrepante inte viteza de reducere a oaselor si dinti"
+    ],
+    "correctAnswerIndexes": [1, 2, 3, 4]
+  },
+  {
+    "id": 165,
+    "question": "Formarea palatului primar presupune:",
+    "answers": [
+      "a) Activitatea mugurelui nazal intern",
+      "b) Activitatea mugurilor maxilari superiori",
+      "c) Activitatea conjugata a mugurelui nazal intern si mugurilor maxilari superiori",
+      "d) Absenta procesului de mezodermizatie",
+      "e) Mezodermizatia apare dinspre posterior spre anterior"
+    ],
+    "correctAnswerIndexes": [2, 4]
+  },
+  {
+    "id": 166,
+    "question": "Constituirea si dezvoltarea organismului uman se imparte in:",
+    "answers": [
+      "a) Ontogeneza",
+      "b) Organogeneza",
+      "c) Filogeneza",
+      "d) Morfogeneza",
+      "e) Odontogeneza"
+    ],
+    "correctAnswerIndexes": [1, 3]
+  },
+  {
+    "id": 167,
+    "question": "In anodontia de premolar II",
+    "answers": [
+      "a) Molarul II temporar trebuie sa se extraga obligatoriu",
+      "b) Se poate adopta o atitudine de expectativa fata de molarul II temporar",
+      "c) Nu este indicata niciodata extractia dintilor temporari",
+      "d) Poate apare reincluzia molarului II temporar",
+      "e) Tratamentul protetic este cel mai indicat"
+    ],
+    "correctAnswerIndexes": [1, 3]
+  },
+  {
+    "id": 168,
+    "question": "Nasion(N) reprezinta:",
+    "answers": [
+      "a) Un punct antropometric median anterior;",
+      "b) Un punct antropometric median posterior;",
+      "c) Punctul situat la intersectia suturii nazoofrontale cu linia mediana;",
+      "d) Punctul folosit la definirea orizontalei de la Frankfurt;",
+      "e) Punctul cel mai infundat de pe osul frontal;"
+    ],
+    "correctAnswerIndexes": [0, 2]
+  },
+  {
+    "id": 169,
+    "question": "Printre punctele antropometrice laterale se numara:",
+    "answers": [
+      "a) Condilion;",
+      "b) Orbitale;",
+      "c) Porion;",
+      "d) Prosthion;",
+      "e) Zygion;"
+    ],
+    "correctAnswerIndexes": [0, 2, 4]
+  },
+  {
+    "id": 170,
+    "question": "Eruptia dintilor permanenti se caracterizeaza prin:",
+    "answers": [
+      "a) Eruptia incepe la varsta de 6 ani;",
+      "b) Erup pe grupe de dinti;",
+      "c) Intervalul de eruptie intre dinti este de 6 luni;",
+      "d) Intervalul de eruptie intre dinti este de 1 an;",
+      "e) Dintii accesionali erup dupa dintii succesionali;"
+    ],
+    "correctAnswerIndexes": [0, 1, 3]
+  },
+  {
+    "id": 171,
+    "question": "Dintre anomaliile dento-maxilare cu transmitere ereditara fac parte:",
+    "answers": [
+      "a) Reincluzia dentara;",
+      "b) Retrognatismul mandibular functional;",
+      "c) Prognatismul mandibular anatomic;",
+      "d) Ocluzia adanca acoperita;",
+      "e) Transpozitia dentara;"
+    ],
+    "correctAnswerIndexes": [2, 3]
+  },
+  {
+    "id": 172,
+    "question": "Profilul pacientului este accentuat convex cand:",
+    "answers": [
+      "a) Punctul Subnasale se afla anterior de planul nazofrontal;",
+      "b) Punctul Subnasale se afla posterior de planul nazofrontal;",
+      "c) Punctul Gnathion se afla anterior de planul nazofrontal;",
+      "d) Punctul Gnathion se alfa posterior de planul nazofrontal;",
+      "e) Punctul Gnathion se afla posterior de planul orbitofrontal;"
+    ],
+    "correctAnswerIndexes": [0, 4]
+  },
+  {
+    "id": 173,
+    "question": "In zona anterioara a campului de profil facial se afla:",
+    "answers": [
+      "a) Punctul Subnasale in 1/3 anterioara;",
+      "b) Buza superioara in 1/3 anterioara;",
+      "c) Punctul Pogonion in 1/3 mijlocie;",
+      "d) Punctul Gnathion in 1/3 posterioara;",
+      "e) Buza inferioara in 1/3 posterioara;"
+    ],
+    "correctAnswerIndexes": [1, 2]
+  },
+  {
+    "id": 174,
+    "question": "Tangenta mandibulei intersecteaza scuama occipitala, indreptandu-se spre vertex, cand:",
+    "answers": [
+      "a) Unghiulmandibular este marit;",
+      "b) Unghiul mandibular este micsorat;",
+      "c) Etajul inferior este micsorat;",
+      "d) Etajul inferior este marit;",
+      "e) Ramul orizontal al mandibulei este scurt;"
+    ],
+    "correctAnswerIndexes": [0, 3]
+  },
+  {
+    "id": 175,
+    "question": "Faciesul caracteristic al respiratorului oral este:",
+    "answers": [
+      "a) Fanta labiala deschisa;",
+      "b) Vizibilitatea incisivilor inferiori;(se vad SUPERIORII)",
+      "c) Pometii obrajilor stersi;",
+      "d) Treapta buzelor inversata;",
+      "e) Profil convex;"
+    ],
+    "correctAnswerIndexes": [0, 2]
+  },
+  {
+    "id": 176,
+    "question": "Deglutitia, ca functie a aparatului dento-maxilar, cunoaste, in evolutia sa, urmatoarele etape:",
+    "answers": [
+      "a) Deglutitia adentatului;",
+      "b) Deglutitia de tip infantil;",
+      "c) Deglutitia de tranzitie;",
+      "d) Deglutitia dentitiei permanente;",
+      "e) Deglutitia de tip adult;"
+    ],
+    "correctAnswerIndexes": [1, 2, 4]
+  },
+  {
+    "id": 177,
+    "question": "Procesul de mezodermizatie:",
+    "answers": [
+      "a) Apartine organogenezei;",
+      "b) Este un proces de separatie;",
+      "c) Duce la disparitia tesuturilor epiteliale;",
+      "d) Realizeaza coalescenta (alipirea) intre doua formatiuni;",
+      "e) Reprezinta patrunderea celulelor epiteliale intre cele mezodermale;"
+    ],
+    "correctAnswerIndexes": [0, 2, 3]
+  },
+  {
+    "id": 178,
+    "question": "Pentru aprecierea pozitiei vestibulare sau orale a dintilor inclusi se folosesc urmatoarele tipuri de radiografii:",
+    "answers": [
+      "a) Radiografie excentrica;",
+      "b) Radiografie cu film ocluzal;",
+      "c) Ortopantomograma;",
+      "d) Radiografia retroalveolara izometrica si ortoradiala;",
+      "e) Radiografie tip Clarck;(clark=excentrica)"
+    ],
+    "correctAnswerIndexes": [0, 1, 4]
+  },
+  {
+    "id": 179,
+    "question": "Malpozitiile dentare se apreciaza fata de:",
+    "answers": [
+      "a) Linia mediana;",
+      "b) Linia interincisiva;",
+      "c) Planul de ocluzie;",
+      "d) Dintii omologi;",
+      "e) Curbura normala a arcadei;"
+    ],
+    "correctAnswerIndexes": [0, 2, 4]
+  },
+  {
+    "id": 180,
+    "question": "Constituirea si dezvoltarea organismului uman se imparte in:",
+    "answers": [
+      "a) Ontogeneza;",
+      "b) Organogeneza;",
+      "c) Morfogeneza;",
+      "d) Odontogeneza;",
+      "e) Micro- si macrogeneza;"
+    ],
+    "correctAnswerIndexes": [1, 2]
+  },
+  {
+    "id": 181,
+    "question": "Care din urm.situatii NU se intalnesc in plan vertical, in z.laterala, ca posibile modificari ale ocluziei:",
+    "answers": [
+      "a) Inocluzia verticala;",
+      "b) Ocluzie lingualizata;",
+      "c) Ocluziainversa;",
+      "d) Ocluzia mezializata;",
+      "e) Ocluzia distalizata;"
+    ],
+    "correctAnswerIndexes": [1, 2, 3, 4]
+  },
+  {
+    "id": 182,
+    "question": "Planul postlacteal este un raport de ocluzie:",
+    "answers": [
+      "a) La limita dintre normal si patologic;",
+      "b) In dentitia temporara;",
+      "c) La nivelul molarilor 1 temporari;",
+      "d) In sens transversal;",
+      "e) In sens sagital;"
+    ],
+    "correctAnswerIndexes": [1, 4]
+  },
+  {
+    "id": 183,
+    "question": "Functia masticatorie perturbata determina:",
+    "answers": [
+      "a) Secretie salivara crescuta;",
+      "b) Absenta sau reducerea abraziunii dintilor temporari;",
+      "c) Hipotonia musculaturii masticatorii;",
+      "d) Dezvoltarea insuficienta a oaselor maxilare;",
+      "e) Migrari orizontale si verticale ale dintilor;"
+    ],
+    "correctAnswerIndexes": [1, 2, 3]
+  },
+  {
+    "id": 184,
+    "question": "Primul arc branhial este:",
+    "answers": [
+      "a) Situat cranial;",
+      "b) Situat caudal;",
+      "c) Cel mai mic;",
+      "d) Cel mai voluminos;",
+      "e) Denumit si arc mandibular;"
+    ],
+    "correctAnswerIndexes": [0, 2, 3]
+  },
+  {
+    "id": 185,
+    "question": "Oasele de natura encondrala ale extremitatii cefalice sunt:",
+    "answers": [
+      "a) Malarul;",
+      "b) Parietalele;",
+      "c) Maxilarele;",
+      "d) Corpul sfenoidului;",
+      "e) Baza occipitalului;"
+    ],
+    "correctAnswerIndexes": [3, 4]
+  },
+  {
+    "id": 186,
+    "question": "Etapele evolutive ale organului dentar sunt:",
+    "answers": [
+      "a) Proliferarea epiteliului;",
+      "b) Diferentierea tisulara;????",
+      "c) Organogeneza(diferentiere morfologica)",
+      "d) Calcifierea(calcificarea),mineralizare",
+      "e) Eruptia dentara;"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3, 4]
+  },
+  {
+    "id": 187,
+    "question": "Calcifierea smaltului este un proces:",
+    "answers": [
+      "a) Omogen;",
+      "b) In care apar striatiile Retzius;",
+      "c) In care apar liniile de contur Owen;",
+      "d) In care apar calcosferitele Beltrami;",
+      "e) Limitat in timp;"
+    ],
+    "correctAnswerIndexes": [1, 4]
+  },
+  {
+    "id": 188,
+    "question": "Intre efectele evolutiei filogenetice se regasesc:",
+    "answers": [
+      "a) Reducerea oaselor maxilare;",
+      "b) Reducerea volumului si numarului dintilor;",
+      "c) Viteza de reducere a oaselor maxilare mai mare decat cea de reducere a dintilor;",
+      "d) Viteza de reducere mai mare a dintilor decat cea de reducere a oaselor maxilare;",
+      "e) Cresterea diferita a neurocraniului si viscerocraniului;"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 189,
+    "question": "Formarea palatului este un proces:",
+    "answers": [
+      "a) Al perioadei de ontogeneza;",
+      "b) Ce se desfasoara in etape;",
+      "c) Ce are drept consecinte patologice anomalii dento-maxilare;",
+      "d) De septare si mezodermizare;",
+      "e) Fara consecinte majore asupra aparatului dento-maxilar;"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3]
+  },
+  {
+    "id": 190,
+    "question": "In etiopatogenia dintilor supranumerari NU se admit:",
+    "answers": [
+      "a) Teoria evaginarii epiteliului adamantin;",
+      "b) Transmiterea ereditara dominanta;",
+      "c) Teoria diviziunii mugurelui dentar;",
+      "d) Teoria reducerii filogenetice;",
+      "e) Teoria atavica;"
+    ],
+    "correctAnswerIndexes": [1, 3]
+  },
+  {
+    "id": 191,
+    "question": "In displazia ectodermala intalnim:",
+    "answers": [
+      "a) Hipotricoza cu par friabil;",
+      "b) Adactilia;",
+      "c) Hipersecretia glandelor sudoripare;",
+      "d) Anodontie totala sau subtotala;",
+      "e) Piele uscata, fragila;"
+    ],
+    "correctAnswerIndexes": [0, 1, 3, 4]
+  },
+  {
+    "id": 192,
+    "question": "Care dintre urmatoarele tulburari de crestere apartin periodei de organogeneza",
+    "answers": [
+      "a) Agenezia dentara;",
+      "b) Cheilognatopalatoschizis;",
+      "c) Coloboma;",
+      "d) Agnatia;",
+      "e) Despicatura mediana a mandibulei",
+      "f) Cheiloscizis",
+      "g) Nedezvoltarea lamei dentare primare",
+      "h) Macrostomia"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3, 4, 5, 6, 7]
+  },
+  {
+    "id": 193,
+    "question": "Diastemizarea este un proces:",
+    "answers": [
+      "a) Prezent intre 4-6 ani;",
+      "b) La incepului dentitiei temporare;",
+      "c) Patologic;",
+      "d) Ce arata o dezvoltare exagerata a maxilarelor;",
+      "e) Ce indica o evolutie normala a arcadelor alveolo-dentare;",
+      "f) Caracteristic ierbivorelor",
+      "g) Specific DT",
+      "h) Localizat in zona incizivilor"
+    ],
+    "correctAnswerIndexes": [0, 4, 6, 7]
+  },
+  {
+    "id": 194,
+    "question": "Care dintre urmatorii factori influenteaza evolutia spre normal a planului postlacteal drept:",
+    "answers": [
+      "a) Diastemizarea;",
+      "b) Eruptia molarilor de 6 ani;",
+      "c) Permutarea zonei de sprijin Korkhaus;",
+      "d) Abraziunea;",
+      "e) Lipsa diastemizarii si abraziunii dintilor temporari;"
+    ],
+    "correctAnswerIndexes": [0, 3]
+  },
+  {
+    "id": 195,
+    "question": "Sindromul Down se caracterizeaza prin:",
+    "answers": [
+      "a) Facies antimongoloid;",
+      "b) Retrognatism mandibular;",
+      "c) Retrognatism maxilar;",
+      "d) Macroglosie;",
+      "e) Modificari ale dintilor;"
+    ],
+    "correctAnswerIndexes": [2, 3, 4]
+  },
+  {
+    "id": 196,
+    "question": "Anomaliile dento-maxilare:",
+    "answers": [
+      "a) Sunt tulburari ale organogenezei;",
+      "b) Sunt tulburari ale morfodiferentierii;",
+      "c) Pot fi determinate de factori ereditari;",
+      "d) Pot fi consecinta unor tulburari functionale;",
+      "e) Se mai numesc si malformatii congenitale;"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3]
+  },
+  {
+    "id": 197,
+    "question": "Cartilajul condilian:",
+    "answers": [
+      "a) Se osifica in portiunea sa supero-posterioara;",
+      "b) Ramane activ in portiunea sa supero-posterioara;",
+      "c) Asigura dezvoltarea mandibulei;",
+      "d) Se mai numeste si cartilaj Meckel;",
+      "e) Are o existenta efemera;(doar pn la 21 ani)"
+    ],
+    "correctAnswerIndexes": [1, 2, 4]
+  },
+  {
+    "id": 198,
+    "question": "Care dintre urmatoarele coordonate NU sunt reprezentative pentru obiceiurile vicioase:",
+    "answers": [
+      "a) Sunt nocive la orice varsta;",
+      "b) Dupa varsta de 6 ani nu necesita deconditionarea lor;",
+      "c) Sunt expresia unor tulburari neuro-psihice;",
+      "d) De regula, genereaza anomalii dento-maxilare;",
+      "e) Deconditionarea se realizeaza cu aparate ortodontice;",
+      "f) Durata si intensitatea",
+      "g) Sunt semne unice ale unor sindroame genetice",
+      "h) Uneori au si influente pozitive asupra aparatului dento-max"
+    ],
+    "correctAnswerIndexes": [1, 2, 4, 6, 7]
+  },
+  {
+    "id": 199,
+    "question": "In anodontiile partial reduse:",
+    "answers": [
+      "a) De cele mai multe ori persista dintii temporari corespondenti;",
+      "b) Deplasarile dentare spre mezial se fac cu usurinta;",
+      "c) Reducerea numerica este intotdeauna simetrica;",
+      "d) Extractia dintilor temporari se impune in localizarile anterioare;",
+      "e) Este indicata intotdeauna extractia dintilor temporari corespondenti;"
+    ],
+    "correctAnswerIndexes": [0, 3]
+  },
+  {
+    "id": 200,
+    "question": "In transpozitia totala:",
+    "answers": [
+      "a) Inversarea este intotdeauna simetrica;",
+      "b) Pot apare tulburari fizionomice;",
+      "c) Se pot stabili contacte premature cu arcada antagonista;",
+      "d) Inversarea intereseaza coroanele;",
+      "e) Cel mai frecvent este interesat caninul superior;",
+      "f) Se asociaza incluzii ale dd vecini",
+      "g) Linia arcadei trece printre cei doi dinti, cel mai frecvent",
+      "h) Cei doi dinti sunt unul langa celalalt",
+      "i) Inversarea intereseaza coroana si radacina",
+      "j) Apar dezechilibre ocluzo-articulare"
+    ],
+    "correctAnswerIndexes": [1, 2, 7, 8, 9]
+  },
+  {
+    "id": 201,
+    "question": "In incluzia dintilor frontali:",
+    "answers": [
+      "a) Dintii temporari corespondenti nu persista niciodata pe arcada;",
+      "b) Spatiul pe arcada este intotdeauna pastrat;",
+      "c) Dintii vecini prezinta axul inclinat spre bresa;",
+      "d) Se produc uneori degenerescente tumorale chistice;",
+      "e) Apar tulburari fizionomice se fonatorii;"
+    ],
+    "correctAnswerIndexes": [2, 3, 4]
+  },
+  {
+    "id": 202,
+    "question": "Printre cauzele reincluziei dentare se numara:",
+    "answers": [
+      "a) Lipsa dintelui succesional;",
+      "b) Cauze mecanice;",
+      "c) Anchiloza osteodentara;",
+      "d) Cresterea potentialului de eruptie;",
+      "e) Reintoarcerea dintelui in profunzimea maxilarului, ca o etapa suplimentara si anormala;"
+    ],
+    "correctAnswerIndexes": [1, 2]
+  },
+  {
+    "id": 203,
+    "question": "Diastema vera poate apare in urmatoarele situatii:",
+    "answers": [
+      "a) In anodontia incisivilor laterali superiori;",
+      "b) In incluzia caninilor superiori in pozitie orizontala",
+      "c) In microdontie;(diag diferential)",
+      "d) In urma extractiilor altor dinti permanenti;(diagnostic diferential)",
+      "e) In compresia de maxilar;"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 204,
+    "question": "Indicii lui Pont NU au valoare reala in:",
+    "answers": [
+      "a) Microdontie;",
+      "b) Migrari verticale ale dintilor laterali;",
+      "c) Macrodontie;",
+      "d) Migrari meziale ale grupului lateral;",
+      "e) Ectopia dintilor la nivelul carora se realizeaza masuratorile;"
+    ],
+    "correctAnswerIndexes": [0, 2, 3, 4]
+  },
+  {
+    "id": 205,
+    "question": "Etajele fetei se pot analiza si masura:",
+    "answers": [
+      "a) Numai din norma frontala;",
+      "b) Numai din norma laterala;",
+      "c) Din ambele norme;",
+      "d) Folosind aceleasi tehnici si repere;"
+    ],
+    "correctAnswerIndexes": [2, 3]
+  },
+  {
+    "id": 206,
+    "question": "Formarea radacinii dintelui incepe:",
+    "answers": [
+      "a) Dupa ce dintele a strapuns mucoasa cavitatii bucale;",
+      "b) Dupa ce coroana a atins dimensiunile sale definitive;",
+      "c) Dupa formarea partiala a coroanei;",
+      "d) La baza clopotului dentar;",
+      "e) Odata cu formarea coroanei dintelui;"
+    ],
+    "correctAnswerIndexes": [1, 3]
+  },
+  {
+    "id": 207,
+    "question": "Care dintre urmatoarele planuri faciale sunt orizontale:",
+    "answers": [
+      "a) Planul bispinos;",
+      "b) Planul orbito-frontal;",
+      "c) Planul nazo-frontal;",
+      "d) Planul bazei craniului;",
+      "e) Planul mandibular;"
+    ],
+    "correctAnswerIndexes": [0, 3, 4]
+  },
+  {
+    "id": 208,
+    "question": "Simetria arcadelor se apreciaza:",
+    "answers": [
+      "a) In plan transversal;",
+      "b) Dupa eruptia dintilor permanenti;",
+      "c) In functie de linia mediana;",
+      "d) In functie de maxilarul antagonist;",
+      "e) Dupa stabilirea relatiilor de ocluzie;"
+    ],
+    "correctAnswerIndexes": [0, 2]
+  },
+  {
+    "id": 209,
+    "question": "Linia mediana la maxilarul superior are ca puncte de reper:",
+    "answers": [
+      "a) Linia dintre cei doi incisivi centrali;",
+      "b) Frenul buzei superioare;",
+      "c) Jumatatea distantei dintre rugile palatine din a doua pereche de rugi;",
+      "d) Spina nazala anterioara;",
+      "e) Spina nazala posterioara;"
+    ],
+    "correctAnswerIndexes": [2, 4]
+  },
+  {
+    "id": 210,
+    "question": "In urma extractiilor precoce ale dintilor temporari se produc:",
+    "answers": [
+      "a) Tulburari in procesul de mineralizare a dintilor permanenti;",
+      "b) Tulburari in procesul de dezvoltare a oaselor maxilare;",
+      "c) Modificari ale pozitiei intraosoase a succesionalilor;",
+      "d) Intruzii ale dintilor vecini;",
+      "e) Migrarile dentare;"
+    ],
+    "correctAnswerIndexes": [1, 2, 4]
+  },
+  {
+    "id": 211,
+    "question": "Procesul de mezodermizatie:",
+    "answers": [
+      "a) Se desfasoara pe toata perioada vietii intrauterine;",
+      "b) Este caracteristic organogenezei;",
+      "c) Realizeaza coalescenta (alipirea) unor formatiuni;",
+      "d) Reprezinta desfiintarea tesuturilor epiteliale de catre tesutul mezodermal;",
+      "e) Nu contribuie la formarea palatului primar si secundar;",
+      "f) Duce la disparitia tesutului epitelial;",
+      "g) Determina despicaturi labio maxilo palatine"
+    ],
+    "correctAnswerIndexes": [1, 2, 3, 5, 6]
+  },
+  {
+    "id": 212,
+    "question": "Particularitatile primului arc branhial sunt:",
+    "answers": [
+      "a) Este cel mai mic;",
+      "b) Este cel mai voluminos;",
+      "c) Se formeaza ultimul;",
+      "d) Se formeaza primul;",
+      "e) Se mai numeste si arc hioidian;"
+    ],
+    "correctAnswerIndexes": [1, 3]
+  },
+  {
+    "id": 213,
+    "question": "Oasele de membrana ale extremitatii cefalice sunt:",
+    "answers": [
+      "a) Maxilarul;",
+      "b) Mandibula;",
+      "c) Malarul;",
+      "d) Vomerul;",
+      "e) Cornetul inferior;"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3]
+  },
+  {
+    "id": 214,
+    "question": "Printre efectele evolutiei filogenetice se numara:",
+    "answers": [
+      "a) Reducerea viscerocraniului;",
+      "b) Cresterea neurocraniului;",
+      "c) Reducerea volumului dentar;",
+      "d) Scaderea numarului de dinti;",
+      "e) Cresterea sensibilitatii parodontale;"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3, 4]
+  },
+  {
+    "id": 215,
+    "question": "Formarea palatului se caracterizeaza prin:",
+    "answers": [
+      "a) Formarea initiala a palatului secundar;",
+      "b) Formarea palatului primar, urmata de formarea palatului secundar;",
+      "c) Procese de septare si mezodermizare;",
+      "d) Procesul mezodermizarii ca proces unic;",
+      "e) Lipsa mezodermizarii;"
+    ],
+    "correctAnswerIndex": [1, 2]
+  },
+  {
+    "id": 216,
+    "question": "Diastemizarea la 4-6 ani indica:",
+    "answers": [
+      "a) Cresterea in exces a procesului alveolar;",
+      "b) Cresterea in exces a bazelor maxilare;",
+      "c) Dezvoltarea normala a arcadelor;",
+      "d) Dimensiune prea mica a dintilor temporari;",
+      "e) Spatiu suficient pentru eruptia dintilor permanenti;"
+    ],
+    "correctAnswerIndex": [2, 4]
+  },
+  {
+    "id": 217,
+    "question": "In mixedemul juvenil, printre simptome se numara:",
+    "answers": [
+      "a) Intarzierea cresterii somatice;",
+      "b) Intarzierea eruptiei dentare;",
+      "c) Accelerarea eruptiei dentare;",
+      "d) Macroglosia;",
+      "e) Parodontopatia marginala;"
+    ],
+    "correctAnswerIndexes": [0, 1, 3]
+  },
+  {
+    "id": 218,
+    "question": "Extractia dintilor supranumerari NU se face:",
+    "answers": [
+      "A. In caz de microdontie",
+      "B. Cand dintele supranumerar este........",
+      "C. In dentitia temporara",
+      "D. Cand un dinte din seria normala din vecinatatea dintelui supranumerar este compromis",
+      "E. Dinte supranumerar anastrofic"
+    ],
+    "correctAnswerIndex": [0, 3]
+  },
+  {
+    "id": 219,
+    "question": "In etiopatogenia dintilor supranumerari se admit urmatoarele teorii:",
+    "answers": [
+      "A. Teoria diviziunii mugurilor dentari",
+      "B. Teoria mugurilor adamantini multipli",
+      "C. Teoria atavica",
+      "D. Teoria celei ce-a 3-a dentitii",
+      "E. Teoria proterogenetica"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 220,
+    "question": "Care din urmatoarele tulburari de crestere apartin perioadei de organogeneza:",
+    "answers": [
+      "A. Agenezia dentara",
+      "B. Cheilognatopalatoschizis",
+      "C. Coloboma",
+      "D. Agnatia",
+      "E. Despicatura mediana a mandibulei"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3, 4]
+  },
+  {
+    "id": 221,
+    "question": "Etapele evolutive ale organului dentar sunt:",
+    "answers": [
+      "A. Proliferarea epiteliala",
+      "B. Diferentierea celulara",
+      "C. Diferentierea morfologica",
+      "D. Mineralizarea",
+      "E. Eruptia"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 222,
+    "question": "Constituirea si dezvoltarea organismului uman se imparte in:",
+    "answers": [
+      "A. Organogeneza",
+      "B. Odontogeneza",
+      "C. Morfogeneza",
+      "D. Ontogeneza",
+      "E. Filogeneza"
+    ],
+    "correctAnswerIndexes": [0, 2]
+  },
+  {
+    "id": 223,
+    "question": "Care dintre urmatoarele planuri faciale sunt verticale:",
+    "answers": [
+      "A. Planul bispinos",
+      "B. Planul orbito-frontal",
+      "C. Planul nazo-frontal",
+      "D. Planul bazei craniului",
+      "E. Planul mandibular",
+      "F. Planul Simon",
+      "G. Planul Camper",
+      "H. Planul mandibular",
+      "I. Planul Dreyfuss",
+      "J. Baza craniului"
+    ],
+    "correctAnswerIndexes": [1, 2, 5, 8]
+  },
+  {
+    "id": 224,
+    "question": "Gonion se defineste ca",
+    "answers": [
+      "a) Pct antropometric lateral",
+      "b) Pct cel mai superior si lateral de pe unghiul mandibulei",
+      "c) Pct cel mai anterior, inferior si lateral de pe unghiul mandibulei",
+      "d) Pct cel mai lat si inf de pe unghiul mand",
+      "e) Pct cel mai inferior, posterior si lateral de pe unghiul mand"
+    ],
+    "correctAnswerIndex": [0, 4]
+  },
+  {
+    "id": 225,
+    "question": "Printre pct antropometrice mediane anterioare se numara",
+    "answers": [
+      "a) Prosthion",
+      "b) Punctul B a lui Down",
+      "c) Sellae",
+      "d) Gonion",
+      "e) Punctul A al lui Down"
+    ],
+    "correctAnswerIndexes": [0, 1, 4]
+  },
+  {
+    "id": 226,
+    "question": "Dintre anomaliile dento-maxilare cu transmitere ereditara fac parte:",
+    "answers": [
+      "a) ectopia",
+      "b) Retrognatismul mandibular functional;",
+      "c) Prognatismul mandibular adevarat;",
+      "d) Ocluzia adanca acoperita;",
+      "e) macrodontia"
+    ],
+    "correctAnswerIndexes": [2, 3]
+  },
+  {
+    "id": 227,
+    "question": "Profilul pacientului este acc convex cand",
+    "answers": [
+      "a) Pct Gnathion se afla posterior de planul nazo-frontal",
+      "b) Pct Subnazale se afla anterior de planul Dreyfuss",
+      "c) Treapta labiala e accentuata",
+      "d) Pct subnazale se afla posterior de planul nazo-frontal",
+      "e) Punctul pogonion e in 1/3 mijlocie a campului ant de profil facial"
+    ],
+    "correctAnswerIndex": [0, 2, 3]
+  },
+  {
+    "id": 228,
+    "question": "In zona anterioara a campului de profil facial se afla:",
+    "answers": [
+      "a) Punctul Subnasale in 1/3 anterioara;",
+      "b) Santul labio-mentonier in 1/3 posterioara",
+      "c) Punctul Pogonion in 1/3 mijlocie;",
+      "d) Punctul Gnathion in 1/3 medie;",
+      "e) Buza inferioara in 1/3 posterioara;"
+    ],
+    "correctAnswerIndex": [0, 1, 2]
+  },
+  {
+    "id": 229,
+    "question": "Deglutitia, ca functie a aparatului dento-maxilar, cunoaste, in evolutia sa, urmatoarele etape:",
+    "answers": [
+      "a) Deglutitia tip visceral",
+      "b) Deglutitia temporara",
+      "c) Deglutitia tranzitorie",
+      "d) Deglutitia permanenta",
+      "e) Deglutitia de tip adult/matura/somatica"
+    ],
+    "correctAnswerIndexes": [0, 2, 4]
+  },
+  {
+    "id": 230,
+    "question": "Raporturile de ocluzie in zonele laterale sunt patologice in plan transversal in urmatoarele situatii",
+    "answers": [
+      "a) Lingualizate partial",
+      "b) Inverse",
+      "c) Lingualizate total",
+      "d) Inocluzie verticala",
+      "e) Supraacoperire mai mare de 1/3"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 231,
+    "question": "Din primul arc branhial se formeaza",
+    "answers": [
+      "a) ...",
+      "b) ....",
+      "c) mandibula",
+      "d) maxilarul",
+      "e) scheletul gatului"
+    ],
+    "correctAnswerIndex": [2, 3, 4]
+  },
+  {
+    "id": 232,
+    "question": "Etapele evolutive ale organului dentar sunt:",
+    "answers": [
+      "a) Crestere si diferentiere celulara",
+      "b) organogeneza",
+      "c) calcifierea",
+      "d) eruptia dentara",
+      "e) unirea dentara"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3]
+  },
+  {
+    "id": 233,
+    "question": "calcifierea dentinei se realizeaza",
+    "answers": [
+      "a) ca un preoces neomogen",
+      "b) ca un proces continuu",
+      "c) ca un proces in etape succesive",
+      "d) cu perioade de repaus relative",
+      "e) dinspre pulpa spre exterior"
+    ],
+    "correctAnswerIndex": [0, 1, 2, 3]
+  },
+  {
+    "id": 234,
+    "question": "formarea palatului secundar",
+    "answers": [
+      "a) e un proces initial al formarii palatului",
+      "b) e un proces concomitent cu cel al formarii palatului primar",
+      "c) presupune mezodermizatia dinspre posterior spre anterior",
+      "d) se realizeaza din mugurii maxilari superiori",
+      "e) presupune mezodermizatia dinspre anterior spre posterior"
+    ],
+    "correctAnswerIndex": [3, 4]
+  },
+  {
+    "id": 235,
+    "question": "dintii inclusi NU determina",
+    "answers": [
+      "a) tulb fizionomice",
+      "b) degenerari de natura chistica",
+      "c) modificari de volum ale vecinilor",
+      "d) malpozitii dentare",
+      "e) modificari de structura ale vecinilor"
+    ],
+    "correctAnswerIndex": [2, 4]
+  },
+  {
+    "id": 236,
+    "question": "Respiratia orala intervine asupra aparatului dento maxilar prin:",
+    "answers": [
+      "a) Lipsa stimulilor naturali de crestere la nivelul ansamblului nazal",
+      "b) Hipertonia limbii, cu actiune nefavorabila pe peretii laterali ai boltii palatine",
+      "c) Actiunea musculaturii obrajilor pe peretii laterali ai maxilarului superior",
+      "d) Actiune directa a aerului inspirat asupra boltii palatine",
+      "e) Prin modificari ce favorizeaza pozitia anterioara a mandibulei si limbii"
+    ],
+    "correctAnswerIndex": [0, 2, 3]
+  },
+  {
+    "id": 237,
+    "question": "Deglutitia ca functie a aparatului dento maxilar urmareste in evolutia sa urmatoarele etape:",
+    "answers": [
+      "a) Deglutitia tip infantil",
+      "b) Deglutitia provizorie",
+      "c) Deglutitia tip somatica",
+      "d) Deglutitia tranzitorie",
+      "e) Deglutitia dismetabolica"
+    ],
+    "correctAnswerIndex": [0, 2, 3]
+  },
+  {
+    "id": 238,
+    "question": "Diagnosticul diferential al diastemei vera se face cu:",
+    "answers": [
+      "a) Diastema fiziologica din dentitia temporara",
+      "b) Diastema consecutiva anodontiei de incisivi laterali",
+      "c) Diastema din prodentie",
+      "d) Diastema datorata",
+      "e) Diastema tranzitorie"
+    ],
+    "correctAnswerIndex": [0, 2, 4]
+  },
+  {
+    "id": 239,
+    "question": "Diastema interincisiva se intalneste",
+    "answers": [
+      "a) Datorita insertiei joase a frenului buzei sup",
+      "b) Cu caracter dominant in familie",
+      "c) In anodontia de IL",
+      "d) In cazul unei fibromucoase foarte dure pe linia med",
+      "e) In anomaliile dentare de numar"
+    ],
+    "correctAnswerIndex": [0, 2, 3, 4]
+  },
+  {
+    "id": 240,
+    "question": "In plan vertical, in regiunea frontala, putem intalni",
+    "answers": [
+      "a) Raport psalidodont",
+      "b) Supraacoperire1/3",
+      "c) Inocluzie verticala",
+      "d) Raport cap la cap",
+      "e) Relatii inverse"
+    ],
+    "correctAnswerIndex": [1, 2, 3]
+  },
+  {
+    "id": 241,
+    "question": "Diastema vera se intalneste in",
+    "answers": [
+      "a) Mai ales la maxilarul superior",
+      "b) Intereseaza ambele maxilare",
+      "c) Intereseaza ambele dentitii",
+      "d) Se reduce intotdeauna spontan",
+      "e) Beneficiaza numai de trat chirurgical"
+    ],
+    "correctAnswerIndex": [0, 1, 2]
+  },
+  {
+    "id": 242,
+    "question": "Anodontia de incisiv e",
+    "answers": [
+      "a) De cele mai multe ori simetrica",
+      "b) Se insoteste de nanismul dintelui omolog",
+      "c) Se transmite intotdeauna ereditar",
+      "d) Se insoteste de modificari de volum ale celorlalti dinti",
+      "e) Se intalneste doar la DP"
+    ],
+    "correctAnswerIndex": [0, 1]
   }
 ]
