@@ -149,6 +149,7 @@
     // Create hasmap to store the user answers
     let userAnswer = new Map();
     let userAnswers2 = [];
+    let selectedButtons = [];
 
     function startQuiz() {
       //empty the userAnswers2 array and userAnswers map before starting the quiz
@@ -281,6 +282,39 @@
         button.addEventListener("click", () => toggleAnswer(button));
       });
 
+      // Make the current question number button active and a bit bigger
+      const questionButtons = Array.from(navigation_questions.children);
+      questionButtons.forEach((button, index) => {
+        if (index === currentQuestionIndex) {
+          button.classList.add("active");
+          button.style.fontSize = "1.7rem";
+        } else {
+          button.classList.remove("active");
+          button.style.fontSize = "1rem";
+        }
+      });
+
+      // Check if the user has already answered the current question
+      if (userAnswer.has(currentQuestionIndex)) {
+        const userAnswerData = userAnswer.get(currentQuestionIndex);
+        const selectedAnswers = userAnswerData.selectedAnswer;
+
+        // Loop through the selected answers
+        selectedAnswers.forEach((selectedAnswer) => {
+          // Find the corresponding answer element in the UI
+          const answerElement = Array.from(answerButtons.children).find(
+            (button) => {
+              return button.textContent.trim() === selectedAnswer; // Trim textContent to remove leading/trailing whitespace
+            }
+          );
+
+          // If the answer element is found, mark it as selected
+          if (answerElement) {
+            answerElement.classList.add("selected");
+          }
+        });
+      }
+
       if (currentQuestion.tobereviewd == "true") {
         questionElement.classList.add("tobereviewed");
         // Add a a text block that says "To be reviewed by the teacher" to the question block in caps
@@ -304,15 +338,15 @@
 
     function storeAnswers() {
       // Ensure at least one answer is selected
-      const selectedButtons = Array.from(
+      selectedButtons = Array.from(
         answerButtons.getElementsByClassName("selected")
       );
-      console.log(selectedButtons);
       if (selectedButtons.length === 0) {
+        // If the user didn't select any answer but before it was selected, remove the answered class from the question number button
+        const questionButtons = Array.from(navigation_questions.children);
+        questionButtons[currentQuestionIndex].classList.remove("answered");
         return;
       }
-
-      console.log(selectedButtons.map((button) => button.textContent));
 
       // Store the selected answers in the userAnswers array for the current index (when the user cames back, to update the answers for the current question)
       // if the answers are correct, set correct as 1, else set it as 0
@@ -326,87 +360,11 @@
           (button) => button.dataset.correct === "true"
         ),
       });
-      console.log(userAnswer);
+
+      // add answered class to the question number button
+      const questionButtons = Array.from(navigation_questions.children);
+      questionButtons[currentQuestionIndex].classList.add("answered");
     }
-
-    /*function showCorrectAnswers() {
-      // Ensure at least one answer is selected
-      const selectedButtons = Array.from(
-        answerButtons.getElementsByClassName("selected")
-      );
-      if (selectedButtons.length === 0) {
-        return;
-      }
-
-      // Count the number of correct answers
-      const correctCount = Array.from(answerButtons.children).reduce(
-        (count, button) => {
-          if (button.dataset.correct === "true") {
-            return count + 1;
-          }
-          return count;
-        },
-        0
-      );
-
-      let countSelected = 0;
-      let allSelectedCorrect = true;
-      let error = 0;
-      let alreadyIncrementedError = false;
-
-      Array.from(answerButtons.children).forEach((button) => {
-        const isCorrect = button.dataset.correct === "true";
-        const isSelected = button.classList.contains("selected");
-
-        // If it's correct and selected, mark as correct
-        if (isCorrect && isSelected) {
-          button.classList.remove("selected");
-          countSelected++;
-        } else if (!isCorrect && isSelected) {
-          // If a wrong answer is selected, mark as incorrect and indicate not all selected are correct
-          button.classList.remove("selected");
-          allSelectedCorrect = false;
-          if (!alreadyIncrementedError) {
-            wrong++;
-            alreadyIncrementedError = true;
-          }
-        } else if (isCorrect && !isSelected) {
-          // Mark correct answers that were not selected
-          if (!alreadyIncrementedError) {
-            wrong++;
-            alreadyIncrementedError = true;
-          }
-        }
-
-        // Disable buttons after showing correct answers
-        button.disabled = true;
-      });
-
-      // Increment score only if all selected answers are correct
-      if (allSelectedCorrect && countSelected === correctCount) {
-        score++;
-      } else if (countSelected > 0 && !allSelectedCorrect) {
-        error++;
-      }
-
-      // selected answers and correct answers to the userAnswers array
-
-      userAnswers.push({
-        question: questions[currentQuestionIndex].question,
-        selectedAnswer: selectedButtons.map((button) => button.textContent),
-        correctAnswers: questions[currentQuestionIndex].answers
-          .filter((answer) => answer.correct)
-          .map((answer) => answer.text),
-        isCorrect: allSelectedCorrect && countSelected === correctCount,
-      });
-
-      nextButton.style.display = "block";
-      if (currentQuestionIndex === questions.length - 1) {
-        nextButton.textContent = "Finish";
-      }
-      // click automatically the next button
-      nextButton.click();
-    }*/
 
     function resetState() {
       nextButton.style.display = "none";
@@ -525,8 +483,18 @@
       if (currentQuestionIndex < questions.length) {
         showQuestion();
       } else {
-        localStorage.setItem("results", JSON.stringify(userAnswers2));
-        showScore();
+        // Check if all the question buttons have the answered class
+        // If they do, show the score, else show an alert to answer all questions
+        const questionButtons = Array.from(navigation_questions.children);
+        const answeredQuestions = questionButtons.filter((button) =>
+          button.classList.contains("answered")
+        );
+        if (answeredQuestions.length === questions.length) {
+          showScore();
+          localStorage.setItem("results", JSON.stringify(userAnswers2));
+        } else {
+          alert("Please answer all questions before submitting.");
+        }
       }
     }
 

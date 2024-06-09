@@ -82,7 +82,6 @@ body {
   background: linear-gradient(45deg, #221b49 0%, #320036 100%);
   width: 90%;
   max-width: 80rem;
-  margin: 100px auto 0;
   margin-bottom: 20px;
   border-radius: 10px;
   padding: 30px;
@@ -491,11 +490,14 @@ body {
 }
 
 .navigation {
+  margin-top: 8rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  width: 80rem;
+  width: 90%;
+  max-width: 80rem;
   overflow-x: auto;
   border: 0.3rem solid #dbdbdb;
   border-radius: 1rem;
@@ -504,8 +506,8 @@ body {
 .navigation button {
   margin: 1rem 1rem;
   padding: 1rem 2rem;
-  background-color: #4447f1;
-  color: #fafafa;
+  background-color: #fafafa;
+  color: #4447f1;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -519,10 +521,18 @@ body {
 #question-number {
   text-align: center;
   margin: 10px auto 0;
-  background-color: #4447f1;
-  color: #fafafa;
   font-weight: bold;
   padding: 1rem;
   border-radius: 5px;
   width: 100%;
+}
+
+.active {
+  background-color: #8644f1 !important;
+  color: #fafafa !important;
+}
+
+.answered {
+  background-color: #4447f1 !important;
+  color: #fafafa !important;
 }
