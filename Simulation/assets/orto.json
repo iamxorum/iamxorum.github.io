@@ -1,0 +1,705 @@
+[
+  {
+    "id": 1,
+    "question": "Alimentatia artificiala prezinta unele inconveniente:",
+    "answers": [
+      "a) Impiedica miscările de propulsie ale mandibulei",
+      "b) Reduce efortul muscular",
+      "c) Aerofagie",
+      "d) Influente de ordin general",
+      "e) Scaderea travaliului muscular"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3, 4]
+  },
+  {
+    "id": 2,
+    "question": "Care din urmatoarele elemente nu apartin dentinei:",
+    "answers": ["a) Striatiile Retzius", "b) Fibrele Sharpey"],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 3,
+    "question": "Depunerea dentinei se realizeaza:",
+    "answers": [
+      "a) Pornind de la calcosferitele Belirami",
+      "b) Neomogen",
+      "c) Incepand din zona marginii incizale, la dintii anteriori"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 4,
+    "question": "Diastemizarea la 4-5 ani denota:",
+    "answers": [
+      "a) Dezvoltarea normala a arcadelor",
+      "b) Partial posibilitatea celei de-a doua lacerari meziale a mandibulei"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 5,
+    "question": "Dintii supranumerari se pot dezvolta:",
+    "answers": [
+      "a) Ca formatiuni total independente",
+      "b) In legatura cu un alt dinte supranumerar",
+      "c) In legatura cu un alt dinte supranumerar",
+      "d) Uneori in interiorul altui dinte"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3]
+  },
+  {
+    "id": 6,
+    "question": "In urma extractiilor precoce ale DT se produc:",
+    "answers": [
+      "a) Tulb in procesul de dezv a oaselor maxilare",
+      "b) Migrari sagitale ale dintilor limitrofi bresei",
+      "c) Mezalierea de grup"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 7,
+    "question": "Mineralizarea matricei smaltului se face:",
+    "answers": [
+      "a) Prin retragerea apei si a unei parti din subst organica",
+      "b) Prin depuneri masive de saruri minerale",
+      "c) Prin cristalizarea sarurilor minerale depuse"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 8,
+    "question": "Mineralizarea matricei smaltului se face:",
+    "answers": [
+      "a) Prin retragerea apei",
+      "b) Ca un proces ritmic",
+      "c) Prin retragerea unei parti din substanta organica",
+      "d) Prin depunerea sarurilor minerale"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3]
+  },
+  {
+    "id": 9,
+    "question": "Orbitale este:",
+    "answers": [
+      "a) Punct osos pe marginea inferioara a orbitei",
+      "b) Punct tegumentar lateral maxilar"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 10,
+    "question": "Printre cauzele transpozitiei dentare nu se gasesc:",
+    "answers": [
+      "a) Pozitia de formare a germenilor dentari",
+      "b) Conformatia atipica a radacinilor dentare",
+      "c) Cronologia eruptiei",
+      "d) Modificari ale sistemului dentar temporar",
+      "e) Lipsa de spatiu"
+    ],
+    "correctAnswerIndexes": [1, 4]
+  },
+  {
+    "id": 11,
+    "question": "Procesul de mineralizare al dentinei se face:",
+    "answers": [
+      "a) Dupa principiul precipitarii unor straturi cristaline",
+      "b) Din varful cuspidolar, lent"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 12,
+    "question": "Reincluderea dentara poate fi:",
+    "answers": [
+      "a) Partiala",
+      "b) Asociata cu anodontia dintelui successional",
+      "c) Totala",
+      "d) Data la DT",
+      "e) Cel mai frecvent la DP"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 13,
+    "question": "Care din urmatoarele elemente apartin smaltului:",
+    "answers": ["a) Striatiile Retzius", "b) Membrana Nasmith"],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 14,
+    "question": "Care din urmatoarele puncte antropometrice nu se gasesc pe linia mediana:",
+    "answers": ["a) Gonion", "b) Zygion", "c) Porion"],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 15,
+    "question": "Care din urmatoarele situatii se traduce ca o consecinta a ritmicitatii procesului de mineralizare a smaltului:",
+    "answers": ["a) Striatiile Retzius"],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 16,
+    "question": "Diagnosticul diferential incluzie se face cu:",
+    "answers": ["a) Reincluderea dentara", "b) Edentatia", "c) Anodontia"],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 17,
+    "question": "Diastema vera prezinta:",
+    "answers": [
+      "a) Spatiul dintre IC superiori",
+      "b) Spatiul dintre IC inferiori"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 18,
+    "question": "Dintii supranumerari pot determina:",
+    "answers": [
+      "a) Tulburari fizionomice in localizarile anterioare",
+      "b) Formatiuni tumorale mai ales de natura chistica",
+      "c) Incluzia dintilor permanenti"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 19,
+    "question": "Elementele anatomice aflate in regiunea anterioara a campului de profil facial sunt:",
+    "answers": [
+      "a) Buza superioara",
+      "b) Pogonion",
+      "c) Santul labio-mentioner"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 20,
+    "question": "Etiopatogenia ectopiei de canin admite:",
+    "answers": [
+      "a) Persistenta caninului temporar pe arcada",
+      "b) Volumul dentar crescut pe arcada",
+      "c) Reducerea sau absenta spatiului pe arcada",
+      "d) Macrodontia",
+      "e) Tulburari metabolice",
+      "f) Factori genetici"
+    ],
+    "correctAnswerIndexes": [2, 3]
+  },
+  {
+    "id": 21,
+    "question": "Formarea smaltului este:",
+    "answers": [
+      "a) Debuteaza dupa formarea primului strat de dentina",
+      "b) Perioada in care apar displaziile dentare"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 22,
+    "question": "In anodontiile partiale reduse:",
+    "answers": [
+      "a) de cele mai multe ori persista dintii temporari coresponenti",
+      "b) extractia dd temporari se impune mai ales in localizarile anterioare"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 23,
+    "question": "In tabloul clinic al displaziei ectodermale nu se intalnesc:",
+    "answers": ["a) afazie", "b) tulburari psihice"],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 24,
+    "question": "Intre tulb ADM ca o consecinta a respiratiei orale nu se regasesc:",
+
+    "answers": [
+      "a) Ingustarea maxilarului superior",
+      "b) Scurtarea maxilarului superior",
+      "c) Retropozitia mandibulei",
+      "d) Ocluzia deschisa",
+      "e) Pozitia anterioara a mandibulei"
+    ],
+    "correctAnswerIndexes": [1, 4]
+  },
+  {
+    "id": 25,
+    "question": "Liniile de contur Owen sunt interpretate ca:",
+    "answers": ["a) o consecinta a pauzelor din perioada calcifierii dentinei"],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 26,
+    "question": "Mineralizarea dentinei se face:",
+    "answers": [
+      "a) lent, toata viata",
+      "b) din exterior in interior",
+      "c) pornind de la focare mici care cresc si se unesc intre ele"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 27,
+    "question": "Obiectivele terapeutice in cadrul tratamentului curativ in anomaliile din clasa aIIIa Angle se refera la:",
+    "answers": [
+      "a) deplasarea mandibulei inapoi",
+      "b) afectarea santului articular"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 28,
+    "question": "Printre consecintele pierderii precoce a zonelor de sprijin temporare se numara:",
+    "answers": [
+      "a) reducerea campului masticator",
+      "b) reducerea spatiului necesar DP",
+      "c) tulb in transmiterea fortelor",
+      "d) tulb fizionomice",
+      "e) tulb masticatorii",
+      "f) eruptie intarziata a dd perm"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3, 5]
+  },
+  {
+    "id": 29,
+    "question": "Procesul de mineralizare la nivelul smaltului se realizeaza:",
+    "answers": [
+      "a) de la nivelul cuspizilor spre colet",
+      "b) limitat in timp prin depunere masiva de saruri minerale"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 30,
+    "question": "Respiratia orala e factor etiologic in:",
+    "answers": ["a) ocluzia deschisa", "b) compresia de maxilar"],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 31,
+    "question": "Alimentatia naturala are ca avantaje:",
+    "answers": [
+      "a) propulsie mand",
+      "b) efortul mm",
+      "c) proprietati nutritive si imunologice"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 32,
+    "question": "rahitismul influenteaza cresterea la nivelul suturilor",
+    "answers": [
+      "a) nazo-frontale maxilare",
+      "b) medio-palatine",
+      "c) dento-alveolare frontale",
+      "d) pterigo-palatino-maxilare"
+    ],
+    "correctAnswerIndexes": [0, 2]
+  },
+  {
+    "id": 33,
+    "question": "inaltarea definitiva de ocluzie se face cu",
+    "answers": [
+      "a) crosetul Stahl",
+      "b) crosetul Schwarz",
+      "c) gutiere",
+      "d) crosetul Adams"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 34,
+    "question": "Filmul muscat in incidenta Bellot inregistreaza",
+    "answers": [
+      "a) Directia verticala a dintelui inclus",
+      "b) Directia V-O a dintelui"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 35,
+    "question": "OPG in ocluzie inregistreaza cu exceptia",
+    "answers": [
+      "a) Dimensiunea verticala",
+      "b) Dimensiunea sagitala",
+      "c) Dimensiunea transversala",
+      "d) Relatiile interincisive in plan sagital"
+    ],
+    "correctAnswerIndexes": [3]
+  },
+  {
+    "id": 36,
+    "question": "OPG in ocluzie fata de cea in propulsie inregistreaza",
+    "answers": [
+      "a) Gradul acoperirii dentare in zona frontala",
+      "b) Cheia lui Angle in raport mezial/distal",
+      "c) Curba lui Spee"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 37,
+    "question": "OPG in propulsie fata de cea in ocluzie inregistreaza",
+    "answers": [
+      "a) Mai bine zona distala mandibulara",
+      "b) Mai bine zona anterioara mandibulara",
+      "c) Mai bine zona medie mandibulara"
+    ],
+    "correctAnswerIndexes": [1, 2]
+  },
+  {
+    "id": 38,
+    "question": "Dormitul cu pumnul sub cap determina (cu exceptia)",
+    "answers": [
+      "a) Asimetrii faciale",
+      "b) Retrognatism mandibular",
+      "c) Prognatism mandibular"
+    ],
+    "correctAnswerIndexes": [1, 2]
+  },
+  {
+    "id": 39,
+    "question": "Baza mandibulei e data de",
+    "answers": [
+      "a) G0 - G1",
+      "b) G0 pana la punctul cel mai inferior al unghiului mandibular",
+      "c) A - P0"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 40,
+    "question": "Baza inferioara a craniului este data de",
+    "answers": ["a) Nasion-Sellae"],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 41,
+    "question": "Baza maxilarului e data de",
+    "answers": ["a) Nsa-Nsp", "b) A-Nsp"],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 42,
+    "question": "Cel mai frecvent in ocluzie sunt",
+    "answers": ["a) M3 si C superior, PM inf, M1 si M2"],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 43,
+    "question": "Cel mai frecvent in ectopie sunt",
+    "answers": ["a) C sup, PM2 sup, PM2 inf"],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 44,
+    "question": "Reinclusia este",
+    "answers": [
+      "a) Anchilozia osoasa",
+      "b) Reintoarcerea in os",
+      "c) Cale de eruptie data de memoria ..",
+      "d) Data de factori mecanici reprezentati de dintii vecini",
+      "e) Toate de mai sus"
+    ],
+    "correctAnswerIndexes": [1, 3]
+  },
+  {
+    "id": 45,
+    "question": "Transpozitia este",
+    "answers": [
+      "a) Inversarea locului intre dinti vecini",
+      "b) Pozitia P",
+      "c) Pozitia V",
+      "d) Pozitia la distanta de locul normal"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 46,
+    "question": "Anomalii cu raport distal si marirea unghiului interincisivt",
+    "answers": ["a) II/1", "b) II/2", "c) III", "d) -II/1", "e) I/2 subdiv."],
+    "correctAnswerIndexes": [1, 4]
+  },
+  {
+    "id": 47,
+    "question": "Baza maxilarului, dintii, procesul alveolar au trasmitere genetica",
+    "answers": [
+      "a) Diferita",
+      "b) Comuna",
+      "c) Comuna dintii cu procese alveolr",
+      "d) Comuna baza cu procese alv",
+      "e) Nicio varianta"
+    ],
+    "correctAnswerIndexes": [0]
+  },
+  {
+    "id": 48,
+    "question": "In ocluzia adanca semne orale",
+    "answers": [
+      "a) Displazii de smalt",
+      "b) Ingustarea arcadei superioare",
+      "c) ...",
+      "d) proalveolia superioara"
+    ],
+    "correctAnswerIndexes": [1, 3]
+  },
+  {
+    "id": 49,
+    "question": "ocluzia o...... deschisa + factori determinanti",
+    "answers": [
+      "a) geminatie + interpozitie",
+      "b) ..... + rahitism",
+      "c) autori locali",
+      "d) factori functionali agravanti",
+      "e) ..."
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 50,
+    "question": "Rotatia anterioara pe OPG se observa",
+    "answers": [
+      "a) Cresterea condil in sus si inapoi",
+      "b) Ram ascendent lat",
+      "c) Simfiza mentoniera lata",
+      "d) Ram orizonatal ingust"
+    ],
+    "correctAnswerIndexes": [1, 3]
+  },
+  {
+    "id": 51,
+    "question": "Aparate functionale sunt",
+    "answers": [
+      "a) Mobile",
+      "b) Pot avea planuri inclinate",
+      "c) Transforma forte musculare in forte ortodontice",
+      "d) Fixe"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3]
+  },
+  {
+    "id": 52,
+    "question": "Testul de retropulsie e negativ in ",
+    "answers": [
+      "a) Angrenaj invers",
+      "b) Ocluzie inversa prin modificare de ax incisiv",
+      "c) Ocluzie inversa de conducere cuspidiana",
+      "d) Macrognatie mandibulara",
+      "e) Pseudognatie produsa prin deficit de dezvoltare a maxilarului superior"
+    ],
+    "correctAnswerIndexes": [0, 1, 3, 4]
+  },
+  {
+    "id": 53,
+    "question": "Semne de crestere in exces a mandibulei",
+    "answers": [
+      "a) Precocitate in eruptia dintilor permanenti",
+      "b) Eruptia dintilor mai intai inferior",
+      "c) Spatii intre dintii permanenti erupti in sectoarele laterale",
+      "d) Mariri sagitale si transversale ale arcadei inferioare",
+      "e) Existenta unor diasteme foarte mari in perioada DT la arcada inferioara"
+    ],
+    "correctAnswerIndexes": [0, 3, 4]
+  },
+  {
+    "id": 54,
+    "question": "Clasa I scheletala are raport",
+    "answers": [
+      "a) Neutral la nivel M1",
+      "b) Neutral la nivel M1 si la nivelul bazelor maxilare",
+      "c) Neutral la nivelul bazelor maxilului"
+    ],
+    "correctAnswerIndexes": [1, 2]
+  },
+  {
+    "id": 55,
+    "question": "Muscarea buzei inferioare determina",
+    "answers": [
+      "a) Proalveolie maxilara",
+      "b) Prodentie maxilara",
+      "c) Retrodentie mandibulara"
+    ],
+    "correctAnswerIndexes": [21]
+  },
+  {
+    "id": 56,
+    "question": "In deglutitia infantila, limba are contact cu",
+    "answers": [
+      "a) Interarcadic",
+      "b) Cu 1/3 de colet a I inferiori pe fata laterala",
+      "c) Cu fata palatinala a I superiori in 1/3 incizala",
+      "d) Bolta palatina in 1/3 ant"
+    ],
+    "correctAnswerIndexes": [0, 2]
+  },
+  {
+    "id": 57,
+    "question": "Respiratia nazala determina cresterea in planul",
+    "answers": ["a) Vertical", "b) Sagital", "c) Transversal"],
+    "correctAnswerIndexes": [2]
+  },
+  {
+    "id": 58,
+    "question": "Cei 2 factori care duc la anomalii sunt",
+    "answers": [
+      "a) Deglutitia, respiratia, spatiul lb-jugal",
+      "b) Deglutita, obiceiuri vicioase, respiratia"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 59,
+    "question": "Anomalii predominant ereditare",
+    "answers": [
+      "a) Prognatia mandibulara si OAA",
+      "b) Prognatia mandibulara si OD (+)",
+      "c) Compresia maxilara si OA in acoperis",
+      "d) OAA, ocluzie deschisa ...."
+    ],
+    "correctAnswerIndexes": [0, 2, 3]
+  },
+  {
+    "id": 60,
+    "question": "Factori care determina incongruenta secundara, cu exceptia",
+    "answers": ["a) Anodontiei", "b) Macrodontiei"],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 61,
+    "question": "Factori care determina incongruenta primara",
+    "answers": [
+      "a) Anodontie",
+      "b) Macrodontie",
+      "c) Retroalveolie",
+      "d) Endoalveolie"
+    ],
+    "correctAnswerIndexes": [1]
+  },
+  {
+    "id": 62,
+    "question": "Tratamentul compresiei de maxilar presupune",
+    "answers": [
+      "a) Disfunctia maxilarului",
+      "b) Largirea maxilarului",
+      "c) Indepartarea obiceiurilor vicioase",
+      "d) Nivelarea planurilor de ocluzie",
+      "e) Corectarea ocluziei distalizate"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3, 4]
+  },
+  {
+    "id": 63,
+    "question": "Planul postlacteal patologic este",
+    "answers": [
+      "a) In treapta meziala",
+      "b) Mezializat",
+      "c) In treapta distalizata",
+      "d) In plan drept"
+    ],
+    "correctAnswerIndexes": [1, 2, 3]
+  },
+  {
+    "id": 64,
+    "question": "Planul Dreyfuss",
+    "answers": [
+      "a) E perpendicular pe planul de ocluzie",
+      "b) E paralel cu planul nazofrontal",
+      "c) Trece prin nazion",
+      "d) Perpendicular pe orizontala de la Frankfurt"
+    ],
+    "correctAnswerIndexes": [2, 3]
+  },
+  {
+    "id": 65,
+    "question": "Respiratia orala se observa din",
+    "answers": [
+      "a) Anamneza",
+      "b) Examen clinic",
+      "c) Testul Gudin",
+      "d) Testul oglinzii",
+      "e) Toate"
+    ],
+    "correctAnswerIndexes": [4]
+  },
+  {
+    "id": 66,
+    "question": "Teoria atavica explica aparitia dintilor",
+    "answers": [
+      "a) In zona medie a arcadei",
+      "b) In zona anterioara",
+      "c) In zona posterioara",
+      "d) Pe linia mediana"
+    ],
+    "correctAnswerIndexes": [0, 1, 3]
+  },
+  {
+    "id": 67,
+    "question": "Obiceiul de sugere favorizeaza",
+    "answers": [
+      "a) Inocluzie verticala",
+      "b) Inocluzie verticala si sagitala",
+      "c) Dezvoltarea transversala",
+      "d) Prognatia mandibulara",
+      "e) Ocluzia inversa laterala (+)"
+    ],
+    "correctAnswerIndexes": [0, 1]
+  },
+  {
+    "id": 68,
+    "question": "Ectopia PM2 superior e favorizata frecvent de",
+    "answers": [
+      "a) Meziopozitia generalizata (+)",
+      "b) Micsorarea spatiului de eruptie",
+      "c) Pozitia mugurelui",
+      "d) Macrodontie (+)"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3]
+  },
+  {
+    "id": 69,
+    "question": "Semne clare de ocluzie deschisa .......",
+    "answers": [
+      "a) Eliminarea incisivilor inferiori",
+      "b) Distructie dentara",
+      "c) Radacini scurte"
+    ],
+    "correctAnswerIndexes": [0, 1, 2]
+  },
+  {
+    "id": 70,
+    "question": "Urmatoarele cauze ale incluziei dd",
+    "answers": [
+      "a) Reducerea spatiului necesar pentru eruptie",
+      "b) Migrarea meziala in grup a dd lat",
+      "c) Angulatie .....",
+      "d) Conformatii anatomice nefavorabile",
+      "e) Angulatie corono-radiculara"
+    ],
+    "correctAnswerIndexes": [0, 1, 2, 3, 4]
+  },
+  {
+    "id": 71,
+    "question": "Dintre urmatorii factori influenteaza evolutia spre normal a planului postlacteal drept",
+    "answers": [
+      "a) Diastemizarea",
+      "b) Eruptia molarilor de 6 ani",
+      "c) Permutarea zonei de sprijin Korkhaus",
+      "d) Abraziunea",
+      "e) Lipsa diastemizarii si abraziunii dd temp"
+    ],
+    "correctAnswerIndexes": [0, 3]
+  },
+  {
+    "id": 72,
+    "question": "Sd Turner nu prezinta",
+    "answers": [
+      "a) Hipotrofie staturala",
+      "b) Infantilism sexual",
+      "c) Facies mongoloid",
+      "d) Fanta palpebrala antimongoloida",
+      "e) Profil accentuat concav"
+    ],
+    "correctAnswerIndexes": [2, 4]
+  }
+]

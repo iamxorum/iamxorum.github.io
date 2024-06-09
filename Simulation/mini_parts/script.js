@@ -68,6 +68,9 @@
     } else if (quizTitle.textContent === "Retele de Calculatoare") {
       json1 = await fetchJSONFile("../assets/rc.json");
       allQuestions = [...json1];
+    } else if (quizTitle.textContent === "UMFCD Orto") {
+      json1 = await fetchJSONFile("../assets/orto.json");
+      allQuestions = [...json1];
     }
 
     const allQuestionsArray = allQuestions.flat();

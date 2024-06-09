@@ -1,6 +1,7 @@
 (async () => {
   const loadingScreen = document.getElementsByClassName("loader_container");
-  const quizContainer = document.getElementsByClassName("app");
+  const quizContainer = document.getElementsByClassName("body_app");
+  const navigation_questions = document.getElementById("navigation-buttons");
   try {
     // Function to fetch JSON from a file
     async function fetchJSONFile(filePath) {
@@ -118,7 +119,7 @@
     let randomlyChosenQuestions;
 
     loadingScreen[0].style.display = "none";
-    quizContainer[0].style.display = "block";
+    quizContainer[0].style.display = "flex";
 
     let questions;
     const questionElement = document.getElementById("question");
@@ -145,11 +146,14 @@
     let score = 0;
     let wrong = 0;
     let timeLeft = 3600; // 30 minutes
-    let userAnswers = [];
+    // Create hasmap to store the user answers
+    let userAnswer = new Map();
+    let userAnswers2 = [];
 
     function startQuiz() {
-      //empty the userAnswers array before starting the quiz
-      userAnswers = [];
+      //empty the userAnswers2 array and userAnswers map before starting the quiz
+      userAnswers2 = [];
+      userAnswer.clear();
       //empyt local storage before starting the quiz
       localStorage.removeItem("results");
       // remove the result div if it exists
@@ -202,6 +206,17 @@
       currentQuestionIndex = 0;
       score = 0;
       nextButton.innerHTML = "Next";
+      // Create buttons for each question to append to the navigation_questions div
+      questions.forEach((question, index) => {
+        const button = document.createElement("button");
+        button.textContent = index + 1;
+        button.classList.add("btn");
+        button.addEventListener("click", () => {
+          currentQuestionIndex = index;
+          showQuestion();
+        });
+        navigation_questions.appendChild(button);
+      });
       showQuestion();
     }
 
@@ -284,11 +299,37 @@
       }
 
       // Show the answer button for every question
-      answerButton.style.display = "block";
-      answerButton.addEventListener("click", showCorrectAnswers);
+      nextButton.style.display = "block";
     }
 
-    function showCorrectAnswers() {
+    function storeAnswers() {
+      // Ensure at least one answer is selected
+      const selectedButtons = Array.from(
+        answerButtons.getElementsByClassName("selected")
+      );
+      console.log(selectedButtons);
+      if (selectedButtons.length === 0) {
+        return;
+      }
+
+      console.log(selectedButtons.map((button) => button.textContent));
+
+      // Store the selected answers in the userAnswers array for the current index (when the user cames back, to update the answers for the current question)
+      // if the answers are correct, set correct as 1, else set it as 0
+      userAnswer.set(currentQuestionIndex, {
+        question: questions[currentQuestionIndex].question,
+        selectedAnswer: selectedButtons.map((button) => button.textContent),
+        correctAnswers: questions[currentQuestionIndex].answers
+          .filter((answer) => answer.correct)
+          .map((answer) => answer.text),
+        isCorrect: selectedButtons.every(
+          (button) => button.dataset.correct === "true"
+        ),
+      });
+      console.log(userAnswer);
+    }
+
+    /*function showCorrectAnswers() {
       // Ensure at least one answer is selected
       const selectedButtons = Array.from(
         answerButtons.getElementsByClassName("selected")
@@ -296,9 +337,6 @@
       if (selectedButtons.length === 0) {
         return;
       }
-
-      // Remove answer button after showing correct answers
-      answerButton.style.display = "none";
 
       // Count the number of correct answers
       const correctCount = Array.from(answerButtons.children).reduce(
@@ -368,7 +406,7 @@
       }
       // click automatically the next button
       nextButton.click();
-    }
+    }*/
 
     function resetState() {
       nextButton.style.display = "none";
@@ -380,6 +418,18 @@
     function showScore() {
       resetState();
       stopTimer();
+      // Calculate the score by seekeing the correct answers from the userAnswers array with the isCorrect = true (increment the score by 1 for each correct answer)
+      score = 0;
+
+      userAnswer.forEach((answer) => {
+        if (answer.isCorrect) {
+          score++;
+        }
+      });
+
+      // Convert the userAnswers Map to an array
+      userAnswers2 = Array.from(userAnswer.values());
+
       timerElement.textContent = "00:00:00";
       // Hide timer and question number
       timerElement.style.display = "none";
@@ -470,11 +520,12 @@
     }
 
     function handleNextButton() {
+      storeAnswers();
       currentQuestionIndex++;
       if (currentQuestionIndex < questions.length) {
         showQuestion();
       } else {
-        localStorage.setItem("results", JSON.stringify(userAnswers));
+        localStorage.setItem("results", JSON.stringify(userAnswers2));
         showScore();
       }
     }
