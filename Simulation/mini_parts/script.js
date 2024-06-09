@@ -161,6 +161,16 @@
         allQuestionsArray,
         allQuestionsArray.length
       );
+
+      if (quizTitle.textContent === "UMFCD Orto") {
+        randomlyChosenQuestions = getRandomQuestions(allQuestionsArray, 45);
+      } else {
+        randomlyChosenQuestions = getRandomQuestions(
+          allQuestionsArray,
+          allQuestionsArray.length
+        );
+      }
+
       questions = randomlyChosenQuestions.map((questionData) => ({
         question: `${questionData.question}`,
         img: questionData.img,
