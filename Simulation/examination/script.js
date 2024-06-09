@@ -125,7 +125,7 @@
     const questionElement = document.getElementById("question");
     const answerButtons = document.getElementById("answer-buttons");
     const nextButton = document.getElementById("next-btn");
-    const answerButton = document.getElementById("answer-btn");
+    const prevButton = document.getElementById("prev-btn");
     const timerElement = document.getElementById("timer"); // Moved here
     const questionNumber = document.createElement("div");
     questionNumber.id = "question-number";
@@ -334,6 +334,23 @@
 
       // Show the answer button for every question
       nextButton.style.display = "block";
+
+      // from the second to the last question, show the prevButton to go back to the previous question
+      if (currentQuestionIndex > 0) {
+        prevButton.style.display = "block";
+      } else {
+        prevButton.style.display = "none";
+      }
+
+      if (currentQuestionIndex === questions.length - 1) {
+        nextButton.innerHTML = "Submit";
+        // Remove next-btn id and add sub-btn id to the next button
+        nextButton.id = "sub-btn";
+      } else {
+        nextButton.innerHTML = "Next";
+        // Remove sub-btn id and add next-btn id to the next button
+        nextButton.id = "next-btn";
+      }
     }
 
     function storeAnswers() {
@@ -498,6 +515,31 @@
       }
     }
 
+    function handlePrevButton() {
+      storeAnswers();
+      currentQuestionIndex--;
+      if (currentQuestionIndex < questions.length) {
+        showQuestion();
+      } else {
+        // Check if all the question buttons have the answered class
+        // If they do, show the score, else show an alert to answer all questions
+        const questionButtons = Array.from(navigation_questions.children);
+        const answeredQuestions = questionButtons.filter((button) =>
+          button.classList.contains("answered")
+        );
+        if (answeredQuestions.length === questions.length) {
+          showScore();
+          localStorage.setItem("results", JSON.stringify(userAnswers2));
+        } else {
+          alert("Please answer all questions before submitting.");
+        }
+      }
+    }
+
+    prevButton.addEventListener("click", () => {
+      handlePrevButton();
+    });
+
     function handleNextButtonClick() {
       // Check if timer is = 0 to start the timer again
       if (timerElement.textContent === "00:00:00") {
@@ -547,8 +589,6 @@
           currentQuestionIndex = questions.length;
           // automatically click the next button when the timer reaches 0 that calls the handleNextButton function
           handleNextButton();
-          //remove answer button after the timer reaches 0
-          answerButton.style.display = "none";
         }
       }, 1000); // Update timer every second
     }
