@@ -14,6 +14,10 @@
       return await response.json();
     }
 
+    // display the loading screen
+    loadingScreen[0].style.display = "flex";
+    quizContainer[0].style.display = "none";
+
     // Load JSON files
     let json1 = await fetchJSONFile("../assets/asd.json");
     let json2 = await fetchJSONFile("../assets/cc.json");
@@ -29,10 +33,6 @@
     let json12 = await fetchJSONFile("../assets/tap.json");
     let json13 = await fetchJSONFile("../assets/web.json");
     // Load more JSON files as needed
-
-    // display the loading screen
-    loadingScreen[0].style.display = "flex";
-    quizContainer[0].style.display = "none";
 
     //sleep randomize betwwen 1 and 5 seconds
     function sleep(ms) {
