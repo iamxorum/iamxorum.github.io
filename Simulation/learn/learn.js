@@ -15,8 +15,8 @@
       SGDB: "../assets/sgdb.json",
       SO: "../assets/so.json",
       TAP: "../assets/tap.json",
-      WEB: "../assets/web.json",
-      ORTO: "../assets/orto.json",
+      WEB: "../assets/web.json"
+      //ORTO: "../assets/orto.json",
     };
 
     // Function to fetch JSON from a file
