@@ -64,37 +64,27 @@
     }
 
     function startRandomQuestions() {
-      json1 = shuffleArray(json1);
-      json2 = shuffleArray(json2);
-      json3 = shuffleArray(json3);
-      json4 = shuffleArray(json4);
-      json5 = shuffleArray(json5);
-      json6 = shuffleArray(json6);
-      json7 = shuffleArray(json7);
-      json8 = shuffleArray(json8);
-      json9 = shuffleArray(json9);
-      json10 = shuffleArray(json10);
-      json11 = shuffleArray(json11);
-      json12 = shuffleArray(json12);
-      json13 = shuffleArray(json13);
+      const jsonArrays = [
+        json1,
+        json2,
+        json3,
+        json4,
+        json5,
+        json6,
+        json7,
+        json8,
+        json9,
+        json10,
+        json11,
+        json12,
+        json13,
+      ];
 
-      // take the first 3 questions from each JSON file
-      allQuestionsArray = json1
-        .slice(0, 3)
-        .concat(
-          json2.slice(0, 3),
-          json3.slice(0, 3),
-          json4.slice(0, 3),
-          json5.slice(0, 3),
-          json6.slice(0, 3),
-          json7.slice(0, 3),
-          json8.slice(0, 3),
-          json9.slice(0, 3),
-          json10.slice(0, 3),
-          json11.slice(0, 3),
-          json12.slice(0, 3),
-          json13.slice(0, 3)
-        );
+      const allQuestionsArray = jsonArrays.flatMap((json) =>
+        shuffleArray(json).slice(0, 3)
+      );
+
+      return allQuestionsArray;
     }
 
     // Number of questions you want to choose randomly
@@ -172,7 +162,7 @@
       if (goButton) {
         goButton.remove();
       }
-      startRandomQuestions();
+      allQuestionsArray = startRandomQuestions();
       randomlyChosenQuestions = getRandomQuestions(
         allQuestionsArray,
         numberOfQuestions
