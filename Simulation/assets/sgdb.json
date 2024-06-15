@@ -129,12 +129,7 @@
   {
     "id": 12,
     "question": "Pentru a preveni problemele ţinând de proprietarul obiectelor unei baze de date Microsoft SQL Server, ce rol ar trebui să fie asignat unui developer?",
-    "answers": [
-      "A. Db-owner",
-      "B. Db-creator",
-      "C. DBA",
-      "D. Db-manager"
-    ],
+    "answers": ["A. Db-owner", "B. Db-creator", "C. DBA", "D. Db-manager"],
     "correctAnswerIndexes": [0]
   },
   {
@@ -148,7 +143,7 @@
       "E. Nu poate avea utilizatori, grupuri sau roluri asignate",
       "F. Păstrează toate permisiunile implicite pentru utilizatorii unei baze de date"
     ],
-    "correctAnswerIndexes": [0,2,4,5]
+    "correctAnswerIndexes": [0, 2, 4, 5]
   },
   {
     "id": 14,
@@ -159,7 +154,7 @@
       "C. Indecşii cluster sunt mai mari decât cei non-cluster",
       "D. Paginile frunză ale indexului cluster sunt paginile de date ale tabelului"
     ],
-    "correctAnswerIndexes": [0,3]
+    "correctAnswerIndexes": [0, 3]
   },
   {
     "id": 15,
@@ -194,7 +189,7 @@
       "D. Server-ul de baze de date permite numai o cheie primară pentru un tabel",
       "E. La crearea ei, serverul construieşte automat o constrângere de domeniu"
     ],
-    "correctAnswerIndexes": [0,1,3]
+    "correctAnswerIndexes": [0, 1, 3]
   },
   {
     "id": 18,
@@ -205,7 +200,7 @@
       "C. Indecşii creaţi de constrângerile PRIMARY KEY şi UNIQUE KEY pot fi şterşi folosind instrucţiunea DROP INDEX",
       "D. Constrângerile pot fi adăugate sau şterse dintr-o tabelă fără a afecta structura tabelei"
     ],
-    "correctAnswerIndexes": [1,3]
+    "correctAnswerIndexes": [1, 3]
   },
   {
     "id": 19,
@@ -228,7 +223,7 @@
       "D. Toţi utilizatorii",
       "E. Utilizatorul student"
     ],
-    "correctAnswerIndexes": [2,4]
+    "correctAnswerIndexes": [2, 4]
   },
   {
     "id": 21,
@@ -240,7 +235,7 @@
       "D. Pentru a obţine date ordonate dintr-o tabelă se pot folosi indecşi",
       "E. Se recomandă crearea unui index pe coloanele folosite în joncţiuni"
     ],
-    "correctAnswerIndexes": [0,3,4]
+    "correctAnswerIndexes": [0, 3, 4]
   },
   {
     "id": 22,
@@ -264,7 +259,7 @@
       "D. Se defineşte o constrângere de tip FOREIGN KEY",
       "E. Se defineşte o constrângere de tip CHECK"
     ],
-    "correctAnswerIndexes": [0,2]
+    "correctAnswerIndexes": [0, 2]
   },
   {
     "id": 24,
@@ -276,7 +271,7 @@
       "D. Coloana conţine un număr mare de valori nule",
       "E. Tabela este actualizată frecvent"
     ],
-    "correctAnswerIndexes": [0,1,3]
+    "correctAnswerIndexes": [0, 1, 3]
   },
   {
     "id": 25,
@@ -301,7 +296,7 @@
       "E. ROLLOVER TRANSACTION",
       "F. COMMIT TRANSACTION"
     ],
-    "correctAnswerIndexes": [1,5]
+    "correctAnswerIndexes": [1, 5]
   },
   {
     "id": 27,
@@ -324,7 +319,7 @@
       "D. UNIQUE",
       "E. FOREIGN KEY"
     ],
-    "correctAnswerIndexes": [1,4]
+    "correctAnswerIndexes": [1, 4]
   },
   {
     "id": 29,
@@ -348,7 +343,7 @@
       "D. Integritatea referenţială",
       "E. Integritatea tipurilor de date"
     ],
-    "correctAnswerIndexes": [0,2,3]
+    "correctAnswerIndexes": [0, 2, 3]
   },
   {
     "id": 31,
@@ -384,8 +379,7 @@
       "D. ROLLBACK<br>ROLLBACK",
       "E. ROLLBACK TRANSACTION SV_product"
     ],
-    "correctAnswerIndexes": [1],
-    "tobereviewd": "true"
+    "correctAnswerIndexes": [1]
   },
   {
     "id": 34,
@@ -409,7 +403,7 @@
       "D. Nu poate fi read only",
       "E. Poate conţine o restricţie de validare"
     ],
-    "correctAnswerIndexes": [0,2,4]
+    "correctAnswerIndexes": [0, 2, 4]
   },
   {
     "id": 36,
@@ -421,7 +415,7 @@
       "D. Se poate construi un index care conţine câmpuri din mai multe tabele",
       "E. Se recomandă crearea unui index pe atributele folosite în joncţiuni"
     ],
-    "correctAnswerIndexes": [1,4]
+    "correctAnswerIndexes": [1, 4]
   },
   {
     "id": 37,
@@ -433,7 +427,7 @@
       "D. În comanda CREATE VIEW se poate folosi SELECT",
       "E. În comanda CREATE VIEW se poate folosi clauza SET"
     ],
-    "correctAnswerIndexes": [0,2,3]
+    "correctAnswerIndexes": [0, 2, 3]
   },
   {
     "id": 38,
@@ -445,7 +439,7 @@
       "D. Da, dacă nu aparţin aceleeaşi scheme",
       "E. Da, dacă nu aparţin aceleeaşi instanţe"
     ],
-    "correctAnswerIndexes": [1,3,4]
+    "correctAnswerIndexes": [1, 3, 4]
   },
   {
     "id": 39,
@@ -457,7 +451,7 @@
       "D. Numai utilizatorul “stud”",
       "E. Toţi utilizatorii care au permisiunea SELECT pe vedere"
     ],
-    "correctAnswerIndexes": [0,2,4]
+    "correctAnswerIndexes": [0, 2, 4]
   },
   {
     "id": 40,
@@ -469,7 +463,7 @@
       "D. De administratorul bazei de date",
       "E. Numai de administratorul bazei de date"
     ],
-    "correctAnswerIndexes": [0,1,3]
+    "correctAnswerIndexes": [0, 1, 3]
   },
   {
     "id": 41,
@@ -481,7 +475,7 @@
       "D. Șterge orice index creat pe o tabelă sistem",
       "E. Să salveze orice bază de date utilizator"
     ],
-    "correctAnswerIndexes": [0,1,4]
+    "correctAnswerIndexes": [0, 1, 4]
   },
   {
     "id": 42,
@@ -515,7 +509,7 @@
       "C. Folosiți clauza OUTPUT în instrucțiunea INSERT pentru a returna liniile inserate.",
       "D. Creați o variabilă de tip tabelă și o populați cu conținutul inițial al tabelei. Inserați datele în tabelă. Executați o instrucțiune SELECT care extrage toate liniile din tabelă, dar care nu sunt în variabila tabelă."
     ],
-    "correctAnswerIndexes": [1,3]
+    "correctAnswerIndexes": [1, 3]
   },
   {
     "id": 45,
@@ -581,6 +575,6 @@
       "C. Acordați utilizatorului permisiunea ALTER pe vederea definită de instrucțiunea: CREATE VIEW dbo.CustomerProductSelect AS SELECT Name, SalePrice, (CurrentStock - NumberSold) AS AvailableStock FROM dbo.Products.",
       "D. Creați două proceduri stocate, una care să execute instrucțiunea SELECT din tabelă și alta care să permită ALTER pe coloanele Name și SalePrice, apoi acordați permisiunea EXECUTE pe proceduri."
     ],
-    "correctAnswerIndexes": [0,3]
+    "correctAnswerIndexes": [0, 3]
   }
 ]

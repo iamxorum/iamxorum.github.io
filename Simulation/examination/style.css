@@ -74,7 +74,7 @@ body {
 }
 
 .app {
-  background: linear-gradient(45deg, #221b49 0%, #320036 100%);
+  background-image: radial-gradient(circle, #4a1414, #420a1d, #350624, #230629, #0c032a);
   width: 90%;
   max-width: 80rem;
   margin-bottom: 20px;
@@ -88,7 +88,7 @@ body {
   padding: 10px;
   font-size: 20px;
   color: #fafafa;
-  background-color: #4447f1;
+  background-color: #f14444;
   border-radius: 5px;
   text-align: center;
   width: 120px; /* Adjust width as needed */
@@ -98,7 +98,7 @@ body {
 }
 #timer:hover {
   background-color: #e0e0e0; /* Lighten the background on hover */
-  color: #333; /* Change text color on hover */
+  color: #f14444; /* Change text color on hover */
 }
 
 .app h3 {
@@ -163,7 +163,7 @@ body {
 }
 .control_flow #next-btn {
   font-weight: 400;
-  background: #8103f7;
+  background: #6915d6;
   color: #fafafa;
   padding: 10px;
   border: none;
@@ -504,7 +504,7 @@ body {
   margin: 1rem 1rem;
   padding: 1rem 2rem;
   background-color: #fafafa;
-  color: #4447f1;
+  color: #f14444;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -512,7 +512,8 @@ body {
 }
 
 .navigation button:hover {
-  background-color: #3a3ed1;
+  background-color: #7a94db !important;
+  color: #fafafa !important;
 }
 
 #question-number {
@@ -525,11 +526,11 @@ body {
 }
 
 .active {
-  background-color: #8644f1 !important;
+  background-color: #4472f1 !important;
   color: #fafafa !important;
 }
 
 .answered {
-  background-color: #4447f1 !important;
+  background-color: #f14545 !important;
   color: #fafafa !important;
 }/*# sourceMappingURL=style.css.map */

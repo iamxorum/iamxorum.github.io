@@ -135,7 +135,7 @@
     questionNumber.style.margin = "10px auto 0";
     questionNumber.style.marginBottom = "10px";
     //make him like a button with a background: #7c2c47;; and color: white; padding: 10px;
-    questionNumber.style.backgroundColor = "#4447f1";
+    questionNumber.style.backgroundColor = "#f14444";
     questionNumber.style.color = "#fafafa";
     questionNumber.style.fontWeight = "bold";
     questionNumber.style.padding = "1rem";
@@ -287,10 +287,8 @@
       questionButtons.forEach((button, index) => {
         if (index === currentQuestionIndex) {
           button.classList.add("active");
-          button.style.fontSize = "1.7rem";
         } else {
           button.classList.remove("active");
-          button.style.fontSize = "1rem";
         }
       });
 

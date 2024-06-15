@@ -33,7 +33,7 @@
       "d) Declarația 3;",
       "e) Declarațiile 1, 2 și 3."
     ],
-    "correctAnswerIndexes": [1,3]
+    "correctAnswerIndexes": [1, 3]
   },
   {
     "id": 4,
@@ -49,7 +49,7 @@
   },
   {
     "id": 5,
-    "question": "Secvenţa următoare:<br>class c1{<br>public:<br>int a;<br>c1(int y){ a=y;cout<<\"constructor 1\";}<br>~c1(){cout<<\"destructor 2\";}<br>};<br>class c2:public c1{<br>public:<br>int b;<br>c2(int y, int x):c1(y) { b=x; cout<<\"constructor 2\";}<br>~c2(){cout<<\"destructor 2\";}<br>};<br>int main(){<br>c1 ob1(2);<br>c2 ob2(2,3);<br>return 0;<br>}<br>afișează:<br>",
+    "question": "Secvenţa următoare:<br>class c1{<br>public:<br>int a;<br>c1(int y){ a=y;cout<<\"constructor 1\";}<br>~c1(){cout<<\"destructor 1\";}<br>};<br>class c2:public c1{<br>public:<br>int b;<br>c2(int y, int x):c1(y) { b=x; cout<<\"constructor 2\";}<br>~c2(){cout<<\"destructor 2\";}<br>};<br>int main(){<br>c1 ob1(2);<br>c2 ob2(2,3);<br>return 0;<br>}<br>afișează:<br>",
     "answers": [
       "a) constructor 1 constructor 2 destructor 2 destructor 1",
       "b) constructor 1 constructor 1 constructor 2 destructor 2 destructor 1 destructor 1",
@@ -95,12 +95,7 @@
   {
     "id": 9,
     "question": "Fie secvenţa următoare:<br>class persoana{<br>int varsta;<br>public:<br>persoana(int v=18){varsta=v;}<br>persoana& operator++(int){varsta++; return *this;}<br>int get_varsta(){return varsta;}<br>};<br>int main(){<br>persoana p(20);<br>cout<<p++.get_varsta();<br>return 0;<br>}<br>Secvența afișează:",
-    "answers": [
-      "e) 21",
-      "f) 20",
-      "g) 18",
-      "h) 19"
-    ],
+    "answers": ["e) 21", "f) 20", "g) 18", "h) 19"],
     "correctAnswerIndexes": [0]
   },
   {
@@ -113,7 +108,7 @@
       "d) nu are acces pe zona private a clasei derivate;",
       "e) are acces pe zonele public și protected ale clasei derivate."
     ],
-    "correctAnswerIndexes": [2,3]
+    "correctAnswerIndexes": [2, 3]
   },
   {
     "id": 11,
@@ -125,17 +120,12 @@
       "d) B c4(1);",
       "e) B c1, c5(c1)."
     ],
-    "correctAnswerIndexes": [2,4]
+    "correctAnswerIndexes": [2, 4]
   },
   {
     "id": 12,
     "question": "Fie următorul program:<br>#include<iostream.h><br>class cls {<br>static int i;<br>int j;<br>public:<br>cls(int x=7) { j=x; }<br>static int imp(int k){ cls a; return i+k+a.j; } };<br>int cls::i;<br>int main()<br>{ int k=5;<br>cout<<cls::imp(k);<br>return 0;<br>}<br>Indicați ce se va afișa pe ecran în urma executării programului:",
-    "answers": [
-      "a) 11",
-      "b) 13",
-      "c) 12",
-      "d) 14"
-    ],
+    "answers": ["a) 11", "b) 13", "c) 12", "d) 14"],
     "correctAnswerIndexes": [2]
   },
   {
@@ -164,13 +154,7 @@
   {
     "id": 15,
     "question": "Fie următorul program:<br>#include<iostream.h><br>class salariat{<br>int varsta;<br>public:<br>salariat (int v=20) {varsta =v;}<br>operator int() { return varsta;}<br>salariat& operator++(){varsta++; return *this;}<br>salariat operator++ (int) { varsta++; return *this;}<br>};<br>int main(){<br>salariat s(21);<br>int a=s++, b=++s;<br>cout<<a<<\" \"<<b<<endl;<br>return 0;<br>}<br>Programul afișează:",
-    "answers": [
-      "a) 20 21",
-      "b) 21 22",
-      "c) 22 23",
-      "d) 20 22",
-      "e) 21 23"
-    ],
+    "answers": ["a) 20 21", "b) 21 22", "c) 22 23", "d) 20 22", "e) 21 23"],
     "correctAnswerIndexes": [2]
   },
   {
@@ -195,7 +179,7 @@
       "d) nu poate fi definită decât inline;",
       "e) daca prelucrează obiecte, primește obiectele ca parametrii expliciți."
     ],
-    "correctAnswerIndexes": [0,2,4]
+    "correctAnswerIndexes": [0, 2, 4]
   },
   {
     "id": 18,
@@ -219,7 +203,7 @@
       "d) complex z1(5.2, 3.6), z4(z1);",
       "e) complex z5(-0.1,28.7)."
     ],
-    "correctAnswerIndexes": [1,3]
+    "correctAnswerIndexes": [1, 3]
   },
   {
     "id": 20,
@@ -242,7 +226,7 @@
       "c) asociativitatea unui operator poate fi modificată prin redefinire;",
       "d) semnificația modului în care lucrează un operator asupra obiectelor de tipuri predefinite nu poate fi schimbată prin redefinire."
     ],
-    "correctAnswerIndexes": [1,3]
+    "correctAnswerIndexes": [1, 3]
   },
   {
     "id": 22,
@@ -253,18 +237,12 @@
       "c) orice funcție membru statică este funcție virtuală;",
       "d) destructorul poate fi funcție virtuală."
     ],
-    "correctAnswerIndexes": [0,3],
-    "tobereviewd": "true"
+    "correctAnswerIndexes": [0, 3]
   },
   {
     "id": 23,
     "question": "Fie programul:<br>#include <iostream.h><br>class Cerc{<br>float raza;<br>public:<br>Cerc(float r){raza=r;}<br>float get_raza(){return raza;}<br>void operator++(){raza++;}<br>};<br>class Cilindru : public Cerc{<br>float inaltime;<br>public:<br>Cilindru(float raza, float i):Cerc(raza){inaltime=i;}<br>void operator++(){inaltime++;}<br>float get_inaltime(){return inaltime;}<br>};<br>int main(){<br>Cerc *pc;<br>Cilindru c(2,6);<br>pc=&c;<br>++ *pc;<br>cout<<pc->get_raza()<<\" \"<<c.get_inaltime()<<endl;<br>return 0;<br>}<br>Programul afișează:",
-    "answers": [
-      "a) 2 5",
-      "b) 2 6",
-      "c) 3 6",
-      "d) 2 5"
-    ],
+    "answers": ["a) 2 5", "b) 2 6", "c) 3 6", "d) 2 5"],
     "correctAnswerIndexes": [2]
   },
   {
@@ -276,17 +254,12 @@
       "c) funcțiile friend ale clasei de bază se moștenesc de către clasa derivată;",
       "d) constructorul și destructorul clasei de bază se moștenesc în clasa derivată."
     ],
-    "correctAnswerIndexes": [0,2,3]
+    "correctAnswerIndexes": [0, 2, 3]
   },
   {
     "id": 25,
     "question": "Fie următorul program:<br>#include<ostream.h><br>class persoana{<br>int varsta, salariul;<br>friend ostream & operator<<(ostream &out,persoana p){<br>out<<p.varsta<<\" \"<<p.salariul; return out;<br>}<br>public:<br>persoana(int v){varsta=v;salariul=0;}<br>persoana(){varsta=0;salariul=0;}<br>};<br>int main(){<br>persoana p(1);cout<<p;<br>return 0;<br>}<br>Programul afișează:",
-    "answers": [
-      "a) 1 0",
-      "b) 0 0",
-      "c) 1 1",
-      "d) 0 1"
-    ],
+    "answers": ["a) 1 0", "b) 0 0", "c) 1 1", "d) 0 1"],
     "correctAnswerIndexes": [0]
   },
   {
@@ -298,7 +271,7 @@
       "c) precedența operatorilor;",
       "d) aritatea operatorului."
     ],
-    "correctAnswerIndexes": [0,2]
+    "correctAnswerIndexes": [0, 2]
   },
   {
     "id": 27,
@@ -344,8 +317,7 @@
       "d) este o funcţie membru oarecare a clasei A, care nu produce supraîncărcarea unui operator;",
       "e) reprezintă un operator ternar."
     ],
-    "correctAnswerIndexes": [3],
-    "tobereviewd": "true"
+    "correctAnswerIndexes": [2]
   },
   {
     "id": 31,
@@ -383,12 +355,7 @@
   {
     "id": 34,
     "question": "Fie următorul program:<br>#include<iostream.h><br>class B1{int x;};<br>class B2{int y;};<br>class B3{int z;};<br>class B4{int t;};<br>class D: public B1, private B2, protected B3,B4 {public : int m;};<br>int main(){<br>D d;<br>cout<<d.m; //varianta 1<br>cout<<d.x; //varianta 2<br>cout<<d.y; //varianta 3<br>return 0;<br>}<br>Variantele care permit accesul la variabile pentru afișare sunt:<br>",
-    "answers": [
-      "a) 1+3;",
-      "b) 1+2;",
-      "c) 1+2+3;",
-      "d) 1"
-    ],
+    "answers": ["a) 1+3;", "b) 1+2;", "c) 1+2+3;", "d) 1"],
     "correctAnswerIndexes": [3]
   },
   {
@@ -405,23 +372,13 @@
   {
     "id": 36,
     "question": "Considerăm următorul program:<br>class c{<br>int a;<br>public:<br>virtual void metoda1()=0;<br>virtual void metoda2(int)=0;<br>};<br>int main{<br>c *pob; //declaraţia 1<br>c ob; //declaraţia 2<br>c *vpob[3]; //declaraţia 3<br>c vob[3]; //declaraţia 4<br>return 0;<br>}<br>Declaraţiile admise:<br>",
-    "answers": [
-      "a) 1+2;",
-      "b) 1+2+3+4",
-      "c) nici una",
-      "d) 1+3;"
-    ],
+    "answers": ["a) 1+2;", "b) 1+2+3+4", "c) nici una", "d) 1+3;"],
     "correctAnswerIndexes": [3]
   },
   {
     "id": 37,
     "question": "Fie data următoarea ierarhie:<br>class B {… }<br>class D1:B{…}<br>class D2:B{…}<br>class M1:D1, public D2{…}<br>class M2:virtual D1, virtual D2 {…}<br>Considerăm următoarele afirmaţii:<br>1. clasa M1 va moşteni un obiect de tip B;<br>2. clasa M1 va moşteni două obiecte de tip B;<br>3. clasa M2 va va moşteni un obiect de tip B;<br>4. clasa M2 va moşteni două obiecte de tip B.<br>Precizaţi care dintre afirmaţiile de mai sus sunt corecte:<br>",
-    "answers": [
-      "a) 2+3",
-      "b) 1+2",
-      "c) 1+3",
-      "d) 2+4"
-    ],
+    "answers": ["a) 2+3", "b) 1+2", "c) 1+3", "d) 2+4"],
     "correctAnswerIndexes": [0]
   },
   {

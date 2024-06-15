@@ -8,10 +8,7 @@
       "<div class=\"code_2\">float x[100];</div>",
       "<div class=\"code_2\">real x(100);</div>"
     ],
-    "correctAnswerIndexes": [
-      1,
-      2
-    ]
+    "correctAnswerIndexes": [1, 2]
   },
   {
     "id": 2,
@@ -22,9 +19,7 @@
       "<div class=\"code_2\">(x&lt;0)||(x&gt;=5)</div>",
       "<div class=\"code_2\">(x&lt;=0)&&(x&gt;5)</div>"
     ],
-    "correctAnswerIndexes": [
-      0
-    ]
+    "correctAnswerIndexes": [0]
   },
   {
     "id": 3,
@@ -35,48 +30,25 @@
       "<div class=\"code_2\">(x&gt;1)&&(x&lt;6)</div>",
       "<div class=\"code_2\">(x&gt;1)&&(x&lt;=6)</div>"
     ],
-    "correctAnswerIndexes": [
-      3
-    ]
+    "correctAnswerIndexes": [3]
   },
   {
     "id": 4,
     "question": "După executarea instrucțiunii float x = 27/5*2/3*7; ce valoare va fi memorată în variabila 𝑥?",
-    "answers": [
-      "25.2",
-      "21",
-      "6.3",
-      "7"
-    ],
-    "correctAnswerIndexes": [
-      1
-    ]
+    "answers": ["25.2", "21", "6.3", "7"],
+    "correctAnswerIndexes": [1]
   },
   {
     "id": 5,
     "question": "După executarea instrucțiunii float x = 55/17*5/8+48/5/8*15; ce valoare va fi memorată în variabila 𝑥?",
-    "answers": [
-      "17.022058",
-      "17",
-      "16",
-      "21.219914"
-    ],
-    "correctAnswerIndexes": [
-      2
-    ]
+    "answers": ["17.022058", "17", "16", "21.219914"],
+    "correctAnswerIndexes": [2]
   },
   {
     "id": 6,
     "question": "Se consideră următoarea secvenţă de instrucțiuni:<br><br><div class=\"code\">int t=0,a=1234,b=10;<br>while(a&gt;=b) {<br><span class=\"tab\"></span>a=a-b;<br><span class=\"tab\"></span>t++;<br>}<br>printf(\"%d %d\",t,a);</div><br><br>Ce valori vor fi afișate pe ecran după executarea secvenței de mai sus?",
-    "answers": [
-      "124 4",
-      "123 4",
-      "123 5",
-      "124 3"
-    ],
-    "correctAnswerIndexes": [
-      1
-    ]
+    "answers": ["124 4", "123 4", "123 5", "124 3"],
+    "correctAnswerIndexes": [1]
   },
   {
     "id": 7,
@@ -87,9 +59,7 @@
       "<div class=\"code_2\">for(i=1;i&lt;=3;i++) printf(\"%d\",7-i);</div>",
       "<div class=\"code_2\">s=7;<br>while(s&gt;=1) printf(\"%d\",s-1);</div>"
     ],
-    "correctAnswerIndexes": [
-      2
-    ]
+    "correctAnswerIndexes": [2]
   },
   {
     "id": 8,
@@ -100,23 +70,13 @@
       "<div class=\"code_2\">for(i=1;i&lt;4;i++) printf(\"%d\",6-i);</div>",
       "<div class=\"code_2\">s=6;<br>while(s&gt;=3) printf(\"%d\",--s);</div>"
     ],
-    "correctAnswerIndexes": [
-      3
-    ]
+    "correctAnswerIndexes": [3]
   },
   {
     "id": 9,
-    "question": "Considerăm următoarea secvenţă de instrucțiuni:<br><br><div class=\"code\">while(n>0) {<br><span class=\"tab\"></span>if(n%10>s) s=n%10;<br><span class=\"tab\"></span>else s=10;<br><span class=\"tab\"></span>n=n/10;<br>}<br>printf(\"%d\",s);</div><br><br>Ştiind că variabilele 𝑠 şi 𝑛 sunt de tip întreg, ce valoare se va afişa după executarea secvenţei de mai sus pentru 𝑛 = 9321?",
-    "answers": [
-      "9",
-      "10",
-      "15",
-      "1"
-    ],
-    "correctAnswerIndexes": [
-      0
-    ],
-    "tobereviewd": "true"
+    "question": "Considerăm următoarea secvenţă de instrucțiuni:<br><br><div class=\"code\">s = 1;<br>while(n>0) {<br><span class=\"tab\"></span>if(n%10>s) s=n%10;<br><span class=\"tab\"></span>else s=10;<br><span class=\"tab\"></span>n=n/10;<br>}<br>printf(\"%d\",s);</div><br><br>Ştiind că variabilele 𝑠 şi 𝑛 sunt de tip întreg, ce valoare se va afişa după executarea secvenţei de mai sus pentru 𝑛 = 9321?",
+    "answers": ["9", "10", "15", "1"],
+    "correctAnswerIndexes": [1]
   },
   {
     "id": 10,
@@ -127,61 +87,31 @@
       "<div class=\"code_2\">int t=0;<br>while(a!=b) {<br><span class=\"tab\"></span>a=a-b;<br><span class=\"tab\"></span>t++;<br>}<br>printf(\"%d %d\",t,b);</div>",
       "<div class=\"code_2\">int t=0;<br>while(a%b==0) {<br><span class=\"tab\"></span>a=a-b;<span class=\"tab\"></span><br><span class=\"tab\"></span>t++;<br>}<br>printf(\"%d %d\",t,a);</div>"
     ],
-    "correctAnswerIndexes": [
-      0
-    ]
+    "correctAnswerIndexes": [0]
   },
   {
     "id": 11,
     "question": "<div class=\"code\">#include&lt;stdio.h&gt;<br>void sch(int a, int *b) {<br><span class=\"tab\"></span>int aux;<br><span class=\"tab\"></span>aux = a;<br><span class=\"tab\"></span>a = *b;<br><span class=\"tab\"></span>*b = aux;<br>}<br><br>int main() {<br><span class=\"tab\"></span>int x = 1,y = 2;<br><span class=\"tab\"></span>sch(x,&y);<br><span class=\"tab\"></span>printf(\"%d\",x+y);<br><span class=\"tab\"></span>return 0;<br>}</div><br><br>Ce valoare se va afişa pe ecran după executarea programului de mai sus?<br>",
-    "answers": [
-      "2",
-      "1",
-      "4",
-      "3"
-    ],
-    "correctAnswerIndexes": [
-      0
-    ]
+    "answers": ["2", "1", "4", "3"],
+    "correctAnswerIndexes": [0]
   },
   {
     "id": 12,
     "question": "<div class=\"code\">#include&lt;stdio.h&gt;<br>void sch(char a, char *b) {<br><span class=\"tab\"></span>char aux;<br><span class=\"tab\"></span>aux = a;<br><span class=\"tab\"></span>a = *b;<br><span class=\"tab\"></span>*b = aux;<br>}<br><br>int main() {<br><span class=\"tab\"></span>char x = '1',y = '2';<br><span class=\"tab\"></span>sch(x,&y);<br><span class=\"tab\"></span>printf(\"%c,%c\",x,y);<br><span class=\"tab\"></span>return 0;<br>}</div><br><br>Ce valori se vor afişa pe ecran după executarea programului de mai sus?<br>",
-    "answers": [
-      "1,2",
-      "2,1",
-      "1,1",
-      "2,2"
-    ],
-    "correctAnswerIndexes": [
-      2
-    ]
+    "answers": ["1,2", "2,1", "1,1", "2,2"],
+    "correctAnswerIndexes": [2]
   },
   {
     "id": 13,
     "question": "<div class=\"code\">#include&lt;stdio.h&gt;<br>void sch(int *a, int b) {<br><span class=\"tab\"></span>int aux;<br><span class=\"tab\"></span>aux = *a;<br><span class=\"tab\"></span>*a = b;<br><span class=\"tab\"></span>b = aux;<br>}<br><br>int main() {<br><span class=\"tab\"></span>int x = 1,y = 2;<br><span class=\"tab\"></span>sch(&x,y);<br><span class=\"tab\"></span>printf(\"%d\",x*y);<br><span class=\"tab\"></span>return 0;<br>}</div><br><br>Ce valoare se va afişa pe ecran după executarea programului de mai sus?<br>",
-    "answers": [
-      "3",
-      "2",
-      "4",
-      "1"
-    ],
-    "correctAnswerIndexes": [
-      2
-    ]
+    "answers": ["3", "2", "4", "1"],
+    "correctAnswerIndexes": [2]
   },
   {
     "id": 14,
     "question": "<div class=\"code\">#include&lt;stdio.h&gt;<br>void f(int a,int *b) {<br><span class=\"tab\"></span>a++;<br><span class=\"tab\"></span>*b=a;<br><span class=\"tab\"></span>(*b)++;<br>}<br><br>void g(int *a,int b) {<br><span class=\"tab\"></span>b++;<br><span class=\"tab\"></span>*a=b;<br><span class=\"tab\"></span>(*a)++;<br>}<br><br>int main() {<br><span class=\"tab\"></span>int x=4, y=-2;<br><span class=\"tab\"></span>f(x,&y);<br><span class=\"tab\"></span>g(&x,y);<br><span class=\"tab\"></span>printf(\"%d %d\",x,y);<br><span class=\"tab\"></span>return 0;<br>}</div><br><br>Ce valori se vor afişa pe ecran după executarea programului de mai sus?<br>",
-    "answers": [
-      "4 8",
-      "8 8",
-      "8 6",
-      "6 6"
-    ],
-    "correctAnswerIndexes": [
-      2
-    ]
+    "answers": ["4 8", "8 8", "8 6", "6 6"],
+    "correctAnswerIndexes": [2]
   },
   {
     "id": 15,
@@ -192,9 +122,7 @@
       "<div class=\"code_2\">max=a[0];<br>for(i=0;i&lt;n;i++)<br><span class=\"tab\"></span>if(a[i]&gt;max) max=a[i];</div>",
       "<div class=\"code_2\">max=0;<br>for(i=0;i&lt;n;i++)<br><span class=\"tab\"></span>if(a[i]&lt;a[i+1]) max=a[i+1];</div>"
     ],
-    "correctAnswerIndexes": [
-      2
-    ]
+    "correctAnswerIndexes": [2]
   },
   {
     "id": 16,
@@ -205,35 +133,19 @@
       "<div class=\"code_2\">(a[i]&gt;0)||(a[i]%2!=0)</div>",
       "<div class=\"code_2\">(a[i]&gt;=0)||(a[i]%2==0)</div>"
     ],
-    "correctAnswerIndexes": [
-      1
-    ]
+    "correctAnswerIndexes": [1]
   },
   {
     "id": 17,
     "question": "Care este valoarea expresiei?<br><br><div class=\"code\">strlen(\"programare\")+strcmp(\"test\",\"test\")</div><br><br>",
-    "answers": [
-      "10",
-      "14",
-      "18",
-      "\"programaretesttest\""
-    ],
-    "correctAnswerIndexes": [
-      0
-    ]
+    "answers": ["10", "14", "18", "\"programaretesttest\""],
+    "correctAnswerIndexes": [0]
   },
   {
     "id": 18,
     "question": "<div class=\"code\">char s[100];<br>strcpy(s,\"\");<br>strcat(s,\"abcdefgh\");<br>strcpy(s+2,s+4);<br>printf(\"%s %d\" ,s,strlen(s));</div><br><br>Ce se va afişa pe ecran după executarea secvenţei date?<br>",
-    "answers": [
-      "adefgh 6",
-      "abefgh 6",
-      "abfgh 5",
-      "abefgh 8"
-    ],
-    "correctAnswerIndexes": [
-      1
-    ]
+    "answers": ["adefgh 6", "abefgh 6", "abfgh 5", "abefgh 8"],
+    "correctAnswerIndexes": [1]
   },
   {
     "id": 19,
@@ -244,48 +156,25 @@
       "<div class=\"code_2\">s==s+5</div>",
       "<div class=\"code_2\">strcmp(s,strcat(s,s+5))==0</div>"
     ],
-    "correctAnswerIndexes": [
-      1
-    ]
+    "correctAnswerIndexes": [1]
   },
   {
     "id": 20,
     "question": "Considerăm următoarea secvenţă de instrucțiuni:<br><br><div class=\"code\">char s[]=\"abcdabcd\",c = 'c';<br>char *p = strchr(s,c);<br>printf(\"%d\",p - s);</div><br><br>Ce se va afişa pe ecran după executarea secvenţei date?<br>",
-    "answers": [
-      "cdabcd",
-      "6",
-      "cd",
-      "2"
-    ],
-    "correctAnswerIndexes": [
-      3
-    ]
+    "answers": ["cdabcd", "6", "cd", "2"],
+    "correctAnswerIndexes": [3]
   },
   {
     "id": 21,
     "question": "Considerăm următoarea secvenţă de instrucțiuni:<br><br><div class=\"code\">char s[20];<br>strcpy(s,\"abcdabcd\");<br>strncat(s,s+2,3);<br>strcpy(s,s+4);<br>printf(\"%d\",strlen(s));</div><br><br>Ce se va afişa pe ecran după executarea secvenţei date?<br>",
-    "answers": [
-      "6",
-      "10",
-      "9",
-      "7"
-    ],
-    "correctAnswerIndexes": [
-      3
-    ]
+    "answers": ["6", "10", "9", "7"],
+    "correctAnswerIndexes": [3]
   },
   {
     "id": 22,
     "question": "Considerăm următoarea secvenţă de instrucțiuni:<br><br><div class=\"code\">char s[20];<br>strncpy(s,\"abcdabcd\",6);<br>s[6]='\\0';<br>strcat(s,s+4);<br>strcpy(s+3,s+6);<br>printf(\"%s\",s);</div><br><br>Ce se va afişa pe ecran după executarea secvenţei date?<br>",
-    "answers": [
-      "abcabab",
-      "abcdab",
-      "abcab",
-      "abcdabd"
-    ],
-    "correctAnswerIndexes": [
-      2
-    ]
+    "answers": ["abcabab", "abcdab", "abcab", "abcdabd"],
+    "correctAnswerIndexes": [2]
   },
   {
     "id": 23,
@@ -296,10 +185,7 @@
       "<div class=\"code_2\">data_nasterii.luna=12;</div>",
       "<div class=\"code_2\">st.luna=12;</div>"
     ],
-    "correctAnswerIndexes": [
-      1
-    ],
-    "tobereviewd": "true"
+    "correctAnswerIndexes": [1]
   },
   {
     "id": 24,
@@ -310,10 +196,7 @@
       "<div class=\"code_2\">data_nasterii.an=1990;</div>",
       "<div class=\"code_2\">st.an=1990;</div>"
     ],
-    "correctAnswerIndexes": [
-      0
-    ],
-    "tobereviewd": "true"
+    "correctAnswerIndexes": [1]
   },
   {
     "id": 25,
@@ -324,22 +207,13 @@
       "<div class=\"code_2\">a.x = a.y = a.z = 0;</div>",
       "<div class=\"code_2\">a.p = a.z = 0;</div>"
     ],
-    "correctAnswerIndexes": [
-      1
-    ]
+    "correctAnswerIndexes": [1]
   },
   {
     "id": 26,
     "question": "Considerăm tipul de date Punct, capabil să memoreze abscisa şi ordonata unui punct din plan, şi tipul de date Segment, capabil să memoreze două puncte reprezentând extremităţile unui segment din plan, definite astfel:<br><br><div class=\"code\">typedef struct {<br><span class=\"tab\"></span>float x,y;<br>}Punct;<br><br>typedef struct {<br><span class=\"tab\"></span>Punct A,B;<br>}Segment;</div><br><br>Care dintre următoarele expresii are o valoare nenulă dacă şi numai dacă variabila 𝑠 de tip Segment memorează informații despre un segment vertical (aflat pe axa Oy sau paralel cu axa Oy)?<br>",
-    "answers": [
-      "s.A == s.B",
-      "s.x == s.y",
-      "A.x == B.x",
-      "s.A.x == s.B.x"
-    ],
-    "correctAnswerIndexes": [
-      3
-    ]
+    "answers": ["s.A == s.B", "s.x == s.y", "A.x == B.x", "s.A.x == s.B.x"],
+    "correctAnswerIndexes": [3]
   },
   {
     "id": 27,
@@ -350,9 +224,7 @@
       "<div class=\"code_2\">double f(Segment s) {<br><span class=\"tab\"></span>return s.B-s.A;<br>}</div>",
       "<div class=\"code_2\">double f(Segment s) {<br><span class=\"tab\"></span>return sqrt(pow(s.A.x–s.B.x,2)+pow(s.A.y–s.B.y,2));<br>}</div>"
     ],
-    "correctAnswerIndexes": [
-      3
-    ]
+    "correctAnswerIndexes": [3]
   },
   {
     "id": 28,
@@ -363,9 +235,7 @@
       "<div class=\"code_2\">t = prod(suma(a,b),suma(a,c)+suma(b,c));</div>",
       "<div class=\"code_2\">t = suma(prod(suma(a,b),suma(a,c)),prod(b,c));</div>"
     ],
-    "correctAnswerIndexes": [
-      3
-    ]
+    "correctAnswerIndexes": [3]
   },
   {
     "id": 29,
@@ -376,10 +246,7 @@
       "<div class=\"code_2\">t = suma(prod(a,b),prod(prod(a,b),c));</div>",
       "<div class=\"code_2\">t = prod(prod(a,b),suma(1,c));</div>"
     ],
-    "correctAnswerIndexes": [
-      2,
-      3
-    ]
+    "correctAnswerIndexes": [2, 3]
   },
   {
     "id": 30,
@@ -390,9 +257,7 @@
       "<div class=\"code_2\">int f(int n) {<br><span class=\"tab\"></span>int s=0;<br><span class=\"tab\"></span>while(n!=0) {<br><span class=\"tab_2\"></span>s=s+n%10;<br><span class=\"tab_2\"></span>n=n/10;<br><span class=\"tab\"></span>}<br>}</div>",
       "<div class=\"code_2\">int f(int n) {<br><span class=\"tab\"></span>int s=0;<br><span class=\"tab\"></span>while(n!=0) {<br><span class=\"tab_2\"></span>s=n%10;<br><span class=\"tab_2\"></span>n=n/10;<br><span class=\"tab\"></span>}<br><span class=\"tab\"></span>return s;<br>}</div>"
     ],
-    "correctAnswerIndexes": [
-      0
-    ]
+    "correctAnswerIndexes": [0]
   },
   {
     "id": 31,
@@ -403,10 +268,7 @@
       "<div class=\"code_2\">void citire(int *v[],int *n) {<br><span class=\"tab\"></span>scanf(\"%d\",&n);<br><span class=\"tab\"></span>for(int i=0;i&lt;n;i++) scanf(\"%d\",&v[i]);<br>}</div>",
       "<div class=\"code_2\">void citire(int *v,int *n) {<br><span class=\"tab\"></span>scanf(\"%d\",n);<br><span class=\"tab\"></span>for(int i=0;i&lt;*n;i++) scanf(\"%d\",v+i);<br>}</div>"
     ],
-    "correctAnswerIndexes": [
-      1,
-      3
-    ]
+    "correctAnswerIndexes": [1, 3]
   },
   {
     "id": 32,
@@ -417,11 +279,7 @@
       "<div class=\"code_2\">int suma(int v[],int n) {<br><span class=\"tab\"></span>int s,k;<br><span class=\"tab\"></span>for(k=s=0;k&lt;n;s+=v[k++]);<br><span class=\"tab\"></span>return s;<br>}</div>",
       "<div class=\"code_2\">int suma(int v[],int n) {<br><span class=\"tab\"></span>int s=0;<br><span class=\"tab\"></span>for(int k=n-1;k&gt;=0;k--) s+=v[n-k-1];<br><span class=\"tab\"></span>return s;<br>}</div>"
     ],
-    "correctAnswerIndexes": [
-      0,
-      2,
-      3
-    ]
+    "correctAnswerIndexes": [0, 2, 3]
   },
   {
     "id": 33,
@@ -432,9 +290,7 @@
       "<div class=\"code_2\">void minmax(int v[],int n,int *min,int *max)</div>",
       "<div class=\"code_2\">void minmax(int *v[],int *n,int *min,int *max)</div>"
     ],
-    "correctAnswerIndexes": [
-      2
-    ]
+    "correctAnswerIndexes": [2]
   },
   {
     "id": 34,
@@ -445,10 +301,7 @@
       "<div class=\"code_2\">printf(\"%p\",v+k*sizeof(double));</div>",
       "<div class=\"code_2\">printf(\"%p\",&v[k]);</div>"
     ],
-    "correctAnswerIndexes": [
-      0,
-      3
-    ]
+    "correctAnswerIndexes": [0, 3]
   },
   {
     "id": 35,
@@ -459,11 +312,7 @@
       "<div class=\"code_2\">printf(\"%d\",p-v);</div>",
       "<div class=\"code_2\">printf(\"%d\",sizeof(v));</div>"
     ],
-    "correctAnswerIndexes": [
-      0,
-      1,
-      3
-    ]
+    "correctAnswerIndexes": [1, 3]
   },
   {
     "id": 36,
@@ -474,10 +323,7 @@
       "<div class=\"code_2\">int *a = (int *)malloc(100);</div>",
       "<div class=\"code_2\">int *a = (int *)calloc(100,sizeof(int));</div>"
     ],
-    "correctAnswerIndexes": [
-      1,
-      3
-    ]
+    "correctAnswerIndexes": [1, 3]
   },
   {
     "id": 37,
@@ -488,7 +334,7 @@
       "<div class=\"code_2\">int *a = (int *)malloc(20*sizeof(int *));<br>for(int i=0;i&lt;20;i++)<br><span class=\"tab\"></span>a[i]=(int *)malloc(10*sizeof(int));</div>",
       "<div class=\"code_2\">int **a = (int **)calloc(10,sizeof(int*));<br>for(int i=0;i&lt;10;i++)<br><span class=\"tab\"></span>a[i]=(int *)calloc(20,sizeof(int));</div>"
     ],
-    "correctAnswerIndexes": [0,3]
+    "correctAnswerIndexes": [0, 3]
   },
   {
     "id": 38,
@@ -499,7 +345,7 @@
       "<div class=\"code_2\">for(int i=0;i&lt;n;i++)<br><span class=\"tab\"></span>for(int j=0;j&lt;n;j++)<br><span class=\"tab_2\"></span>if(i+j==n-1) printf(\"%d \",a[i][j]);</div>",
       "<div class=\"code_2\">for(int i=0;i&lt;n;i++) printf(\"%d \",a[i][n-i-1]);</div>"
     ],
-    "correctAnswerIndexes": [0,1]
+    "correctAnswerIndexes": [0, 1]
   },
   {
     "id": 39,
@@ -510,7 +356,7 @@
       "<div class=\"code_2\">for(int i=0;i&lt;n;i++)<br><span class=\"tab\"></span>for(int j=0;j&lt;n;j++)<br><span class=\"tab_2\"></span>if(i+j==n-1) printf(\"%d \",a[i][j]);</div>",
       "<div class=\"code_2\">for(int i=0;i&lt;n;i++) printf(\"%d \",a[i][n-i-1]);</div>"
     ],
-    "correctAnswerIndexes": [2,3]
+    "correctAnswerIndexes": [2, 3]
   },
   {
     "id": 40,
@@ -521,7 +367,7 @@
       "<div class=\"code_2\">for(int i=0;i&lt;n;i++)<br><span class=\"tab\"></span>for(int j=0;j&lt;=i;j++) printf(\"%d \",a[i][j]);</div>",
       "<div class=\"code_2\">for(int i=0;i&lt;n;i++)<br><span class=\"tab\"></span>for(int j=i;j&lt;n;j++) printf(\"%d \",a[i][j]);</div>"
     ],
-    "correctAnswerIndexes": [0,2]
+    "correctAnswerIndexes": [0, 2]
   },
   {
     "id": 41,
@@ -532,7 +378,7 @@
       "<div class=\"code_2\">for(int i=0;i&lt;n;i++)<br><span class=\"tab\"></span>for(int j=0;j&lt;=i;j++) printf(\"%d \",a[i][j]);",
       "<div class=\"code_2\">for(int i=0;i&lt;n;i++)<br><span class=\"tab\"></span>for(int j=i;j&lt;n;j++) printf(\"%d \",a[i][j]);"
     ],
-    "correctAnswerIndexes": [1,3]
+    "correctAnswerIndexes": [1, 3]
   },
   {
     "id": 42,
@@ -554,7 +400,7 @@
       "<div class=\"code_2\">int nb(char *nf) {<br><span class=\"tab\"></span>FILE *f=fopen(nf,\"r\");<br><span class=\"tab\"></span>int n=sizeof(f);<br><span class=\"tab\"></span>fclose(f);<br><span class=\"tab\"></span>return n;<br>}</div>",
       "<div class=\"code_2\">int nb(char *nf) {<br><span class=\"tab\"></span>char s[1001];<br><span class=\"tab\"></span>FILE *f=fopen(nf,\"r\");<br><span class=\"tab\"></span>int n=0;<br><span class=\"tab\"></span>while(fgets(s,1000,f))<br><span class=\"tab_2\"></span>n++;<br><span class=\"tab\"></span>fclose(f);<br><span class=\"tab\"></span>return n;<br>}</div>"
     ],
-    "correctAnswerIndexes": [0,1]
+    "correctAnswerIndexes": [0, 1]
   },
   {
     "id": 44,
@@ -565,7 +411,7 @@
       "<div class=\"code_2\">int nb(char *nf) {<br><span class=\"tab\"></span>FILE *f=fopen(nf,\"r\");<br><span class=\"tab\"></span>int n=sizeof(f);<br><span class=\"tab\"></span>fclose (f);<br><span class=\"tab\"></span>return n/sizeof(char *);<br>}</div>",
       "<div class=\"code_2\">int nb(char *nf) {<br><span class=\"tab\"></span>char s[1001];<br><span class=\"tab\"></span>FILE *f=fopen(nf,\"r\");<br><span class=\"tab\"></span>int n=0;<br><span class=\"tab\"></span>while(fgets(s,1000,f))<br><span class=\"tab_2\"></span>n++;<br><span class=\"tab\"></span>fclose (f);<br><span class=\"tab\"></span>return n;<br>}</div>"
     ],
-    "correctAnswerIndexes": [1,3]
+    "correctAnswerIndexes": [1, 3]
   },
   {
     "id": 45,
@@ -609,7 +455,7 @@
       "<div class=\"code_2\">int p(int v[],int n) {<br><span class=\"tab\"></span>int i,x=-1;<br><span class=\"tab\"></span>for(i=0;i&lt;n;i++)<br><span class=\"tab_2\"></span>if((v[i]&gt;0)&&(x<0)) x=i;<br><span class=\"tab\"></span>return x;<br>}</div>",
       "<div class=\"code_2\">int p(int v[],int n) {<br><span class=\"tab\"></span>int i;<br><span class=\"tab\"></span>for(int i=0;i&lt;n;i++)<br><span class=\"tab_2\"></span>if (v[i]&gt;0) return i;<br><span class=\"tab\"></span>return -1;<br>}</div>"
     ],
-    "correctAnswerIndexes": [2,3]
+    "correctAnswerIndexes": [2, 3]
   },
   {
     "id": 49,
@@ -625,12 +471,7 @@
   {
     "id": 50,
     "question": "Considerăm următorul program:<br><br><div class=\"code\">#include&lt;stdio.h&gt;<br>void p(int v[],int *n) {<br><span class=\"tab\"></span>int i,j,g;<br><span class=\"tab\"></span>do {<br><span class=\"tab_2\"></span>g=0;<br><span class=\"tab_2\"></span>for(i=0;i&lt;*n;i++)<br><span class=\"tab_3\"></span>if(v[i]&lt;0) {<br><span class=\"tab_4\"></span>for(j=i;j&lt;*n-1;j++) v[j]=v[j+1];<br><span class=\"tab_4\"></span>(*n)--;<br><span class=\"tab_4\"></span>g=1;<br><span class=\"tab_3\"></span>}<br><span class=\"tab_2\"></span>}<br><span class=\"tab\"></span>while(g);<br>}<br><br>int main() {<br><span class=\"tab\"></span>int i,v[]={-1,2,-3,-4,5},n=5;<br><span class=\"tab\"></span>p(v,&n);<br><span class=\"tab\"></span>for(i=0;i&lt;n;i++)<br><span class=\"tab_2\"></span>printf(\"%d \",v[i]);<br><span class=\"tab\"></span>return 0;<br>}</div><br><br>Ce valori vor fi afișate pe ecran după executarea programului de mai sus?",
-    "answers": [
-      "–1 -3 -4",
-      "2 5",
-      "–1 2 -3 -4",
-      "2 -3 -4 5"
-    ],
+    "answers": ["–1 -3 -4", "2 5", "–1 2 -3 -4", "2 -3 -4 5"],
     "correctAnswerIndexes": [1]
   }
 ]

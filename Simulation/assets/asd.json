@@ -19,18 +19,12 @@
       "else if(rad-&gt;stang == NULL && rad-&gt;drept == NULL) return 0;",
       "else"
     ],
-    "correctAnswerIndexes": [2],
-    "tobereviewd": "true"
+    "correctAnswerIndexes": [2]
   },
   {
     "id": 3,
     "question": "Se dă următoarea funcție<br><br><div class=\"code\">int cautare(int x[], int first, int last, int value) { <br><span class=\"tab\"></span>int mid;<br><span class=\"tab\"></span>if(first &gt; last) return -1;<br><span class=\"tab\"></span>mid = (first + last) / 2;<br><span class=\"tab\"></span>if (x[mid] == value) return mid;<br><span class=\"tab\"></span>if(x[mid] &lt; value) return cautare(x, mid + 1, last, value);<br><span class=\"tab\"></span>else return cautare(x, first, mid - 1, value);<br>}</div><br><br>Dacă vectorul x = (2, 4, 5, 8, 9, 15, 23), care va fi rezultatul apelării funcției cautare (x, 2, 6, 8) ?",
-    "answers": [
-      "-1",
-      "2",
-      "3",
-      "1"
-    ],
+    "answers": ["-1", "2", "3", "1"],
     "correctAnswerIndexes": [2]
   },
   {
@@ -83,12 +77,7 @@
   {
     "id": 8,
     "question": "Ordinul de complexitate a algoritmului Bubblesort (metoda bulelor) este",
-    "answers": [
-      "O (n)",
-      "O(n^2)",
-      "O(n log n)",
-      "O(n^3)"
-    ],
+    "answers": ["O (n)", "O(n^2)", "O(n log n)", "O(n^3)"],
     "correctAnswerIndexes": [1]
   },
   {
@@ -105,34 +94,19 @@
   {
     "id": 10,
     "question": "Câte comparații se fac dacă se folosește algoritmul de căutare secvențială pentru căutarea elementului 12 în vectorul (2, 3, 6, 9, 10, 25)?",
-    "answers": [
-      "6",
-      "5",
-      "3",
-      "1"
-    ],
+    "answers": ["6", "5", "3", "1"],
     "correctAnswerIndexes": [0]
   },
   {
     "id": 11,
     "question": "Câte comparații se fac dacă se folosește algoritmul de căutare binară pentru căutarea elementului 12 în vectorul (2, 3, 6, 9, 10, 25)?",
-    "answers": [
-      "6",
-      "5",
-      "3",
-      "1"
-    ],
+    "answers": ["6", "5", "3", "1"],
     "correctAnswerIndexes": [2]
   },
   {
     "id": 12,
     "question": "O listă liniară în care inserările în lista se fac pe la un capăt, iar ștergerile pe la celălalt capăt se numește",
-    "answers": [
-      "stivă",
-      "vector",
-      "coadă",
-      "arbore"
-    ],
+    "answers": ["stivă", "vector", "coadă", "arbore"],
     "correctAnswerIndexes": [2]
   },
   {
@@ -144,7 +118,7 @@
       "sortarea prin inserare",
       "Quicksort (sortarea rapidă)"
     ],
-    "correctAnswerIndexes": [1,3]
+    "correctAnswerIndexes": [1, 3]
   },
   {
     "id": 14,
@@ -155,7 +129,7 @@
       "elementul căutat este pe ultima poziție în listă",
       "vectorul este ordonat crescator"
     ],
-    "correctAnswerIndexes": [1,2]
+    "correctAnswerIndexes": [1, 2]
   },
   {
     "id": 15,
@@ -171,12 +145,7 @@
   {
     "id": 16,
     "question": "Ordinul de complexitate a algoritmului de căutare binară este",
-    "answers": [
-      "O(n)",
-      "O(n^2)",
-      "O(n log n)",
-      "O(log n)"
-    ],
+    "answers": ["O(n)", "O(n^2)", "O(n log n)", "O(log n)"],
     "correctAnswerIndexes": [3]
   },
   {
@@ -243,7 +212,7 @@
       "<div class=\"code_2\">iter!=NULL && !gasit</div>",
       "<div class=\"code_2\">gasit ==0</div>"
     ],
-    "correctAnswerIndexes": [0,2]
+    "correctAnswerIndexes": [0, 2]
   },
   {
     "id": 23,
@@ -254,7 +223,7 @@
       "elimină primul nod al listei și returnează un pointer la noul cap al listei",
       "returnează NULL dacă lista este vidă"
     ],
-    "correctAnswerIndexes": [2,3]
+    "correctAnswerIndexes": [2, 3]
   },
   {
     "id": 24,
@@ -328,56 +297,31 @@
   {
     "id": 30,
     "question": "Se dă următoarea funcție, care apelează funcția interclasare descrisă la exercițiul 29.<br><br><div class=\"code\">void mergesort(int x[], int prim, int ultim) {<br><span class=\"tab\"></span>if (prim &lt; ultim) {<br><span class=\"tab_2\"></span>int mijloc = (prim + ultim)/2;<br><span class=\"tab\"></span>mergesort(x, prim, mijloc);<br><span class=\"tab\"></span>mergesort(x, mijloc + 1, ultim);<br><span class=\"tab\"></span>int C[ultim - prim +1];<br><span class=\"tab\"></span>interclasare(x, prim, mijloc, ultim, C);<br><span class=\"tab\"></span>for (int i = prim; i &lt;= ultim; i++)<br><span class=\"tab_2\"></span>x[i]=C[i-prim];<br><span class=\"tab\"></span>}<br>}</div><br><br>La apelul funcției mergesort(x, 0, 6) unde vectorul x = (9, 15, 23, 2, 4, 5, 8), de câte ori va fi apelată funcția mergesort (incluzând apelul inițial)?",
-    "answers": [
-      "1",
-      "3",
-      "13",
-      "7"
-    ],
+    "answers": ["1", "3", "13", "7"],
     "correctAnswerIndexes": [2]
   },
   {
     "id": 31,
     "question": "Ordinul de complexitate a algoritmului de sortare prin inserare este",
-    "answers": [
-      "O(n)",
-      "O(n^2)",
-      "O(n log n)",
-      "O(n&3)"
-    ],
+    "answers": ["O(n)", "O(n^2)", "O(n log n)", "O(n&3)"],
     "correctAnswerIndexes": [1]
   },
   {
     "id": 32,
     "question": "Ordinul de complexitate a algoritmului de căutare secvențială este",
-    "answers": [
-      "O(n)",
-      "O(n^2)",
-      "O(n log n)",
-      "O(log n)"
-    ],
+    "answers": ["O(n)", "O(n^2)", "O(n log n)", "O(log n)"],
     "correctAnswerIndexes": [0]
   },
   {
     "id": 33,
     "question": "O listă liniară în care inserările și ștergerile în lista se fac pe la un singur capăt se numește",
-    "answers": [
-      "stivă",
-      "vector",
-      "coadă",
-      "arbore"
-    ],
+    "answers": ["stivă", "vector", "coadă", "arbore"],
     "correctAnswerIndexes": [0]
   },
   {
     "id": 34,
     "question": "Ordinul de complexitate a algoritmului de sortare prin selecție este",
-    "answers": [
-      "O (n)",
-      "O(n^2)",
-      "O(n log n)",
-      "O(n^3)"
-    ],
+    "answers": ["O (n)", "O(n^2)", "O(n log n)", "O(n^3)"],
     "correctAnswerIndexes": [1]
   },
   {
@@ -400,7 +344,7 @@
       "vectorul este descrescător și se dorește sortarea lui în ordine crescătoare",
       "vectorul conține și elemente negative"
     ],
-    "correctAnswerIndexes": [1,2]
+    "correctAnswerIndexes": [1, 2]
   },
   {
     "id": 37,
@@ -416,56 +360,31 @@
   {
     "id": 38,
     "question": "Numărul minim de comparații între elementele unui vector cu n elemente care este sortat cu algoritmul de sortare prin inserare este",
-    "answers": [
-      "n",
-      "n+1",
-      "n-1",
-      "log n"
-    ],
+    "answers": ["n", "n+1", "n-1", "log n"],
     "correctAnswerIndexes": [2]
   },
   {
     "id": 39,
     "question": "Numărul minim de comparații între elementele unui vector cu n elemente care este sortat cu algoritmul de sortare prin metoda bulelor (Bubblesort) este",
-    "answers": [
-      "n-1",
-      "n+1",
-      "n",
-      "n log n"
-    ],
+    "answers": ["n-1", "n+1", "n", "n log n"],
     "correctAnswerIndexes": [0]
   },
   {
     "id": 40,
     "question": "Numărul maxim de comparații între elementele unui vector cu n elemente care este sortat cu algoritmul de sortare prin metoda bulelor (Bubblesort) este",
-    "answers": [
-      "n!",
-      "n(n+1)/2",
-      "n(n-1)/2",
-      "n log n"
-    ],
+    "answers": ["n!", "n(n+1)/2", "n(n-1)/2", "n log n"],
     "correctAnswerIndexes": [2]
   },
   {
     "id": 41,
     "question": "Câte comparații se fac dacă se folosește algoritmul de căutare secvențială pentru căutarea elementului 9 în vectorul (8, 3, 5, 9, 11, 2)?",
-    "answers": [
-      "6",
-      "5",
-      "3",
-      "4"
-    ],
+    "answers": ["6", "5", "3", "4"],
     "correctAnswerIndexes": [3]
   },
   {
     "id": 42,
     "question": "Câte comparații se fac dacă se folosește algoritmul de căutare binară pentru căutarea elementului 19 în vectorul (1, 2, 3, 5, 8, 9, 19)?",
-    "answers": [
-      "6",
-      "5",
-      "3",
-      "O(log 7)"
-    ],
+    "answers": ["6", "5", "3", "O(log 7)"],
     "correctAnswerIndexes": [2]
   },
   {
@@ -493,12 +412,7 @@
   {
     "id": 45,
     "question": "Dacă se aplicăm sortarea prin inserare pentru sortarea vectorului x = (9, 15, 23, 25, 4, 8, 5), care este primul element al vectorului a cărui analiză va implica efectuarea de modificări asupra vectorului?",
-    "answers": [
-      "15",
-      "23",
-      "25",
-      "4"
-    ],
+    "answers": ["15", "23", "25", "4"],
     "correctAnswerIndexes": [3]
   },
   {
@@ -521,7 +435,7 @@
       "Arborele din figura Fig. 1 este un arbore binar de căutare.",
       "Arborele din figura Fig. 1 nu este un arbore binar de căutare."
     ],
-    "correctAnswerIndexes": [0,2],
+    "correctAnswerIndexes": [0, 2],
     "img": "../drawable/img0.png"
   },
   {
