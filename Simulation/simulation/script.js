@@ -153,6 +153,8 @@
     let userAnswers = [];
 
     function startQuiz() {
+      score = 0;
+      wrong = 0;
       //empty the userAnswers array before starting the quiz
       userAnswers = [];
       //empyt local storage before starting the quiz
