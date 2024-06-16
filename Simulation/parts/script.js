@@ -349,6 +349,7 @@
           .filter((answer) => answer.correct)
           .map((answer) => answer.text),
         isCorrect: allSelectedCorrect && countSelected === correctCount,
+        isWeb: isWeb,
       });
 
       // Update score

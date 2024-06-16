@@ -312,6 +312,7 @@
           .filter((answer) => answer.correct)
           .map((answer) => answer.text),
         isCorrect: allSelectedCorrect && countSelected === correctCount,
+        isWeb: true,
       });
 
       // Update score
@@ -401,9 +402,10 @@
       nextButton.addEventListener("click", handleNextButtonClick);
 
       // Add button to go back to the result page
-      const goButton = document.createElement("button");
+      goButton = document.createElement("button");
       goButton.innerHTML = "Go to Results";
       goButton.classList.add("btn");
+      goButton.id = "go-btn";
 
       // Add the button to the DOM below the quiz div
       nextButton.insertAdjacentElement("afterend", goButton);

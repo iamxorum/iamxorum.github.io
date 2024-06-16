@@ -184,15 +184,6 @@
         allQuestionsArray.length
       );
 
-      if (quizTitle.textContent === "UMFCD Orto") {
-        randomlyChosenQuestions = getRandomQuestions(allQuestionsArray, 45);
-      } else {
-        randomlyChosenQuestions = getRandomQuestions(
-          allQuestionsArray,
-          allQuestionsArray.length
-        );
-      }
-
       questions = randomlyChosenQuestions.map((questionData) => ({
         question: `${questionData.question}`,
         img: questionData.img,
@@ -371,6 +362,7 @@
           .filter((answer) => answer.correct)
           .map((answer) => answer.text),
         isCorrect: allSelectedCorrect && countSelected === correctCount,
+        isWeb: false,
       });
 
       // Update score
@@ -471,7 +463,7 @@
 
       // Add event listener to the button to go to the result page
       goButton.addEventListener("click", () => {
-        window.location.href = "../result/results.html";
+        location.href = "../result/results.html";
       });
     }
 

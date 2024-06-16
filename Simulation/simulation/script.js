@@ -80,11 +80,17 @@
         json13,
       ];
 
-      const allQuestionsArray = jsonArrays.flatMap((json) =>
-        shuffleArray(json).slice(0, 3)
-      );
+      // Flatten all JSON arrays into a single array
+      const allQuestionsArray = jsonArrays.flat();
 
-      return allQuestionsArray;
+      // Shuffle the combined array
+      shuffleArray(allQuestionsArray);
+
+      // Select the first 36 unique rnadom questions from the shuffled array
+      const numberOfQuestions = 36;
+      const selectedQuestions = allQuestionsArray.slice(0, numberOfQuestions);
+
+      return selectedQuestions;
     }
 
     // Number of questions you want to choose randomly
@@ -366,6 +372,7 @@
           .filter((answer) => answer.correct)
           .map((answer) => answer.text),
         isCorrect: allSelectedCorrect && countSelected === correctCount,
+        isWeb: isWeb,
       });
 
       // Update score

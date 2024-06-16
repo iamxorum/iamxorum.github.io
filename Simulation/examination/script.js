@@ -81,11 +81,17 @@
         json13,
       ];
 
-      const allQuestionsArray = jsonArrays.flatMap((json) =>
-        shuffleArray(json).slice(0, 3)
-      );
+      // Flatten all JSON arrays into a single array
+      const allQuestionsArray = jsonArrays.flat();
 
-      return allQuestionsArray;
+      // Shuffle the combined array
+      shuffleArray(allQuestionsArray);
+
+      // Select the first N unique questions from the shuffled array
+      const numberOfQuestions = 36; // Adjust this number as needed
+      const selectedQuestions = allQuestionsArray.slice(0, numberOfQuestions);
+
+      return selectedQuestions;
     }
 
     // Number of questions you want to choose randomly
@@ -139,9 +145,17 @@
         result_div.remove();
       }
 
+      quizContainer[0].style.marginTop = "0rem";
+
       // If questionNumber and timer are hidden, show them
       timerElement.style.display = "block";
       questionNumber.style.display = "block";
+      navigation_questions.style.display = "flex";
+
+      // remove all the question number buttons before starting the quiz
+      while (navigation_questions.firstChild) {
+        navigation_questions.removeChild(navigation_questions.firstChild);
+      }
 
       // Remove the goButton if it exists before starting the quiz
       let goButton = document.getElementById("go-btn");
@@ -213,6 +227,11 @@
 
     function showQuestion() {
       resetState();
+      if (currentQuestionIndex === questions.length) {
+        localStorage.setItem("results", JSON.stringify(userAnswers2));
+        return;
+      }
+
       let currentQuestion = questions[currentQuestionIndex];
       let questionNo = currentQuestionIndex + 1;
       isWeb = currentQuestion.isWeb;
@@ -325,6 +344,22 @@
         // Remove sub-btn id and add next-btn id to the next button
         nextButton.id = "next-btn";
       }
+
+      // if it's Submited, remove the next button listener and add the showScore function
+      if (nextButton.id === "sub-btn") {
+        nextButton.removeEventListener("click", handleNextButtonClick);
+        nextButton.addEventListener("click", handleSubButtonClick);
+      } else {
+        nextButton.removeEventListener("click", handleSubButtonClick);
+        nextButton.addEventListener("click", handleNextButtonClick);
+      }
+    }
+
+    function arraysEqual(a, b) {
+      if (a.length !== b.length) return false;
+      const sortedA = a.slice().sort();
+      const sortedB = b.slice().sort();
+      return sortedA.every((val, index) => val === sortedB[index]);
     }
 
     function storeAnswers() {
@@ -347,9 +382,13 @@
         correctAnswers: questions[currentQuestionIndex].answers
           .filter((answer) => answer.correct)
           .map((answer) => answer.text),
-        isCorrect: selectedButtons.every(
-          (button) => button.dataset.correct === "true"
+        isCorrect: arraysEqual(
+          selectedButtons.map((button) => button.textContent),
+          questions[currentQuestionIndex].answers
+            .filter((answer) => answer.correct)
+            .map((answer) => answer.text)
         ),
+        isWeb: questions[currentQuestionIndex].isWeb,
       });
 
       // add answered class to the question number button
@@ -375,6 +414,17 @@
           score++;
         }
       });
+
+      // Hide the navigation_questions div
+      navigation_questions.style.display = "none";
+
+      //add margin top to the result div
+      quizContainer[0].style.marginTop = "20rem";
+
+      // Remove prevButton if it exists
+      if (prevButton) {
+        prevButton.style.display = "none";
+      }
 
       // Convert the userAnswers Map to an array
       userAnswers2 = Array.from(userAnswer.values());
@@ -459,8 +509,10 @@
       goButton.classList.add("btn");
       goButton.id = "go-btn";
 
+      const div_control = document.getElementsByClassName("control_flow")[0];
+
       // Add the button to the DOM below the quiz div
-      nextButton.insertAdjacentElement("afterend", goButton);
+      div_control.insertAdjacentElement("afterend", goButton);
 
       // Add event listener to the button to go to the result page
       goButton.addEventListener("click", () => {
@@ -468,31 +520,26 @@
       });
     }
 
+    function handleSubButtonClick() {
+      showScore();
+      localStorage.setItem("results", JSON.stringify(userAnswers2));
+    }
+
     function handleNextButton() {
-      storeAnswers();
-      currentQuestionIndex++;
       if (currentQuestionIndex < questions.length) {
+        storeAnswers();
+        currentQuestionIndex++;
         showQuestion();
       } else {
-        // Check if all the question buttons have the answered class
-        // If they do, show the score, else show an alert to answer all questions
-        const questionButtons = Array.from(navigation_questions.children);
-        const answeredQuestions = questionButtons.filter((button) =>
-          button.classList.contains("answered")
-        );
-        if (answeredQuestions.length === questions.length) {
-          showScore();
-          localStorage.setItem("results", JSON.stringify(userAnswers2));
-        } else {
-          alert("Please answer all questions before submitting.");
-        }
+        showScore();
+        localStorage.setItem("results", JSON.stringify(userAnswers2));
       }
     }
 
     function handlePrevButton() {
-      storeAnswers();
-      currentQuestionIndex--;
       if (currentQuestionIndex < questions.length) {
+        storeAnswers();
+        currentQuestionIndex--;
         showQuestion();
       } else {
         // Check if all the question buttons have the answered class

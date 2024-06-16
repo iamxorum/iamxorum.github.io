@@ -15,7 +15,7 @@
       SGDB: "../assets/sgdb.json",
       SO: "../assets/so.json",
       TAP: "../assets/tap.json",
-      WEB: "../assets/web.json"
+      WEB: "../assets/web.json",
       //ORTO: "../assets/orto.json",
     };
 
@@ -141,7 +141,7 @@
         questionData.answers.forEach((answer, answerIndex) => {
           const answerItem = document.createElement("li");
           if (isWeb) {
-            answerItem.textContent = escapeHTML(answer);
+            answerItem.innerHTML = escapeHTML(answer);
           } else {
             answerItem.innerHTML = answer;
           }

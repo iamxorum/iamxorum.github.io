@@ -1,3 +1,13 @@
+function escapeHTML(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;")
+    .replace(/\n/g, "<br>");
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const resultsContainer = document.getElementById("results-container");
   const results = JSON.parse(localStorage.getItem("results"));
@@ -6,30 +16,48 @@ document.addEventListener("DOMContentLoaded", () => {
     results.forEach((result) => {
       const resultItem = document.createElement("div");
       resultItem.classList.add("result-item");
-      resultItem.classList.add(result.isCorrect ? "correct" : "incorrect");
+      resultItem.classList.add(
+        result.isCorrect ? "correctResult" : "incorrectResult"
+      );
+
+      const statusDiv = document.createElement("div");
+      statusDiv.classList.add("status");
+      statusDiv.textContent = result.isCorrect ? "CORRECT" : "INCORRECT";
+      resultItem.appendChild(statusDiv);
+
       if (result.isCorrect === true) {
-        resultItem.innerHTML = `
-                    <p><strong>Question:</strong> ${result.question}</p>
-                    <p><strong>Your Answer:</strong> ${
-                      result.selectedAnswer
-                    }</p>
-                    <p><strong>Result:</strong> ${
-                      result.isCorrect ? "Correct" : "Incorrect"
-                    }</p>
-                `;
+        if (result.isWeb === true) {
+          resultItem.innerHTML += `
+          <p><strong>Question:</strong> ${escapeHTML(result.question)}</p>
+          <p><strong>Your Answer:</strong> ${escapeHTML(
+            result.selectedAnswer
+          )}</p>
+        `;
+        } else {
+          resultItem.innerHTML += `
+            <p><strong>Question:</strong> ${result.question}</p>
+            <p><strong>Your Answer:</strong> ${result.selectedAnswer}</p>
+            <p><strong>Correct Answer:</strong> ${result.correctAnswers}</p>
+          `;
+        }
       } else {
-        resultItem.innerHTML = `
-                    <p><strong>Question:</strong> ${result.question}</p>
-                    <p><strong>Your Answer:</strong> ${
-                      result.selectedAnswer
-                    }</p>
-                    <p><strong>Correct Answer:</strong> ${
-                      result.correctAnswers
-                    }</p>
-                    <p><strong>Result:</strong> ${
-                      result.isCorrect ? "Correct" : "Incorrect"
-                    }</p>
-                `;
+        if (result.isWeb === true) {
+          resultItem.innerHTML += `
+          <p><strong>Question:</strong> ${escapeHTML(result.question)}</p>
+          <p><strong>Your Answer:</strong> ${escapeHTML(
+            result.selectedAnswer
+          )}</p>
+          <p><strong>Correct Answer:</strong> ${escapeHTML(
+            result.correctAnswers
+          )}</p>
+        `;
+        } else {
+          resultItem.innerHTML += `
+          <p><strong>Question:</strong> ${result.question}</p>
+          <p><strong>Your Answer:</strong> ${result.selectedAnswer}</p>
+          <p><strong>Correct Answer:</strong> ${result.correctAnswers}</p>
+        `;
+        }
       }
 
       resultsContainer.appendChild(resultItem);
@@ -38,6 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
     resultsContainer.innerHTML = "<p>No results available.</p>";
   }
 
-  //delete results from local storage
+  // Delete results from local storage
   localStorage.removeItem("results");
 });

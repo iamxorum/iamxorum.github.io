@@ -21,7 +21,7 @@
       "c. <body bgcolor=\"p.gif\">;",
       "d. <body background-image=\"image/imagine.gif\">;"
     ],
-    "correctAnswerIndexes": [0,1,2,3]
+    "correctAnswerIndexes": [0, 1, 2, 3]
   },
   {
     "isWeb": true,
@@ -45,7 +45,7 @@
       "c. &nbsp; - introduce un spațiu;",
       "d. Atributul ACTION al marcajului FORM stabilește adresa fișierului la care sunt trimise datele dintr-un formular;"
     ],
-    "correctAnswerIndexes": [1,2,3]
+    "correctAnswerIndexes": [1, 2, 3]
   },
   {
     "isWeb": true,
@@ -69,7 +69,7 @@
       "c) day_time ;",
       "d) form_action;"
     ],
-    "correctAnswerIndexes": [0,1]
+    "correctAnswerIndexes": [0, 1]
   },
   {
     "isWeb": true,
@@ -81,7 +81,7 @@
       "c) input, area, a, iframe;",
       "d) radio, checkbox, frame;"
     ],
-    "correctAnswerIndexes": [1,3]
+    "correctAnswerIndexes": [1, 3]
   },
   {
     "isWeb": true,
@@ -93,7 +93,7 @@
       "c. <area shape=”polygon” coords=‘‘50,350,150,350,100,250,300” ”href=test.html” >;",
       "d. <area shape=”circle” coords=”100,100,30” href=”cv.html” target=”_blank”>;"
     ],
-    "correctAnswerIndexes": [0,1,3]
+    "correctAnswerIndexes": [0, 1, 3]
   },
   {
     "isWeb": true,
@@ -117,7 +117,7 @@
       "c. <input value=”html”/>html ;",
       "d. <input type=”checkbox” value=”html” name=”value_html” checked />html;"
     ],
-    "correctAnswerIndexes": [1,3]
+    "correctAnswerIndexes": [1, 3]
   },
   {
     "isWeb": true,
@@ -129,7 +129,7 @@
       "c. fromCharCode() este metoda care transformă valoarea unicode în caracter;",
       "d. toCaselower() – convertește un șir în litere mici;"
     ],
-    "correctAnswerIndexes": [0,2]
+    "correctAnswerIndexes": [0, 2]
   },
   {
     "isWeb": true,
@@ -147,49 +147,29 @@
     "isWeb": true,
     "id": 13,
     "question": "În JavaScript, numărul zilei din lună se extrage apelând metoda?",
-    "answers": [
-      "a. getDate()",
-      "b. getDay()",
-      "c. getMonth()",
-      "d. setDay()"
-    ],
+    "answers": ["a. getDate()", "b. getDay()", "c. getMonth()", "d. setDay()"],
     "correctAnswerIndexes": [0]
   },
   {
     "isWeb": true,
     "id": 14,
     "question": "Metodele și proprietățile obiectului String sunt:",
-    "answers": [
-      "a. substr()",
-      "b. replace()",
-      "c. length",
-      "d. charCodeAt()"
-    ],
-    "correctAnswerIndexes": [0,1,2,3]
+    "answers": ["a. substr()", "b. replace()", "c. length", "d. charCodeAt()"],
+    "correctAnswerIndexes": [0, 1, 2, 3]
   },
   {
     "isWeb": true,
     "id": 15,
     "question": "Alegeţi evenimentele Javascript?",
-    "answers": [
-      "a. OnKeyDown",
-      "b. OnErrorFocus",
-      "c. onLoad",
-      "d. onUnload"
-    ],
-    "correctAnswerIndexes": [0,2,3]
+    "answers": ["a. OnKeyDown", "b. OnErrorFocus", "c. onLoad", "d. onUnload"],
+    "correctAnswerIndexes": [0, 2, 3]
   },
   {
     "isWeb": true,
     "id": 16,
     "question": "Care sunt metodele şi proprietăţile pentru obiectul window din Javascript?",
-    "answers": [
-      "a. open()",
-      "b. status",
-      "c. alert()",
-      "d. write()"
-    ],
-    "correctAnswerIndexes": [0,1,2]
+    "answers": ["a. open()", "b. status", "c. alert()", "d. write()"],
+    "correctAnswerIndexes": [0, 1, 2]
   },
   {
     "isWeb": true,
@@ -213,7 +193,7 @@
       "c. # stil {font-size:10pt; color: #FFFFFF;}",
       "d. . stil {font-size:10px; color: #000000;}"
     ],
-    "correctAnswerIndexes": [0,2]
+    "correctAnswerIndexes": [0, 2]
   },
   {
     "isWeb": true,
@@ -222,34 +202,24 @@
     "answers": [
       "a. Un script JavaScript poate fi introdus în interiorul marcajelor <script></script>",
       "b. Functiile JavaScript definite de utilizator pot fi si într-un fişier cu extensia .js",
-      "c. O clasa de stiluri este definita corect astfel:<br>#clasa { color:#ab1121;background-image:url(”poza.gif”);text-decoration:overline;}",
+      "c. O clasa de stiluri este definita corect astfel:\n#clasa { color:#ab1121;background-image:url(”poza.gif”);text-decoration:overline;}",
       "d. <link rel=”stylesheet” type=”text/css” href=”exemplu.css” />"
     ],
-    "correctAnswerIndexes": [0,1,3]
+    "correctAnswerIndexes": [0, 1, 3]
   },
   {
     "isWeb": true,
     "id": 20,
     "question": "Care este rezultatul următoarei secvenţe din JavaScript \"1\" + 2 + 4 ?",
-    "answers": [
-      "a. 124",
-      "b. \"124\"",
-      "c. \"1\" si 24",
-      "d. \"1\" si 6"
-    ],
+    "answers": ["a. 124", "b. \"124\"", "c. \"1\" si 24", "d. \"1\" si 6"],
     "correctAnswerIndexes": [1]
   },
   {
     "isWeb": true,
     "id": 21,
     "question": "Tipurile de date utilizate în PHP sunt?",
-    "answers": [
-      "a. String",
-      "b. Array",
-      "c. Null",
-      "d. Data"
-    ],
-    "correctAnswerIndexes": [0,1,2]
+    "answers": ["a. String", "b. Array", "c. Null", "d. Data"],
+    "correctAnswerIndexes": [0, 1, 2]
   },
   {
     "isWeb": true,
@@ -261,7 +231,7 @@
       "c. nu este colecţie de date;",
       "d. nu este sensibil la tipul literelor;"
     ],
-    "correctAnswerIndexes": [0,1]
+    "correctAnswerIndexes": [0, 1]
   },
   {
     "isWeb": true,
@@ -273,7 +243,7 @@
       "c. alte informaţii importante pentru prelucrarea şi redarea documentului;",
       "d. codificările de limbă utilizate în document;"
     ],
-    "correctAnswerIndexes": [0,1,2,3]
+    "correctAnswerIndexes": [0, 1, 2, 3]
   },
   {
     "isWeb": true,
@@ -285,7 +255,7 @@
       "c. pentru fiecare element se ataseaza o baza de date;",
       "d. Nu se pot defini scheme XML decat dacă se utilizează şi PHP-ul;"
     ],
-    "correctAnswerIndexes": [0,1]
+    "correctAnswerIndexes": [0, 1]
   },
   {
     "isWeb": true,
@@ -309,16 +279,16 @@
       "c. $_COOKIE conţine valorile variabilelor care cuprind informaţii referitoare la cookie-urile păstrate pe calculatorul utilizatorului care accesează pagina web.",
       "d. $_SESSION cuprinde variabile disponibile prin intermediul oricărui tip de mecanism cu ajutorul căruia utilizatorul poate introduce date."
     ],
-    "correctAnswerIndexes": [0,1,2]
+    "correctAnswerIndexes": [0, 1, 2]
   },
   {
     "isWeb": true,
     "id": 27,
-    "question": "Ce va afișa scriptul PHP?<br><?php<br>$i = 5.7; echo $i.\"<br />\";<br>$i = sprintf(\"%05.2f\", $i);<br>echo '<br />'. $i;<br>?>",
+    "question": "Ce va afișa scriptul PHP?\n<?php\n$i = 5.7; echo $i.\"<br />\";\n$i = sprintf(\"%05.2f\", $i);\necho '<br />'. $i;\n?>",
     "answers": [
       "a) 5.7;05.70",
-      "b) 5.7<br>05.70",
-      "c) 5.70<br>05.7",
+      "b) 5.7\n05.70",
+      "c) 5.70\n05.7",
       "d) 5.7 05.7"
     ],
     "correctAnswerIndexes": [1]
@@ -327,13 +297,8 @@
     "isWeb": true,
     "id": 28,
     "question": "Care funcţii PHP acţionează asupra fişierelor?",
-    "answers": [
-      "a. fgetc ;",
-      "b. is_file ;",
-      "c. filesize;",
-      "d. is_close;"
-    ],
-    "correctAnswerIndexes": [0,1,2]
+    "answers": ["a. fgetc ;", "b. is_file ;", "c. filesize;", "d. is_close;"],
+    "correctAnswerIndexes": [0, 1, 2]
   },
   {
     "isWeb": true,
@@ -345,7 +310,7 @@
       "c. focus();",
       "d. strike();"
     ],
-    "correctAnswerIndexes": [1,2]
+    "correctAnswerIndexes": [1, 2]
   },
   {
     "isWeb": true,
@@ -386,7 +351,7 @@
   {
     "isWeb": true,
     "id": 33,
-    "question": "Ce se afișează într-un browser care suportă SVG, după încărcarea codului?<br><!DOCTYPE html><br><html><br><body><br><svg width=\"400\" height=\"180\"><br><rect x=\"50\" y=\"50\" width=\"100\" height=\"100\" rx=\"10\" ry=\"10\"<br>style=\"fill:red;opacity:1\" /><br>Sorry, your browser does not support inline SVG.<br></svg><br></body></html>",
+    "question": "Ce se afișează într-un browser care suportă SVG, după încărcarea codului?\n<!DOCTYPE html>\n<html>\n<body>\n<svg width=\"400\" height=\"180\">\n<rect x=\"50\" y=\"50\" width=\"100\" height=\"100\" rx=\"10\" ry=\"10\"\nstyle=\"fill:red;opacity:1\" />\nSorry, your browser does not support inline SVG.\n</svg>\n</body></html>",
     "answers": [
       "a. un dreptunghi cu dimensiunea laturilor 50 px și colțuri rotunjite;",
       "b. un dreptunghi cu laturile 100 px și colțuri nerotunjite;",
@@ -401,11 +366,11 @@
     "question": "Care este secvența corectă pentru a ne conecta la o bază de date MySQL cu funcțiile PHP?",
     "answers": [
       "a. $mysqli = mysqli_connect($host, $user, $pass, $database_stud);",
-      "b. $mysqli = new mysqli($host, $user, $pass, $database_stud);<br>if ($mysqli->connect_errno)<br>{echo \"Failed to connect to MySQL: \" . $mysqli->connect_error;}",
+      "b. $mysqli = new mysqli($host, $user, $pass, $database_stud);\nif ($mysqli->connect_errno)\n{echo \"Failed to connect to MySQL: \" . $mysqli->connect_error;}",
       "c. mysqli-connect($host, $user, $pass, $database_stud);",
       "d. connect-mysqli (\"localhost\");"
     ],
-    "correctAnswerIndexes": [0,1]
+    "correctAnswerIndexes": [0, 1]
   },
   {
     "isWeb": true,
@@ -417,7 +382,7 @@
       "c. window.write(\"hello world\");",
       "d. document.write(a=\" Hello World \");"
     ],
-    "correctAnswerIndexes": [0,3]
+    "correctAnswerIndexes": [0, 3]
   },
   {
     "isWeb": true,
@@ -441,18 +406,13 @@
       "c. echo \"Hello World\";",
       "d. $mes=\"Hello World\";echo $mes;"
     ],
-    "correctAnswerIndexes": [2,3]
+    "correctAnswerIndexes": [2, 3]
   },
   {
     "isWeb": true,
     "id": 38,
     "question": "Variabilele în PHP încep cu:",
-    "answers": [
-      "a. $",
-      "b. &",
-      "c. !",
-      "d. ?php"
-    ],
+    "answers": ["a. $", "b. &", "c. !", "d. ?php"],
     "correctAnswerIndexes": [0]
   },
   {
@@ -501,7 +461,7 @@
       "c. XML nu este un protocol pentru transmiterea datelor în rețea;",
       "d. Un document XML poate fi citit de orice parser."
     ],
-    "correctAnswerIndexes": [0,2,3]
+    "correctAnswerIndexes": [0, 2, 3]
   },
   {
     "isWeb": true,
@@ -549,7 +509,7 @@
       "c. name - permite atașarea unui nume câmpului de editare multilinie;",
       "d. text-wrap - determină comportamentul câmpului de editare față de sfârșitul de linie."
     ],
-    "correctAnswerIndexes": [0,1,2]
+    "correctAnswerIndexes": [0, 1, 2]
   },
   {
     "isWeb": true,
@@ -561,7 +521,7 @@
       "c. OnLoad – realizează încărcarea paginii în navigator",
       "d. OnBlur - elementul primește focus"
     ],
-    "correctAnswerIndexes": [0,1,2]
+    "correctAnswerIndexes": [0, 1, 2]
   },
   {
     "isWeb": true,
@@ -578,7 +538,7 @@
   {
     "isWeb": true,
     "id": 49,
-    "question": "Care este rolul butonului “submit” pentru codul de mai jos?<br><br><form action=\"test.php\" method=\"POST\"><br>Introduceți numele : <input type=\"text\" name=\"n\"><br><br><input type=\"submit\" value=\"Trimite\"><br></form>",
+    "question": "Care este rolul butonului “submit” pentru codul de mai jos?\n\n<form action=\"test.php\" method=\"POST\">\nIntroduceți numele : <input type=\"text\" name=\"n\">\n\n<input type=\"submit\" value=\"Trimite\">\n</form>",
     "answers": [
       "a. Transmite la server variabila n din formular;",
       "b. Transmite la fișierul test.php de pe server conținutul variabilei n;",

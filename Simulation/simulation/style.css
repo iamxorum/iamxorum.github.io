@@ -11,6 +11,7 @@ body {
 }
 
 .back {
+  z-index: 5;
   position: fixed;
   top: 10px;
   left: 10px;
@@ -74,14 +75,7 @@ body {
 }
 
 .app {
-  background-image: radial-gradient(
-    circle,
-    #311164,
-    #241156,
-    #190f47,
-    #100c38,
-    #0c032a
-  );
+  background: linear-gradient(45deg, #221b49 0%, #320036 100%);
   width: 90%;
   max-width: 80rem;
   margin: 100px auto 0;
@@ -340,11 +334,7 @@ body {
   top: 15vmin;
   right: -10vmin;
   animation: spin-bot var(--sp) ease 0s infinite;
-  background-image: var(--cross),
-    radial-gradient(
-      var(--dt) 5.5vmin,
-      rgba(255, 255, 255, 0) calc(5.5vmin + 1px)
-    );
+  background-image: var(--cross), radial-gradient(var(--dt) 5.5vmin, rgba(255, 255, 255, 0) calc(5.5vmin + 1px));
   background-repeat: no-repeat;
   background-size: 3vmin 1vmin, 1vmin 3vmin, 100% 100%;
   background-position: center center;
@@ -356,11 +346,7 @@ body {
   top: -2vmin;
   animation: spin-top var(--sp) ease 0s infinite;
   transform: rotate(-45deg);
-  background-image: var(--cross),
-    radial-gradient(
-      var(--dt) 1.25vmin,
-      rgba(255, 255, 255, 0) calc(1.25vmin + 1px)
-    );
+  background-image: var(--cross), radial-gradient(var(--dt) 1.25vmin, rgba(255, 255, 255, 0) calc(1.25vmin + 1px));
   right: -4vmin;
   filter: hue-rotate(10deg) var(--shadow);
   background-size: 1.4vmin 1vmin, 1vmin 1.4vmin, 100% 100%;
@@ -372,8 +358,7 @@ body {
   left: -13vmin;
   transform: rotate(175deg);
   animation: spin-left var(--sp) ease calc(var(--sp) / 4) infinite;
-  background-image: var(--cross),
-    radial-gradient(var(--dt) 9vmin, rgba(255, 255, 255, 0) calc(9vmin + 1px));
+  background-image: var(--cross), radial-gradient(var(--dt) 9vmin, rgba(255, 255, 255, 0) calc(9vmin + 1px));
   filter: hue-rotate(20deg) var(--shadow);
   background-size: 5vmin 1vmin, 1vmin 5vmin, 100% 100%;
 }
@@ -383,13 +368,8 @@ body {
   top: 35vmin;
   left: -6vmin;
   transform: rotate(-280deg);
-  animation: spin-last var(--sp) ease calc((var(--sp) / 4 + var(--sp)) * -1)
-    infinite;
-  background-image: var(--cross),
-    radial-gradient(
-      var(--dt) 2.5vmin,
-      rgba(255, 255, 255, 0) calc(2.5vmin + 1px)
-    );
+  animation: spin-last var(--sp) ease calc((var(--sp) / 4 + var(--sp)) * -1) infinite;
+  background-image: var(--cross), radial-gradient(var(--dt) 2.5vmin, rgba(255, 255, 255, 0) calc(2.5vmin + 1px));
   filter: hue-rotate(30deg) var(--shadow);
   background-size: 2vmin 1vmin, 1vmin 2vmin, 100% 100%;
 }
@@ -411,32 +391,26 @@ body {
   }
 }
 @keyframes spin-bot {
-  0%,
-  35% {
+  0%, 35% {
     transform: rotate(0deg);
   }
-  80%,
-  100% {
+  80%, 100% {
     transform: rotate(-360deg);
   }
 }
 @keyframes spin-left {
-  0%,
-  35% {
+  0%, 35% {
     transform: rotate(175deg);
   }
-  80%,
-  100% {
+  80%, 100% {
     transform: rotate(535deg);
   }
 }
 @keyframes spin-last {
-  0%,
-  10% {
+  0%, 10% {
     transform: rotate(-280deg);
   }
-  90%,
-  100% {
+  90%, 100% {
     transform: rotate(-640deg);
   }
 }
@@ -468,4 +442,50 @@ body {
     transform: scale(1);
     color: rgba(250, 250, 250, 0.6784313725);
   }
-} /*# sourceMappingURL=style.css.map */
+}
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+.result-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+.result-item.correctResult {
+  background-color: #e6f4ea;
+  border-left: 4px solid #28a745;
+  color: #155724;
+}
+.result-item.correctResult .status {
+  background-color: #28a745;
+}
+.result-item.incorrectResult {
+  background-color: #fce8e8;
+  border-left: 4px solid #dc3545;
+  color: #721c24;
+}
+.result-item.incorrectResult .status {
+  background-color: #dc3545;
+}
+.result-item p {
+  margin: 10px 0 10px;
+  line-height: 1.5;
+}
+.result-item strong {
+  font-weight: 600;
+}
+.result-item .status {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}/*# sourceMappingURL=style.css.map */
