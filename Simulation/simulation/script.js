@@ -168,6 +168,11 @@
       if (goButton) {
         goButton.remove();
       }
+
+      //remove correct answers count from the DOM
+      correctAnswersDiv.display = "block";
+      //remove wrong answers count from the DOM display none
+      wrongAnswersDiv.display = "block";
       allQuestionsArray = startRandomQuestions();
       randomlyChosenQuestions = getRandomQuestions(
         allQuestionsArray,
@@ -396,9 +401,9 @@
       resetState();
       stopTimer();
       //remove correct answers count from the DOM
-      correctAnswersDiv.remove();
-      //remove wrong answers count from the DOM
-      wrongAnswersDiv.remove();
+      correctAnswersDiv.display = "none";
+      //remove wrong answers count from the DOM display none
+      wrongAnswersDiv.display = "none";
       timerElement.textContent = "00:00:00";
       questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
       nextButton.innerHTML = "Play Again";
