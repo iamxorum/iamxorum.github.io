@@ -378,12 +378,20 @@
         ),
         correctAnswers: questions[currentQuestionIndex].answers
           .filter((answer) => answer.correct)
-          .map((answer) => answer.text),
+          .map((answer) => {
+            // Use a regular expression to remove HTML tags
+            const plainText = answer.text.replace(/<\/?[^>]+(>|$)/g, "");
+            return plainText;
+          }),
         isCorrect: arraysEqual(
           selectedButtons.map((button) => escape(button.textContent)),
           questions[currentQuestionIndex].answers
             .filter((answer) => answer.correct)
-            .map((answer) => answer.text)
+            .map((answer) => {
+              // Use a regular expression to remove HTML tags
+              const plainText = answer.text.replace(/<\/?[^>]+(>|$)/g, "");
+              return plainText;
+            })
         ),
         isWeb: questions[currentQuestionIndex].isWeb,
       });
@@ -507,6 +515,8 @@
       goButton.id = "go-btn";
 
       const div_control = document.getElementsByClassName("control_flow")[0];
+
+      console.log(userAnswers2);
 
       // Add the button to the DOM below the quiz div
       div_control.insertAdjacentElement("afterend", goButton);

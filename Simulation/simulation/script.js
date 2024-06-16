@@ -372,14 +372,29 @@
 
       // selected answers and correct answers to the userAnswers array
 
-      userAnswers.push({
+      userAnswer.set(currentQuestionIndex, {
         question: questions[currentQuestionIndex].question,
-        selectedAnswer: selectedButtons.map((button) => button.textContent),
+        selectedAnswer: selectedButtons.map((button) =>
+          escape(button.textContent)
+        ),
         correctAnswers: questions[currentQuestionIndex].answers
           .filter((answer) => answer.correct)
-          .map((answer) => answer.text),
-        isCorrect: allSelectedCorrect && countSelected === correctCount,
-        isWeb: isWeb,
+          .map((answer) => {
+            // Use a regular expression to remove HTML tags
+            const plainText = answer.text.replace(/<\/?[^>]+(>|$)/g, "");
+            return plainText;
+          }),
+        isCorrect: arraysEqual(
+          selectedButtons.map((button) => escape(button.textContent)),
+          questions[currentQuestionIndex].answers
+            .filter((answer) => answer.correct)
+            .map((answer) => {
+              // Use a regular expression to remove HTML tags
+              const plainText = answer.text.replace(/<\/?[^>]+(>|$)/g, "");
+              return plainText;
+            })
+        ),
+        isWeb: questions[currentQuestionIndex].isWeb,
       });
 
       // Update score
