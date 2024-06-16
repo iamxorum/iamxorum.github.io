@@ -26,9 +26,13 @@ document.addEventListener("DOMContentLoaded", () => {
       resultItem.appendChild(statusDiv);
 
       const questionP = document.createElement("p");
-      questionP.innerHTML = `<strong>Question:</strong> ${escapeHTML(
-        result.question
-      )}`;
+      if (result.isWeb) {
+        questionP.innerHTML = `<strong>Question:</strong> ${escapeHTML(
+          result.question
+        )}`;
+      } else {
+        questionP.innerHTML = `<strong>Question:</strong> ${result.question}`;
+      }
       resultItem.appendChild(questionP);
 
       const yourAnswersDiv = document.createElement("div");
@@ -45,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         correctAnswersDiv.innerHTML = `<strong>Correct Answers:</strong>`;
         result.correctAnswers.forEach((correctAnswer) => {
           const correctAnswerP = document.createElement("div");
-          correctAnswerP.innerHTML = escapeHTML(correctAnswer);
+          correctAnswerP.innerHTML = correctAnswer;
           correctAnswersDiv.appendChild(correctAnswerP);
         });
         resultItem.appendChild(correctAnswersDiv);
