@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (results && results.length > 0) {
     results.forEach((result) => {
       const resultItem = document.createElement("div");
-      resultItem.classList.add("result-item");
       resultItem.classList.add(
+        "result-item",
         result.isCorrect ? "correctResult" : "incorrectResult"
       );
 
@@ -25,39 +25,30 @@ document.addEventListener("DOMContentLoaded", () => {
       statusDiv.textContent = result.isCorrect ? "CORRECT" : "INCORRECT";
       resultItem.appendChild(statusDiv);
 
-      if (result.isCorrect === true) {
-        if (result.isWeb === true) {
-          resultItem.innerHTML += `
-          <p><strong>Question:</strong> ${escapeHTML(result.question)}</p>
-          <p><strong>Your Answer:</strong> ${escapeHTML(
-            result.selectedAnswer
-          )}</p>
-        `;
-        } else {
-          resultItem.innerHTML += `
-            <p><strong>Question:</strong> ${result.question}</p>
-            <p><strong>Your Answer:</strong> ${result.selectedAnswer}</p>
-            <p><strong>Correct Answer:</strong> ${result.correctAnswers}</p>
-          `;
-        }
-      } else {
-        if (result.isWeb === true) {
-          resultItem.innerHTML += `
-          <p><strong>Question:</strong> ${escapeHTML(result.question)}</p>
-          <p><strong>Your Answer:</strong> ${escapeHTML(
-            result.selectedAnswer
-          )}</p>
-          <p><strong>Correct Answer:</strong> ${escapeHTML(
-            result.correctAnswers
-          )}</p>
-        `;
-        } else {
-          resultItem.innerHTML += `
-          <p><strong>Question:</strong> ${result.question}</p>
-          <p><strong>Your Answer:</strong> ${result.selectedAnswer}</p>
-          <p><strong>Correct Answer:</strong> ${result.correctAnswers}</p>
-        `;
-        }
+      const questionP = document.createElement("p");
+      questionP.innerHTML = `<strong>Question:</strong> ${escapeHTML(
+        result.question
+      )}`;
+      resultItem.appendChild(questionP);
+
+      const yourAnswersDiv = document.createElement("div");
+      yourAnswersDiv.innerHTML = `<strong>Your Answers:</strong>`;
+      result.selectedAnswer.forEach((answer) => {
+        const answerP = document.createElement("div");
+        answerP.innerHTML = escapeHTML(answer);
+        yourAnswersDiv.appendChild(answerP);
+      });
+      resultItem.appendChild(yourAnswersDiv);
+
+      if (!result.isCorrect || !result.isWeb) {
+        const correctAnswersDiv = document.createElement("div");
+        correctAnswersDiv.innerHTML = `<strong>Correct Answers:</strong>`;
+        result.correctAnswers.forEach((correctAnswer) => {
+          const correctAnswerP = document.createElement("div");
+          correctAnswerP.innerHTML = escapeHTML(correctAnswer);
+          correctAnswersDiv.appendChild(correctAnswerP);
+        });
+        resultItem.appendChild(correctAnswersDiv);
       }
 
       resultsContainer.appendChild(resultItem);
