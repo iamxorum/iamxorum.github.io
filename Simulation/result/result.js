@@ -1,11 +1,5 @@
 function escapeHTML(str) {
-  return String(str)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#39;")
-    .replace(/\n/g, "<br>");
+  return String(str).replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -37,21 +31,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const yourAnswersDiv = document.createElement("div");
       yourAnswersDiv.innerHTML = `<strong>Your Answers:</strong>`;
-      result.selectedAnswer.forEach((answer) => {
-        const answerP = document.createElement("div");
-        answerP.innerHTML = escapeHTML(answer);
-        yourAnswersDiv.appendChild(answerP);
-      });
+      if (result.isWeb) {
+        result.selectedAnswer.forEach((answer) => {
+          const answerP = document.createElement("div");
+          answerP.innerHTML = escapeHTML(answer);
+          yourAnswersDiv.appendChild(answerP);
+        });
+      } else {
+        result.selectedAnswer.forEach((yourAnswer) => {
+          const yourAnswerP = document.createElement("div");
+          yourAnswerP.innerHTML = yourAnswer;
+          yourAnswersDiv.appendChild(yourAnswerP);
+        });
+      }
       resultItem.appendChild(yourAnswersDiv);
 
       if (!result.isCorrect || !result.isWeb) {
         const correctAnswersDiv = document.createElement("div");
         correctAnswersDiv.innerHTML = `<strong>Correct Answers:</strong>`;
-        result.correctAnswers.forEach((correctAnswer) => {
-          const correctAnswerP = document.createElement("div");
-          correctAnswerP.innerHTML = correctAnswer;
-          correctAnswersDiv.appendChild(correctAnswerP);
-        });
+        if (result.isWeb) {
+          result.correctAnswers.forEach((answer) => {
+            const answerP = document.createElement("div");
+            answerP.innerHTML = escapeHTML(answer);
+            correctAnswersDiv.appendChild(answerP);
+          });
+        } else {
+          result.correctAnswers.forEach((correctAnswer) => {
+            const correctAnswerP = document.createElement("div");
+            correctAnswerP.innerHTML = correctAnswer;
+            correctAnswersDiv.appendChild(correctAnswerP);
+          });
+        }
         resultItem.appendChild(correctAnswersDiv);
       }
 

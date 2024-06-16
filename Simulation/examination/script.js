@@ -217,12 +217,7 @@
     }
 
     function escape(htmlStr) {
-      return htmlStr
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#39;");
+      return htmlStr.replace(/</g, "&lt;").replace(/>/g, "&gt;");
     }
 
     function showQuestion() {
@@ -378,12 +373,14 @@
       // if the answers are correct, set correct as 1, else set it as 0
       userAnswer.set(currentQuestionIndex, {
         question: questions[currentQuestionIndex].question,
-        selectedAnswer: selectedButtons.map((button) => button.textContent),
+        selectedAnswer: selectedButtons.map((button) =>
+          escape(button.textContent)
+        ),
         correctAnswers: questions[currentQuestionIndex].answers
           .filter((answer) => answer.correct)
           .map((answer) => answer.text),
         isCorrect: arraysEqual(
-          selectedButtons.map((button) => button.textContent),
+          selectedButtons.map((button) => escape(button.textContent)),
           questions[currentQuestionIndex].answers
             .filter((answer) => answer.correct)
             .map((answer) => answer.text)
