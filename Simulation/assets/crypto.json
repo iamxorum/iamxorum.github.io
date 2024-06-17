@@ -287,9 +287,9 @@
     "id": 27,
     "question": "Un sistem de cifrare este strict ideal dacă:",
     "answers": [
-      "a. H(X/C)>H(K);",
-      "b. H(X/C)<H(K);",
-      "c. H(X/C)<=H(K);",
+      "a. H(X/C)&gt;H(K);",
+      "b. H(X/C)&lt;H(K);",
+      "c. H(X/C)&lt;=H(K);",
       "d. H(X/C)=H(K)."
     ],
     "correctAnswerIndexes": [3]
@@ -310,9 +310,9 @@
     "question": "Dacă notăm cu n0 numărul de biți de „0” şi cu n1 numărul de biți de „1” dintr-o succesiune de biţi, atunci pentru a avea o succesiune aleatoare conform testului de frecvenţă biţi este necesar ca:",
     "answers": [
       "a. n0 ~= n1;",
-      "b. n0 <n1;",
-      "c. n0 >n1;",
-      "d. n0 <<n1;"
+      "b. n0 &lt;n1;",
+      "c. n0 &gt;n1;",
+      "d. n0 &lt;&lt;n1;"
     ],
     "correctAnswerIndexes": [0]
   },
@@ -331,8 +331,8 @@
     "id": 31,
     "question": "Într-un sistem secret, informația este complet ascunsă atunci când:",
     "answers": [
-      "a. 𝐻(𝐶) > 𝑙𝑜𝑔 𝑛",
-      "b. 𝐻(𝐶) < 𝑙𝑜𝑔 𝑛",
+      "a. 𝐻(𝐶) &gt; 𝑙𝑜𝑔 𝑛",
+      "b. 𝐻(𝐶) &lt; 𝑙𝑜𝑔 𝑛",
       "c. 𝐻(𝐶) = 𝑙𝑜𝑔 𝑛."
     ],
     "correctAnswerIndexes": [2]
@@ -351,15 +351,15 @@
     "id": 33,
     "question": "Care dintre afirmatiile de mai jos nu reprezinta un criteriu de aleatorism propus de Golomb:",
     "answers": [
-      "a. Dacă p este par atunci secvenţa de lungime p va avea p/2 biţi de valoare 0 şi p/2<br>biţi de valoarea 1. Dacă p este impar, atunci numărul de zerouri si numărul de<br>cifre unu diferă printr-o unitate",
-      "b. Într-o secvenţă de lungime p, jumătate din numărul seriilor va avea lungimea 1,<br>1/4 va avea lungimea 2,...,1/ 2k din numărul seriilor va avea lungimea k",
+      "a. Dacă p este par atunci secvenţa de lungime p va avea p/2 biţi de valoare 0 şi p/2 biţi de valoarea 1. Dacă p este impar, atunci numărul de zerouri si numărul de cifre unu diferă printr-o unitate",
+      "b. Într-o secvenţă de lungime p, jumătate din numărul seriilor va avea lungimea 1, 1/4 va avea lungimea 2,...,1/ 2k din numărul seriilor va avea lungimea k",
       "c. Autocorelaţia defazată nu este constantă"
     ],
     "correctAnswerIndexes": [2]
   },
   {
     "id": 34,
-    "question": "Pentru evaluarea caracterisiticilor aleatoare a unui șir de numere, testul spectral se<br>bazează pe:",
+    "question": "Pentru evaluarea caracterisiticilor aleatoare a unui șir de numere, testul spectral se bazează pe:",
     "answers": [
       "a. Tehnica transformărilor Fourier",
       "b. Tehnica evaluării numărului de apariții a biților de 0 și de 1",
@@ -371,7 +371,7 @@
     "id": 35,
     "question": "În criptanaliză, cuvintele probabile sunt:",
     "answers": [
-      "a. Cuvinte sau expresii care pot fi întâlnite într-un mesaj ca urmare a faptului că sunt<br>caracteristice pentru sursa respectivă",
+      "a. Cuvinte sau expresii care pot fi întâlnite într-un mesaj ca urmare a faptului că sunt caracteristice pentru sursa respectivă",
       "b. Litere și cifre care apar în mod pseudoaleator;",
       "c. Mesaje informaționale care au probabilitate de apariție de 0.5.;"
     ],

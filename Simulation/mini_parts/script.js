@@ -261,6 +261,9 @@
         button.classList.add("btn");
         answerButtons.appendChild(button);
 
+        // Add a data attribute to the button to store the correct index
+        button.dataset.correctIndex = currentQuestion.answers.indexOf(answer);
+
         if (answer.correct) {
           button.dataset.correct = answer.correct;
         }
@@ -378,15 +381,13 @@
             const plainText = answer.text.replace(/<\/?[^>]+(>|$)/g, "");
             return plainText;
           }),
+        // take the index of the selected answers from selectedButtons.data-correct-index and convert to array of integers
+        selectedIndex: selectedButtons.map((button) => parseInt(button.dataset.correctIndex)),
+        // take the index of the correct answers
+        correctIndex: questions[currentQuestionIndex].correctAnswerIndexes,
         isCorrect: arraysEqual(
-          selectedButtons.map((button) => escape(button.textContent)),
-          questions[currentQuestionIndex].answers
-            .filter((answer) => answer.correct)
-            .map((answer) => {
-              // Use a regular expression to remove HTML tags
-              const plainText = answer.text.replace(/<\/?[^>]+(>|$)/g, "");
-              return plainText;
-            })
+          selectedButtons.map((button) => parseInt(button.dataset.correctIndex)),
+          questions[currentQuestionIndex].correctAnswerIndexes
         ),
         isWeb: false,
       };
