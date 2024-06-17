@@ -165,7 +165,7 @@
       allQuestionsArray = startRandomQuestions();
       randomlyChosenQuestions = getRandomQuestions(
         allQuestionsArray,
-        numberOfQuestions
+        4
       );
       questions = randomlyChosenQuestions.map((questionData) => ({
         isWeb: questionData.isWeb || false,
@@ -265,8 +265,12 @@
         button.classList.add("btn");
         answerButtons.appendChild(button);
 
+        // Add a data attribute to the button to store the correct index
+        button.dataset.correctIndex = currentQuestion.answers.indexOf(answer);
+
         if (answer.correct) {
           button.dataset.correct = answer.correct;
+          
         }
 
         button.addEventListener("click", () => toggleAnswer(button));
@@ -373,9 +377,17 @@
       // if the answers are correct, set correct as 1, else set it as 0
       userAnswer.set(currentQuestionIndex, {
         question: questions[currentQuestionIndex].question,
-        selectedAnswer: selectedButtons.map((button) =>
-          escape(button.textContent)
+        // take the index of the selected answers from selectedButtons.data-correct-index and convert to array of integers
+        selectedIndex: selectedButtons.map((button) => parseInt(button.dataset.correctIndex)),
+        // take the index of the correct answers
+        correctIndex: questions[currentQuestionIndex].correctAnswerIndexes,
+        isCorrect: arraysEqual(
+          selectedButtons.map((button) => parseInt(button.dataset.correctIndex)),
+          questions[currentQuestionIndex].correctAnswerIndexes
         ),
+        isWeb: questions[currentQuestionIndex].isWeb,
+        selectedAnswer: selectedButtons.map((button) => escape(button.textContent)),
+        // take the index of the correct answers
         correctAnswers: questions[currentQuestionIndex].answers
           .filter((answer) => answer.correct)
           .map((answer) => {
@@ -383,17 +395,6 @@
             const plainText = answer.text.replace(/<\/?[^>]+(>|$)/g, "");
             return plainText;
           }),
-        isCorrect: arraysEqual(
-          selectedButtons.map((button) => escape(button.textContent)),
-          questions[currentQuestionIndex].answers
-            .filter((answer) => answer.correct)
-            .map((answer) => {
-              // Use a regular expression to remove HTML tags
-              const plainText = answer.text.replace(/<\/?[^>]+(>|$)/g, "");
-              return plainText;
-            })
-        ),
-        isWeb: questions[currentQuestionIndex].isWeb,
       });
 
       // add answered class to the question number button
