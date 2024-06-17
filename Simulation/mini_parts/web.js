@@ -308,7 +308,7 @@
         error++;
       }
 
-      userAnswers.set(currentQuestionIndex, {
+      userAnswers[currentQuestionIndex] = {
         question: questions[currentQuestionIndex].question,
         selectedAnswer: selectedButtons.map((button) =>
           escape(button.textContent)
@@ -331,7 +331,7 @@
             })
         ),
         isWeb: true,
-      });
+      };
 
       // Update score
       correctAnswersDiv.textContent = `${score}`;

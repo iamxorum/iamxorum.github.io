@@ -94,7 +94,7 @@
     }
 
     // Number of questions you want to choose randomly
-    const numberOfQuestions = 36;
+    const numberOfQuestions = 4;
 
     // Get random questions
     let randomlyChosenQuestions;
@@ -376,7 +376,7 @@
 
       // selected answers and correct answers to the userAnswers array
 
-      userAnswers.set(currentQuestionIndex, {
+      userAnswers[currentQuestionIndex] = {
         question: questions[currentQuestionIndex].question,
         selectedAnswer: selectedButtons.map((button) =>
           escape(button.textContent)
@@ -399,7 +399,7 @@
             })
         ),
         isWeb: questions[currentQuestionIndex].isWeb,
-      });
+      };
 
       // Update score
       correctAnswersDiv.textContent = `${score}`;
