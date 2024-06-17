@@ -291,6 +291,13 @@
       answerButton.addEventListener("click", showCorrectAnswers);
     }
 
+    function arraysEqual(a, b) {
+      if (a.length !== b.length) return false;
+      const sortedA = a.slice().sort();
+      const sortedB = b.slice().sort();
+      return sortedA.every((val, index) => val === sortedB[index]);
+    }
+
     function showCorrectAnswers() {
       // Ensure at least one answer is selected
       const selectedButtons = Array.from(

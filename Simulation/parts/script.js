@@ -201,6 +201,13 @@
         .replace(/>/g, "&gt;")
     }
 
+    function arraysEqual(a, b) {
+      if (a.length !== b.length) return false;
+      const sortedA = a.slice().sort();
+      const sortedB = b.slice().sort();
+      return sortedA.every((val, index) => val === sortedB[index]);
+    }
+
     function showQuestion() {
       resetState();
       let currentQuestion = questions[currentQuestionIndex];
