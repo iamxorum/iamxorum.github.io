@@ -228,11 +228,8 @@
 
     function escape(htmlStr) {
       return htmlStr
-        .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#39;");
     }
 
     function showQuestion() {
@@ -372,7 +369,7 @@
 
       // selected answers and correct answers to the userAnswers array
 
-      userAnswer.set(currentQuestionIndex, {
+      userAnswers.set(currentQuestionIndex, {
         question: questions[currentQuestionIndex].question,
         selectedAnswer: selectedButtons.map((button) =>
           escape(button.textContent)

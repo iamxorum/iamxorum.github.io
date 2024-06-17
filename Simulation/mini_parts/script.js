@@ -229,6 +229,10 @@
       button.classList.toggle("selected");
     }
 
+    function escape(htmlStr) {
+      return htmlStr.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    }
+
     function showQuestion() {
       resetState();
       let currentQuestion = questions[currentQuestionIndex];
@@ -355,7 +359,7 @@
 
       // selected answers and correct answers to the userAnswers array
 
-      userAnswer.set(currentQuestionIndex, {
+      userAnswers.set(currentQuestionIndex, {
         question: questions[currentQuestionIndex].question,
         selectedAnswer: selectedButtons.map((button) =>
           escape(button.textContent)
