@@ -165,7 +165,7 @@
       allQuestionsArray = startRandomQuestions();
       randomlyChosenQuestions = getRandomQuestions(
         allQuestionsArray,
-        4
+        numberOfQuestions
       );
       questions = randomlyChosenQuestions.map((questionData) => ({
         isWeb: questionData.isWeb || false,
