@@ -2,12 +2,17 @@ function escapeHTML(str) {
   return String(str).replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
+function reformatHTML(str) {
+  return String(str).replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const resultsContainer = document.getElementById("results-container");
   const results = JSON.parse(localStorage.getItem("results"));
 
   if (results && results.length > 0) {
     results.forEach((result) => {
+      console.log(result);
       const resultItem = document.createElement("div");
       resultItem.classList.add(
         "result-item",
@@ -34,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (result.isWeb) {
         result.selectedAnswer.forEach((answer) => {
           const answerP = document.createElement("div");
-          answerP.innerHTML = escapeHTML(answer);
+          answerP.textContent = reformatHTML(answer);
           yourAnswersDiv.appendChild(answerP);
         });
       } else {
@@ -52,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (result.isWeb) {
           result.correctAnswers.forEach((answer) => {
             const answerP = document.createElement("div");
-            answerP.innerHTML = escapeHTML(answer);
+            answerP.textContent = reformatHTML(answer);
             correctAnswersDiv.appendChild(answerP);
           });
         } else {

@@ -227,9 +227,7 @@
     }
 
     function escape(htmlStr) {
-      return htmlStr
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
+      return htmlStr.replace(/</g, "&lt;").replace(/>/g, "&gt;");
     }
 
     function arraysEqual(a, b) {
@@ -379,28 +377,59 @@
 
       // selected answers and correct answers to the userAnswers array
 
-      userAnswers[currentQuestionIndex] = {
-        question: questions[currentQuestionIndex].question,
-        selectedAnswer: selectedButtons.map((button) =>
-          escape(button.textContent)
-        ),
-        correctAnswers: questions[currentQuestionIndex].answers
-          .filter((answer) => answer.correct)
-          .map((answer) => {
-            // Use a regular expression to remove HTML tags
-            const plainText = answer.text.replace(/<\/?[^>]+(>|$)/g, "");
-            return plainText;
-          }),
-        // take the index of the selected answers from selectedButtons.data-correct-index and convert to array of integers
-        selectedIndex: selectedButtons.map((button) => parseInt(button.dataset.correctIndex)),
-        // take the index of the correct answers
-        correctIndex: questions[currentQuestionIndex].correctAnswerIndexes,
-        isCorrect: arraysEqual(
-          selectedButtons.map((button) => parseInt(button.dataset.correctIndex)),
-          questions[currentQuestionIndex].correctAnswerIndexes
-        ),
-        isWeb: questions[currentQuestionIndex].isWeb,
-      };
+      if (isWeb) {
+        userAnswers[currentQuestionIndex] = {
+          question: questions[currentQuestionIndex].question,
+          selectedAnswer: selectedButtons.map((button) =>
+            escape(button.textContent)
+          ),
+          correctAnswers: questions[currentQuestionIndex].answers
+            .filter((answer) => answer.correct)
+            .map((answer) => {
+              return answer.text;
+            }),
+          // take the index of the selected answers from selectedButtons.data-correct-index and convert to array of integers
+          selectedIndex: selectedButtons.map((button) =>
+            parseInt(button.dataset.correctIndex)
+          ),
+          // take the index of the correct answers
+          correctIndex: questions[currentQuestionIndex].correctAnswerIndexes,
+          isCorrect: arraysEqual(
+            selectedButtons.map((button) =>
+              parseInt(button.dataset.correctIndex)
+            ),
+            questions[currentQuestionIndex].correctAnswerIndexes
+          ),
+          isWeb: questions[currentQuestionIndex].isWeb,
+        };
+      } else {
+        userAnswers[currentQuestionIndex] = {
+          question: questions[currentQuestionIndex].question,
+          selectedAnswer: selectedButtons.map((button) =>
+            escape(button.textContent)
+          ),
+          correctAnswers: questions[currentQuestionIndex].answers
+            .filter((answer) => answer.correct)
+            .map((answer) => {
+              // Use a regular expression to remove HTML tags
+              const plainText = answer.text.replace(/<\/?[^>]+(>|$)/g, "");
+              return plainText;
+            }),
+          // take the index of the selected answers from selectedButtons.data-correct-index and convert to array of integers
+          selectedIndex: selectedButtons.map((button) =>
+            parseInt(button.dataset.correctIndex)
+          ),
+          // take the index of the correct answers
+          correctIndex: questions[currentQuestionIndex].correctAnswerIndexes,
+          isCorrect: arraysEqual(
+            selectedButtons.map((button) =>
+              parseInt(button.dataset.correctIndex)
+            ),
+            questions[currentQuestionIndex].correctAnswerIndexes
+          ),
+          isWeb: questions[currentQuestionIndex].isWeb,
+        };
+      }
 
       // Update score
       correctAnswersDiv.textContent = `${score}`;

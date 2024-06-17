@@ -270,7 +270,6 @@
 
         if (answer.correct) {
           button.dataset.correct = answer.correct;
-          
         }
 
         button.addEventListener("click", () => toggleAnswer(button));
@@ -375,27 +374,61 @@
 
       // Store the selected answers in the userAnswers array for the current index (when the user cames back, to update the answers for the current question)
       // if the answers are correct, set correct as 1, else set it as 0
-      userAnswer.set(currentQuestionIndex, {
-        question: questions[currentQuestionIndex].question,
-        // take the index of the selected answers from selectedButtons.data-correct-index and convert to array of integers
-        selectedIndex: selectedButtons.map((button) => parseInt(button.dataset.correctIndex)),
-        // take the index of the correct answers
-        correctIndex: questions[currentQuestionIndex].correctAnswerIndexes,
-        isCorrect: arraysEqual(
-          selectedButtons.map((button) => parseInt(button.dataset.correctIndex)),
-          questions[currentQuestionIndex].correctAnswerIndexes
-        ),
-        isWeb: questions[currentQuestionIndex].isWeb,
-        selectedAnswer: selectedButtons.map((button) => escape(button.textContent)),
-        // take the index of the correct answers
-        correctAnswers: questions[currentQuestionIndex].answers
-          .filter((answer) => answer.correct)
-          .map((answer) => {
-            // Use a regular expression to remove HTML tags
-            const plainText = answer.text.replace(/<\/?[^>]+(>|$)/g, "");
-            return plainText;
-          }),
-      });
+      if (isWeb) {
+        userAnswer.set(currentQuestionIndex, {
+          question: questions[currentQuestionIndex].question,
+          // take the index of the selected answers from selectedButtons.data-correct-index and convert to array of integers
+          selectedIndex: selectedButtons.map((button) =>
+            parseInt(button.dataset.correctIndex)
+          ),
+          // take the index of the correct answers
+          correctIndex: questions[currentQuestionIndex].correctAnswerIndexes,
+          isCorrect: arraysEqual(
+            selectedButtons.map((button) =>
+              parseInt(button.dataset.correctIndex)
+            ),
+            questions[currentQuestionIndex].correctAnswerIndexes
+          ),
+          isWeb: questions[currentQuestionIndex].isWeb,
+          selectedAnswer: selectedButtons.map((button) =>
+            escape(button.textContent)
+          ),
+          // take the index of the correct answers
+          correctAnswers: questions[currentQuestionIndex].answers
+            .filter((answer) => answer.correct)
+            .map((answer) => {
+              return answer.text;
+            }),
+        });
+      } else {
+        userAnswer.set(currentQuestionIndex, {
+          question: questions[currentQuestionIndex].question,
+          // take the index of the selected answers from selectedButtons.data-correct-index and convert to array of integers
+          selectedIndex: selectedButtons.map((button) =>
+            parseInt(button.dataset.correctIndex)
+          ),
+          // take the index of the correct answers
+          correctIndex: questions[currentQuestionIndex].correctAnswerIndexes,
+          isCorrect: arraysEqual(
+            selectedButtons.map((button) =>
+              parseInt(button.dataset.correctIndex)
+            ),
+            questions[currentQuestionIndex].correctAnswerIndexes
+          ),
+          isWeb: questions[currentQuestionIndex].isWeb,
+          selectedAnswer: selectedButtons.map((button) =>
+            escape(button.textContent)
+          ),
+          // take the index of the correct answers
+          correctAnswers: questions[currentQuestionIndex].answers
+            .filter((answer) => answer.correct)
+            .map((answer) => {
+              // Use a regular expression to remove HTML tags
+              const plainText = answer.text.replace(/<\/?[^>]+(>|$)/g, "");
+              return plainText;
+            }),
+        });
+      }
 
       // add answered class to the question number button
       const questionButtons = Array.from(navigation_questions.children);

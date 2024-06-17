@@ -170,9 +170,7 @@
     }
 
     function escape(htmlStr) {
-      return htmlStr
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
+      return htmlStr.replace(/</g, "&lt;").replace(/>/g, "&gt;");
     }
     function arraysEqual(a, b) {
       if (a.length !== b.length) return false;
@@ -319,16 +317,18 @@
         correctAnswers: questions[currentQuestionIndex].answers
           .filter((answer) => answer.correct)
           .map((answer) => {
-            // Use a regular expression to remove HTML tags
-            const plainText = answer.text.replace(/<\/?[^>]+(>|$)/g, "");
-            return plainText;
+            return escape(answer.text);
           }),
         // take the index of the selected answers from selectedButtons.data-correct-index and convert to array of integers
-        selectedIndex: selectedButtons.map((button) => parseInt(button.dataset.correctIndex)),
+        selectedIndex: selectedButtons.map((button) =>
+          parseInt(button.dataset.correctIndex)
+        ),
         // take the index of the correct answers
         correctIndex: questions[currentQuestionIndex].correctAnswerIndexes,
         isCorrect: arraysEqual(
-          selectedButtons.map((button) => parseInt(button.dataset.correctIndex)),
+          selectedButtons.map((button) =>
+            parseInt(button.dataset.correctIndex)
+          ),
           questions[currentQuestionIndex].correctAnswerIndexes
         ),
         isWeb: true,
@@ -428,6 +428,8 @@
 
       // Add the button to the DOM below the quiz div
       nextButton.insertAdjacentElement("afterend", goButton);
+
+      console.log(userAnswers);
 
       // Add event listener to the button to go to the result page
       goButton.addEventListener("click", () => {
