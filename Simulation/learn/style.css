@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #0d0a20;
+  background: #061814;
   height: 90vh;
 }
 
@@ -32,7 +32,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #221b49;
+  background-color: #133b33;
   padding: 10px 0;
   border-bottom: 0.3rem solid #fafafa;
 }
@@ -47,7 +47,7 @@ nav ul li {
   margin: 0 10px;
 }
 nav ul li button {
-  background-color: #221b49;
+  background-color: #133b33;
   color: white;
   padding: 14px 20px;
   border: none;
@@ -57,10 +57,10 @@ nav ul li button {
   transition: background-color 0.3s;
 }
 nav ul li button:hover {
-  background-color: #7c2c47;
+  background-color: #497c2c;
 }
 nav ul li button.active {
-  background-color: #6c3d91;
+  background-color: #3d914f;
 }
 
 .learn-container {
@@ -85,10 +85,10 @@ nav ul li button.active {
 .question-block {
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #221b49;
-  border: 1px solid #ddd;
+  background-image: radial-gradient(circle, #114a3e, #003c42, #002c42, #001c3b, #0c032a);
+  border: 0.3rem solid #ddd;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.8);
 }
 .question-block h4 {
   font-size: 18px;
@@ -167,7 +167,7 @@ nav ul li button.active {
 }
 
 .code {
-  background-color: #5c50a5;
+  background-color: #2d553f;
   border: 1px solid #2b466e;
   border-radius: 1rem;
   padding: 15px;
@@ -220,7 +220,7 @@ nav ul li button.active {
     display: none;
     position: absolute;
     width: 100%;
-    background-color: #221b49;
+    background-color: #133b33;
     padding: 0;
   }
   .nav-links li {
@@ -246,16 +246,17 @@ nav ul li button.active {
   .show {
     display: block;
   }
+  #search-box {
+    top: 10px;
+    right: 10px;
+  }
 }
 .app {
-  background: #15112e;
-  width: 90%;
+  width: 100%;
   max-width: 80rem;
   margin: 100px auto 0;
   margin-bottom: 20px;
-  border-radius: 10px;
   padding: 30px;
-  border: 0.15rem solid #fafafa;
 }
 
 :root {
@@ -410,4 +411,51 @@ nav ul li button.active {
     transform: scale(1);
     color: rgba(250, 250, 250, 0.6784313725);
   }
+}
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Search styles */
+#search-box {
+  background: rgb(34, 104, 170) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQBJREFUeNqslI0RgyAMhdENWIEVWMEVXIGO0BW6Ah2hHcGOoCPYEewINFzBe9IA9id37w4kfEZesHHOCSYUqSPJML+RJlELDwN1pMHxMZNMkr8RTgyz2YPH5LmtwXpIHkOFmKhIlxowDmYAycKnHAHYcTCsSpXOJCie6YWDnXKLGeHLN2stGaqDsXXrX3GFcYcLrfhjtKEhffQ792gYT2nT6pJDjCw4z7ZGdGipOIqNbXIwFUARmCbKpMfYxsWJBmCEDoW7+gYUTAU2s3HJrK3AJvMLkqGHFLgWXTckm+SfSQexs+tLRqwVfgvjgMsvMAT689S5M/sk/I14kO5PAQYAuk6L1q+EdHMAAAAASUVORK5CYII=) no-repeat 15px 15px;
+  text-indent: 1em;
+  display: inline-block;
+  position: fixed;
+  top: 6px;
+  right: 10px;
+  z-index: 20;
+  border: 0 none;
+  width: 0;
+  height: 3.3rem;
+  border-radius: 3em;
+  transition: 0.3s;
+  outline: none;
+  padding: 1em 1.5em;
+  cursor: pointer;
+  -webkit-appearance: none;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  color: #999;
+  vertical-align: baseline;
+}
+
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+#search-box:hover,
+#search-box:focus {
+  background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAT5JREFUeNqsVLtOw0AQtIMlRJHCEhUVMg398QEUSZnSfILzCXxDPsFu6XAJHWnTcS1lWsprKdmLxtKwvjVBYaTV7cm+udnX5fPb+yyBSmwhVmK/FfPZLyjUPhI8YtXYi23EOovs7PzyevAbsWeoGg5HNUHsCipX8F9TZDOstVgLPxIsxW6w3sHv6dJ2StkLbh6IPtR/AWRfSIET20H9D2U1hfaAgxY2KMagcBSmg9/rmwx0lBqTzGfHoVfVHxXgXzCjHNRHnnHke4vMGc2q0RBR0GSeCLlpLaJGFWKUszVuib32nih7iTFrjXAPyGnQ48c3Gu5AOVlMtMk6NZuf+FiC+AIhV0T+pBQ5ntXceIJKqKko2duJ2TwoLAz5QTVnagJaXWEO8y/wSMuKH9RTJoCTHyNZFidOUEfNu/8WYAAOXUT04MOtlwAAAABJRU5ErkJggg==) 15px 15px no-repeat;
+}
+
+#search-box:focus {
+  width: 31%;
+  cursor: text;
 }/*# sourceMappingURL=style.css.map */
