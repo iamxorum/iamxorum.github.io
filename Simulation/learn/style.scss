@@ -163,18 +163,22 @@ nav {
 
 .tab {
   margin-left: 20px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .tab_2 {
   margin-left: 40px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .tab_3 {
   margin-left: 60px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .tab_4 {
   margin-left: 80px;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .code {
@@ -185,8 +189,10 @@ nav {
   font-family: "Courier New", Courier, monospace;
   color: rgb(255, 217, 93);
   overflow-x: auto;
+  overflow-y: hidden; /* Hide vertical scrollbar if any */
   margin: 20px 0;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  white-space: nowrap; /* Prevent text from wrapping */
 
   pre {
     margin: 0;
@@ -201,8 +207,10 @@ nav {
   font-family: "Courier New", Courier, monospace;
   color: rgb(255, 255, 255);
   overflow-x: auto;
+  overflow-y: hidden; /* Hide vertical scrollbar if any */
   margin: 20px 0;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  white-space: nowrap; /* Prevent text from wrapping */
 
   pre {
     margin: 0;

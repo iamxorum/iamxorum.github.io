@@ -319,7 +319,7 @@
   },
   {
     "id": 35,
-    "question": "Ce se va afişa la execuţia urmatorului program Java?<br><br>interface I1 {<br><span class=\"tab\">float x=2.3f;<br>}<br>public class Test implements I1{ <br><span class=\"tab\">public static void main(String [] args) {<br><span class=\"tab_2\">System.out.print(x+\" \");<br><span class=\"tab_2\">x=6.7f;<br><span class=\"tab_2\">System.out.print(x);<br><span class=\"tab\">}<br>}</div><br><br>",
+    "question": "Ce se va afişa la execuţia urmatorului program Java?<br><br><div class=\"code\">interface I1 {<br><span class=\"tab\">float x=2.3f;<br>}<br>public class Test implements I1{ <br><span class=\"tab\">public static void main(String [] args) {<br><span class=\"tab_2\">System.out.print(x+\" \");<br><span class=\"tab_2\">x=6.7f;<br><span class=\"tab_2\">System.out.print(x);<br><span class=\"tab\">}<br>}</div><br><br>",
     "answers": [
       "Va aparea eroare la compilare deoarece valoarea variabilei x nu se mai poatemodifica;",
       "La execuţie se va afişa: 2.3f 6.7f;",
@@ -381,8 +381,7 @@
       "eXamen",
       "Examen"
     ],
-    "correctAnswerIndexes": [3],
-    "tobereviewd": "true"
+    "correctAnswerIndexes": [3]
   },
   {
     "id": 41,
