@@ -23,7 +23,7 @@
     }
 
     //sleep for 1 second
-    await sleep(Math.floor(Math.random() * 5000) + 2000);
+    await sleep(Math.floor(Math.random() * 2000) + 1000);
 
     let json1;
 
@@ -134,6 +134,7 @@
           ),
         })),
         tobereviewd: questionData.tobereviewd,
+        details: questionData.details,
       }));
 
       // Shuffle the answers for each question and update the correct answer indexes
@@ -333,6 +334,89 @@
         ),
         isWeb: true,
       };
+
+      // Add a button to display the the details of the question if the question has details to be displayed
+      if (questions[currentQuestionIndex].details) {
+        const detailsButton = document.createElement("button");
+        detailsButton.innerHTML = "Details";
+        detailsButton.classList.add("details_btn");
+        detailsButton.style.backgroundColor = "#4447f1";
+        detailsButton.style.color = "#fafafa";
+        detailsButton.style.fontWeight = "bold";
+        detailsButton.style.borderRadius = "5px";
+        detailsButton.style.width = "100%";
+        detailsButton.style.marginTop = "1rem";
+        detailsButton.style.marginBottom = "1rem";
+        detailsButton.style.padding = "1rem";
+        detailsButton.style.fontSize = "1rem";
+        detailsButton.style.cursor = "pointer";
+        detailsButton.style.transition = "all 0.3s";
+        detailsButton.style.display = "block";
+
+        // Add the details button to the answerButtons div
+        answerButtons.appendChild(detailsButton);
+
+        // Add an event listener to the details button to display the details of the question
+        detailsButton.addEventListener("click", () => {
+          // Create a new div to display the details of the question
+          const detailsDiv = document.createElement("div");
+          detailsDiv.innerHTML = questions[currentQuestionIndex].details;
+          detailsDiv.style.marginTop = "1rem";
+          detailsDiv.style.marginBottom = "1rem";
+          detailsDiv.style.padding = "1rem";
+          detailsDiv.style.backgroundColor = "#f1f1f1";
+          detailsDiv.style.borderRadius = "5px";
+          detailsDiv.style.fontSize = "1rem";
+          detailsDiv.style.lineHeight = "1.5rem";
+          detailsDiv.style.fontWeight = "normal";
+          detailsDiv.style.color = "#000";
+          detailsDiv.style.transition = "all 0.3s";
+          detailsDiv.style.display = "block";
+          detailsDiv.style.width = "100%";
+
+          // Check if the details div already exists, if it does, remove it before creating a new one
+          const detailsDivEx = document.getElementById("details-div");
+          if (detailsDivEx) {
+            detailsDivEx.remove();
+          }
+
+          // Add an id to the detailsDiv
+          detailsDiv.id = "details-div";
+
+          // Insert the detailsDiv after the details button
+          detailsButton.insertAdjacentElement("afterend", detailsDiv);
+
+          detailsButton.remove();
+
+          // Add a button to hide the details
+          const hideButton = document.createElement("button");
+          hideButton.innerHTML = "Hide Details";
+          hideButton.classList.add("details_btn");
+          hideButton.style.backgroundColor = "#4447f1";
+          hideButton.style.color = "#fafafa";
+          hideButton.style.fontWeight = "bold";
+          hideButton.style.borderRadius = "5px";
+          hideButton.style.width = "100%";
+          hideButton.style.marginTop = "1rem";
+          hideButton.style.marginBottom = "1rem";
+          hideButton.style.padding = "1rem";
+          hideButton.style.fontSize = "1rem";
+          hideButton.style.cursor = "pointer";
+          hideButton.style.transition = "all 0.3s";
+          hideButton.style.display = "block";
+
+          // Add an event listener to the hide button to hide the details
+          hideButton.addEventListener("click", () => {
+            // Add the details button back before removing the detailsDiv
+            answerButtons.appendChild(detailsButton);
+            detailsDiv.remove();
+            hideButton.remove();
+          });
+
+          // Insert the hideButton after the detailsDiv
+          detailsDiv.insertAdjacentElement("afterend", hideButton);
+        });
+      }
 
       // Update score
       correctAnswersDiv.textContent = `${score}`;

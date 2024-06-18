@@ -594,3 +594,32 @@ body {
   background-color: #f14545 !important;
   color: #fafafa !important;
 }
+
+pre code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px; /* Adjust the font size as needed */
+  background-color: #e2e2e2; /* Light gray background for better readability */
+  padding: 10px; /* Add some padding around the code */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #333333; /* Add a border around the code */
+  display: block; /* Ensure it takes the full width */
+  overflow-x: auto; /* Add horizontal scroll if the code is too wide */
+  white-space: pre;
+  // shadow
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+
+.details_btn {
+  background-color: #007bff;
+  color: #f7fbff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #f7fbff !important;
+    color: #007bff !important;
+  }
+}

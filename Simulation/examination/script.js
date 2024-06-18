@@ -40,7 +40,7 @@
     }
 
     //sleep for 1 second
-    await sleep(Math.floor(Math.random() * 5000) + 2000);
+    await sleep(Math.floor(Math.random() * 2000) + 1000);
 
     let allQuestionsArray;
 

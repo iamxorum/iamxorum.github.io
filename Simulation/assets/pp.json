@@ -8,7 +8,8 @@
       "<div class=\"code_2\">float x[100];</div>",
       "<div class=\"code_2\">real x(100);</div>"
     ],
-    "correctAnswerIndexes": [1, 2]
+    "correctAnswerIndexes": [1, 2],
+    "details": "<p>\u00cen limbajul de programare C, un tablou unidimensional (vector) \u00een care se pot memora cel mult 100 de numere reale se declar\u0103 corect folosind urm\u0103toarele variante:</p>\n<ul>\n<li>b) <code>double x[100];</code></li>\n<li>c) <code>float x[100];</code></li>\n</ul>\n<p><strong>Explica\u021bie:</strong></p>\n<ul>\n<li><code>double x[100];</code> declar\u0103 un vector de 100 de elemente de tip <code>double</code>, care reprezint\u0103 numere reale pe 64 de bi\u021bi.</li>\n<li><code>float x[100];</code> declar\u0103 un vector de 100 de elemente de tip <code>float</code>, care reprezint\u0103 numere reale pe 32 de bi\u021bi.</li>\n</ul>\n<p>Celelalte op\u021biuni nu sunt corecte \u00een limbajul C:</p>\n<ul>\n<li>a) <code>x=float[100];</code> nu este o sintax\u0103 corect\u0103 \u00een C.</li>\n<li>d) <code>real x(100);</code> nu este o sintax\u0103 corect\u0103 \u00een C.</li>\n</ul>"
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
       "<div class=\"code_2\">(x&lt;0)||(x&gt;=5)</div>",
       "<div class=\"code_2\">(x&lt;=0)&&(x&gt;5)</div>"
     ],
-    "correctAnswerIndexes": [0]
+    "correctAnswerIndexes": [0],
+    "details": "<p>R\u0103spuns corect: <strong>a) (x<=0)||(x>5)</strong></p>\n<p>Justificare:</p>\n<ul>\n<li>Intervalul (0,5] \u00eenseamn\u0103 c\u0103 \ud835\udc65 trebuie s\u0103 fie mai mare dec\u00e2t 0 \u0219i mai mic sau egal cu 5.</li>\n<li>Pentru ca \ud835\udc65 s\u0103 nu apar\u021bin\u0103 acestui interval, \ud835\udc65 trebuie s\u0103 fie fie mai mic sau egal cu 0 (<code>x<=0</code>), fie mai mare dec\u00e2t 5 (<code>x>5</code>).</li>\n<li>Combina\u021bia logic\u0103 <code>(x<=0)||(x>5)</code> este adev\u0103rat\u0103 doar atunci c\u00e2nd \ud835\udc65 nu apar\u021bine intervalului (0,5].</li>\n</ul>"
   },
   {
     "id": 3,
@@ -30,25 +32,29 @@
       "<div class=\"code_2\">(x&gt;1)&&(x&lt;6)</div>",
       "<div class=\"code_2\">(x&gt;1)&&(x&lt;=6)</div>"
     ],
-    "correctAnswerIndexes": [3]
+    "correctAnswerIndexes": [3],
+    "details": "<p>R\u0103spuns corect: <strong>d) (x>1)&&(x<=6)</strong></p>\n<p>Expresia corect\u0103 este <code>(x>1)&&(x<=6)</code> deoarece:</p>\n<ul>\n<li>Intervalul (1,6] \u00eenseamn\u0103 c\u0103 \ud835\udc65 trebuie s\u0103 fie mai mare dec\u00e2t 1 \u0219i mai mic sau egal cu 6.</li>\n<li>Expresia <code>(x>1)</code> verific\u0103 dac\u0103 \ud835\udc65 este mai mare dec\u00e2t 1.</li>\n<li>Expresia <code>(x<=6)</code> verific\u0103 dac\u0103 \ud835\udc65 este mai mic sau egal cu 6.</li>\n<li>Astfel, expresia <code>(x>1)&&(x<=6)</code> este adev\u0103rat\u0103 doar atunci c\u00e2nd \ud835\udc65 apar\u021bine intervalului (1,6].</li>\n</ul>"
   },
   {
     "id": 4,
     "question": "După executarea instrucțiunii float x = 27/5*2/3*7; ce valoare va fi memorată în variabila 𝑥?",
     "answers": ["25.2", "21", "6.3", "7"],
-    "correctAnswerIndexes": [1]
+    "correctAnswerIndexes": [1],
+    "details": "<p>Dup\u0103 executarea instruc\u021biunii <code>float x = 27/5*2/3*7;</code> valoarea memorat\u0103 \u00een variabila \ud835\udc65 va fi 21 deoarece:</p>\n<ul>\n<li>Opera\u021biile se efectueaz\u0103 conform ordinii de preceden\u021b\u0103 \u0219i cu tipuri de date implicite (\u00een acest caz, \u00eentregi).</li>\n<li><code>27 / 5</code> se evalueaz\u0103 ca 5 (\u00eemp\u0103r\u021bire \u00eentre \u00eentregi).</li>\n<li><code>5 * 2</code> se evalueaz\u0103 ca 10.</li>\n<li><code>10 / 3</code> se evalueaz\u0103 ca 3 (\u00eemp\u0103r\u021bire \u00eentre \u00eentregi).</li>\n<li><code>3 * 7</code> se evalueaz\u0103 ca 21.</li>\n<li>Rezultatul final este 21, care este apoi convertit la <code>float</code> \u0219i stocat \u00een variabila <code>x</code>.</li>\n</ul>\n<p>R\u0103spuns corect: <strong>b) 21</strong></p>\n<p><strong>Codul C pentru demonstra\u021bie:</strong></p>\n<pre><code>#include &lt;stdio.h&gt;\n\nint main() {\n    float x = 27 / 5 * 2 / 3 * 7;  // Instruc\u021biunea dat\u0103\n    printf(\"x = %f\\n\", x);         // Afi\u0219eaz\u0103 valoarea lui x\n    return 0;\n}\n</code></pre>"
   },
   {
     "id": 5,
     "question": "După executarea instrucțiunii float x = 55/17*5/8+48/5/8*15; ce valoare va fi memorată în variabila 𝑥?",
     "answers": ["17.022058", "17", "16", "21.219914"],
-    "correctAnswerIndexes": [2]
+    "correctAnswerIndexes": [2],
+    "details": "<p>Dup\u0103 executarea instruc\u021biunii <code>float x = 55/17*5/8+48/5/8*15;</code> valoarea memorat\u0103 \u00een variabila \ud835\udc65 va fi **16.0** deoarece:</p>\n<ul>\n<li>Opera\u021biile se efectueaz\u0103 conform ordinii de preceden\u021b\u0103 \u0219i cu tipuri de date implicite (\u00een acest caz, \u00eentregi).</li>\n<li><code>55 / 17</code> se evalueaz\u0103 ca 3 (\u00eemp\u0103r\u021bire \u00eentre \u00eentregi).</li>\n<li><code>3 * 5</code> se evalueaz\u0103 ca 15.</li>\n<li><code>15 / 8</code> se evalueaz\u0103 ca 1 (\u00eemp\u0103r\u021bire \u00eentre \u00eentregi).</li>\n<li><code>48 / 5</code> se evalueaz\u0103 ca 9 (\u00eemp\u0103r\u021bire \u00eentre \u00eentregi).</li>\n<li><code>9 / 8</code> se evalueaz\u0103 ca 1 (\u00eemp\u0103r\u021bire \u00eentre \u00eentregi).</li>\n<li><code>1 * 15</code> se evalueaz\u0103 ca 15.</li>\n<li><code>1 + 15</code> se evalueaz\u0103 ca 16.</li>\n<li>Deoarece variabila \ud835\udc65 este de tip float, rezultatul 16 este convertit implicit la 16.0 \u0219i stocat \u00een variabila <code>x</code>.</li>\n</ul>\n<p>R\u0103spuns corect: <strong>c) 16</strong></p>\n<p><strong>Codul C pentru demonstra\u021bie:</strong></p>\n<pre><code>#include &lt;stdio.h&gt;\n\nint main() {\n    float x = 55 / 17 * 5 / 8 + 48 / 5 / 8 * 15;  // Instruc\u021biunea dat\u0103\n    printf(\"x = %f\\n\", x);         // Afi\u0219eaz\u0103 valoarea lui x\n    return 0;\n}\n</code></pre>"
   },
   {
     "id": 6,
     "question": "Se consideră următoarea secvenţă de instrucțiuni:<br><br><div class=\"code\">int t=0,a=1234,b=10;<br>while(a&gt;=b) {<br><span class=\"tab\"></span>a=a-b;<br><span class=\"tab\"></span>t++;<br>}<br>printf(\"%d %d\",t,a);</div><br><br>Ce valori vor fi afișate pe ecran după executarea secvenței de mai sus?",
     "answers": ["124 4", "123 4", "123 5", "124 3"],
-    "correctAnswerIndexes": [1]
+    "correctAnswerIndexes": [1],
+    "details": "<p>Valorile afi\u0219ate pe ecran vor fi <b>123 4</b>.</p>\n<p>Explica\u021bie:</p>\n<ul>\n<li>Ini\u021bial, <code>t = 0</code>, <code>a = 1234</code> \u0219i <code>b = 10</code>.</li>\n<li>Ciclul <code>while</code> se execut\u0103 c\u00e2t timp <code>a</code> este mai mare sau egal cu <code>b</code>.</li>\n<li>La fiecare itera\u021bie:\n<ul>\n<li><code>a</code> este decrementat cu valoarea lui <code>b</code> (<code>a = a - b</code>).</li>\n<li><code>t</code> este incrementat cu 1 (<code>t++</code>).</li>\n</ul>\n</li>\n<li>Ciclul se opre\u0219te c\u00e2nd <code>a</code> devine mai mic dec\u00e2t <code>b</code>.</li>\n<li>Dup\u0103 executarea ciclului, valorile finale sunt <code>t = 123</code> \u0219i <code>a = 4</code>.</li>\n<li>Instruc\u021biunea <code>printf</code> afi\u0219eaz\u0103 aceste valori separate prin spa\u021biu.</li>\n</ul>\n<p>R\u0103spuns corect: <strong>b) 123 4</strong></p>\n<p>Cod C pentru demonstra\u021bie:</p>\n<pre><code>#include &lt;stdio.h&gt;\n\nint main() {\n    int t = 0, a = 1234, b = 10;\n    while (a >= b) {\n        a = a - b;\n        t++;\n    }\n    printf(\"%d %d\\n\", t, a);\n    return 0;\n}\n</code></pre>"
   },
   {
     "id": 7,
@@ -59,7 +65,8 @@
       "<div class=\"code_2\">for(i=1;i&lt;=3;i++) printf(\"%d\",7-i);</div>",
       "<div class=\"code_2\">s=7;<br>while(s&gt;=1) printf(\"%d\",s-1);</div>"
     ],
-    "correctAnswerIndexes": [2]
+    "correctAnswerIndexes": [2],
+    "details": "<p>R\u0103spuns corect: <strong>c) for(i=1;i<=3;i++) printf(\"%d\",7-i);</strong></p>\n<p>Justificare:</p>\n<ul>\n<li>Secven\u021ba <code>for(i=1;i<=3;i++) printf(\"%d\",7-i);</code> afi\u0219eaz\u0103 valorile 6, 5 \u0219i 4, concaten\u00e2ndu-le \u00een 654.</li>\n<li>Variabila <code>i</code> ia valorile de la 1 la 3.</li>\n<li>La fiecare itera\u021bie, se afi\u0219eaz\u0103 <code>7-i</code>, astfel rezult\u00e2nd 6, 5 \u0219i 4.</li>\n</ul>\n<p>Cod C pentru demonstra\u021bie:</p>\n<pre><code>#include &lt;stdio.h&gt;\n\nint main() {\n    int i;\n    for(i = 1; i <= 3; i++) {\n        printf(\"%d\", 7 - i);\n    }\n    return 0;\n}\n</code></pre>"
   },
   {
     "id": 8,
@@ -472,6 +479,7 @@
     "id": 50,
     "question": "Considerăm următorul program:<br><br><div class=\"code\">#include&lt;stdio.h&gt;<br>void p(int v[],int *n) {<br><span class=\"tab\"></span>int i,j,g;<br><span class=\"tab\"></span>do {<br><span class=\"tab_2\"></span>g=0;<br><span class=\"tab_2\"></span>for(i=0;i&lt;*n;i++)<br><span class=\"tab_3\"></span>if(v[i]&lt;0) {<br><span class=\"tab_4\"></span>for(j=i;j&lt;*n-1;j++) v[j]=v[j+1];<br><span class=\"tab_4\"></span>(*n)--;<br><span class=\"tab_4\"></span>g=1;<br><span class=\"tab_3\"></span>}<br><span class=\"tab_2\"></span>}<br><span class=\"tab\"></span>while(g);<br>}<br><br>int main() {<br><span class=\"tab\"></span>int i,v[]={-1,2,-3,-4,5},n=5;<br><span class=\"tab\"></span>p(v,&n);<br><span class=\"tab\"></span>for(i=0;i&lt;n;i++)<br><span class=\"tab_2\"></span>printf(\"%d \",v[i]);<br><span class=\"tab\"></span>return 0;<br>}</div><br><br>Ce valori vor fi afișate pe ecran după executarea programului de mai sus?",
     "answers": ["–1 -3 -4", "2 5", "–1 2 -3 -4", "2 -3 -4 5"],
-    "correctAnswerIndexes": [1]
+    "correctAnswerIndexes": [1],
+    "details": "<p>R\u0103spuns corect: <strong>b) 2 5</strong></p>\n<p>Justificare:</p>\n<ul>\n<li>Programul de mai sus elimin\u0103 toate valorile negative din tabloul <code>v</code>. Func\u021bia <code>p</code> prime\u0219te un tablou de numere \u00eentregi <code>v</code> \u0219i un pointer <code>n</code> care reprezint\u0103 num\u0103rul de elemente din tablou.</li>\n<li><strong>Ini\u021bializarea \u0219i bucla <code>do-while</code></strong>: <code>do { g = 0; for (i = 0; i < *n; i++) { if (v[i] < 0) { for (j = i; j < *n - 1; j++) { v[j] = v[j + 1]; } (*n)--; g = 1; break; } } } while (g);</code> - <code>g</code> este un flag care indic\u0103 dac\u0103 a fost eliminat un element negativ. - Bucla <code>for</code> itereaz\u0103 prin toate elementele tabloului <code>v</code>. - Dac\u0103 un element <code>v[i]</code> este negativ, acesta este eliminat prin mutarea tuturor elementelor urm\u0103toare cu o pozi\u021bie spre st\u00e2nga. - Dimensiunea tabloului <code>n</code> este decrementat\u0103. - <code>g</code> este setat la 1 pentru a continua bucla <code>do-while</code>.</li>\n<li><strong>Apelarea func\u021biei <code>p</code> \u0219i afi\u0219area rezultatului</strong>: <code>p(v, &n); for (i = 0; i < n; i++) printf(\"%d \", v[i]);</code> - Func\u021bia <code>p</code> este apelat\u0103 pentru a elimina valorile negative din <code>v</code>. - Valorile r\u0103mase \u00een <code>v</code> sunt afi\u0219ate pe ecran.</li>\n<li>Programul va elimina toate valorile negative din tabloul <code>v</code>, l\u0103s\u00e2nd doar valorile <code>2</code> \u0219i <code>5</code>.</li>\n</ul>\n<p>Codul C pentru demonstra\u021bie:</p>\n<pre><code>#include &lt;stdio.h&gt;\n\nvoid p(int v[], int *n) {\n    int i, j, g;\n    do {\n        g = 0;\n        for (i = 0; i < *n; i++) {\n            if (v[i] < 0) {\n                for (j = i; j < *n - 1; j++) {\n                    v[j] = v[j + 1];\n                }\n                (*n)--;\n                g = 1;\n                break;\n            }\n        }\n    } while (g);\n}\n\nint main() {\n    int i, v[] = { -1, 2, -3, -4, 5 }, n = 5;\n    p(v, &n);\n    for (i = 0; i < n; i++)\n        printf(\"%d \", v[i]);\n    return 0;\n}\n</code></pre>"
   }
 ]
