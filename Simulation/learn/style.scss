@@ -481,12 +481,12 @@ nav {
 #search-box {
   background: rgb(34, 104, 170)
     url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQBJREFUeNqslI0RgyAMhdENWIEVWMEVXIGO0BW6Ah2hHcGOoCPYEewINFzBe9IA9id37w4kfEZesHHOCSYUqSPJML+RJlELDwN1pMHxMZNMkr8RTgyz2YPH5LmtwXpIHkOFmKhIlxowDmYAycKnHAHYcTCsSpXOJCie6YWDnXKLGeHLN2stGaqDsXXrX3GFcYcLrfhjtKEhffQ792gYT2nT6pJDjCw4z7ZGdGipOIqNbXIwFUARmCbKpMfYxsWJBmCEDoW7+gYUTAU2s3HJrK3AJvMLkqGHFLgWXTckm+SfSQexs+tLRqwVfgvjgMsvMAT689S5M/sk/I14kO5PAQYAuk6L1q+EdHMAAAAASUVORK5CYII=)
-    no-repeat 15px 15px;
+    no-repeat 14px 14px;
   text-indent: 1em;
   display: inline-block;
   position: fixed;
-  top: 6px;
-  right: 10px;
+  bottom: 1rem;
+  right: 1rem;
   z-index: 20;
   border: 0 none;
   width: 0;
@@ -512,11 +512,11 @@ input[type="search"]::-webkit-search-cancel-button {
 #search-box:focus {
   background: #fff
     url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAT5JREFUeNqsVLtOw0AQtIMlRJHCEhUVMg398QEUSZnSfILzCXxDPsFu6XAJHWnTcS1lWsprKdmLxtKwvjVBYaTV7cm+udnX5fPb+yyBSmwhVmK/FfPZLyjUPhI8YtXYi23EOovs7PzyevAbsWeoGg5HNUHsCipX8F9TZDOstVgLPxIsxW6w3sHv6dJ2StkLbh6IPtR/AWRfSIET20H9D2U1hfaAgxY2KMagcBSmg9/rmwx0lBqTzGfHoVfVHxXgXzCjHNRHnnHke4vMGc2q0RBR0GSeCLlpLaJGFWKUszVuib32nih7iTFrjXAPyGnQ48c3Gu5AOVlMtMk6NZuf+FiC+AIhV0T+pBQ5ntXceIJKqKko2duJ2TwoLAz5QTVnagJaXWEO8y/wSMuKH9RTJoCTHyNZFidOUEfNu/8WYAAOXUT04MOtlwAAAABJRU5ErkJggg==)
-    15px 15px no-repeat;
+    14px 14px no-repeat;
 }
 
 #search-box:focus {
-  width: 31%;
+  width: 98%;
   cursor: text;
 }
 
@@ -547,4 +547,13 @@ pre code {
     background-color: #f7fbff !important;
     color: #007bff !important;
   }
+}
+
+.details_div {
+  display: none;
+  padding: 20px;
+  background-color: #f7fbff;
+  border-radius: 5px;
+  margin: 20px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
 }
