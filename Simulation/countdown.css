@@ -31,6 +31,13 @@
   max-width: 720px;
   margin: 0 auto;
 }
+@media screen and (max-width: 768px) {
+  .wrap .countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .wrap .countdown .bloc-time {
   float: left;
   margin-right: 2rem;
@@ -39,6 +46,11 @@
 }
 .wrap .countdown .bloc-time:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 768px) {
+  .wrap .countdown .bloc-time {
+    margin-right: 0;
+  }
 }
 .wrap .countdown .count-title {
   display: block;
