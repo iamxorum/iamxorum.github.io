@@ -167,7 +167,7 @@
       "c) Monitoriza si comanda o instanta EC2",
       "d) Trimite mesaje de tip AWS Simple Notification Services (SNS)"
     ],
-    "correctAnswerIndexes": [2]
+    "correctAnswerIndexes": [0, 1, 3]
   },
   {
     "id": 19,

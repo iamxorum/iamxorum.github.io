@@ -6,6 +6,7 @@
       rel="icon"
       href="https://www.utm.ro/wp-content/uploads/2017/02/sigla-l-1.png"
     />
+    <link rel="stylesheet" href="./countdown.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quizzes</title>
     <style>
@@ -102,66 +103,160 @@
         }
       }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/EasePack.min.js"></script>
   </head>
   <body>
     <button class="back" onclick="window.location.href = '../index.html';">
       Back
     </button>
-    <div class="grid grid-3 learn">
-      <button onclick="location.href='learn/learn.html'">Learning Mode</button>
+    <div class="app">
+      <div class="wrap">
+        <h1>Examen <strong>Licenta</strong></h1>
+
+        <div class="countdown">
+          <div class="bloc-time hours" data-init-value="24">
+            <span class="count-title">Hours</span>
+
+            <div class="figure hours hours-1">
+              <span class="top">2</span>
+              <span class="top-back">
+                <span>2</span>
+              </span>
+              <span class="bottom">2</span>
+              <span class="bottom-back">
+                <span>2</span>
+              </span>
+            </div>
+
+            <div class="figure hours hours-2">
+              <span class="top">4</span>
+              <span class="top-back">
+                <span>4</span>
+              </span>
+              <span class="bottom">4</span>
+              <span class="bottom-back">
+                <span>4</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="bloc-time min" data-init-value="0">
+            <span class="count-title">Minutes</span>
+
+            <div class="figure min min-1">
+              <span class="top">0</span>
+              <span class="top-back">
+                <span>0</span>
+              </span>
+              <span class="bottom">0</span>
+              <span class="bottom-back">
+                <span>0</span>
+              </span>
+            </div>
+
+            <div class="figure min min-2">
+              <span class="top">0</span>
+              <span class="top-back">
+                <span>0</span>
+              </span>
+              <span class="bottom">0</span>
+              <span class="bottom-back">
+                <span>0</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="bloc-time sec" data-init-value="0">
+            <span class="count-title">Seconds</span>
+
+            <div class="figure sec sec-1">
+              <span class="top">0</span>
+              <span class="top-back">
+                <span>0</span>
+              </span>
+              <span class="bottom">0</span>
+              <span class="bottom-back">
+                <span>0</span>
+              </span>
+            </div>
+
+            <div class="figure sec sec-2">
+              <span class="top">0</span>
+              <span class="top-back">
+                <span>0</span>
+              </span>
+              <span class="bottom">0</span>
+              <span class="bottom-back">
+                <span>0</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-3 learn">
+        <button onclick="location.href='learn/learn.html'">
+          Learning Mode
+        </button>
+      </div>
+      <div class="line"></div>
+      <div class="grid grid-3">
+        <button onclick="location.href='simulation/simulate.html'">
+          Simulation
+        </button>
+        <button id="exam_btn" onclick="location.href='examination/exam.html'">
+          Exam
+        </button>
+      </div>
+      <div class="line"></div>
+      <div class="grid grid-4">
+        <button onclick="location.href='parts/module_1.html'">Modul 1</button>
+        <button onclick="location.href='parts/module_2.html'">Modul 2</button>
+        <button onclick="location.href='parts/module_3.html'">Modul 3</button>
+        <button onclick="location.href='parts/module_4.html'">Modul 4</button>
+      </div>
+      <div class="line"></div>
+      <div class="grid grid-13">
+        <button onclick="location.href='mini_parts/asd.html'">
+          Algoritmi si Structuri de Date
+        </button>
+        <button onclick="location.href='mini_parts/db.html'">
+          Baze de Date
+        </button>
+        <button onclick="location.href='mini_parts/crypto.html'">
+          Criptografie
+        </button>
+        <button onclick="location.href='mini_parts/ce.html'">
+          Comert Electronic
+        </button>
+        <button onclick="location.href='mini_parts/cc.html'">
+          Cloud Computing
+        </button>
+        <button onclick="location.href='mini_parts/cpp.html'">C++</button>
+        <button onclick="location.href='mini_parts/java.html'">Java</button>
+        <button onclick="location.href='mini_parts/pp.html'">
+          Programare Procedurala
+        </button>
+        <button onclick="location.href='mini_parts/tap.html'">
+          Tehnici Avansate de Programare
+        </button>
+        <button onclick="location.href='mini_parts/web.html'">
+          Tehnologii Web
+        </button>
+        <button onclick="location.href='mini_parts/rc.html'">
+          Retele de Calculatoare
+        </button>
+        <button onclick="location.href='mini_parts/so.html'">
+          Sisteme de Operare
+        </button>
+        <button onclick="location.href='mini_parts/sgbd.html'">
+          Sisteme de Gestiune a Bazelor de Date
+        </button>
+        <!-- <button onclick="location.href='mini_parts/orto.html'">UMFCD ORTO</button> -->
+      </div>
     </div>
-    <div class="line"></div>
-    <div class="grid grid-3">
-      <button onclick="location.href='simulation/simulate.html'">
-        Simulation
-      </button>
-      <button id="exam_btn" onclick="location.href='examination/exam.html'">
-        Exam
-      </button>
-    </div>
-    <div class="line"></div>
-    <div class="grid grid-4">
-      <button onclick="location.href='parts/module_1.html'">Modul 1</button>
-      <button onclick="location.href='parts/module_2.html'">Modul 2</button>
-      <button onclick="location.href='parts/module_3.html'">Modul 3</button>
-      <button onclick="location.href='parts/module_4.html'">Modul 4</button>
-    </div>
-    <div class="line"></div>
-    <div class="grid grid-13">
-      <button onclick="location.href='mini_parts/asd.html'">
-        Algoritmi si Structuri de Date
-      </button>
-      <button onclick="location.href='mini_parts/db.html'">Baze de Date</button>
-      <button onclick="location.href='mini_parts/crypto.html'">
-        Criptografie
-      </button>
-      <button onclick="location.href='mini_parts/ce.html'">
-        Comert Electronic
-      </button>
-      <button onclick="location.href='mini_parts/cc.html'">
-        Cloud Computing
-      </button>
-      <button onclick="location.href='mini_parts/cpp.html'">C++</button>
-      <button onclick="location.href='mini_parts/java.html'">Java</button>
-      <button onclick="location.href='mini_parts/pp.html'">
-        Programare Procedurala
-      </button>
-      <button onclick="location.href='mini_parts/tap.html'">
-        Tehnici Avansate de Programare
-      </button>
-      <button onclick="location.href='mini_parts/web.html'">
-        Tehnologii Web
-      </button>
-      <button onclick="location.href='mini_parts/rc.html'">
-        Retele de Calculatoare
-      </button>
-      <button onclick="location.href='mini_parts/so.html'">
-        Sisteme de Operare
-      </button>
-      <button onclick="location.href='mini_parts/sgbd.html'">
-        Sisteme de Gestiune a Bazelor de Date
-      </button>
-      <!-- <button onclick="location.href='mini_parts/orto.html'">UMFCD ORTO</button> -->
-    </div>
+    <script src="./countdown.js"></script>
   </body>
 </html>
