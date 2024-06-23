@@ -193,6 +193,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh; // Changed from height to min-height
+  width: 100%;
   padding: 20px;
 
   @media (max-width: 768px) {
