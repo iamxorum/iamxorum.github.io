@@ -139,6 +139,9 @@ var Countdown = {
 // Initialize countdown
 Countdown.init();
 
+//Hide the countdown when the page loads
+$(".wrap").hide();
+
 // If the button with id "hide" is clicked, hide the "wrap" class, otherwise show it if it is hidden (change the name to show )
 $("#hide").click(function () {
   // Animate the showing//hiding of the countdown
