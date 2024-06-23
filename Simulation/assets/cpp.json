@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "question": "Fie secvența:<br>class cls{<br>public:<br>cls(){ cout<<\"constructor\";}<br>cls(cls &c){cout<<\"constructor de copiere\";}<br>};<br>int f(cls c){ return 1;}<br>int main(){<br>cls c;<br>f(c);<br>return 0;<br>}<br>În momentul executării programului de mai sus:<br>",
+    "question": "Fie secvența:<br><div class=\"code\">class cls{<br><span class=\"tab\">public:<br><span class=\"tab\">cls(){ cout&lt;&lt;\"constructor\";}<br><span class=\"tab\">cls(cls &c){cout&lt;&lt;\"constructor de copiere\";}<br>};<br>int f(cls c){ return 1;}<br>int main(){<br><span class=\"tab\">cls c;<br><span class=\"tab\">f(c);<br><span class=\"tab\">return 0;<br>}</div><br>În momentul executării programului de mai sus:<br>",
     "answers": [
       "a) constructorul de clasă se apelează o dată, iar cel de copiere nu se apelează;",
       "b) constructorul de clasă şi cel de copiere se apelează fiecare câte o dată;",
@@ -13,7 +13,7 @@
   },
   {
     "id": 2,
-    "question": "Fie secvența:<br>class cls{<br>public:<br>cls(){ cout<<\"constructor\";}<br>cls(cls &c){cout<<\"constructor de copiere\";}<br>};<br>int f(cls &c){ return 1;}<br>int main(){<br>cls c;<br>f(c);<br>return 0;<br>}<br>În momentul executării programului de mai sus:<br>",
+    "question": "Fie secvența:<br><div class=\"code\">class cls{<br><span class=\"tab\">public:<br><span class=\"tab\">cls(){ cout&lt;&lt;\"constructor\";}<br><span class=\"tab\">cls(cls &c){cout&lt;&lt;\"constructor de copiere\";}<br>};<br>int f(cls &c){ return 1;}<br>int main(){<br><span class=\"tab\">cls c;<br><span class=\"tab\">f(c);<br><span class=\"tab\">return 0;<br>}</div><br>În momentul executării programului de mai sus:<br>",
     "answers": [
       "a) constructorul clasei se apelează o dată, iar cel de copiere nu se apelează nicio dată;",
       "b) constructorul de clasă şi cel de copiere se apelează fiecare câte o dată;",
@@ -25,7 +25,7 @@
   },
   {
     "id": 3,
-    "question": "Fie secvența:<br>class C{<br>int a;<br>public:<br>virtual void metoda1()=0;<br>virtual void metoda2()=0;<br>};<br>int main(){<br>C *pob; //declarația 1<br>C ob; //declarația 2<br>C *vpob[5]; //declarația 3<br>C vob[5]; //declarația 4<br>return 0;<br>}<br>Declarațiile admise în acest caz sunt:<br>",
+    "question": "Fie secvența:<br><div class=\"code\">class C{<br><span class=\"tab\">int a;<br><span class=\"tab\">public:<br><span class=\"tab_2\">virtual void metoda1()=0;<br><span class=\"tab_2\">virtual void metoda2()=0;<br>};<br>int main(){<br><span class=\"tab\">C *pob; //declarația 1<br><span class=\"tab\">C ob; //declarația 2<br><span class=\"tab\">C *vpob[5]; //declarația 3<br><span class=\"tab\">C vob[5]; //declarația 4<br><span class=\"tab\">return 0;<br>}</div><br>Declarațiile admise în acest caz sunt:<br>",
     "answers": [
       "a) Declarațiile 1 și 2;",
       "b) Declarația 1;",
@@ -37,7 +37,7 @@
   },
   {
     "id": 4,
-    "question": "Fie clasa :<br>class c {<br>int a, b ;<br>public :<br>c (int , int ) ;<br>int det_a ( ) {return a ;}<br>~c () ;<br>};<br>Semnul ~ are rolul :<br>",
+    "question": "Fie clasa :<br><div class=\"code\">class c {<br><span class=\"tab\">int a, b ;<br><span class=\"tab\">public :<br><span class=\"tab_2\">c (int , int ) ;<br><span class=\"tab_2\">int det_a ( ) {return a ;}<br><span class=\"tab_2\">~c () ;<br>};</div><br>Semnul ~ are rolul :<br>",
     "answers": [
       "a) de a nega pe biți rezultatul returnat de metoda c( );",
       "b) de a preciza existența destructorului;",
@@ -49,7 +49,7 @@
   },
   {
     "id": 5,
-    "question": "Secvenţa următoare:<br>class c1{<br>public:<br>int a;<br>c1(int y){ a=y;cout<<\"constructor 1\";}<br>~c1(){cout<<\"destructor 1\";}<br>};<br>class c2:public c1{<br>public:<br>int b;<br>c2(int y, int x):c1(y) { b=x; cout<<\"constructor 2\";}<br>~c2(){cout<<\"destructor 2\";}<br>};<br>int main(){<br>c1 ob1(2);<br>c2 ob2(2,3);<br>return 0;<br>}<br>afișează:<br>",
+    "question": "Secvenţa următoare:<br><div class=\"code\">class c1{<br><span class=\"tab\">public:<br><span class=\"tab_2\">int a;<br><span class=\"tab_2\">c1(int y){ a=y;cout&lt;&lt;\"constructor 1\";}<br><span class=\"tab_2\">~c1(){cout&lt;&lt;\"destructor 1\";}<br>};<br>class c2:public c1{<br><span class=\"tab\">public:<br><span class=\"tab_2\">int b;<br><span class=\"tab_2\">c2(int y, int x):c1(y) { b=x; cout&lt;&lt;\"constructor 2\";}<br><span class=\"tab_2\">~c2(){cout&lt;&lt;\"destructor 2\";}<br>};<br>int main(){<br><span class=\"tab\">c1 ob1(2);<br><span class=\"tab\">c2 ob2(2,3);<br><span class=\"tab\">return 0;<br>}</div><br>afișează:<br>",
     "answers": [
       "a) constructor 1 constructor 2 destructor 2 destructor 1",
       "b) constructor 1 constructor 1 constructor 2 destructor 2 destructor 1 destructor 1",
@@ -61,7 +61,7 @@
   },
   {
     "id": 6,
-    "question": "Fie următorul program C++:<br>#include <iostream.h><br>class B{<br>public:<br>B(){cout<<\"B()\"<<endl;}<br>~B(){cout<<\"~B()\"<<endl;}<br>};<br>class D: public B{<br>public:<br>D(){cout<<\"D()\"<<endl;}<br>~D(){cout<<\"~D()\"<<endl;}<br>};<br>int main(){<br>B *b=new B();<br>delete b;<br>b=new D();<br>delete b;<br>return 0;<br>}<br>Programul afișează:<br>",
+    "question": "Fie următorul program C++:<br><div class=\"code\">#include <iostream.h><br>class B{<br><span class=\"tab\">public:<br><span class=\"tab_2\">B(){cout&lt;&lt;\"B()\"&lt;&lt;endl;}<br><span class=\"tab_2\">~B(){cout&lt;&lt;\"~B()\"&lt;&lt;endl;}<br>};<br>class D: public B{<br><span class=\"tab\">public:<br><span class=\"tab_2\">D(){cout&lt;&lt;\"D()\"&lt;&lt;endl;}<br><span class=\"tab_2\">~D(){cout&lt;&lt;\"~D()\"&lt;&lt;endl;}<br>};<br>int main(){<br><span class=\"tab\">B *b=new B();<br><span class=\"tab\">delete b;<br><span class=\"tab\">b=new D();<br><span class=\"tab\">delete b;<br><span class=\"tab\">return 0;<br>}</div><br>Programul afișează:<br>",
     "answers": [
       "a) B() ~B() B() D() ~D()",
       "b) B() ~B() B() D() ~B()",
@@ -72,7 +72,7 @@
   },
   {
     "id": 7,
-    "question": "Fie programul:<br>#include <iostream.h><br>class B{<br>public:<br>B(){cout<<\"B()\"<<endl;}<br>B(B &b){cout<<\"B(B &b)\"<<endl;}<br>};<br>class D: public B{<br>public:<br>D(){cout<<\"D()\"<<endl;}<br>D(D &d){cout<<\"D(D &d)\"<<endl;}<br>};<br>int main(){<br>B b;<br>B b1(b);<br>D d;<br>D d1(d);<br>return 0;<br>}<br>Programul afișează:<br>",
+    "question": "Fie programul:<br><div class=\"code\">#include <iostream.h><br>class B{<br><span class=\"tab\">public:<br><span class=\"tab_2\">B(){cout&lt;&lt;\"B()\"&lt;&lt;endl;}<br><span class=\"tab_2\">B(B &b){cout&lt;&lt;\"B(B &b)\"&lt;&lt;endl;}<br>};<br>class D: public B{<br><span class=\"tab\">public:<br><span class=\"tab_2\">D(){cout&lt;&lt;\"D()\"&lt;&lt;endl;}<br><span class=\"tab_2\">D(D &d){cout&lt;&lt;\"D(D &d)\"&lt;&lt;endl;}<br>};<br>int main(){<br><span class=\"tab\">B b;<br><span class=\"tab\">B b1(b);<br><span class=\"tab\">D d;<br><span class=\"tab\">D d1(d);<br><span class=\"tab\">return 0;<br>}</div><br>Programul afișează:<br>",
     "answers": [
       "a) B() B(B&b) B() D() B(B &b) D(D &d)",
       "b) B() B() B(B&b) B() D() B(B &b) D() B(B &b)",
@@ -83,7 +83,7 @@
   },
   {
     "id": 8,
-    "question": "8. Fie clasa :<br>class c {<br>int a,b;<br>public:<br>float c (int, int)<br>int get_a {return a;}<br>c ();<br>};<br>Declaraţia float c(int, int) ar putea corespunde unui constructor al clasei?<br>",
+    "question": "Fie clasa :<br><div class=\"code\">class c {<br><span class=\"tab\">int a,b;<br><span class=\"tab\">public:<br><span class=\"tab_2\">float c (int, int)<br><span class=\"tab_2\">int get_a {return a;}<br><span class=\"tab_2\">c ();<br>};</div><br>Declaraţia float c(int, int) ar putea corespunde unui constructor al clasei?<br>",
     "answers": [
       "a) da, fiind o supraîncarcare a celui existent;",
       "b) nu, deoarece crează ambiguitate;",
@@ -94,7 +94,7 @@
   },
   {
     "id": 9,
-    "question": "Fie secvenţa următoare:<br>class persoana{<br>int varsta;<br>public:<br>persoana(int v=18){varsta=v;}<br>persoana& operator++(int){varsta++; return *this;}<br>int get_varsta(){return varsta;}<br>};<br>int main(){<br>persoana p(20);<br>cout<<p++.get_varsta();<br>return 0;<br>}<br>Secvența afișează:",
+    "question": "Fie secvenţa următoare:<br><div class=\"code\">class persoana{<br><span class=\"tab\">int varsta;<br><span class=\"tab\">public:<br><span class=\"tab_2\">persoana(int v=18){varsta=v;}<br><span class=\"tab_2\">persoana& operator++(int){varsta++; return *this;}<br><span class=\"tab_2\">int get_varsta(){return varsta;}<br>};<br>int main(){<br><span class=\"tab\">persoana p(20);<br><span class=\"tab\">cout&lt;&lt;p++.get_varsta();<br><span class=\"tab\">return 0;<br>}</div><br>Secvența afișează:",
     "answers": ["e) 21", "f) 20", "g) 18", "h) 19"],
     "correctAnswerIndexes": [0]
   },
@@ -112,7 +112,7 @@
   },
   {
     "id": 11,
-    "question": "Se consideră următoarea secvență de program:<br>class B{<br>private:<br>int x,y;<br>public:<br>B(int a,int b){ x=a;y=b; }<br>B(const B &a){ x=a.x; y=a.y;}<br>};<br>În care dintre următoarele situații se realizează copierea unui obiect într-altul:",
+    "question": "Se consideră următoarea secvență de program:<br><div class=\"code\">class B{<br><span class=\"tab\">private:<br><span class=\"tab_2\">int x,y;<br><span class=\"tab\">public:<br><span class=\"tab_2\">B(int a,int b){ x=a;y=b; }<br><span class=\"tab_2\">B(const B &a){ x=a.x; y=a.y;}<br>};</div><br>În care dintre următoarele situații se realizează copierea unui obiect într-altul:",
     "answers": [
       "a) B c1(4,5);",
       "b) B c2(0.0, 0,0);",
@@ -124,13 +124,13 @@
   },
   {
     "id": 12,
-    "question": "Fie următorul program:<br>#include<iostream.h><br>class cls {<br>static int i;<br>int j;<br>public:<br>cls(int x=7) { j=x; }<br>static int imp(int k){ cls a; return i+k+a.j; } };<br>int cls::i;<br>int main()<br>{ int k=5;<br>cout<<cls::imp(k);<br>return 0;<br>}<br>Indicați ce se va afișa pe ecran în urma executării programului:",
+    "question": "Fie următorul program:<br><div class=\"code\">#include<iostream.h><br>class cls {<br><span class=\"tab\">static int i;<br><span class=\"tab\">int j;<br><span class=\"tab\">public:<br><span class=\"tab_2\">cls(int x=7) { j=x; }<br><span class=\"tab_2\">static int imp(int k){ cls a; return i+k+a.j; } };<br>int cls::i;<br>int main()<br><span class=\"tab\">{ int k=5;<br><span class=\"tab_2\">cout&lt;&lt;cls::imp(k);<br><span class=\"tab_2\">return 0;<br>}</div><br>Indicați ce se va afișa pe ecran în urma executării programului:",
     "answers": ["a) 11", "b) 13", "c) 12", "d) 14"],
     "correctAnswerIndexes": [2]
   },
   {
     "id": 13,
-    "question": "Fie următorul program:<br>#include <iostream.h><br>class B{<br>public:<br>virtual void f() { cout<<\"B::f() \";}<br>void g() { cout<<\"B::g() \";}<br>};<br>class D: public B{<br>public:<br>void f() { cout<<\"D::f() \";}<br>void g() { cout<<\"D::g() \";}<br>};<br>int main(){<br>int i;<br>B *a=new B();<br>B *b=new D();<br>a->f(); b->f();<br>a->g(); b->g();<br>return 0;<br>}<br>Indicați ce se va afișa pe ecran în urma executării programului:",
+    "question": "Fie următorul program:<br><div class=\"code\">#include <iostream.h><br>class B{<br><span class=\"tab\">public:<br><span class=\"tab_2\">virtual void f() { cout&lt;&lt;\"B::f() \";}<br><span class=\"tab_2\">void g() { cout&lt;&lt;\"B::g() \";}<br>};<br>class D: public B{<br><span class=\"tab\">public:<br><span class=\"tab_2\">void f() { cout&lt;&lt;\"D::f() \";}<br><span class=\"tab_2\">void g() { cout&lt;&lt;\"D::g() \";}<br>};<br>int main(){<br><span class=\"tab\">int i;<br><span class=\"tab\">B *a=new B();<br><span class=\"tab\">B *b=new D();<br><span class=\"tab\">a->f(); b->f();<br><span class=\"tab\">a->g(); b->g();<br><span class=\"tab\">return 0;<br>}</div><br>Indicați ce se va afișa pe ecran în urma executării programului:",
     "answers": [
       "a) D::f() B::f() B::g() B::g()",
       "b) B::f() D::f() B::g() B::g()",
@@ -141,7 +141,7 @@
   },
   {
     "id": 14,
-    "question": "Fie următorul program:<br>#include <iostream.h><br>class B{<br>public:<br>virtual void f() { cout<<\"B::f() \";}<br>void g() { cout<<\"B::g() \";}<br>};<br>class D1: public B{<br>public:<br>void f() { cout<<\"D1::f() \";}<br>void g() { cout<<\"D1::g() \";}<br>};<br>class D2: public B{<br>public:<br>void g() { cout<<\"D2::g() \";}<br>};<br>int main(){<br>int i;<br>B *a=new B();<br>B *b=new D1();<br>B *c=new D2();<br>a->f(); b->f(); c->f();<br>a->g(); b->g(); c->g();<br>return 0;<br>}<br>Indicați ce se va afișa pe ecran în urma executării programului:",
+    "question": "Fie următorul program:<br><div class=\"code\">#include <iostream.h><br>class B{<br><span class=\"tab\">public:<br><span class=\"tab_2\">virtual void f() { cout&lt;&lt;\"B::f() \";}<br><span class=\"tab_2\">void g() { cout&lt;&lt;\"B::g() \";}<br>};<br>class D1: public B{<br><span class=\"tab\">public:<br><span class=\"tab_2\">void f() { cout&lt;&lt;\"D1::f() \";}<br><span class=\"tab_2\">void g() { cout&lt;&lt;\"D1::g() \";}<br>};<br>class D2: public B{<br><span class=\"tab\">public:<br><span class=\"tab_2\">void g() { cout&lt;&lt;\"D2::g() \";}<br>};<br>int main(){<br><span class=\"tab\">int i;<br><span class=\"tab\">B *a=new B();<br><span class=\"tab\">B *b=new D1();<br><span class=\"tab\">B *c=new D2();<br><span class=\"tab\">a->f(); b->f(); c->f();<br><span class=\"tab\">a->g(); b->g(); c->g();<br><span class=\"tab\">return 0;<br>}</div><br>Indicați ce se va afișa pe ecran în urma executării programului:",
     "answers": [
       "e) B::f() D1::f() B::f() B::g() B::g() B::g()",
       "f) D2::f() D1::f() B::f() B::g() B::g() B::g()",
@@ -153,13 +153,13 @@
   },
   {
     "id": 15,
-    "question": "Fie următorul program:<br>#include<iostream.h><br>class salariat{<br>int varsta;<br>public:<br>salariat (int v=20) {varsta =v;}<br>operator int() { return varsta;}<br>salariat& operator++(){varsta++; return *this;}<br>salariat operator++ (int) { varsta++; return *this;}<br>};<br>int main(){<br>salariat s(21);<br>int a=s++, b=++s;<br>cout<<a<<\" \"<<b<<endl;<br>return 0;<br>}<br>Programul afișează:",
+    "question": "Fie următorul program:<br><div class=\"code\">#include<iostream.h><br>class salariat{<br><span class=\"tab\">int varsta;<br><span class=\"tab\">public:<br><span class=\"tab_2\">salariat (int v=20) {varsta =v;}<br><span class=\"tab_2\">operator int() { return varsta;}<br><span class=\"tab_2\">salariat& operator++(){varsta++; return *this;}<br><span class=\"tab_2\">salariat operator++ (int) { varsta++; return *this;}<br>};<br>int main(){<br><span class=\"tab\">salariat s(21);<br><span class=\"tab\">int a=s++, b=++s;<br><span class=\"tab\">cout&lt;&lt;a&lt;&lt;\" \"&lt;&lt;b&lt;&lt;endl;<br><span class=\"tab\">return 0;<br>}</div><br>Programul afișează:",
     "answers": ["a) 20 21", "b) 21 22", "c) 22 23", "d) 20 22", "e) 21 23"],
     "correctAnswerIndexes": [2]
   },
   {
     "id": 16,
-    "question": "Fie următorul program:<br>#include <iostream.h><br>class Cerc{<br>public:<br>float raza;<br>Cerc(float r){raza=r;}<br>float get_raza(){return raza;}<br>Cerc operator++(){raza++; return *this;}<br>Cerc operator--(){raza--; return *this;}<br>};<br>int main(){<br>Cerc c(3.5);<br>cout<<(++(++c)).get_raza()<<\" \";<br>cout<<c.get_raza()<<\" \";<br>cout<<(--(--c)).get_raza()<<\" \";<br>cout<<c.get_raza()<<\" \";<br>return 0;<br>}<br>Programul afișează:",
+    "question": "Fie următorul program:<br><div class=\"code\">#include &lt;iostream.h&gt;<br>class Cerc{<br><span class=\"tab\">public:<br><span class=\"tab_2\">float raza;<br><span class=\"tab_2\">Cerc(float r){raza=r;}<br><span class=\"tab_2\">float get_raza(){return raza;}<br><span class=\"tab_2\">Cerc operator++(){raza++; return *this;}<br><span class=\"tab_2\">Cerc operator--(){raza--; return *this;}<br>};<br>int main(){<br><span class=\"tab\">Cerc c(3.5);<br><span class=\"tab\">cout&lt;&lt;(++(++c)).get_raza()&lt;&lt;\" \";<br><span class=\"tab\">cout&lt;&lt;c.get_raza()&lt;&lt;\" \";<br><span class=\"tab\">cout&lt;&lt;(--(--c)).get_raza()&lt;&lt;\" \";<br><span class=\"tab\">cout&lt;&lt;c.get_raza()&lt;&lt;\" \";<br><span class=\"tab\">return 0;<br>}</div><br>Programul afișează:",
     "answers": [
       "a) 3.5 4.5 2.5 3.5",
       "b) 5.5 4.5 2.5 2.5",
@@ -183,7 +183,7 @@
   },
   {
     "id": 18,
-    "question": "Fie secvența de program:<br>#include <iostream.h><br>class C{<br>public:<br>static int s;<br>};<br>int C::s=0;<br>int main(){<br>int a=7; C::s=a;<br>cout<<C::s;<br>return 0;<br>}<br>În secvența de mai sus, inițializarea lui s este:",
+    "question": "Fie secvența de program:<br><div class=\"code\">#include &lt;iostream.h&gt;<br>class C{<br><span class=\"tab\">public:<br><span class=\"tab_2\">static int s;<br>};<br>int C::s=0;<br>int main(){<br><span class=\"tab\">int a=7; C::s=a;<br><span class=\"tab\">cout&lt;&lt;C::s;<br><span class=\"tab\">return 0;<br>}</div><br>În secvența de mai sus, inițializarea lui s este:",
     "answers": [
       "a) ilegală, deoarece nu există niciun obiect creat;",
       "b) ilegală, deoarece s este inițializat în afara clasei;",
@@ -195,7 +195,7 @@
   },
   {
     "id": 19,
-    "question": "Fie secvența:<br>class complex{<br>double re;<br>double im;<br>public:<br>complex(double x=1.0,double y=6.80){re=x; im=y;}<br>complex( const complex &u){re=u.re;im=u.im;}<br>};<br>Precizaţi în ce situaţie se utilizează constructorul de copiere:",
+    "question": "Fie secvența:<br><div class=\"code\">class complex{<br><span class=\"tab\">double re;<br><span class=\"tab\">double im;<br><span class=\"tab\">public:<br><span class=\"tab_2\">complex(double x=1.0,double y=6.80){re=x; im=y;}<br><span class=\"tab_2\">complex( const complex &u){re=u.re;im=u.im;}<br>};</div><br>Precizaţi în ce situaţie se utilizează constructorul de copiere:",
     "answers": [
       "a) complex z1(5.2, 3.6);",
       "b) complex z1(5.2, 3.6), z2=z1;",
@@ -207,7 +207,7 @@
   },
   {
     "id": 20,
-    "question": "Fie secvența :<br>class A1{<br>public:<br>A1(){cout << \"A1 \";}<br>};<br>class A2{<br>public:<br>A2(){cout << \"A2 \";}<br>};<br>class AA1 : public A1, virtual public A2{<br>public:<br>AA1(){cout << \"AA1 \";}<br>};<br>class AA2 : public A1, virtual A2{<br>public:<br>AA2(){cout << \"AA2 \";}<br>};<br>class B : public AA1, virtual public AA2{<br>public:<br>B(){cout << \"B \";}<br>};<br>int main(){<br>B ob1;<br>return 0;<br>}<br>Secvența afișează:",
+    "question": "Fie secvența :<br><div class=\"code\">class A1{<br><span class=\"tab\">public:<br><span class=\"tab_2\">A1(){cout &lt;&lt; \"A1 \";}<br>};<br>class A2{<br><span class=\"tab\">public:<br><span class=\"tab_2\">A2(){cout &lt;&lt; \"A2 \";}<br>};<br>class AA1 : public A1, virtual public A2{<br><span class=\"tab\">public:<br><span class=\"tab_2\">AA1(){cout &lt;&lt; \"AA1 \";}<br>};<br>class AA2 : public A1, virtual A2{<br><span class=\"tab\">public:<br><span class=\"tab_2\">AA2(){cout &lt;&lt; \"AA2 \";}<br>};<br>class B : public AA1, virtual public AA2{<br><span class=\"tab\">public:<br><span class=\"tab_2\">B(){cout &lt;&lt; \"B \";}<br>};<br>int main(){<br><span class=\"tab\">B ob1;<br><span class=\"tab\">return 0;<br>}</div><br>Secvența afișează:",
     "answers": [
       "a) A1 A2 AA2 A1 AA1 B",
       "b) A2 A2 AA2 AA1 A1 B",
@@ -241,7 +241,7 @@
   },
   {
     "id": 23,
-    "question": "Fie programul:<br>#include <iostream.h><br>class Cerc{<br>float raza;<br>public:<br>Cerc(float r){raza=r;}<br>float get_raza(){return raza;}<br>void operator++(){raza++;}<br>};<br>class Cilindru : public Cerc{<br>float inaltime;<br>public:<br>Cilindru(float raza, float i):Cerc(raza){inaltime=i;}<br>void operator++(){inaltime++;}<br>float get_inaltime(){return inaltime;}<br>};<br>int main(){<br>Cerc *pc;<br>Cilindru c(2,6);<br>pc=&c;<br>++ *pc;<br>cout<<pc->get_raza()<<\" \"<<c.get_inaltime()<<endl;<br>return 0;<br>}<br>Programul afișează:",
+    "question": "Fie programul:<br><div class=\"code\">#include <iostream.h><br>class Cerc{<br><span class=\"tab\">float raza;<br><span class=\"tab\">public:<br><span class=\"tab_2\">Cerc(float r){raza=r;}<br><span class=\"tab_2\">float get_raza(){return raza;}<br><span class=\"tab_2\">void operator++(){raza++;}<br>};<br>class Cilindru : public Cerc{<br><span class=\"tab\">float inaltime;<br><span class=\"tab\">public:<br><span class=\"tab_2\">Cilindru(float raza, float i):Cerc(raza){inaltime=i;}<br><span class=\"tab_2\">void operator++(){inaltime++;}<br><span class=\"tab_2\">float get_inaltime(){return inaltime;}<br>};<br>int main(){<br><span class=\"tab\">Cerc *pc;<br><span class=\"tab\">Cilindru c(2,6);<br><span class=\"tab\">pc=&c;<br><span class=\"tab\">++ *pc;<br><span class=\"tab\">cout&lt;&lt;pc->get_raza()&lt;&lt;\" \"&lt;&lt;c.get_inaltime()&lt;&lt;endl;<br><span class=\"tab\">return 0;<br>}</div><br>Programul afișează:",
     "answers": ["a) 2 5", "b) 2 6", "c) 3 6", "d) 2 5"],
     "correctAnswerIndexes": [2]
   },
@@ -258,7 +258,7 @@
   },
   {
     "id": 25,
-    "question": "Fie următorul program:<br>#include<ostream.h><br>class persoana{<br>int varsta, salariul;<br>friend ostream & operator<<(ostream &out,persoana p){<br>out<<p.varsta<<\" \"<<p.salariul; return out;<br>}<br>public:<br>persoana(int v){varsta=v;salariul=0;}<br>persoana(){varsta=0;salariul=0;}<br>};<br>int main(){<br>persoana p(1);cout<<p;<br>return 0;<br>}<br>Programul afișează:",
+    "question": "Fie următorul program:<br><div class=\"code\">#include<ostream.h><br>class persoana{<br><span class=\"tab\">int varsta, salariul;<br><span class=\"tab\">friend ostream & operator&lt;&lt;(ostream &out,persoana p){<br><span class=\"tab_2\">out&lt;&lt;p.varsta&lt;&lt;\" \"&lt;&lt;p.salariul; return out;<br>}<br><span class=\"tab\">public:<br><span class=\"tab_2\">persoana(int v){varsta=v;salariul=0;}<br><span class=\"tab_2\">persoana(){varsta=0;salariul=0;}<br>};<br>int main(){<br><span class=\"tab\">persoana p(1);cout&lt;&lt;p;<br><span class=\"tab\">return 0;<br>}</div><br>Programul afișează:",
     "answers": ["a) 1 0", "b) 0 0", "c) 1 1", "d) 0 1"],
     "correctAnswerIndexes": [0]
   },
@@ -275,7 +275,7 @@
   },
   {
     "id": 27,
-    "question": "Fie programul:<br>class c{<br>int a;<br>public:<br>c(){};<br>c(const c&){};<br>void operator=(c&){};<br>};<br>int main(){<br>c a;<br>c b=a;<br>}<br>Linia de cod c b=a; determină:<br>",
+    "question": "Fie programul:<br><div class=\"code\">class c{<br><span class=\"tab\">int a;<br><span class=\"tab\">public:<br><span class=\"tab_2\">c(){};<br><span class=\"tab_2\">c(const c&){};<br><span class=\"tab_2\">void operator=(c&){};<br>};<br>int main(){<br><span class=\"tab\">c a;<br><span class=\"tab\">c b=a;<br>}</div><br>Linia de cod <span class=\"code_2\">c b=a;</span> determină:<br>",
     "answers": [
       "a) executarea constructorului de copiere;",
       "b) executarea metodei prin care se supraîncărcă operatorul =;",
@@ -287,7 +287,7 @@
   },
   {
     "id": 28,
-    "question": "Fie următorul program:<br>#include<iostream.h><br>class cls{<br>public:<br>~cls(){cout<<\"<br> Destructor\";}<br>};<br>int main(){<br>cls *po=new cls[3];<br>delete []po;<br>}<br>Destructorul clasei:<br>",
+    "question": "Fie următorul program:<br><div class=\"code\">#include&lt;iostream.h&gt;<br>class cls{<br><span class=\"tab\">public:<br><span class=\"tab_2\">~cls(){cout&lt;&lt;\"<br> Destructor\";}<br>};<br>int main(){<br><span class=\"tab\">cls *po=new cls[3];<br><span class=\"tab\">delete []po;<br>}</div><br>Destructorul clasei:<br>",
     "answers": [
       "a) nu se apelează nicio dată;",
       "b) se apelează o dată;",
@@ -309,7 +309,7 @@
   },
   {
     "id": 30,
-    "question": "Fie următorul program:<br>#include<iostream.h><br>class A{<br>int a[3];<br>public:<br>A(int i, int j, int k){a[0]=i; a[1]=j; a[2]=k;}<br>int& operator[](int i){return a[i];}<br>};<br>int main(){<br>A ob(1,2,3); cout<<ob[1];<br>ob[1]=25; cout<<ob[1];<br>return 0;<br>}<br>Ce se poate afirma despre operator[]()?<br>",
+    "question": "Fie următorul program:<br><div class=\"code\">#include&lt;iostream.h&gt;<br>class A{<br><span class=\"tab\">int a[3];<br><span class=\"tab\">public:<br><span class=\"tab_2\">A(int i, int j, int k){a[0]=i; a[1]=j; a[2]=k;}<br><span class=\"tab_2\">int& operator[](int i){return a[i];}<br>};<br>int main(){<br><span class=\"tab\">A ob(1,2,3); cout&lt;&lt;ob[1];<br><span class=\"tab\">ob[1]=25; cout&lt;&lt;ob[1];<br><span class=\"tab\">return 0;<br>}</div><br>Ce se poate afirma despre <span class=\"code_2\">operator[]()</span>?<br>",
     "answers": [
       "a) produce supraîncărcarea unei funcţii;",
       "b) produce supraîncărcarea unui operator unar;",
@@ -321,7 +321,7 @@
   },
   {
     "id": 31,
-    "question": "Considerăm următorul program:<br>#include<iostream.h><br>class C{<br>public:<br>int x;<br>C(int v) { x=v;}<br>double operator+(C &c, double d){return c.x+d;}<br>double operator+(double d, C &c){return c.x+d;}<br>};<br>int main() {<br>C c(5);<br>cout<<2+c+3;<br>return 0;<br>}<br>Stabiliți care dintre următoarele afirmații sunt adevărate:<br>",
+    "question": "Considerăm următorul program:<br><div class=\"code\">#include&lt;iostream.h&gt;<br>class C{<br><span class=\"tab\">public:<br><span class=\"tab_2\">int x;<br><span class=\"tab_2\">C(int v) { x=v;}<br><span class=\"tab_2\">double operator+(C &c, double d){return c.x+d;}<br><span class=\"tab_2\">double operator+(double d, C &c){return c.x+d;}<br>};<br>int main() {<br><span class=\"tab\">C c(5);<br><span class=\"tab\">cout&lt;&lt;2+c+3;<br><span class=\"tab\">return 0;<br>}</div><br>Stabiliți care dintre următoarele afirmații sunt adevărate:<br>",
     "answers": [
       "a) supraîncărcările operator + () trebuie să fie friend;",
       "b) supraîncărcările operator+() nu se justifică deoarece au același cod;",
@@ -332,7 +332,7 @@
   },
   {
     "id": 32,
-    "question": "Fie programul:<br>#include<iostream.h><br>class c1{ int a;};<br>class c2:public c1{<br>public:<br>int b;<br>void scrie_a( ) { cout<<a; }<br>};<br>int main(){<br>c2 ob; ob.scrie_a();<br>return 0;<br>}<br>Selectaţi afirmaţia corectă:<br>",
+    "question": "Fie programul:<br><div class=\"code\">#include&lt;iostream.h&gt;<br>class c1{ int a;};<br>class c2:public c1{<br><span class=\"tab\">public:<br><span class=\"tab_2\">int b;<br><span class=\"tab_2\">void scrie_a( ) { cout&lt;&lt;a; }<br>};<br>int main(){<br><span class=\"tab\">c2 ob; ob.scrie_a();<br><span class=\"tab\">return 0;<br>}</div><br>Selectaţi afirmaţia corectă:<br>",
     "answers": [
       "a) funcția scrie_a( ) nu are acces asupra unui membru privat;",
       "b) programul afișează valoarea lui a;",
@@ -343,7 +343,7 @@
   },
   {
     "id": 33,
-    "question": "Fie programul următor:<br>#include<iostream.h><br>class B{<br>int x;<br>public:<br>B(int i=10) { x=i;}<br>int get_x() { return x; }<br>};<br>class D: public B{<br>public:<br>D(int i):B(i){}<br>D operator+(const D& a) {return x+a.x; }<br>};<br>int main(){<br>D ob1(7), ob2(-12);<br>cout<<(ob1+ob2).get_x();<br>return 0;<br>}<br>Programul afișează:<br>",
+    "question": "Fie programul următor:<br><div class=\"code\">#include&lt;iostream.h&gt;<br>class B{<br><span class=\"tab\">int x;<br><span class=\"tab\">public:<br><span class=\"tab_2\">B(int i=10) { x=i;}<br><span class=\"tab_2\">int get_x() { return x; }<br>};<br>class D: public B{<br><span class=\"tab\">public:<br><span class=\"tab_2\">D(int i):B(i){}<br><span class=\"tab_2\">D operator+(const D& a) {return x+a.x; }<br>};<br>int main(){<br><span class=\"tab\">D ob1(7), ob2(-12);<br><span class=\"tab\">cout&lt;&lt;(ob1+ob2).get_x();<br><span class=\"tab\">return 0;<br>}</div><br>Programul afișează:<br>",
     "answers": [
       "a) eroare, clasa B nu poate fi moștenită de clasa D;",
       "b) eroare, metoda operator nu are acces la un membru privat al clasei de bază;",
@@ -354,13 +354,13 @@
   },
   {
     "id": 34,
-    "question": "Fie următorul program:<br>#include<iostream.h><br>class B1{int x;};<br>class B2{int y;};<br>class B3{int z;};<br>class B4{int t;};<br>class D: public B1, private B2, protected B3,B4 {public : int m;};<br>int main(){<br>D d;<br>cout<<d.m; //varianta 1<br>cout<<d.x; //varianta 2<br>cout<<d.y; //varianta 3<br>return 0;<br>}<br>Variantele care permit accesul la variabile pentru afișare sunt:<br>",
+    "question": "Fie următorul program:<br><div class=\"code\">#include&lt;iostream.h&gt;<br>class B1{int x;};<br>class B2{int y;};<br>class B3{int z;};<br>class B4{int t;};<br>class D: public B1, private B2, protected B3,B4 {public : int m;};<br>int main(){<br><span class=\"tab\">D d;<br><span class=\"tab\">cout&lt;&lt;d.m; //varianta 1<br><span class=\"tab\">cout&lt;&lt;d.x; //varianta 2<br><span class=\"tab\">cout&lt;&lt;d.y; //varianta 3<br><span class=\"tab\">return 0;<br>}</div><br>Variantele care permit accesul la variabile pentru afișare sunt:<br>",
     "answers": ["a) 1+3;", "b) 1+2;", "c) 1+2+3;", "d) 1"],
     "correctAnswerIndexes": [3]
   },
   {
     "id": 35,
-    "question": "Considerăm următorul program:<br>class vector{<br>int * pe, nr_c;<br>public:<br>operator int (){return nr_c;}<br>vector(int);<br>};<br>vector::vector(int n){<br>pe=new int[n]; nr_c=n;<br>while(n--) pe[n]=n;<br>}<br>void f(int i){cout<<i<<endl;}<br>int main(){<br>vector x(10);<br>f(x);<br>return 0;<br>}<br>Programul afişează:<br>",
+    "question": "Considerăm următorul program:<br><div class=\"code\">class vector{<br><span class=\"tab\">int * pe, nr_c;<br><span class=\"tab\">public:<br><span class=\"tab_2\">operator int (){return nr_c;}<br><span class=\"tab_2\">vector(int);<br>};<br>vector::vector(int n){<br><span class=\"tab\">pe=new int[n]; nr_c=n;<br><span class=\"tab\">while(n--) pe[n]=n;<br>}<br>void f(int i){cout&lt;&lt;i&lt;&lt;endl;}<br>int main(){<br><span class=\"tab\">vector x(10);<br><span class=\"tab\">f(x);<br><span class=\"tab\">return 0;<br>}</div><br>Programul afişează:<br>",
     "answers": [
       "a) 9",
       "b) 10",
@@ -371,19 +371,19 @@
   },
   {
     "id": 36,
-    "question": "Considerăm următorul program:<br>class c{<br>int a;<br>public:<br>virtual void metoda1()=0;<br>virtual void metoda2(int)=0;<br>};<br>int main{<br>c *pob; //declaraţia 1<br>c ob; //declaraţia 2<br>c *vpob[3]; //declaraţia 3<br>c vob[3]; //declaraţia 4<br>return 0;<br>}<br>Declaraţiile admise:<br>",
+    "question": "Considerăm următorul program:<br><div class=\"code\">class c{<br><span class=\"tab\">int a;<br><span class=\"tab\">public:<br><span class=\"tab_2\">virtual void metoda1()=0;<br><span class=\"tab_2\">virtual void metoda2(int)=0;<br>};<br>int main{<br><span class=\"tab\">c *pob; //declaraţia 1<br><span class=\"tab\">c ob; //declaraţia 2<br><span class=\"tab\">c *vpob[3]; //declaraţia 3<br><span class=\"tab\">c vob[3]; //declaraţia 4<br><span class=\"tab\">return 0;<br>}</div><br>Declaraţiile admise:<br>",
     "answers": ["a) 1+2;", "b) 1+2+3+4", "c) nici una", "d) 1+3;"],
     "correctAnswerIndexes": [3]
   },
   {
     "id": 37,
-    "question": "Fie data următoarea ierarhie:<br>class B {… }<br>class D1:B{…}<br>class D2:B{…}<br>class M1:D1, public D2{…}<br>class M2:virtual D1, virtual D2 {…}<br>Considerăm următoarele afirmaţii:<br>1. clasa M1 va moşteni un obiect de tip B;<br>2. clasa M1 va moşteni două obiecte de tip B;<br>3. clasa M2 va va moşteni un obiect de tip B;<br>4. clasa M2 va moşteni două obiecte de tip B.<br>Precizaţi care dintre afirmaţiile de mai sus sunt corecte:<br>",
+    "question": "Fie data următoarea ierarhie:<br><div class=\"code\">class B {… }<br>class D1:B{…}<br>class D2:B{…}<br>class M1:D1, public D2{…}<br>class M2:virtual D1, virtual D2 {…}</div><br>Considerăm următoarele afirmaţii:<br>1. clasa M1 va moşteni un obiect de tip B;<br>2. clasa M1 va moşteni două obiecte de tip B;<br>3. clasa M2 va va moşteni un obiect de tip B;<br>4. clasa M2 va moşteni două obiecte de tip B.<br>Precizaţi care dintre afirmaţiile de mai sus sunt corecte:<br>",
     "answers": ["a) 2+3", "b) 1+2", "c) 1+3", "d) 2+4"],
     "correctAnswerIndexes": [0]
   },
   {
     "id": 38,
-    "question": "Fie următorul program:<br>#include<iostream.h><br>class B{<br>public:<br>int x;<br>B(int i=10) { x=i; }<br>B f(B ob) { return x+ob.x; }<br>};<br>class D: public B{<br>public:<br>D(int i=25) { x=i; }<br>B f(B ob) { return x+ob.x+1; }<br>void afisare(){ cout<<x; }<br>};<br>int main(){<br>B *p1=new D, *p2=new B, *p3=new B(p1->f(*p2));<br>cout<<p3->x;<br>return 0;<br>}<br>Programul afişează:<br>",
+    "question": "Fie următorul program:<br><div class=\"code\">#include&lt;iostream.h&gt;<br>class B{<br><span class=\"tab\">public:<br><span class=\"tab_2\">int x;<br><span class=\"tab_2\">B(int i=10) { x=i; }<br><span class=\"tab_2\">B f(B ob) { return x+ob.x; }<br>};<br>class D: public B{<br><span class=\"tab\">public:<br><span class=\"tab_2\">D(int i=25) { x=i; }<br><span class=\"tab_2\">B f(B ob) { return x+ob.x+1; }<br><span class=\"tab_2\">void afisare(){ cout&lt;&lt;x; }<br>};<br>int main(){<br><span class=\"tab\">B *p1=new D, *p2=new B, *p3=new B(p1->f(*p2));<br><span class=\"tab\">cout&lt;&lt;p3->x;<br><span class=\"tab\">return 0;<br>}</div><br>Programul afişează:<br>",
     "answers": [
       "a) 41",
       "b) eroare, nu se poate instanţia un obiect al unei clase derivate printr-un pointer la un obiect de<br>tip clasa de bază;",
@@ -394,7 +394,7 @@
   },
   {
     "id": 39,
-    "question": "Fie următorul program:<br>#include<iostream.h><br>class B{<br>int i;<br>public:<br>static int x;<br>B() { x++; i=1; }<br>~B() { x--; }<br>static int get_x() { return x; }<br>int get_i() { return i; }<br>};<br>int B::x;<br>class D: public B{<br>public:<br>D() { x++; }<br>~D() { x--; }<br>};<br>int f(B *q){ return (q->get_i())+1;}<br>int main(){<br>B *p=new B;<br>cout<<f(p);<br>delete p;<br>p=new D;<br>cout<<f(p);<br>delete p;<br>cout<<D::get_x();<br>return 0;<br>}<br>Programul afişează:<br>",
+    "question": "Fie următorul program:<br><div class=\"code\">#include&lt;iostream.h&gt;<br>class B{<br><span class=\"tab\">int i;<br><span class=\"tab\">public:<br><span class=\"tab_2\">static int x;<br><span class=\"tab_2\">B() { x++; i=1; }<br><span class=\"tab_2\">~B() { x--; }<br><span class=\"tab_2\">static int get_x() { return x; }<br><span class=\"tab_2\">int get_i() { return i; }<br>};<br>int B::x;<br>class D: public B{<br><span class=\"tab\">public:<br><span class=\"tab_2\">D() { x++; }<br><span class=\"tab_2\">~D() { x--; }<br>};<br>int f(B *q){ return (q->get_i())+1;}<br>int main(){<br><span class=\"tab\">B *p=new B;<br><span class=\"tab\">cout&lt;&lt;f(p);<br><span class=\"tab\">delete p;<br><span class=\"tab\">p=new D;<br><span class=\"tab\">cout&lt;&lt;f(p);<br><span class=\"tab\">delete p;<br><span class=\"tab\">cout&lt;&lt;D::get_x();<br><span class=\"tab\">return 0;<br>}</div><br>Programul afişează:<br>",
     "answers": [
       "a) eroare, data membră statică x nu este iniţializată;",
       "b) eroare, metoda get_x() nu poate fi declarată static;",
@@ -405,7 +405,7 @@
   },
   {
     "id": 40,
-    "question": "Fie următorul program:<br>#include <iostream.h><br>template<class T, class E><br>float f(T x, E y){ return x+y;}<br>float g(int x, float y){ return x-y;}<br>int main(){<br>int a=5;<br>float b=8.6;<br>cout<<g(a,b);<br>return 0;<br>}<br>Programul afişează:<br>",
+    "question": "Fie următorul program:<br><div class=\"code\">#include &lt;iostream.h&gt;<br>template&lt;class T, class E&gt;<br>float f(T x, E y){ return x+y;}<br>float g(int x, float y){ return x-y;}<br>int main(){<br><span class=\"tab\">int a=5;<br><span class=\"tab\">float b=8.6;<br><span class=\"tab\">cout&lt;&lt;g(a,b);<br><span class=\"tab\">return 0;<br>}</div><br>Programul afişează:<br>",
     "answers": [
       "a) 3",
       "b) eroare, parametrizarea clasei T este incorrect realizată",
@@ -416,7 +416,7 @@
   },
   {
     "id": 41,
-    "question": "Fie următorul program:<br>#include <iostream.h><br>template<class T><br>int f(T x, T y){ return x+y;}<br>int f(int x, int y){ return x-y;}<br>int main(){<br>int a=5;<br>float b=8.6;<br>cout<<f(a,b);<br>return 0;<br>}<br>Programul afişează:<br>e) -3<br>f) eroare, parametrizarea clasei T este incorrect realizată<br>g) 13.6<br>h) 3.6",
+    "question": "Fie următorul program:<br><div class=\"code\">#include <iostream.h><br>template<class T><br>int f(T x, T y){ return x+y;}<br>int f(int x, int y){ return x-y;}<br>int main(){<br><span class=\"tab\">int a=5;<br><span class=\"tab\">float b=8.6;<br><span class=\"tab\">cout&lt;&lt;f(a,b);<br><span class=\"tab\">return 0;<br>}</div><br>Programul afişează:<br>e) -3<br>f) eroare, parametrizarea clasei T este incorrect realizată<br>g) 13.6<br>h) 3.6",
     "answers": [
       "e) -3",
       "f) eroare, parametrizarea clasei T este incorrect realizată",
@@ -427,7 +427,7 @@
   },
   {
     "id": 42,
-    "question": "Fie următorul program:<br>#include<iostream.h><br>class B{<br>int x;<br>public:<br>B(int i=10) { x=i; }<br>int get_x() { return x; }};<br>class D: public B{<br>public:<br>D(int i):B(i) {}<br>D operator+(const D& a) {return x+a.x; }};<br>int main()<br>{ D ob1(7), ob2(-12);<br>cout<<(ob1+ob2).get_x();<br>return 0;<br>}<br>Indicați ce se va afișa pe ecran în urma executării programului:<br>",
+    "question": "Fie următorul program:<br><div class=\"code\">#include<iostream.h><br>class B{<br><span class=\"tab\">int x;<br><span class=\"tab\">public:<br><span class=\"tab_2\">B(int i=10) { x=i; }<br><span class=\"tab_2\">int get_x() { return x; }};<br>class D: public B{<br><span class=\"tab\">public:<br><span class=\"tab_2\">D(int i):B(i) {}<br><span class=\"tab_2\">D operator+(const D& a) {return x+a.x; }};<br>int main()<br>{ D ob1(7), ob2(-12);<br><span class=\"tab\">cout&lt;&lt;(ob1+ob2).get_x();<br><span class=\"tab\">return 0;<br>}</div><br>Indicați ce se va afișa pe ecran în urma executării programului:<br>",
     "answers": [
       "a) -5",
       "b) -4",
@@ -438,7 +438,7 @@
   },
   {
     "id": 43,
-    "question": "Fie următorul program:<br>#include<iostream.h><br>class B{<br>public:<br>int x;<br>B(int i=16) { x=i; }<br>B f(B ob) { return x+ob.x; } };<br>class D: public B{<br>public:<br>D(int i=25) { x=i; }<br>B f(B ob) { return x+ob.x+1; }<br>void afisare(){ cout<<x; } };<br>int main()<br>{<br>B *p1=new D, *p2=new B, *p3=new B(p1->f(*p2));<br>cout<<p3->x;<br>return 0;<br>}<br>Programul afişează:<br>",
+    "question": "Fie următorul program:<br><div class=\"code\">#include<iostream.h><br>class B{<br><span class=\"tab\">public:<br><span class=\"tab_2\">int x;<br><span class=\"tab_2\">B(int i=16) { x=i; }<br><span class=\"tab_2\">B f(B ob) { return x+ob.x; } };<br>class D: public B{<br><span class=\"tab\">public:<br><span class=\"tab_2\">D(int i=25) { x=i; }<br><span class=\"tab_2\">B f(B ob) { return x+ob.x+1; }<br><span class=\"tab_2\">void afisare(){ cout&lt;&lt;x; } };<br>int main()<br>{<br><span class=\"tab\">B *p1=new D, *p2=new B, *p3=new B(p1->f(*p2));<br><span class=\"tab\">cout&lt;&lt;p3->x;<br><span class=\"tab\">return 0;<br>}</div><br>Programul afişează:<br>",
     "answers": [
       "a) 41",
       "b) eroare, în clasa derivată D nu se poate accesa data membră x a clasei B",
@@ -449,7 +449,7 @@
   },
   {
     "id": 44,
-    "question": "Fie următorul program:<br>#include<iostream.h><br>class cls1{<br>public:<br>int a;<br>cls1() { a=7; }<br>};<br>class cls2{<br>public:<br>int b;<br>cls2(int i) { b=i; }<br>cls2(cls1& x) { b=x.a; }<br>};<br>int main(){<br>cls1 x;<br>cout<<x.a;<br>cls2 y(x);<br>cout<<y.b;<br>return 0;<br>}<br>Programul afișează:",
+    "question": "Fie următorul program:<br><div class=\"code\">#include<iostream.h><br>class cls1{<br><span class=\"tab\">public:<br><span class=\"tab_2\">int a;<br><span class=\"tab_2\">cls1() { a=7; }<br>};<br>class cls2{<br><span class=\"tab\">public:<br><span class=\"tab_2\">int b;<br><span class=\"tab_2\">cls2(int i) { b=i; }<br><span class=\"tab_2\">cls2(cls1& x) { b=x.a; }<br>};<br>int main(){<br><span class=\"tab\">cls1 x;<br><span class=\"tab\">cout&lt;&lt;x.a;<br><span class=\"tab\">cls2 y(x);<br><span class=\"tab\">cout&lt;&lt;y.b;<br><span class=\"tab\">return 0;<br>}</div><br>Programul afișează:",
     "answers": [
       "e) 7 7",
       "f) eroare, constructorul de copiere nu este corect definit",
@@ -496,7 +496,7 @@
   },
   {
     "id": 48,
-    "question": "Fie următorul program:<br>#include <iostream><br>using namespace std;<br>class c{<br>int a;<br>public :<br>c() {}<br>c(const c&);<br>c& operator =(c&);};<br>c& c::operator=(c &c){ cout << endl << \"copiere cu egal\"; return c;}<br>c::c(const c &c) { cout << endl << \"Constructor de copiere\"; }<br>int main()<br>{<br>c x,y=x;<br>c b=x; x=y;<br>};<br>Programul:",
+    "question": "Fie următorul program:<br><div class=\"code\">#include &lt;iostream&gt;<br>using namespace std;<br>class c{<br><span class=\"tab\">int a;<br><span class=\"tab\">public :<br><span class=\"tab_2\">c() {}<br><span class=\"tab_2\">c(const c&);<br><span class=\"tab_2\">c& operator =(c&);};<br><span class=\"tab\">c& c::operator=(c &c){ cout &lt;&lt; endl &lt;&lt; \"copiere cu egal\"; return c;}<br><span class=\"tab\">c::c(const c &c) { cout &lt;&lt; endl &lt;&lt; \"Constructor de copiere\"; }<br>int main()<br><span class=\"tab\">{<br><span class=\"tab_2\">c x,y=x;<br><span class=\"tab_2\">c b=x; x=y;<br><span class=\"tab_2\">}</div><br>Programul:",
     "answers": [
       "a) apeleaza de doua ori operator=(), o data constructorul de copiere si o data constructorul implicit;",
       "b) apeleaza de trei ori constructorul de copiere, o data constructorul implicit;",
@@ -508,7 +508,7 @@
   },
   {
     "id": 49,
-    "question": "De câte ori este apelat destructorul clasei Persoana în programul următor?<br>#include <iostream><br>using namespace std;<br>class Persoana{<br>public:<br>Persoana() {cout<<\"Constructor\"<<endl;}<br>~Persoana() {cout<<\"Destructor\"<<endl;}};<br>int main(){<br>Persoana** ppp;<br>ppp = new Persoana*[5];<br>for(int i=0; i<5; i++)<br>ppp[i] = new Persoana();<br>for(int i=0; i<5; i++)<br>delete ppp[i];<br>}<br>Răspuns:",
+    "question": "De câte ori este apelat destructorul clasei Persoana în programul următor?<br><div class=\"code\">#include &lt;iostream&gt;<br>using namespace std;<br>class Persoana{<br><span class=\"tab\">public:<br><span class=\"tab_2\">Persoana() {cout&lt;&lt;\"Constructor\"&lt;&lt;endl;}<br><span class=\"tab_2\">~Persoana() {cout&lt;&lt;\"Destructor\"&lt;&lt;endl;}};<br>int main(){<br><span class=\"tab\">Persoana** ppp;<br><span class=\"tab\">ppp = new Persoana*[5];<br><span class=\"tab\">for(int i=0; i<5; i++)<br><span class=\"tab_2\">ppp[i] = new Persoana();<br><span class=\"tab\">for(int i=0; i<5; i++)<br><span class=\"tab_2\">delete ppp[i];<br>}</div><br>Răspuns:",
     "answers": [
       "a. 10;",
       "b. 6;",
@@ -520,7 +520,7 @@
   },
   {
     "id": 50,
-    "question": "În programul următor:<br>#include <iostream><br>using namespace std;<br>class Persoana{<br>int varsta;<br>char* nume;<br>public:<br>Persoana(int v=0, char* n=\"Oarecare\"):varsta(v){<br>this->nume = new char[strlen(n)+1];<br>strcpy(this->nume,n);<br>cout<<\"Constructor\"<<endl;}<br>Persoana(Persoana& p){<br>this->varsta = p.varsta;<br>this->nume = new char[strlen(p.nume)+1];<br>strcpy(this->nume, p.nume);<br>cout<<\"Constructor de copiere\"<<endl;}<br>void operator=(Persoana& p){<br>this->varsta = p.varsta;<br>delete[] this->nume;<br>this->nume = new char[strlen(p.nume)+1];<br>strcpy(this->nume, p.nume);<br>cout<<\"Operator=\"<<endl;}<br>~Persoana(){ cout<<\"Destructor\"<<endl;}};<br>int main()<br>{<br>Persoana p1, p2(20, \"Gigel\");<br>Persoana p3 = p1;<br>p3 = p2;<br>Persoana p4 = p1;<br>}<br>Sunt apelate următoarele:",
+    "question": "În programul următor:<br><div class=\"code\">#include &lt;iostream&gt;<br>using namespace std;<br>class Persoana{<br><span class=\"tab\">int varsta;<br><span class=\"tab\">char* nume;<br><span class=\"tab\">public:<br><span class=\"tab_2\">Persoana(int v=0, char* n=\"Oarecare\"):varsta(v){<br><span class=\"tab_3\">this->nume = new char[strlen(n)+1];<br><span class=\"tab_3\">strcpy(this->nume,n);<br><span class=\"tab_3\">cout&lt;&lt;\"Constructor\"&lt;&lt;endl;}<br><span class=\"tab_2\">Persoana(Persoana& p){<br><span class=\"tab_3\">this->varsta = p.varsta;<br><span class=\"tab_3\">this->nume = new char[strlen(p.nume)+1];<br><span class=\"tab_3\">strcpy(this->nume, p.nume);<br><span class=\"tab_3\">cout&lt;&lt;\"Constructor de copiere\"&lt;&lt;endl;}<br><span class=\"tab_2\">void operator=(Persoana& p){<br><span class=\"tab_3\">this->varsta = p.varsta;<br><span class=\"tab_3\">delete[] this->nume;<br><span class=\"tab_3\">this->nume = new char[strlen(p.nume)+1];<br><span class=\"tab_3\">strcpy(this->nume, p.nume);<br><span class=\"tab_3\">cout&lt;&lt;\"Operator=\"&lt;&lt;endl;}<br><span class=\"tab_2\">~Persoana(){ cout&lt;&lt;\"Destructor\"&lt;&lt;endl;}};<br>int main()<br><span class=\"tab\">{<br><span class=\"tab_2\">Persoana p1, p2(20, \"Gigel\");<br><span class=\"tab_2\">Persoana p3 = p1;<br><span class=\"tab_2\">p3 = p2;<br><span class=\"tab_2\">Persoana p4 = p1;<br>}</div><br>Sunt apelate următoarele:",
     "answers": [
       "a. constructor – de patru ori, constructor de copiere – o dată, destructor – de patru ori;",
       "b. constructor – de trei ori, constructor de copiere - de două ori, destructor de cinci ori;",
