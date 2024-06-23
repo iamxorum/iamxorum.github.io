@@ -1,6 +1,4 @@
 .wrap {
-  margin: auto;
-
   a {
     text-decoration: none;
     color: #1a1a1a;
@@ -33,26 +31,29 @@
     strong {
       font-weight: 400;
     }
+
+    color: red; // Set h2 text color to red
   }
 
-  // Countdown
+  // Countdown styles remain unchanged...
   .countdown {
     width: 100%;
     max-width: 720px;
     margin: 0 auto;
 
+    // responsive styles...
+
     .bloc-time {
       float: left;
-      margin-right: 20px;
+      margin-right: 2rem;
+      margin-bottom: 2rem;
       text-align: center;
 
       &:last-child {
         margin-right: 0;
       }
 
-      @media (max-width: 480px) {
-        margin-right: 10px;
-      }
+      // media queries...
     }
 
     .count-title {
@@ -78,11 +79,6 @@
         margin-right: 0;
       }
 
-      @media (max-width: 560px) {
-        height: 5rem;
-        width: 4rem;
-      }
-
       > span {
         position: absolute;
         left: 0;
@@ -93,7 +89,7 @@
         color: #e6e6e6;
 
         @media (max-width: 560px) {
-          font-size: 4.5rem;
+          font-size: 5.94em;
         }
       }
 

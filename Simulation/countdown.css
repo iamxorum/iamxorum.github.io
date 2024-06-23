@@ -1,5 +1,4 @@
 .wrap {
-  margin: auto;
   color: antiquewhite;
 }
 .wrap a {
@@ -22,6 +21,7 @@
   text-align: center;
   font: 300 0.7em "Lato";
   text-transform: uppercase;
+  color: red;
 }
 .wrap h2 strong {
   font-weight: 400;
@@ -33,16 +33,12 @@
 }
 .wrap .countdown .bloc-time {
   float: left;
-  margin-right: 20px;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 .wrap .countdown .bloc-time:last-child {
   margin-right: 0;
-}
-@media (max-width: 480px) {
-  .wrap .countdown .bloc-time {
-    margin-right: 10px;
-  }
 }
 .wrap .countdown .count-title {
   display: block;
@@ -64,12 +60,6 @@
 .wrap .countdown .figure:last-child {
   margin-right: 0;
 }
-@media (max-width: 560px) {
-  .wrap .countdown .figure {
-    height: 5rem;
-    width: 4rem;
-  }
-}
 .wrap .countdown .figure > span {
   position: absolute;
   left: 0;
@@ -81,7 +71,7 @@
 }
 @media (max-width: 560px) {
   .wrap .countdown .figure > span {
-    font-size: 4.5rem;
+    font-size: 5.94em;
   }
 }
 .wrap .countdown .figure .top:after,
