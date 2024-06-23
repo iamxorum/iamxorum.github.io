@@ -138,3 +138,16 @@ var Countdown = {
 
 // Initialize countdown
 Countdown.init();
+
+// If the button with id "hide" is clicked, hide the "wrap" class, otherwise show it if it is hidden (change the name to show )
+$("#hide").click(function () {
+  // Animate the showing//hiding of the countdown
+  $(".wrap").slideToggle();
+
+  //change the name of the button to show if it is hidden
+  if ($("#hide").text() == "Hide Countdown") {
+    $("#hide").text("Show Countdown");
+  } else {
+    $("#hide").text("Hide Countdown");
+  }
+});

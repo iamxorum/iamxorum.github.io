@@ -26,7 +26,7 @@
         display: grid;
         gap: 10px;
         width: 100%;
-        max-width: 600px;
+        max-width: 44rem;
         margin: 20px 0;
       }
       .grid-3 {
@@ -47,6 +47,11 @@
         color: white;
         border-radius: 5px;
         transition: background-color 0.3s;
+      }
+
+      #hide {
+        background-color: rgb(255, 232, 99);
+        color: rgb(34, 34, 34);
       }
 
       #exam_btn {
@@ -85,9 +90,28 @@
         transition: background-color 0.3s;
       }
 
+      #hide {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 1rem 2rem;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        background-color: rgb(255, 232, 99);
+        color: rgb(34, 34, 34);
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+
       .back:hover {
         background-color: #ea5151;
       }
+
+      #hide:hover {
+        background-color: #f7d358;
+      }
+
       @media (min-width: 900px) {
         .grid-3 button,
         .grid-4 button,
@@ -101,6 +125,11 @@
           position: static;
           margin-bottom: 10px;
         }
+
+        #hide {
+          position: static;
+          margin-bottom: 10px;
+        }
       }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -111,6 +140,7 @@
     <button class="back" onclick="window.location.href = '../index.html';">
       Back
     </button>
+    <button id="hide">Hide Countdown</button>
     <div class="app">
       <div class="wrap">
         <h1>Examen <strong>Licenta</strong></h1>
