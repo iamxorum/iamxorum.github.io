@@ -20,7 +20,7 @@
   {
     "id": 4,
     "question": "Complexitatea minimă a unui algoritm care afişează toate modurile în care pot fi aşezate n cărți pe un raft suficient de lung este:",
-    "answers": ["a) 𝒪(𝑛2)", "b) 𝒪(2𝑛)", "c) 𝒪(𝑛)", "d) 𝒪(𝑛!)"],
+    "answers": ["a) 𝒪(𝑛^2)", "b) 𝒪(2^𝑛)", "c) 𝒪(𝑛)", "d) 𝒪(𝑛!)"],
     "correctAnswerIndexes": [1]
   },
   {
