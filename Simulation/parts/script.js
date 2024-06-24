@@ -513,10 +513,10 @@
     function showScore() {
       resetState();
       stopTimer();
-      //remove correct answers count from the DOM
-      correctAnswersDiv.remove();
-      //remove wrong answers count from the DOM
-      wrongAnswersDiv.remove();
+      //hide correct answers count from the DOM
+      correctAnswersDiv.display = "none";
+      //hide wrong answers count from the DOM
+      wrongAnswersDiv.display = "none";
       timerElement.textContent = "00:00:00";
 
       timerElement.style.display = "none";
