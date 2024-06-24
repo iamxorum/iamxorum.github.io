@@ -3,6 +3,7 @@
   const quizContainer = document.getElementsByClassName("body");
   const searchBox = document.getElementById("search-box");
   let allQuestions = []; // To store all questions for the current subject
+  let combinedQuestions = []; // To store all questions from all subjects
 
   try {
     const subjects = {
@@ -196,7 +197,8 @@
 
     async function loadSubject(subject) {
       const filePath = subjects[subject];
-      allQuestions = await fetchJSONFile(filePath);
+      const subjectQuestions = await fetchJSONFile(filePath);
+      allQuestions = subjectQuestions; // Store current subject questions
       renderQuestions(allQuestions, subject, subject === "WEB");
       navLinks.classList.toggle("show");
       document
@@ -227,16 +229,14 @@
     }
 
     function filterQuestions(query) {
-      const filteredQuestions = allQuestions.filter((question) => {
+      const filteredQuestions = combinedQuestions.filter((question) => {
         return question.question.toLowerCase().includes(query.toLowerCase());
       });
-      const currentSubject = document
-        .querySelector(".nav-links li button.active")
-        .getAttribute("data-subject");
+      // Display the filtered questions AND the subject title as their subject
       renderQuestions(
         filteredQuestions,
-        currentSubject,
-        currentSubject === "WEB"
+        "Filtrate",
+        query.toLowerCase().includes("web")
       );
     }
 
@@ -261,6 +261,13 @@
       filterQuestions(event.target.value);
     });
 
+    // Load all questions from all subjects initially
+    for (const subject of Object.keys(subjects)) {
+      const subjectQuestions = await fetchJSONFile(subjects[subject]);
+      combinedQuestions = combinedQuestions.concat(subjectQuestions);
+    }
+
+    // Load the first subject to display initially
     loadSubject(Object.keys(subjects)[0]);
   } catch (error) {
     console.error(error);
