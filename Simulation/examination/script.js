@@ -81,15 +81,43 @@
         json13,
       ];
 
-      // Flatten all JSON arrays into a single array
-      const allQuestionsArray = jsonArrays.flat();
+      const selectedQuestions = [];
+      const totalQuestionsNeeded = 36;
+      const numberOfJsonArrays = jsonArrays.length;
 
-      // Shuffle the combined array
-      shuffleArray(allQuestionsArray);
+      // Calculate minimum and maximum questions that can be taken from each array
+      const minQuestionsPerArray = Math.floor(
+        totalQuestionsNeeded / numberOfJsonArrays
+      );
+      const extraQuestionsNeeded = totalQuestionsNeeded % numberOfJsonArrays;
 
-      // Select the first N unique questions from the shuffled array
-      const numberOfQuestions = 36; // Adjust this number as needed
-      const selectedQuestions = allQuestionsArray.slice(0, numberOfQuestions);
+      let remainingQuestionsNeeded = totalQuestionsNeeded;
+
+      jsonArrays.forEach((jsonArray, index) => {
+        // Decide whether to take 2 or 3 questions
+        let numberOfQuestions;
+        if (index < extraQuestionsNeeded) {
+          numberOfQuestions = minQuestionsPerArray + 1;
+        } else {
+          numberOfQuestions = minQuestionsPerArray;
+        }
+
+        // Shuffle the array to ensure randomness
+        shuffleArray(jsonArray);
+
+        // Select the desired number of questions
+        const questionsToAdd = jsonArray.slice(0, numberOfQuestions);
+
+        // Add the selected questions to the final list
+        selectedQuestions.push(...questionsToAdd);
+        remainingQuestionsNeeded -= numberOfQuestions;
+      });
+
+      // In case we have selected more questions than needed, trim the list to the exact number
+      if (selectedQuestions.length > totalQuestionsNeeded) {
+        shuffleArray(selectedQuestions);
+        return selectedQuestions.slice(0, totalQuestionsNeeded);
+      }
 
       return selectedQuestions;
     }
