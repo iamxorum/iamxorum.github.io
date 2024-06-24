@@ -160,6 +160,8 @@
     let userAnswers = [];
 
     function startQuiz() {
+      score = 0;
+      wrong = 0;
       //empty the userAnswers array before starting the quiz
       userAnswers = [];
       //empyt local storage before starting the quiz
@@ -173,6 +175,11 @@
       // If questionNumber and timer are hidden, show them
       timerElement.style.display = "block";
       questionNumber.style.display = "block";
+
+      //remove correct answers count from the DOM
+      correctAnswersDiv.display = "block";
+      //remove wrong answers count from the DOM display none
+      wrongAnswersDiv.display = "block";
 
       // Remove the goButton if it exists before starting the quiz
       let goButton = document.getElementById("go-btn");
