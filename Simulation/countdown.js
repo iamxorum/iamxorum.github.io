@@ -17,7 +17,7 @@ var Countdown = {
     };
 
     // Calculate the total seconds until the target date
-    var targetDate = new Date("2024-06-26T09:00:00").getTime();
+    var targetDate = new Date("2024-06-26T08:30:00").getTime();
     var currentDate = new Date().getTime();
     var timeDifference = targetDate - currentDate;
 
