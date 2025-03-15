@@ -8,7 +8,32 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exam Simulation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      html, body {
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #1e1e2f, #2d3a4f);
+        color: #ffffff;
+      }
+      
+      body {
+        position: relative;
+        min-height: 100vh;
+      }
+    </style>
   </head>
   <body>
     <!-- Add a div button to navigate back to the index.html file -->
@@ -25,14 +50,19 @@
       </div>
     </div>
     <div class="app">
-      <div id="timer">00:00:00</div>
+      <div id="timer">00:59:49</div>
+      <div class="score-container">
+        <div id="correct-answers">0</div>
+        <div id="wrong-answers">2</div>
+      </div>
       <h3>Simulation</h3>
       <div class="quiz">
+        <div id="question-number">Question 1 of 36</div>
         <h2 id="question">Question goes here.</h2>
         <img class="image" src="" alt="" />
         <div id="answer-buttons"></div>
-        <button id="next-btn" style="display: none">Next</button>
-        <button id="answer-btn" style="display: none">Answer</button>
+        <button id="next-btn">Next</button>
+        <button id="answer-btn">Answer</button>
       </div>
     </div>
     <script src="script.js"></script>

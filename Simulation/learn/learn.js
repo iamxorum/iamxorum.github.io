@@ -58,11 +58,6 @@
       const subjectTitle = document.createElement("h2");
       subjectTitle.textContent = getSubjectTitle(subject);
       subjectTitle.id = `subject-${subject}`;
-      subjectTitle.style.textAlign = "center";
-      subjectTitle.style.marginTop = "2rem";
-      subjectTitle.style.marginBottom = "2rem";
-      subjectTitle.style.fontWeight = "bold";
-      subjectTitle.style.color = "#fafafa";
       questionsContainer.appendChild(subjectTitle);
 
       loadingScreen[0].style.display = "none";
@@ -71,16 +66,11 @@
       questions.forEach((questionData, index) => {
         const questionDiv = document.createElement("div");
         questionDiv.classList.add("question-block");
+        
         if (questionData.tobereviewd) {
           questionDiv.classList.add("tobereviewed");
           const reviewText = document.createElement("p");
           reviewText.textContent = "TREBUIE REVIZUIT DE PROFESOR";
-          reviewText.style.textAlign = "center";
-          reviewText.style.color = "#000";
-          reviewText.style.fontSize = "1.5rem";
-          reviewText.style.fontWeight = "bold";
-          reviewText.style.marginTop = "1rem";
-          reviewText.style.marginBottom = "1rem";
           questionDiv.appendChild(reviewText);
         }
 
@@ -94,6 +84,7 @@
           const questionImg = document.createElement("img");
           questionImg.src = questionData.img;
           questionImg.alt = `Image for question ${index + 1}`;
+          questionImg.loading = "lazy";
           questionDiv.appendChild(questionImg);
         }
 
@@ -108,86 +99,25 @@
         });
         questionDiv.appendChild(answersList);
 
-        // Add a button to display the the details of the question if the question has details to be displayed
         if (questionData.details) {
           const detailsButton = document.createElement("button");
-          detailsButton.innerHTML = "Details";
+          detailsButton.textContent = "Show Details";
           detailsButton.classList.add("details_btn");
-          detailsButton.style.backgroundColor = "#4447f1";
-          detailsButton.style.color = "#fafafa";
-          detailsButton.style.fontWeight = "bold";
-          detailsButton.style.borderRadius = "5px";
-          detailsButton.style.width = "100%";
-          detailsButton.style.marginTop = "1rem";
-          detailsButton.style.marginBottom = "1rem";
-          detailsButton.style.padding = "1rem";
-          detailsButton.style.fontSize = "1rem";
-          detailsButton.style.cursor = "pointer";
-          detailsButton.style.transition = "all 0.3s";
-          detailsButton.style.display = "block";
-
-          // Add the details button to the answerButtons div
           questionDiv.appendChild(detailsButton);
 
-          // Add an event listener to the details button to display the details of the question
           detailsButton.addEventListener("click", () => {
-            // Create a new div to display the details of the question
-            const detailsDiv = document.createElement("div");
-            detailsDiv.innerHTML = questionData.details;
-            detailsDiv.style.marginTop = "1rem";
-            detailsDiv.style.marginBottom = "1rem";
-            detailsDiv.style.padding = "1rem";
-            detailsDiv.style.backgroundColor = "#f1f1f1";
-            detailsDiv.style.borderRadius = "5px";
-            detailsDiv.style.fontSize = "1rem";
-            detailsDiv.style.lineHeight = "1.5rem";
-            detailsDiv.style.fontWeight = "normal";
-            detailsDiv.style.color = "#000";
-            detailsDiv.style.transition = "all 0.3s";
-            detailsDiv.style.display = "block";
-            detailsDiv.style.width = "100%";
-
-            // Check if the details div already exists, if it does, remove it before creating a new one
-            const detailsDivEx = document.getElementById("details-div");
-            if (detailsDivEx) {
-              detailsDivEx.remove();
+            const existingDetails = document.getElementById("details-div");
+            if (existingDetails) {
+              existingDetails.remove();
+              detailsButton.textContent = "Show Details";
+              return;
             }
 
-            // Add an id to the detailsDiv
+            const detailsDiv = document.createElement("div");
+            detailsDiv.innerHTML = questionData.details;
             detailsDiv.id = "details-div";
-
-            // Insert the detailsDiv after the details button
             detailsButton.insertAdjacentElement("afterend", detailsDiv);
-
-            detailsButton.remove();
-
-            // Add a button to hide the details
-            const hideButton = document.createElement("button");
-            hideButton.innerHTML = "Hide Details";
-            hideButton.classList.add("details_btn");
-            hideButton.style.backgroundColor = "#4447f1";
-            hideButton.style.color = "#fafafa";
-            hideButton.style.fontWeight = "bold";
-            hideButton.style.borderRadius = "5px";
-            hideButton.style.width = "100%";
-            hideButton.style.marginTop = "1rem";
-            hideButton.style.marginBottom = "1rem";
-            hideButton.style.padding = "1rem";
-            hideButton.style.fontSize = "1rem";
-            hideButton.style.cursor = "pointer";
-            hideButton.style.transition = "all 0.3s";
-            hideButton.style.display = "block";
-
-            // Add an event listener to the hide button to hide the details
-            hideButton.addEventListener("click", () => {
-              // Add the details button back before removing the detailsDiv
-              questionDiv.appendChild(detailsButton);
-              detailsDiv.remove();
-              hideButton.remove();
-            });
-
-            // Insert the hideButton after the detailsDiv
-            detailsDiv.insertAdjacentElement("afterend", hideButton);
+            detailsButton.textContent = "Hide Details";
           });
         }
 
@@ -269,6 +199,33 @@
 
     // Load the first subject to display initially
     loadSubject(Object.keys(subjects)[0]);
+
+    // Add this to the JavaScript to toggle the active class on the menu button
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      
+      menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('show');
+        menuToggle.classList.toggle('active');
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!event.target.closest('.nav-links') && !event.target.closest('.menu-toggle')) {
+          navLinks.classList.remove('show');
+          menuToggle.classList.remove('active');
+        }
+      });
+      
+      // Close menu when a nav item is clicked
+      document.querySelectorAll('.nav-links li button').forEach(button => {
+        button.addEventListener('click', function() {
+          navLinks.classList.remove('show');
+          menuToggle.classList.remove('active');
+        });
+      });
+    });
   } catch (error) {
     console.error(error);
   }

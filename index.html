@@ -6,808 +6,1798 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/style/o_index.css" />
-    <title>Xorum | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Add Tailwind CSS via CDN for quick setup -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind with extended theme -->
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                200: '#bae6fd',
+                300: '#7dd3fc',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
+              },
+              secondary: {
+                50: '#f5f3ff',
+                100: '#ede9fe',
+                200: '#ddd6fe',
+                300: '#c4b5fd',
+                400: '#a78bfa',
+                500: '#8b5cf6',
+                600: '#7c3aed',
+                700: '#6d28d9',
+                800: '#5b21b6',
+                900: '#4c1d95',
+              },
+              dark: {
+                100: '#1E293B',
+                200: '#0F172A',
+                300: '#020617',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            animation: {
+              'gradient-x': 'gradient-x 5s ease infinite',
+              'fade-in': 'fade-in 1s ease-out',
+              'slide-up': 'slide-up 0.5s ease-out',
+            },
+            keyframes: {
+              'gradient-x': {
+                '0%, 100%': {
+                  'background-size': '200% 200%',
+                  'background-position': 'left center'
+                },
+                '50%': {
+                  'background-size': '200% 200%',
+                  'background-position': 'right center'
+                },
+              },
+              'fade-in': {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              'slide-up': {
+                '0%': { transform: 'translateY(20px)', opacity: '0' },
+                '100%': { transform: 'translateY(0)', opacity: '1' },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>Andrei Murariu | Developer Portfolio</title>
+    <style>
+      .gradient-text {
+        background: linear-gradient(to right, #0ea5e9, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      
+      .gradient-bg {
+        background: linear-gradient(to right, #0ea5e9, #8b5cf6);
+      }
+      
+      .skill-tag {
+        transition: all 0.3s ease;
+      }
+      
+      .skill-tag:hover {
+        transform: translateY(-5px);
+      }
+      
+      .project-card {
+        transition: all 0.3s ease;
+        overflow: hidden;
+      }
+      
+      .project-card:hover {
+        transform: translateY(-10px);
+      }
+      
+      .project-card:hover .project-overlay {
+        opacity: 0.9;
+      }
+      
+      .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 2px;
+        background: linear-gradient(to bottom, #0ea5e9, #8b5cf6);
+      }
+      
+      body {
+        cursor: none;
+      }
+      
+      a, button, input, textarea, .skill-tag, .project-card {
+        cursor: none;
+      }
+    </style>
   </head>
-  <body class="bg-teal-50">
-    <nav class="bg-gray-800 h-10vh w-100%">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="flex items-center justify-between h-10vh">
-          <div class="flex items-center flex-row">
-            <a href="./index.html" class="text-white text-lg font-semibold">
-              <img src="./img/logo white.png" alt="Xorum Logo" class="h-20" />
+  <body class="bg-gray-50 dark:bg-dark-200 text-gray-900 dark:text-white font-sans">
+    <!-- Add this right after the opening body tag -->
+    <div id="particles-js" class="absolute inset-0 z-0"></div>
+    <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-primary-500 to-secondary-500 z-50" style="width: 0%"></div>
+    <div id="custom-cursor" class="hidden md:block fixed w-8 h-8 rounded-full border-2 border-primary-500 pointer-events-none z-50 transition-transform duration-200 ease-out"></div>
+    <div id="custom-cursor-dot" class="hidden md:block fixed w-2 h-2 bg-primary-500 rounded-full pointer-events-none z-50 transition-transform duration-200 ease-out"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white dark:bg-dark-100 shadow-md z-50 transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <a href="#" class="flex items-center space-x-2">
+              <img src="./img/logo white.png" alt="Andrei Murariu Logo" class="h-10 w-auto">
+              <span class="text-xl font-bold gradient-text">ANDREI MURARIU</span>
             </a>
-            <h2 class="text-white text-lg font-semibold">XORUM</h2>
           </div>
-          <div class="hidden md:flex">
-            <a
-              href="#AboutMe"
-              class="text-gray-300 hover:text-white px-3 py-2 rounded-md"
-              >About Me</a
-            >
-            <a
-              href="#skills"
-              class="text-gray-300 hover:text-white px-3 py-2 rounded-md"
-              >Skills</a
-            >
-            <a
-              href="#projects"
-              class="text-gray-300 hover:text-white px-3 py-2 rounded-md"
-              >Projects</a
-            >
-            <a
-              href="#formation"
-              class="text-gray-300 hover:text-white px-3 py-2 rounded-md"
-              >Education & Work</a
-            >
+          
+          <!-- Desktop Navigation -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">About</a>
+              <a href="#skills" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Skills</a>
+              <a href="#projects" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Projects</a>
+              <a href="#music" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Music</a>
+              <a href="#experience" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Experience</a>
+              <a href="#contact" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Contact</a>
+              <button id="theme-toggle" class="p-2 rounded-full text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-100 focus:outline-none">
+                <i class="fas fa-moon dark:hidden"></i>
+                <i class="fas fa-sun hidden dark:block"></i>
+              </button>
           </div>
+          </div>
+          
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button id="theme-toggle-mobile" class="p-2 mr-2 rounded-full text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-100 focus:outline-none">
+              <i class="fas fa-moon dark:hidden"></i>
+              <i class="fas fa-sun hidden dark:block"></i>
+            </button>
+            <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-100 focus:outline-none">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-dark-100 shadow-lg">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-300">About</a>
+          <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-300">Skills</a>
+          <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-300">Projects</a>
+          <a href="#music" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-300">Music</a>
+          <a href="#experience" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-300">Experience</a>
+          <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-300">Contact</a>
         </div>
       </div>
     </nav>
-    <section class="bg-slate-300" id="AboutMe">
-      <div
-        class="flex flex-col-reverse items-center mx-2 md:mx-10 md:flex-row-reverse"
-      >
-        <div
-          class="flex-1 p-8 border-2 border-purple-500 rounded-lg shadow-2xl bg-teal-100 mb-8 md:mb-0"
-        >
-          <h1
-            class="text-center text-2xl font-bold text-gray-900 py-4 md:text-4x1"
-          >
-            Dev. <span class="gradient-text">Murariu Andrei</span>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-dark-200 dark:to-dark-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
+          <div class="w-full md:w-1/2 animate-fade-in">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              Hi, I'm <span class="gradient-text">Andrei Murariu</span>
           </h1>
-          <p class="text-base mb-4 text-center text-black md:text-lg">
-            Unleashing the power of code like a
-            <span class="text-blue-500 animate-pulse">hacker</span> in the
-            <span class="text-green-500 animate-pulse">Matrix</span>, I delve
-            into the realms of
-            <span class="text-yellow-500 animate-pulse"
-              >Object-Oriented Programming</span
-            >, crafting intricate
-            <span class="text-purple-500 animate-pulse">Full-Stack</span>
-            solutions that push boundaries. With
-            <span class="text-red-500 animate-pulse">Linux</span> as my trusted
-            sidekick, I conquer challenges with finesse, blending creativity and
-            precision to craft seamless digital experiences.
-          </p>
-          <p class="text-base mb-4 text-center text-black md:text-lg">
-            But wait, there's more! When I'm not hacking away at code, you can
-            find me unleashing <span class="text-green-500">sick beats</span> in
-            the studio, producing music that sets the world on fire {..
-            literally, I burnt my speakers}. And if that's not enough, I'm also
-            a <span class="text-green-500">gym enthusiast</span>. So, whether
-            it's coding, making music, or hitting the gym, I bring passion and
-            dedication to everything I do. Let's collaborate and create
-            something extraordinary!
-          </p>
+            <h2 class="text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-6">
+              <span id="typing-text"></span><span class="typing-cursor">|</span>
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
+              Unleashing the power of code like a <span class="text-primary-500 font-medium">hacker</span> in the 
+              <span class="text-secondary-500 font-medium">Matrix</span>, I delve into the realms of 
+              <span class="text-yellow-500 font-medium">Object-Oriented Programming</span>, crafting intricate 
+              <span class="text-primary-600 font-medium">Full-Stack</span> solutions that push boundaries.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="#contact" class="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors shadow-lg hover:shadow-xl">
+                Contact Me
+              </a>
+              <a href="#projects" class="px-6 py-3 bg-white dark:bg-dark-100 text-primary-600 dark:text-primary-400 font-medium rounded-lg border border-primary-600 dark:border-primary-400 hover:bg-gray-50 dark:hover:bg-dark-300 transition-colors shadow-lg hover:shadow-xl">
+                View Projects
+              </a>
+              <a href="/path/to/your-resume.pdf" download class="px-6 py-3 flex items-center bg-secondary-600 hover:bg-secondary-700 text-white font-medium rounded-lg transition-colors shadow-lg hover:shadow-xl">
+                <i class="fas fa-download mr-2"></i>
+                Download Resume
+              </a>
         </div>
-        <div class="flex-1">
-          <img
-            src="./img/techny-project-management.gif"
-            alt="Techny Project Management"
-            class="w-full h-auto object-cover selector"
-            style="max-width: 100%; height: auto"
-          />
         </div>
+          <div class="w-full md:w-1/2 animate-fade-in">
+            <img src="./img/techny-project-management.gif" alt="Developer Animation" class="w-full h-auto rounded-2xl shadow-2xl">
       </div>
+              </div>
+              </div>
     </section>
-    <section class="bg-teal-50" id="skills">
-      <div class="flex h-40vh items-center">
-        <div class="bg-teal-50 flex-1 p-8">
-          <h1 class="text-4xl font-bold mb-4 text-center md:text-2x1">
-            Skill Experience
-          </h1>
-          <div class="flex justify-start items-center mt-4 mb-8">
-            <div class="flex justify-between w-full">
-              <div
-                class="bg-green-500 text-white px-4 py-2 rounded-lg mx-2 flex-1 text-center"
-              >
-                0-1 years
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 md:py-24 bg-white dark:bg-dark-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 animate-fade-in">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">My Skills</h2>
+          <div class="w-24 h-1 gradient-bg mx-auto rounded-full mb-6"></div>
+          <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            A comprehensive collection of my technical skills and expertise, developed through years of practice and real-world projects.
+          </p>
               </div>
-              <div
-                class="bg-yellow-500 text-white px-4 py-2 rounded-lg mx-2 flex-1 text-center"
-              >
-                2-4 years
-              </div>
-              <div
-                class="bg-red-500 text-white px-4 py-2 rounded-lg mx-2 flex-1 text-center"
-              >
-                5+ years
-              </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 animate-slide-up">
+          <!-- Technical Skills -->
+          <div class="bg-gray-50 dark:bg-dark-200 rounded-2xl shadow-xl p-8">
+            <h3 class="text-2xl font-bold mb-6 gradient-text">Technical Skills</h3>
+            
+            <!-- Full-Stack Development -->
+            <div class="mb-8">
+              <h4 class="text-lg font-semibold mb-3 flex items-center">
+                <i class="fas fa-code text-primary-600 dark:text-primary-400 mr-2"></i>
+                Full-Stack Development
+              </h4>
+              <div class="flex flex-wrap gap-3">
+                <span class="skill-tag px-4 py-2 bg-primary-600 text-white rounded-lg text-sm font-medium">JavaScript</span>
+                <span class="skill-tag px-4 py-2 bg-primary-600 text-white rounded-lg text-sm font-medium">HTML/CSS</span>
+                <span class="skill-tag px-4 py-2 bg-primary-600 text-white rounded-lg text-sm font-medium">React</span>
+                <span class="skill-tag px-4 py-2 bg-primary-600 text-white rounded-lg text-sm font-medium">Node.js</span>
+                <span class="skill-tag px-4 py-2 bg-primary-600 text-white rounded-lg text-sm font-medium">PHP</span>
+                <span class="skill-tag px-4 py-2 bg-primary-600 text-white rounded-lg text-sm font-medium">MySQL</span>
+                <span class="skill-tag px-4 py-2 bg-primary-600 text-white rounded-lg text-sm font-medium">RESTful APIs</span>
+                <span class="skill-tag px-4 py-2 bg-primary-600 text-white rounded-lg text-sm font-medium">SASS/SCSS</span>
+                <span class="skill-tag px-4 py-2 bg-primary-600 text-white rounded-lg text-sm font-medium">Tailwind CSS</span>
             </div>
           </div>
-          <div class="flex justify-between">
-            <div class="w-1/2 mr-2">
-              <h2 class="text-2x1 font-semibold mb-2 text-center md:text-base">
-                Hard Skills
-              </h2>
-              <div class="flex flex-wrap gap-1.5 sm:gap-4">
-                <div
-                  class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  Tailwind
+            
+            <!-- DevOps & Cloud -->
+            <div class="mb-8">
+              <h4 class="text-lg font-semibold mb-3 flex items-center">
+                <i class="fas fa-server text-primary-600 dark:text-primary-400 mr-2"></i>
+                DevOps & Cloud
+              </h4>
+              <div class="flex flex-wrap gap-3">
+                <span class="skill-tag px-4 py-2 bg-secondary-600 text-white rounded-lg text-sm font-medium">Docker</span>
+                <span class="skill-tag px-4 py-2 bg-secondary-600 text-white rounded-lg text-sm font-medium">Git/GitHub</span>
+                <span class="skill-tag px-4 py-2 bg-secondary-600 text-white rounded-lg text-sm font-medium">CI/CD</span>
+                <span class="skill-tag px-4 py-2 bg-secondary-600 text-white rounded-lg text-sm font-medium">AWS</span>
+                <span class="skill-tag px-4 py-2 bg-secondary-600 text-white rounded-lg text-sm font-medium">Linux</span>
+                <span class="skill-tag px-4 py-2 bg-secondary-600 text-white rounded-lg text-sm font-medium">Bash Scripting</span>
+                <span class="skill-tag px-4 py-2 bg-secondary-600 text-white rounded-lg text-sm font-medium">Jenkins</span>
+                <span class="skill-tag px-4 py-2 bg-secondary-600 text-white rounded-lg text-sm font-medium">Zabbix</span>
                 </div>
-                <div
-                  class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  Photoshop
                 </div>
-                <div
-                  class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  Docker
+            
+            <!-- Programming Languages -->
+            <div class="mb-8">
+              <h4 class="text-lg font-semibold mb-3 flex items-center">
+                <i class="fas fa-laptop-code text-primary-600 dark:text-primary-400 mr-2"></i>
+                Programming Languages
+              </h4>
+              <div class="flex flex-wrap gap-3">
+                <span class="skill-tag px-4 py-2 bg-yellow-500 text-white rounded-lg text-sm font-medium">JavaScript</span>
+                <span class="skill-tag px-4 py-2 bg-yellow-500 text-white rounded-lg text-sm font-medium">PHP</span>
+                <span class="skill-tag px-4 py-2 bg-yellow-500 text-white rounded-lg text-sm font-medium">Python</span>
+                <span class="skill-tag px-4 py-2 bg-yellow-500 text-white rounded-lg text-sm font-medium">Java</span>
+                <span class="skill-tag px-4 py-2 bg-yellow-500 text-white rounded-lg text-sm font-medium">C++</span>
+                <span class="skill-tag px-4 py-2 bg-yellow-500 text-white rounded-lg text-sm font-medium">C</span>
+                <span class="skill-tag px-4 py-2 bg-yellow-500 text-white rounded-lg text-sm font-medium">Bash</span>
                 </div>
-                <div
-                  class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  JQuery
                 </div>
-                <div
-                  class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  Zabbix
+            
+            <!-- Tools & Technologies -->
+            <div>
+              <h4 class="text-lg font-semibold mb-3 flex items-center">
+                <i class="fas fa-tools text-primary-600 dark:text-primary-400 mr-2"></i>
+                Tools & Technologies
+              </h4>
+              <div class="flex flex-wrap gap-3">
+                <span class="skill-tag px-4 py-2 bg-blue-500 text-white rounded-lg text-sm font-medium">VS Code</span>
+                <span class="skill-tag px-4 py-2 bg-blue-500 text-white rounded-lg text-sm font-medium">JetBrains IDEs</span>
+                <span class="skill-tag px-4 py-2 bg-blue-500 text-white rounded-lg text-sm font-medium">Git</span>
+                <span class="skill-tag px-4 py-2 bg-blue-500 text-white rounded-lg text-sm font-medium">MySQL</span>
+                <span class="skill-tag px-4 py-2 bg-blue-500 text-white rounded-lg text-sm font-medium">OOP</span>
+                <span class="skill-tag px-4 py-2 bg-blue-500 text-white rounded-lg text-sm font-medium">Data Structures</span>
+                <span class="skill-tag px-4 py-2 bg-blue-500 text-white rounded-lg text-sm font-medium">Algorithms</span>
+                <span class="skill-tag px-4 py-2 bg-blue-500 text-white rounded-lg text-sm font-medium">Photoshop</span>
+                <span class="skill-tag px-4 py-2 bg-blue-500 text-white rounded-lg text-sm font-medium">FL Studio</span>
                 </div>
-                <div
-                  class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  Jenkins
                 </div>
-                <div
-                  class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  AWS
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  Bash
+          
+          <!-- Soft Skills -->
+          <div class="bg-gray-50 dark:bg-dark-200 rounded-2xl shadow-xl p-8">
+            <h3 class="text-2xl font-bold mb-6 gradient-text">Soft Skills</h3>
+            
+            <div class="grid grid-cols-2 gap-4">
+              <div class="skill-tag p-4 bg-primary-100 dark:bg-primary-900/30 rounded-xl">
+                <div class="flex items-center mb-2">
+                  <i class="fas fa-puzzle-piece text-primary-600 dark:text-primary-400 mr-2"></i>
+                  <h4 class="font-semibold">Problem Solving</h4>
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  Git
+                <p class="text-sm text-gray-600 dark:text-gray-400">Analytical approach to complex challenges</p>
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  PHP
+              
+              <div class="skill-tag p-4 bg-primary-100 dark:bg-primary-900/30 rounded-xl">
+                <div class="flex items-center mb-2">
+                  <i class="fas fa-users text-primary-600 dark:text-primary-400 mr-2"></i>
+                  <h4 class="font-semibold">Teamwork</h4>
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  FL Studio
+                <p class="text-sm text-gray-600 dark:text-gray-400">Collaborative and supportive team player</p>
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  JetBrains IDEs
+              
+              <div class="skill-tag p-4 bg-primary-100 dark:bg-primary-900/30 rounded-xl">
+                <div class="flex items-center mb-2">
+                  <i class="fas fa-comments text-primary-600 dark:text-primary-400 mr-2"></i>
+                  <h4 class="font-semibold">Communication</h4>
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  VS Code
+                <p class="text-sm text-gray-600 dark:text-gray-400">Clear and effective communicator</p>
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  IntelliJ IDEA
+              
+              <div class="skill-tag p-4 bg-primary-100 dark:bg-primary-900/30 rounded-xl">
+                <div class="flex items-center mb-2">
+                  <i class="fas fa-clock text-primary-600 dark:text-primary-400 mr-2"></i>
+                  <h4 class="font-semibold">Time Management</h4>
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  C++
+                <p class="text-sm text-gray-600 dark:text-gray-400">Efficient prioritization of tasks</p>
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  JavaScript
+              
+              <div class="skill-tag p-4 bg-primary-100 dark:bg-primary-900/30 rounded-xl">
+                <div class="flex items-center mb-2">
+                  <i class="fas fa-lightbulb text-primary-600 dark:text-primary-400 mr-2"></i>
+                  <h4 class="font-semibold">Creativity</h4>
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  MatLab
+                <p class="text-sm text-gray-600 dark:text-gray-400">Innovative approach to problem-solving</p>
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  Python
+              
+              <div class="skill-tag p-4 bg-primary-100 dark:bg-primary-900/30 rounded-xl">
+                <div class="flex items-center mb-2">
+                  <i class="fas fa-sync-alt text-primary-600 dark:text-primary-400 mr-2"></i>
+                  <h4 class="font-semibold">Adaptability</h4>
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  File Handling
+                <p class="text-sm text-gray-600 dark:text-gray-400">Quick to adapt to new technologies</p>
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  JAVA
+              
+              <div class="skill-tag p-4 bg-primary-100 dark:bg-primary-900/30 rounded-xl">
+                <div class="flex items-center mb-2">
+                  <i class="fas fa-book text-primary-600 dark:text-primary-400 mr-2"></i>
+                  <h4 class="font-semibold">Self-Learning</h4>
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  C
+                <p class="text-sm text-gray-600 dark:text-gray-400">Continuous self-improvement</p>
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  HTML
+              
+              <div class="skill-tag p-4 bg-primary-100 dark:bg-primary-900/30 rounded-xl">
+                <div class="flex items-center mb-2">
+                  <i class="fas fa-tasks text-primary-600 dark:text-primary-400 mr-2"></i>
+                  <h4 class="font-semibold">Agile Methodologies</h4>
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  XML
+                <p class="text-sm text-gray-600 dark:text-gray-400">Experience with agile development</p>
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  CSS
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  Database
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  MySQL
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  SASS/SCSS
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  OOP
+    </section>
+
+    <!-- Add this to your skills section -->
+    <div class="bg-white dark:bg-dark-100 rounded-2xl shadow-xl p-6 mt-8 mx-auto max-w-md">
+      <h3 class="text-2xl font-bold mb-4 gradient-text text-center">Skills Proficiency</h3>
+      <div class="w-full h-64 relative">
+        <canvas id="skills-radar" width="300" height="300"></canvas>
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  Data Structures
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  Algorithms
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 md:py-24 bg-gray-50 dark:bg-dark-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 animate-fade-in">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+          <div class="w-24 h-1 gradient-bg mx-auto rounded-full mb-6"></div>
+          <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            A showcase of my best work, demonstrating my skills and expertise in various technologies.
+          </p>
                 </div>
-                <div
-                  class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  Linux
+        
+        <!-- Add this before your projects grid -->
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
+          <button class="project-filter active px-4 py-2 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 font-medium transition-all hover:bg-primary-200 dark:hover:bg-primary-800/30" data-filter="all">All</button>
+          <button class="project-filter px-4 py-2 rounded-full bg-gray-100 dark:bg-dark-300 text-gray-700 dark:text-gray-300 font-medium transition-all hover:bg-gray-200 dark:hover:bg-dark-400" data-filter="web">Web</button>
+          <button class="project-filter px-4 py-2 rounded-full bg-gray-100 dark:bg-dark-300 text-gray-700 dark:text-gray-300 font-medium transition-all hover:bg-gray-200 dark:hover:bg-dark-400" data-filter="app">App</button>
+          <button class="project-filter px-4 py-2 rounded-full bg-gray-100 dark:bg-dark-300 text-gray-700 dark:text-gray-300 font-medium transition-all hover:bg-gray-200 dark:hover:bg-dark-400" data-filter="algorithm">Algorithm</button>
+          <button class="project-filter px-4 py-2 rounded-full bg-gray-100 dark:bg-dark-300 text-gray-700 dark:text-gray-300 font-medium transition-all hover:bg-gray-200 dark:hover:bg-dark-400" data-filter="music">Music</button>
                 </div>
-                <div
-                  class="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 text-sm"
-                >
-                  Debugging
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-slide-up">
+          <!-- Project 1 -->
+          <a href="./Simulation/index.html" class="project-card" data-category="web">
+            <div class="relative h-48 overflow-hidden">
+              <img src="./img/Simulation.jpg" alt="Bachelor's Degree Simulation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                <div class="p-4">
+                  <span class="px-2 py-1 bg-primary-600 text-white text-xs font-medium rounded">Web App</span>
                 </div>
               </div>
             </div>
-            <div class="flex justify-center">
-              <div class="border-r border-indigo-50 h-auto"></div>
-            </div>
-            <div class="w-1/2 ml-2">
-              <h2 class="text-2x1 font-semibold mb-2 text-center md:text-base">
-                Soft Skills
-              </h2>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Bachelor's Degree Simulation</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">An interactive web application simulating the bachelor's degree examination process.</p>
               <div class="flex flex-wrap gap-2">
-                <div
-                  class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-500 transition-colors duration-300 text-sm"
-                >
-                  Problem Solving
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">HTML</span>
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">CSS</span>
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">JavaScript</span>
                 </div>
-                <div
-                  class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-500 transition-colors duration-300 text-sm"
-                >
-                  Teamwork
                 </div>
-                <div
-                  class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-500 transition-colors duration-300 text-sm"
-                >
-                  Communication
+          </a>
+          
+          <!-- Project 2 -->
+          <a href="./Chomsky/Page 1/tema.html" class="project-card" data-category="algorithm">
+            <div class="relative h-48 overflow-hidden">
+              <img src="./img/chomsky.jpg" alt="Chomsky Normal Form" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                <div class="p-4">
+                  <span class="px-2 py-1 bg-primary-600 text-white text-xs font-medium rounded">Algorithm</span>
                 </div>
-                <div
-                  class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-500 transition-colors duration-300 text-sm"
-                >
-                  Time Management
                 </div>
-                <div
-                  class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-500 transition-colors duration-300 text-sm"
-                >
-                  Adaptability
                 </div>
-                <div
-                  class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-500 transition-colors duration-300 text-sm"
-                >
-                  Creativity
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Chomsky Normal Form</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">An implementation of the Chomsky Normal Form algorithm for context-free grammars.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">JavaScript</span>
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Algorithms</span>
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">HTML/CSS</span>
                 </div>
-                <div
-                  class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-500 transition-colors duration-300 text-sm"
-                >
-                  Algebra
                 </div>
-                <div
-                  class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-500 transition-colors duration-300 text-sm"
-                >
-                  Software Design
+          </a>
+          
+          <!-- Project 3 -->
+          <a href="./Cryptography/crypto.html" class="project-card" data-category="web">
+            <div class="relative h-48 overflow-hidden">
+              <img src="./img/crypto.jpg" alt="Cryptography WebApps" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                <div class="p-4">
+                  <span class="px-2 py-1 bg-primary-600 text-white text-xs font-medium rounded">Security</span>
                 </div>
-                <div
-                  class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-500 transition-colors duration-300 text-sm"
-                >
-                  Ideas
                 </div>
-                <div
-                  class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-500 transition-colors duration-300 text-sm"
-                >
-                  Self-Taught
                 </div>
-                <div
-                  class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-500 transition-colors duration-300 text-sm"
-                >
-                  Curiosity
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Cryptography WebApps</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">A collection of web applications demonstrating various cryptographic algorithms and techniques.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">JavaScript</span>
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Cryptography</span>
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Web Security</span>
                 </div>
-                <div
-                  class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-500 transition-colors duration-300 text-sm"
-                >
-                  Commitment and eager to learn new things
                 </div>
-                <div
-                  class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-500 transition-colors duration-300 text-sm"
-                >
-                  Agile Methodologies
+          </a>
+          
+          <!-- Project 4 -->
+          <a href="https://github.com/iamxorum/medical-system" class="project-card" data-category="app">
+            <div class="relative h-48 overflow-hidden">
+              <img src="./img/java.jpg" alt="Java Medical System" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                <div class="p-4">
+                  <span class="px-2 py-1 bg-primary-600 text-white text-xs font-medium rounded">Java</span>
                 </div>
-                <div
-                  class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-500 transition-colors duration-300 text-sm"
-                >
-                  Scripting
                 </div>
-                <div
-                  class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-500 transition-colors duration-300 text-sm"
-                >
-                  Reverse Engineering
                 </div>
-                <div
-                  class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-100 hover:text-blue-500 transition-colors duration-300 text-sm"
-                >
-                  Testing
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Medical System Management</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">A comprehensive Java application for managing medical systems and patient records.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Java</span>
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">OOP</span>
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Database</span>
                 </div>
               </div>
+          </a>
+          
+          <!-- Project 5 -->
+          <a href="https://github.com/iamxorum/universities_management" class="project-card" data-category="algorithm">
+            <div class="relative h-48 overflow-hidden">
+              <img src="./img/cpp.jpg" alt="C++ Universities System" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                <div class="p-4">
+                  <span class="px-2 py-1 bg-primary-600 text-white text-xs font-medium rounded">C++</span>
             </div>
           </div>
         </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Universities System Management</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">A C++ application for managing university systems, courses, and student records.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">C++</span>
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Data Structures</span>
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Algorithms</span>
       </div>
+          </div>
+          </a>
+          
+          <!-- Project 6 -->
+          <a href="https://github.com/iamxorum/patients_management" class="project-card" data-category="app">
+            <div class="relative h-48 overflow-hidden">
+              <img src="./img/fullstack.jpg" alt="Full-Stack Patients Management" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="project-overlay absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end">
+                <div class="p-4">
+                  <span class="px-2 py-1 bg-primary-600 text-white text-xs font-medium rounded">Full-Stack</span>
+          </div>
+          </div>
+          </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Patients Management</h3>
+              <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">A full-stack application for managing patient records, appointments, and medical histories.</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">JavaScript</span>
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">PHP</span>
+                <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">MySQL</span>
+          </div>
+          </div>
+        </a>
+          </div>
+        
+        <div class="text-center mt-12">
+          <a href="https://github.com/iamxorum" class="inline-flex items-center px-6 py-3 bg-white dark:bg-dark-100 text-primary-600 dark:text-primary-400 font-medium rounded-lg border border-primary-600 dark:border-primary-400 hover:bg-gray-50 dark:hover:bg-dark-300 transition-colors shadow-lg hover:shadow-xl">
+            <i class="fab fa-github mr-2"></i>
+            View More on GitHub
+          </a>
+          </div>
+          </div>
     </section>
-    <section class="bg-slate-300" id="projects">
-      <h1 class="text-4xl font-bold mb-4 text-center pt-10">Projects</h1>
 
-      <div class="flex flex-wrap justify-center">
-        <a href="./Simulation/index.html" class="project-card shadow-2xl">
-          <div class="project-image">
-            <img src="./img/Simulation.jpg" alt="Bachelor's Degree Simulation (Romanian)" />
-            <div class="overlay"></div>
-          </div>
-          <div class="project-name">Bachelor's Degree Simulation (Romanian)</div>
-        </a>
-
-        <a href="./Chomsky/Page 1/tema.html" class="project-card shadow-2xl">
-          <div class="project-image">
-            <img src="./img/chomsky.jpg" alt="Chomsky Normal Form" />
-            <div class="overlay"></div>
-          </div>
-          <div class="project-name">Chomsky Normal Form</div>
-        </a>
-
-        <a href="./Cryptography/crypto.html" class="project-card shadow-2xl">
-          <div class="project-image">
-            <img src="./img/crypto.jpg" alt="Cryptography WebApps" />
-            <div class="overlay"></div>
-          </div>
-          <div class="project-name">Cryptography WebApps</div>
-        </a>
-
-        <a href="./Altex/altex.html" class="project-card shadow-2xl">
-          <div class="project-image">
-            <img src="./img/altex.png" lt="Altex" />
-            <div class="overlay"></div>
-          </div>
-          <div class="project-name">Altex</div>
-        </a>
-
-        <a
-          href="https://github.com/iamxorum/medical-system"
-          class="project-card shadow-2xl"
-        >
-          <div class="project-image">
-            <img src="./img/java.jpg" alt="Java Projects" />
-            <div class="overlay"></div>
-          </div>
-          <div class="project-name">Java<br />Medical System Management</div>
-        </a>
-
-        <a
-          href="https://github.com/iamxorum/universities_management"
-          class="project-card shadow-2xl"
-        >
-          <div class="project-image">
-            <img src="./img/cpp.jpg" alt="C++ Projects" />
-            <div class="overlay"></div>
-          </div>
-          <div class="project-name">
-            C++<br />Universities System Management
-          </div>
-        </a>
-
-        <a
-          href="https://github.com/iamxorum/climbing_stairs"
-          class="project-card shadow-2xl"
-        >
-          <div class="project-image">
-            <img src="./img/cpp.jpg" alt="C++ Projects" />
-            <div class="overlay"></div>
-          </div>
-          <div class="project-name">
-            C++<br />Backtracking Algorithm<br />Climbing stairs
-          </div>
-        </a>
-
-        <a
-          href="https://github.com/iamxorum/best_sum_of_money"
-          class="project-card shadow-2xl"
-        >
-          <div class="project-image">
-            <img src="./img/cpp.jpg" alt="C++ Projects" />
-            <div class="overlay"></div>
-          </div>
-          <div class="project-name">
-            C++<br />Dynamic Programming<br />Best sum of money
-          </div>
-        </a>
-
-        <a
-          href="https://github.com/iamxorum/gauss_montante_algorithm"
-          class="project-card shadow-2xl"
-        >
-          <div class="project-image">
-            <img src="./img/c.jpg" alt="Java Projects" />
-            <div class="overlay"></div>
-          </div>
-          <div class="project-name">
-            C<br />Gauss-Montante<br />Bareiss Algorithm
-          </div>
-        </a>
-
-        <a
-          href="https://github.com/iamxorum/patients_management"
-          class="project-card shadow-2xl"
-        >
-          <div class="project-image">
-            <img src="./img/fullstack.jpg" alt="Java Projects" />
-            <div class="overlay"></div>
-          </div>
-          <div class="project-name">Full-Stack<br />Patients Management</div>
-        </a>
-
-        <a
-          href="https://github.com/iamxorum/faculty_database"
-          class="project-card shadow-2xl"
-        >
-          <div class="project-image">
-            <img src="./img/database.png" alt="Java Projects" />
-            <div class="overlay"></div>
-          </div>
-          <div class="project-name">Transact SQL<br />Faculty DataBase</div>
-        </a>
-      </div>
-    </section>
-    <section class="bg-teal-50 flex flex-col md:flex-row" id="formation">
-      <!-- Work Experience Timeline -->
-      <div class="flex items-center h-100vh mx-5">
-        <div class="flex-1 p-8">
-          <h1 class="text-2xl text-center font-bold mb-8 md:text-4x1">
-            Work<br />Experience
-          </h1>
-          <div class="flex items-start h-100vh mx-10">
-            <div class="timeline ml-40 flex-2">
-              <div class="timeline-item flex">
-                <div class="timeline-year mr-4">
-                  <h3 class="timeline-title">Pres.<br /></h3>
-                </div>
-                <div class="timeline-icon">
-                  <i class="fas fa-briefcase"></i>
-                </div>
-                <div class="timeline-content ml-4">
-                  <h4 class="timeline-description">Freelancing</h4>
-                  <p class="timeline-description">
-                    IT Support & Operations Specialist
-                  </p>
-                </div>
-              </div>
-              <div class="timeline-item flex">
-                <div class="timeline-year mr-4">
-                  <h3 class="timeline-title">2018<br />2023</h3>
-                </div>
-                <div class="timeline-icon">
-                  <i class="fas fa-briefcase"></i>
-                </div>
-                <div class="timeline-content ml-4">
-                  <h4 class="timeline-description">Freelancing</h4>
-                  <p class="timeline-description">
-                    Software & Front-end development
-                  </p>
-                  <button
-                    class="popup-button3 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-2"
-                  >
-                    Info
-                  </button>
-                  <div
-                    id="popup3"
-                    class="hidden bg-gray-100 border border-gray-300 rounded p-4 mt-2"
-                  >
-                    <div class="popup-content">
-                      <p class="text-gray-800 mb-4">
-                        As a freelancer in basic software and frontend
-                        development projects, I have experience working on
-                        various projects using different technologies.
-                      </p>
-                      <p class="text-gray-800 mb-4">
-                        In frontend development, I specialize in creating
-                        Vanilla websites using HTML, CSS, JavaScript, and
-                        Tailwind CSS. I have a solid understanding of web
-                        fundamentals and can create responsive and visually
-                        appealing web pages without relying on frameworks.
-                      </p>
-                      <p class="text-gray-800 mb-4">
-                        For software development, I have worked on super basic
-                        projects using languages such as C, C++, and Java.
-                        Although these projects may be small in scale, they have
-                        provided me with a solid foundation in programming
-                        concepts and problem-solving skills.
-                      </p>
-                      <p class="text-gray-800 bg-gray-800mb-4">
-                        I am constantly learning and exploring new technologies
-                        to enhance my skills and expand my capabilities as a
-                        developer. I enjoy taking on new challenges and
-                        delivering high-quality solutions to meet client
-                        requirements.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="timeline-item flex">
-                <div class="timeline-year mr-4">
-                  <h3 class="timeline-title">2017<br />2017</h3>
-                </div>
-                <div class="timeline-icon">
-                  <i class="fas fa-briefcase"></i>
-                </div>
-                <div class="timeline-content ml-4">
-                  <h4 class="timeline-description">Lenzi Bike, Prato, Italy</h4>
-                  <p class="timeline-description">
-                    Sales Assistant {School-Work Program}
-                  </p>
-                </div>
-              </div>
-              <div class="timeline-item flex">
-                <div class="timeline-year mr-4">
-                  <h3 class="timeline-title">2017<br />2019</h3>
-                </div>
-                <div class="timeline-icon">
-                  <i class="fas fa-briefcase"></i>
-                </div>
-                <div class="timeline-content ml-4">
-                  <h4 class="timeline-description">
-                    ITEPS Paolo Dagomari, Prato, Italy
-                  </h4>
-                  <p class="timeline-description">System Administration</p>
-                  <button
-                    class="popup-button bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-2"
-                  >
-                    Info
-                  </button>
-                  <div id="popup">
-                    <div
-                      class="popup-content bg-white border border-gray-300 rounded p-4 mt-2"
-                    >
-                      <p class="text-gray-800 mb-4">
-                        As a system administrator in a school, I am responsible
-                        for managing and maintaining computer systems, networks,
-                        and technology infrastructure. My role involves ensuring
-                        the smooth operation of IT systems and supporting the
-                        educational environment.
-                      </p>
-                      <p class="text-gray-800 mb-4">
-                        I install and configure hardware and software, manage
-                        user accounts and permissions, troubleshoot technical
-                        issues, and implement security measures to protect
-                        sensitive data and network resources. I collaborate with
-                        teachers, staff, and IT vendors to address technology
-                        needs and provide technical support and training.
-                      </p>
-                      <p class="text-gray-800 mb-4">
-                        In addition, I oversee the deployment and management of
-                        educational software, maintain servers and network
-                        infrastructure, monitor system performance, and plan for
-                        future technology upgrades. I stay updated with the
-                        latest advancements in technology and security practices
-                        to optimize the school's technology environment and
-                        enhance the learning experience for students and
-                        educators.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="timeline-item flex">
-                <div class="timeline-year mr-4">
-                  <h3 class="timeline-title">2018<br />2020</h3>
-                </div>
-                <div class="timeline-icon">
-                  <i class="fas fa-briefcase"></i>
-                </div>
-                <div class="timeline-content ml-4">
-                  <h4 class="timeline-description">
-                    Associazione Italiana Arbitri, Prato, Italy
-                  </h4>
-                  <p class="timeline-description">11v11 Football Referee</p>
-                </div>
-              </div>
-              <div class="timeline-item flex">
-                <div class="timeline-year mr-4">
-                  <h3 class="timeline-title">2020<br />2020</h3>
-                </div>
-                <div class="timeline-icon">
-                  <i class="fas fa-briefcase"></i>
-                </div>
-                <div class="timeline-content ml-4">
-                  <h4 class="timeline-description">CoseNonCose, Italy</h4>
-                  <p class="timeline-description">
-                    Video Maker & Content Creator
-                  </p>
-                  <button
-                    class="popup-button2 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-2"
-                  >
-                    Info
-                  </button>
-                  <div
-                    id="popup2"
-                    class="hidden bg-gray-100 border border-gray-300 rounded p-4 mt-2"
-                  >
-                    <div class="popup-content">
-                      <p class="text-gray-800 mb-4">
-                        As a Video Maker & Content Creator, I specialize in
-                        creating memes and video memes. My work involves
-                        leveraging my creativity and video editing skills to
-                        produce engaging and entertaining content.
-                      </p>
-                      <p class="text-gray-800 mb-4">
-                        I am proficient in using video editing software to craft
-                        humorous and relatable memes that resonate with the
-                        audience. I have a keen eye for viral trends and know
-                        how to incorporate them into my content to maximize
-                        engagement.
-                      </p>
-                      <p class="text-gray-800 mb-4">
-                        I stay up-to-date with the latest internet culture and
-                        meme formats, allowing me to create content that is
-                        relevant and shareable. I understand the importance of
-                        timing, humor, and visual aesthetics in creating
-                        effective memes and video memes.
-                      </p>
-                      <p class="text-gray-800 bg-gray-800mb-4">
-                        Through my work as a Video Maker & Content Creator, I
-                        strive to bring joy and entertainment to online
-                        communities and connect with a wide audience through the
-                        power of memes and videos.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Add more timeline items here -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="flex h-100vh mx-5">
-        <div class="flex-1 p-8">
-          <h1 class="text-2xl text-center font-bold mb-8 md:text-4x1">
-            Education
-          </h1>
-          <div class="flex items-start h-100vh mx-10">
-            <div class="timeline ml-40 flex-2">
-              <div class="timeline-item flex">
-                <div class="timeline-year mr-4">
-                  <h3 class="timeline-title">2014<br />2019</h3>
-                </div>
-                <div class="timeline-icon">
-                  <i class="fas fa-code"></i>
-                </div>
-                <div class="timeline-content ml-4">
-                  <h4 class="timeline-description">
-                    ITEPS Paolo Dgomari, Prato, Italy
-                  </h4>
-                  <p class="timeline-description">
-                    Informatics and Economics diploma.
-                  </p>
-                </div>
-              </div>
-              <div class="timeline-item flex">
-                <div class="timeline-year mr-4">
-                  <h3 class="timeline-title">2021<br />2024</h3>
-                </div>
-                <div class="timeline-icon">
-                  <i class="fas fa-database"></i>
-                </div>
-                <div class="timeline-content ml-4">
-                  <h4 class="timeline-description">
-                    Universitatea Titu Maiorescu, Bucharest, Romania
-                  </h4>
-                  <p class="timeline-description">
-                    Bachelor's degree in Computer Science.
-                  </p>
-                </div>
-              </div>
-              <!-- Add more timeline items here -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="bg-gray-800 h-10vh w-full">
-      <div class="flex items-center justify-center h-full">
-        <div class="text-white text-center">
-          <h4 class="text-xl font-bold mb-2 mt-3">Contact Information</h4>
-          <p class="mb-1">Email: andrei.smurariu@gmail.com</p>
-          <p class="mb-1">Phone: +40 729 762 236</p>
-          <p class="mb-3">
-            <a
-              href="https://www.linkedin.com/in/andrei-stefanel-murariu-83317b177/"
-              >Linkedin</a
-            >
+    <!-- Music Producer Section -->
+    <section id="music" class="py-16 md:py-24 bg-gray-100 dark:bg-dark-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 animate-fade-in">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Music Production</h2>
+          <div class="w-24 h-1 gradient-bg mx-auto rounded-full mb-6"></div>
+          <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            Beyond coding, I express my creativity through music production, creating electronic tracks that blend technical precision with artistic expression.
           </p>
         </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 animate-slide-up">
+          <!-- Music Bio -->
+          <div class="bg-white dark:bg-dark-200 rounded-2xl shadow-xl p-8">
+            <h3 class="text-2xl font-bold mb-6 gradient-text">My Musical Journey</h3>
+            
+            <p class="text-gray-600 dark:text-gray-400 mb-6">
+              As a music producer, I specialize in creating electronic music that combines technical precision with emotional depth. My journey in music production began as a natural extension of my technical skills, allowing me to blend my programming knowledge with artistic expression.
+            </p>
+            
+            <p class="text-gray-600 dark:text-gray-400 mb-6">
+              I produce primarily using FL Studio, where I leverage my understanding of digital signal processing and sound design to craft unique sonic landscapes. My tracks often feature intricate arrangements, dynamic progressions, and carefully crafted sound design.
+            </p>
+            
+            <p class="text-gray-600 dark:text-gray-400 mb-6">
+              The same problem-solving mindset that drives my coding work influences my approach to music production, where I constantly experiment with new techniques and push the boundaries of what's possible within the digital audio workstation.
+            </p>
+            
+            <div class="flex flex-wrap gap-3 mt-8">
+              <span class="skill-tag px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium">FL Studio</span>
+              <span class="skill-tag px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium">Sound Design</span>
+              <span class="skill-tag px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium">Mixing</span>
+              <span class="skill-tag px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium">Mastering</span>
+              <span class="skill-tag px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium">Electronic Music</span>
+              <span class="skill-tag px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium">MIDI Composition</span>
+            </div>
+          </div>
+          
+          <!-- Music Platforms -->
+          <div class="bg-white dark:bg-dark-200 rounded-2xl shadow-xl p-8">
+            <h3 class="text-2xl font-bold mb-6 gradient-text">Listen to My Music</h3>
+            
+            <div class="space-y-6">
+              <!-- Spotify -->
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 rounded-lg">
+                  <i class="fab fa-spotify text-xl"></i>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-semibold mb-1">Spotify</h4>
+                  <a href="https://open.spotify.com/artist/25zeM1ahtv5jE1lD0l0XWh?si=0L7-TGsPT3GqgSLlBLWTLg" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-green-600 dark:hover:text-green-400 transition-colors">Xorum</a>
+                  <p class="text-sm text-gray-500 dark:text-gray-500 mt-1">Stream my latest releases and playlists</p>
+                </div>
+              </div>
+              
+              <!-- SoundCloud -->
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 rounded-lg">
+                  <i class="fab fa-soundcloud text-xl"></i>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-semibold mb-1">SoundCloud</h4>
+                  <a href="https://soundcloud.com/iamxorum" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors">Xorum</a>
+                  <p class="text-sm text-gray-500 dark:text-gray-500 mt-1">Discover my works in progress and experimental tracks</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+        <!-- Music Projects -->
+        <div class="mt-16">
+          <h3 class="text-2xl font-bold mb-8 text-center gradient-text">Featured Music Projects</h3>
+          
+          <!-- Scrollable container for music projects -->
+          <div class="relative">
+            <!-- Navigation arrows -->
+            <button id="prev-track" class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white dark:bg-dark-200 rounded-full p-3 shadow-lg text-primary-600 dark:text-primary-400 hover:bg-gray-100 dark:hover:bg-dark-300 focus:outline-none hidden md:block">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="next-track" class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white dark:bg-dark-200 rounded-full p-3 shadow-lg text-primary-600 dark:text-primary-400 hover:bg-gray-100 dark:hover:bg-dark-300 focus:outline-none hidden md:block">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Scrollable track container -->
+            <div id="tracks-container" class="flex overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
+              <!-- Track 0 -->
+              <div class="min-w-full md:min-w-[calc(100%-2rem)] px-4 snap-start">
+                <div class="bg-dark-300 rounded-2xl p-8 shadow-xl">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                      <h3 class="text-2xl font-bold mb-4 text-white">Bebe Rexha - Sacrifice (Xorum Remix)</h3>
+                      <div class="mb-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-600 text-white text-sm font-medium rounded-full">Electronic</span>
+                        <span class="px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded-full">House</span>
+                        <span class="px-3 py-1 bg-orange-600 text-white text-sm font-medium rounded-full">Remix</span>
+                      </div>
+                      <a href="https://www.youtube.com/watch?v=jm3bSZQpJYc" target="_blank" class="inline-block px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors">
+                        <i class="fab fa-youtube mr-2"></i>
+                        Listen "Sacrifice" on YouTube
+                      </a>
+                    </div>
+                    <div class="bg-dark-200 p-4 rounded-xl">
+                      <div class="relative rounded-lg overflow-hidden">
+                        <!-- YouTube thumbnail with play button overlay -->
+                        <img src="https://img.youtube.com/vi/jm3bSZQpJYc/maxresdefault.jpg" alt="Bebe Rexha - Sacrifice (Xorum Remix)" class="w-full h-auto rounded-lg">
+                        <a href="https://www.youtube.com/watch?v=jm3bSZQpJYc" target="_blank" class="absolute inset-0 flex items-center justify-center">
+                          <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg">
+                            <i class="fas fa-play text-white text-xl"></i>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Track 1 -->
+              <div class="min-w-full md:min-w-[calc(100%-2rem)] px-4 snap-start">
+                <div class="bg-dark-300 rounded-2xl p-8 shadow-xl">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                      <h3 class="text-2xl font-bold mb-4 text-white">Xorum - iPhone</h3>
+                      <p class="text-gray-300 mb-6">Latest single on Spotify.</p>
+                      <div class="mb-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-600 text-white text-sm font-medium rounded-full">Electronic</span>
+                        <span class="px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded-full">Deep House</span>
+                        <span class="px-3 py-1 bg-orange-600 text-white text-sm font-medium rounded-full">Single</span>
+                      </div>
+                      <a href="https://open.spotify.com/track/3UsLwZBeb9GQ3MJEc2vKfS?si=be57dc4ae1e24ef0" target="_blank" class="inline-block px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg transition-colors">
+                        <i class="fab fa-spotify mr-2"></i>
+                        Listen "iPhone" on Spotify
+                      </a>
+                    </div>
+                    <div class="bg-dark-200 p-4 rounded-xl">
+                      <iframe src="https://open.spotify.com/embed/track/3UsLwZBeb9GQ3MJEc2vKfS" width="100%" height="152" frameborder="0" allowtransparency="true" allow="encrypted-media" class="rounded-lg"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Track 2 -->
+              <div class="min-w-full md:min-w-[calc(100%-2rem)] px-4 snap-start">
+                <div class="bg-dark-300 rounded-2xl p-8 shadow-xl">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                      <h3 class="text-2xl font-bold mb-4 text-white">Paul Damixie - Burning Bridge (Xorum Remix)</h3>
+                      <p class="text-gray-300 mb-6">Most popular track on Spotify.</p>
+                      <div class="mb-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-600 text-white text-sm font-medium rounded-full">Electronic</span>
+                        <span class="px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded-full">Deep House</span>
+                        <span class="px-3 py-1 bg-orange-600 text-white text-sm font-medium rounded-full">Remix</span>
+                      </div>
+                      <a href="https://open.spotify.com/track/5nB8GGx7lc0er8uFVqQD1P?si=50c940bdf1884313" target="_blank" class="inline-block px-6 py-3 bg-rose-600 hover:bg-rose-700 text-white font-medium rounded-lg transition-colors">
+                        <i class="fab fa-spotify mr-2"></i>
+                        Listen "Burning Bridge" on Spotify
+                      </a>
+                    </div>
+                    <div class="bg-dark-200 p-4 rounded-xl">
+                      <iframe src="https://open.spotify.com/embed/track/5nB8GGx7lc0er8uFVqQD1P" width="100%" height="152" frameborder="0" allowtransparency="true" allow="encrypted-media" class="rounded-lg"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Track 3 -->
+              <div class="min-w-full md:min-w-[calc(100%-2rem)] px-4 snap-start">
+                <div class="bg-dark-300 rounded-2xl p-8 shadow-xl">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                      <h3 class="text-2xl font-bold mb-4 text-white">Affective Sounds - Talking Body (Xorum Remix)</h3>
+                      <div class="mb-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-600 text-white text-sm font-medium rounded-full">Electronic</span>
+                        <span class="px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded-full">Slap House</span>
+                        <span class="px-3 py-1 bg-orange-600 text-white text-sm font-medium rounded-full">Remix</span>
+                      </div>
+                      <a href="https://open.spotify.com/track/7ElTf8NoG88JLGM82tLKTf?si=928d7bd871b042ff" target="_blank" class="inline-block px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors">
+                        <i class="fab fa-spotify mr-2"></i>
+                        Listen "Talking Body" on Spotify
+                      </a>
+                    </div>
+                    <div class="bg-dark-200 p-4 rounded-xl">
+                      <iframe src="https://open.spotify.com/embed/track/7ElTf8NoG88JLGM82tLKTf?si=fa4f2f1c15994a5e" width="100%" height="152" frameborder="0" allowtransparency="true" allow="encrypted-media" class="rounded-lg"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Track 4 -->
+              <div class="min-w-full md:min-w-[calc(100%-2rem)] px-4 snap-start">
+                <div class="bg-dark-300 rounded-2xl p-8 shadow-xl">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                      <h3 class="text-2xl font-bold mb-4 text-white">K391 - Lonely World (Xorum Remix)</h3>
+                      <div class="mb-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-600 text-white text-sm font-medium rounded-full">Electronic</span>
+                        <span class="px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded-full">House</span>
+                        <span class="px-3 py-1 bg-orange-600 text-white text-sm font-medium rounded-full">Remix</span>
+                      </div>
+                      <a href="https://soundcloud.com/iamxorum/k391-victor-crone-lonely-world-xorum-remix" target="_blank" class="inline-block px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors">
+                        <i class="fab fa-soundcloud mr-2"></i>
+                        Listen "Lonely World" on SoundCloud
+                      </a>
+                    </div>
+                    <div class="bg-dark-200 p-4 rounded-xl">
+                      <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1306770319&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true" width="100%" height="152" frameborder="0" allowtransparency="true" allow="encrypted-media" class="rounded-lg"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Track 5 -->
+              <div class="min-w-full md:min-w-[calc(100%-2rem)] px-4 snap-start">
+                <div class="bg-dark-300 rounded-2xl p-8 shadow-xl">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                      <h3 class="text-2xl font-bold mb-4 text-white">Xorum - Stay</h3>
+                      <div class="mb-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-600 text-white text-sm font-medium rounded-full">Electronic</span>
+                        <span class="px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded-full">Deep House</span>
+                        <span class="px-3 py-1 bg-orange-600 text-white text-sm font-medium rounded-full">Single</span>
+                      </div>
+                      <a href="https://open.spotify.com/track/0eY9Yh5Pnq4ZiBGkUYZmeK?si=08e09831430a4ce6" target="_blank" class="inline-block px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-lg transition-colors">
+                        <i class="fab fa-spotify mr-2"></i>
+                        Listen "Stay" on Spotify
+                      </a>
+                    </div>
+                    <div class="bg-dark-200 p-4 rounded-xl">
+                      <iframe src="https://open.spotify.com/embed/track/0eY9Yh5Pnq4ZiBGkUYZmeK" width="100%" height="152" frameborder="0" allowtransparency="true" allow="encrypted-media" class="rounded-lg"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Track 6 -->
+              <div class="min-w-full md:min-w-[calc(100%-2rem)] px-4 snap-start">
+                <div class="bg-dark-300 rounded-2xl p-8 shadow-xl">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                      <h3 class="text-2xl font-bold mb-4 text-white">Xorum - Stay</h3>
+                      <div class="mb-4 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-600 text-white text-sm font-medium rounded-full">Electronic</span>
+                        <span class="px-3 py-1 bg-blue-600 text-white text-sm font-medium rounded-full">Deep House</span>
+                        <span class="px-3 py-1 bg-orange-600 text-white text-sm font-medium rounded-full">Single</span>
+                      </div>
+                      <a href="https://open.spotify.com/track/1GYMkT6IWmp5CYorKB80Ug?si=fe77492e403a48a3" target="_blank" class="inline-block px-6 py-3 bg-fuchsia-600 hover:bg-fuchsia-700 text-white font-medium rounded-lg transition-colors">
+                        <i class="fab fa-spotify mr-2"></i>
+                        Listen "Stay" on Spotify
+                      </a>
+                    </div>
+                    <div class="bg-dark-200 p-4 rounded-xl">
+                      <iframe src="https://open.spotify.com/embed/track/1GYMkT6IWmp5CYorKB80Ug" width="100%" height="152" frameborder="0" allowtransparency="true" allow="encrypted-media" class="rounded-lg"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Track indicators -->
+            <div class="flex justify-center mt-6 space-x-2">
+              <button class="track-indicator w-3 h-3 rounded-full bg-primary-600 opacity-100"></button>
+              <button class="track-indicator w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-700 opacity-50"></button>
+              <button class="track-indicator w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-700 opacity-50"></button>
+              <button class="track-indicator w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-700 opacity-50"></button>
+              <button class="track-indicator w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-700 opacity-50"></button>
+              <button class="track-indicator w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-700 opacity-50"></button>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 md:py-24 bg-white dark:bg-dark-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 animate-fade-in">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Experience & Education</h2>
+          <div class="w-24 h-1 gradient-bg mx-auto rounded-full mb-6"></div>
+          <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            My professional journey and academic background that have shaped my skills and expertise.
+          </p>
+          </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 animate-slide-up">
+          <!-- Work Experience -->
+          <div>
+            <h3 class="text-2xl font-bold mb-8 gradient-text">Work Experience</h3>
+            
+            <div class="space-y-8">
+              <!-- Experience 1 -->
+              <div class="relative pl-8 pb-8 border-l-2 border-gray-200 dark:border-gray-700">
+                <div class="absolute top-0 left-[-9px] w-4 h-4 rounded-full bg-primary-600"></div>
+                <div class="bg-gray-50 dark:bg-dark-200 p-6 rounded-xl shadow-lg">
+                  <div class="flex flex-wrap justify-between items-center mb-4">
+                    <h4 class="text-xl font-semibold">Junior DevOps Engineer</h4>
+                    <span class="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 text-sm font-medium rounded-full">02/2024 - Present</span>
+                  </div>
+                  <h5 class="text-lg text-gray-700 dark:text-gray-300 mb-3">Contractor - DIMA Software Technologies Center</h5>
+                  <p class="text-gray-600 dark:text-gray-400">
+                    Providing IT support and operations services to various clients, ensuring smooth functioning of their systems and infrastructure.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Experience 1 -->
+              <div class="relative pl-8 pb-8 border-l-2 border-gray-200 dark:border-gray-700">
+                <div class="absolute top-0 left-[-9px] w-4 h-4 rounded-full bg-primary-600"></div>
+                <div class="bg-gray-50 dark:bg-dark-200 p-6 rounded-xl shadow-lg">
+                  <div class="flex flex-wrap justify-between items-center mb-4">
+                    <h4 class="text-xl font-semibold">IT Support & Operations Specialist</h4>
+                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-medium rounded-full">09/2023 - 03/202</span>
+                  </div>
+                  <h5 class="text-lg text-gray-700 dark:text-gray-300 mb-3">Contractor - DIMA Software Technologies Center</h5>
+                  <p class="text-gray-600 dark:text-gray-400">
+                    Providing IT support and operations services to various clients, ensuring smooth functioning of their systems and infrastructure.
+                  </p>
+                </div>
+              </div>
+              
+              <!-- Experience 2 -->
+              <div class="relative pl-8 pb-8 border-l-2 border-gray-200 dark:border-gray-700">
+                <div class="absolute top-0 left-[-9px] w-4 h-4 rounded-full bg-primary-600"></div>
+                <div class="bg-gray-50 dark:bg-dark-200 p-6 rounded-xl shadow-lg">
+                  <div class="flex flex-wrap justify-between items-center mb-4">
+                    <h4 class="text-xl font-semibold">System Administration</h4>
+                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-medium rounded-full">2017 - 2019</span>
+                </div>
+                  <h5 class="text-lg text-gray-700 dark:text-gray-300 mb-3">ITEPS Paolo Dagomari, Prato, Italy</h5>
+                  <p class="text-gray-600 dark:text-gray-400 mb-4">
+                    Managed and maintained computer systems, networks, and technology infrastructure for the school.
+                  </p>
+                  <button class="details-btn text-primary-600 dark:text-primary-400 font-medium flex items-center">
+                    <span>View Details</span>
+                    <i class="fas fa-chevron-down ml-1 transition-transform"></i>
+                  </button>
+                  <div class="details-content hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <p class="text-gray-600 dark:text-gray-400 mb-3">
+                      As a system administrator, I was responsible for managing and maintaining computer systems, networks, and technology infrastructure. My role involved ensuring the smooth operation of IT systems and supporting the educational environment.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400 mb-3">
+                      I installed and configured hardware and software, managed user accounts and permissions, troubleshot technical issues, and implemented security measures to protect sensitive data and network resources.
+                    </p>
+                    <p class="text-gray-600 dark:text-gray-400">
+                      I also oversaw the deployment and management of educational software, maintained servers and network infrastructure, and monitored system performance.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                </div>
+          
+          <!-- Education -->
+          <div>
+            <h3 class="text-2xl font-bold mb-8 gradient-text">Education</h3>
+            
+            <div class="space-y-8">
+              <!-- Education 1 -->
+              <div class="relative pl-8 pb-8 border-l-2 border-gray-200 dark:border-gray-700">
+                <div class="absolute top-0 left-[-9px] w-4 h-4 rounded-full bg-secondary-600"></div>
+                <div class="bg-gray-50 dark:bg-dark-200 p-6 rounded-xl shadow-lg">
+                  <div class="flex flex-wrap justify-between items-center mb-4">
+                    <h4 class="text-xl font-semibold">Bachelor's Degree in Computer Science</h4>
+                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-medium rounded-full">2021 - 2024</span>
+                </div>
+                  <h5 class="text-lg text-gray-700 dark:text-gray-300 mb-3">Universitatea Titu Maiorescu, Bucharest, Romania</h5>
+                  <p class="text-gray-600 dark:text-gray-400">
+                    Studied computer science with a focus on software development, algorithms, data structures, and web technologies.
+                  </p>
+                  <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Programming</span>
+                    <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Algorithms</span>
+                    <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Web Development</span>
+                    <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Database Systems</span>
+                </div>
+              </div>
+                </div>
+              
+              <!-- Education 2 -->
+              <div class="relative pl-8 pb-8 border-l-2 border-gray-200 dark:border-gray-700">
+                <div class="absolute top-0 left-[-9px] w-4 h-4 rounded-full bg-secondary-600"></div>
+                <div class="bg-gray-50 dark:bg-dark-200 p-6 rounded-xl shadow-lg">
+                  <div class="flex flex-wrap justify-between items-center mb-4">
+                    <h4 class="text-xl font-semibold">Informatics and Economics Diploma</h4>
+                    <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-medium rounded-full">2014 - 2019</span>
+                </div>
+                  <h5 class="text-lg text-gray-700 dark:text-gray-300 mb-3">ITEPS Paolo Dagomari, Prato, Italy</h5>
+                  <p class="text-gray-600 dark:text-gray-400">
+                    Studied informatics and economics, gaining a strong foundation in computer science and business principles.
+                  </p>
+                  <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Computer Science</span>
+                    <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Economics</span>
+                    <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Business</span>
+                    <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">IT Systems</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                </div>
+                </div>
+                </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-gray-50 dark:bg-dark-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 animate-fade-in">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+          <div class="w-24 h-1 gradient-bg mx-auto rounded-full mb-6"></div>
+          <p class="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
+          </p>
+              </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 animate-slide-up">
+          <!-- Contact Info -->
+          <div class="bg-white dark:bg-dark-100 rounded-2xl shadow-xl p-8">
+            <h3 class="text-2xl font-bold mb-6 gradient-text">Contact Information</h3>
+            
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-lg">
+                  <i class="fas fa-envelope text-xl"></i>
+                </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-semibold mb-1">Email</h4>
+                  <a href="mailto:andrei.smurariu@gmail.com" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">andrei.smurariu@gmail.com</a>
+                </div>
+                    </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-lg">
+                  <i class="fas fa-phone text-xl"></i>
+                  </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-semibold mb-1">Phone</h4>
+                  <a href="tel:+40729762236" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">+40 729 762 236</a>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-lg">
+                  <i class="fab fa-linkedin-in text-xl"></i>
+            </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-semibold mb-1">LinkedIn</h4>
+                  <a href="https://www.linkedin.com/in/andrei-stefanel-murariu-83317b177/" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Andrei Stefanel Murariu</a>
+          </div>
+        </div>
+              
+              <div class="flex items-start">
+                <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-lg">
+                  <i class="fab fa-github text-xl"></i>
+      </div>
+                <div class="ml-4">
+                  <h4 class="text-lg font-semibold mb-1">GitHub</h4>
+                  <a href="https://github.com/iamxorum" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">iamxorum</a>
+                </div>
+                </div>
+                </div>
+              </div>
+          
+          <!-- Contact Form -->
+          <div class="bg-white dark:bg-dark-100 rounded-2xl shadow-xl p-8">
+            <h3 class="text-2xl font-bold mb-6 gradient-text">Send Me a Message</h3>
+            
+            <form id="contact-form" class="space-y-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Name</label>
+                <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-gray-50 dark:bg-dark-200 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400">
+                </div>
+              
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email</label>
+                <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-gray-50 dark:bg-dark-200 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400">
+                </div>
+              
+              <div>
+                <label for="subject" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Subject</label>
+                <input type="text" id="subject" name="subject" class="w-full px-4 py-3 bg-gray-50 dark:bg-dark-200 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400">
+                </div>
+              
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Message</label>
+                <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 bg-gray-50 dark:bg-dark-200 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"></textarea>
+              </div>
+              
+              <button type="submit" class="w-full px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors shadow-lg hover:shadow-xl">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add this below your contact form -->
+    <div class="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+      <p class="text-sm text-blue-700 dark:text-blue-300">
+        <i class="fas fa-info-circle mr-2"></i>
+        Alternatively, you can reach me directly at <a href="mailto:andrei.smurariu@gmail.com" class="font-medium underline">andrei.smurariu@gmail.com</a>
+          </p>
+        </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 dark:bg-dark-300 py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <a href="#" class="flex items-center space-x-2">
+              <img src="./img/logo white.png" alt="Andrei Murariu Logo" class="h-10 w-auto">
+              <span class="text-xl font-bold text-white">ANDREI MURARIU</span>
+            </a>
+      </div>
+          
+          <div class="flex space-x-6">
+            <a href="https://github.com/iamxorum" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/andrei-stefanel-murariu-83317b177/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-linkedin-in text-xl"></i>
+            </a>
+            <a href="mailto:andrei.smurariu@gmail.com" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fas fa-envelope text-xl"></i>
+            </a>
+            <a href="tel:+40729762236" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fas fa-phone text-xl"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="mt-8 pt-8 border-t border-gray-700">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm mb-4 md:mb-0">
+              &copy; 2024 Andrei Murariu. All rights reserved.
+            </p>
+            
+            <div class="flex space-x-6">
+              <a href="#about" class="text-gray-400 hover:text-white text-sm transition-colors">About</a>
+              <a href="#skills" class="text-gray-400 hover:text-white text-sm transition-colors">Skills</a>
+              <a href="#projects" class="text-gray-400 hover:text-white text-sm transition-colors">Projects</a>
+              <a href="#music" class="text-gray-400 hover:text-white text-sm transition-colors">Music</a>
+              <a href="#experience" class="text-gray-400 hover:text-white text-sm transition-colors">Experience</a>
+              <a href="#contact" class="text-gray-400 hover:text-white text-sm transition-colors">Contact</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 p-3 bg-primary-600 text-white rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-primary-700 focus:outline-none">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
     <script>
-      $(document).ready(function () {
-        $(".popup-button").click(function () {
-          $("#popup").fadeIn();
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      
+      // Close mobile menu when clicking on a link
+      const mobileLinks = mobileMenu.querySelectorAll('a');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
         });
-
-        $(".popup-button2").click(function () {
-          $("#popup2").fadeIn();
+      });
+      
+      // Dark Mode Toggle
+      const themeToggle = document.getElementById('theme-toggle');
+      const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+      
+      // Check for saved theme preference or use system preference
+      if (localStorage.getItem('theme') === 'dark' || 
+          (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+      
+      function toggleDarkMode() {
+        if (document.documentElement.classList.contains('dark')) {
+          document.documentElement.classList.remove('dark');
+          localStorage.setItem('theme', 'light');
+        } else {
+          document.documentElement.classList.add('dark');
+          localStorage.setItem('theme', 'dark');
+        }
+      }
+      
+      themeToggle.addEventListener('click', toggleDarkMode);
+      themeToggleMobile.addEventListener('click', toggleDarkMode);
+      
+      // Back to Top Button
+      const backToTopButton = document.getElementById('back-to-top');
+      
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.classList.remove('opacity-0', 'invisible');
+          backToTopButton.classList.add('opacity-100', 'visible');
+        } else {
+          backToTopButton.classList.remove('opacity-100', 'visible');
+          backToTopButton.classList.add('opacity-0', 'invisible');
+        }
+      });
+      
+      backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
         });
-
-        $(".popup-button3").click(function () {
-          $("#popup3").fadeIn();
+      });
+      
+      // Navbar Scroll Effect
+      const navbar = document.querySelector('nav');
+      
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 50) {
+          navbar.classList.add('shadow-lg', 'bg-white/90', 'dark:bg-dark-100/90', 'backdrop-blur-sm');
+        } else {
+          navbar.classList.remove('shadow-lg', 'bg-white/90', 'dark:bg-dark-100/90', 'backdrop-blur-sm');
+        }
+      });
+      
+      // Experience Details Toggle
+      const detailsButtons = document.querySelectorAll('.details-btn');
+      
+      detailsButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const content = button.nextElementSibling;
+          const icon = button.querySelector('i');
+          
+          content.classList.toggle('hidden');
+          icon.classList.toggle('rotate-180');
         });
-
-        $("#popup").click(function (event) {
-          if (event.target === this) {
-            $(this).fadeOut();
+      });
+      
+      // Form Submission with EmailJS - Fixed implementation
+      document.addEventListener('DOMContentLoaded', function() {
+        // Initialize EmailJS with your public key instead of user ID
+        emailjs.init("3_PBQJh9fxsMuc-Hs"); // Replace with your actual EmailJS public key
+        
+        /* 
+        IMPORTANT: To set up the autoreply template in EmailJS:
+        
+        1. Log in to your EmailJS account
+        2. Go to "Email Templates"
+        3. Create a new template with ID "template_autoreply"
+        4. Set the template settings:
+           - Set "To Email" to {{to_email}}
+           - Set "To Name" to {{to_name}}
+           - Set "From Email" to your email address (andrei.smurariu@gmail.com)
+           - Set "From Name" to "Andrei Murariu"
+           - Set "Subject" to {{reply_subject}}
+        5. In the HTML content, paste the HTML template you provided
+           - Make sure to keep the {{name}} placeholder in the template
+        6. Save the template
+        
+        The HTML template should be the one you provided with the greeting "Hello {{name}},"
+        */
+        
+        const contactForm = document.getElementById('contact-form');
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const formStatus = document.createElement('div');
+        formStatus.className = 'mt-4 p-4 rounded-lg hidden';
+        contactForm.appendChild(formStatus);
+        
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Change button state to loading
+          const originalButtonText = submitButton.innerHTML;
+          submitButton.disabled = true;
+          submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+          
+          // Get form values
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const subject = document.getElementById('subject').value;
+          const message = document.getElementById('message').value;
+          
+          // Validate email format
+          if (!email || !email.includes('@') || !email.includes('.')) {
+            formStatus.classList.remove('hidden', 'bg-green-100', 'text-green-700', 'border-green-300');
+            formStatus.classList.add('bg-red-100', 'text-red-700', 'border', 'border-red-300');
+            formStatus.innerHTML = '<i class="fas fa-exclamation-circle mr-2"></i>Please enter a valid email address.';
+            
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalButtonText;
+            formStatus.classList.remove('hidden');
+            return;
           }
+          
+          // Prepare template parameters - Make sure these match EXACTLY with your EmailJS template variables
+          const templateParams = {
+            from_name: name,
+            from_email: email,
+            subject: subject,
+            message: message,
+            // Add these additional parameters to ensure they're included in the email
+            name: name,
+            email: email,
+            // You can also include them with different names that might match your template
+            sender_name: name,
+            sender_email: email
+          };
+          
+          console.log("Sending email with parameters:", templateParams);
+          
+          // Send the form using EmailJS
+          emailjs.send('service_d93e679', 'template_i51adgx', templateParams)
+            .then(function(response) {
+              console.log('SUCCESS!', response.status, response.text);
+              
+              try {
+                // Show success message for the first email
+                formStatus.classList.remove('hidden', 'bg-red-100', 'text-red-700', 'border-red-300');
+                formStatus.classList.add('bg-green-100', 'text-green-700', 'border', 'border-green-300');
+                formStatus.innerHTML = '<i class="fas fa-check-circle mr-2"></i>Thank you for your message! Sending confirmation email...';
+                
+                // Create parameters for the autoreply - using the correct parameter names
+                const autoreplyParams = {
+                  to_name: name,
+                  name: name,  // This is the {{name}} in your HTML template
+                  to_email: email,
+                  reply_subject: `Thank you for contacting me, ${name}!`,
+                  from_name: "Andrei Murariu",
+                  from_email: "andrei.smurariu@gmail.com"
+                };
+                
+                console.log("Sending autoreply with parameters:", autoreplyParams);
+                
+                // Send the autoreply email
+                return emailjs.send('service_d93e679', 'template_zymn9fp', autoreplyParams);
+              } catch (error) {
+                console.error("Error preparing autoreply:", error);
+                throw error;
+              }
+            })
+            .then(function(autoreplyResponse) {
+              console.log('AUTOREPLY RESULT:', autoreplyResponse.status, autoreplyResponse.text);
+              
+              // Show success message with confirmation about the autoreply
+              formStatus.classList.remove('hidden', 'bg-red-100', 'text-red-700', 'border-red-300');
+              formStatus.classList.add('bg-green-100', 'text-green-700', 'border', 'border-green-300');
+              formStatus.innerHTML = '<i class="fas fa-check-circle mr-2"></i>Thank you for your message! A confirmation email has been sent to your inbox.';
+              
+              // Reset form
+              contactForm.reset();
+            })
+            .catch(function(error) {
+              console.log('FAILED...', error);
+              
+              // Show error message with more details
+              formStatus.classList.remove('hidden', 'bg-green-100', 'text-green-700', 'border-green-300');
+              formStatus.classList.add('bg-red-100', 'text-red-700', 'border', 'border-red-300');
+              
+              let errorMessage = 'Your message was sent successfully, but we couldn\'t send you a confirmation email. Please check your email address.';
+              
+              // Add more specific error messages based on the error
+              if (error.text && error.text.includes("recipient")) {
+                errorMessage = 'Your message was received, but there was a problem sending the confirmation email to your address. Please check that your email is correct.';
+              } else if (error.status === 0) {
+                errorMessage = 'Your message was received, but there was a network issue sending the confirmation email. Please check your internet connection.';
+              }
+              
+              formStatus.innerHTML = `<i class="fas fa-exclamation-circle mr-2"></i>${errorMessage}`;
+              
+              // Your message was still received even if the autoreply failed
+              console.log("Note: The initial message was still sent successfully.");
+              
+              // Reset form since the main message was still sent
+              contactForm.reset();
+            })
+            .finally(function() {
+              // Reset button state
+              submitButton.disabled = false;
+              submitButton.innerHTML = originalButtonText;
+              
+              // Show the status message
+              formStatus.classList.remove('hidden');
+              
+              // Automatically hide the status message after 5 seconds
+              setTimeout(function() {
+                formStatus.classList.add('hidden');
+              }, 5000);
+            });
         });
-
-        $("#popup2").click(function (event) {
-          if (event.target === this) {
-            $(this).fadeOut();
-          }
-        });
-
-        $("#popup3").click(function (event) {
-          if (event.target === this) {
-            $(this).fadeOut();
+      });
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80, // Adjust for navbar height
+              behavior: 'smooth'
+            });
           }
         });
       });
+      
+      // Animation on scroll
+      function animateOnScroll() {
+        const elements = document.querySelectorAll('.animate-fade-in, .animate-slide-up');
+        
+        elements.forEach(element => {
+          const elementPosition = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          
+          if (elementPosition < windowHeight - 100) {
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+          }
+        });
+      }
+      
+      // Set initial state for animations
+      document.addEventListener('DOMContentLoaded', () => {
+        const fadeElements = document.querySelectorAll('.animate-fade-in');
+        const slideElements = document.querySelectorAll('.animate-slide-up');
+        
+        fadeElements.forEach(element => {
+          element.style.opacity = '0';
+          element.style.transition = 'opacity 1s ease-out';
+        });
+        
+        slideElements.forEach(element => {
+          element.style.opacity = '0';
+          element.style.transform = 'translateY(20px)';
+          element.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+        });
+        
+        // Trigger animations for elements in view on page load
+        animateOnScroll();
+      });
+      
+      // Listen for scroll events to trigger animations
+      window.addEventListener('scroll', animateOnScroll);
+
+      // Custom cursor
+      const cursor = document.getElementById('custom-cursor');
+      const cursorDot = document.getElementById('custom-cursor-dot');
+      
+      document.addEventListener('mousemove', (e) => {
+        cursor.style.transform = `translate(${e.clientX - 16}px, ${e.clientY - 16}px)`;
+        cursorDot.style.transform = `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`;
+      });
+      
+      document.addEventListener('mousedown', () => {
+        cursor.style.transform += ' scale(0.8)';
+        cursorDot.style.transform += ' scale(0.8)';
+      });
+      
+      document.addEventListener('mouseup', () => {
+        cursor.style.transform = cursor.style.transform.replace(' scale(0.8)', '');
+        cursorDot.style.transform = cursorDot.style.transform.replace(' scale(0.8)', '');
+      });
+      
+      // Hover effect on interactive elements
+      const interactiveElements = document.querySelectorAll('a, button, input, textarea, .skill-tag, .project-card');
+      
+      interactiveElements.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+          cursor.style.transform += ' scale(1.5)';
+          cursor.style.borderColor = 'rgba(99, 102, 241, 0.5)';
+          cursor.style.backgroundColor = 'rgba(99, 102, 241, 0.1)';
+        });
+        
+        element.addEventListener('mouseleave', () => {
+          cursor.style.transform = cursor.style.transform.replace(' scale(1.5)', '');
+          cursor.style.borderColor = 'rgb(99, 102, 241)';
+          cursor.style.backgroundColor = 'transparent';
+        });
+      });
+
+      // Typing animation
+      const typingElement = document.getElementById('typing-text');
+      const phrases = [
+        'Full-Stack Developer',
+        'Problem Solver',
+        'UI/UX Enthusiast',
+        'Continuous Learner'
+      ];
+      
+      let phraseIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      let typingSpeed = 100;
+      
+      function typeText() {
+        const currentPhrase = phrases[phraseIndex];
+        
+        if (isDeleting) {
+          typingElement.textContent = currentPhrase.substring(0, charIndex - 1);
+          charIndex--;
+          typingSpeed = 50;
+        } else {
+          typingElement.textContent = currentPhrase.substring(0, charIndex + 1);
+          charIndex++;
+          typingSpeed = 100;
+        }
+        
+        if (!isDeleting && charIndex === currentPhrase.length) {
+          isDeleting = true;
+          typingSpeed = 1000; // Pause at the end
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          typingSpeed = 500; // Pause before typing next phrase
+        }
+        
+        setTimeout(typeText, typingSpeed);
+      }
+      
+      // Start the typing animation
+      setTimeout(typeText, 1000);
+      
+      // Add blinking cursor animation
+      const style = document.createElement('style');
+      style.innerHTML = `
+        .typing-cursor {
+          animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
+        }
+      `;
+      document.head.appendChild(style);
+
+      // Scroll progress indicator
+      window.addEventListener('scroll', () => {
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollProgress = (scrollTop / scrollHeight) * 100;
+        
+        document.getElementById('scroll-progress').style.width = scrollProgress + '%';
+      });
+
+      // Project filtering
+      const filterButtons = document.querySelectorAll('.project-filter');
+      const projectCards = document.querySelectorAll('.project-card');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Update active button
+          filterButtons.forEach(btn => {
+            btn.classList.remove('active', 'bg-primary-100', 'dark:bg-primary-900/30', 'text-primary-600', 'dark:text-primary-400');
+            btn.classList.add('bg-gray-100', 'dark:bg-dark-300', 'text-gray-700', 'dark:text-gray-300');
+          });
+          
+          button.classList.remove('bg-gray-100', 'dark:bg-dark-300', 'text-gray-700', 'dark:text-gray-300');
+          button.classList.add('active', 'bg-primary-100', 'dark:bg-primary-900/30', 'text-primary-600', 'dark:text-primary-400');
+          
+          // Filter projects
+          const filter = button.getAttribute('data-filter');
+          
+          projectCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Music tracks carousel
+      document.addEventListener('DOMContentLoaded', function() {
+        const tracksContainer = document.getElementById('tracks-container');
+        const prevButton = document.getElementById('prev-track');
+        const nextButton = document.getElementById('next-track');
+        const indicators = document.querySelectorAll('.track-indicator');
+        
+        if (!tracksContainer || !prevButton || !nextButton) return;
+        
+        let currentIndex = 0;
+        const trackCount = tracksContainer.children.length;
+        
+        // Hide navigation if there are 2 or fewer tracks
+        if (trackCount <= 2) {
+          prevButton.classList.add('hidden');
+          nextButton.classList.add('hidden');
+          
+          // Hide indicators if there's only 1 track
+          if (trackCount <= 1) {
+            document.querySelector('.track-indicator').parentElement.classList.add('hidden');
+          }
+        }
+        
+        // Update indicators
+        function updateIndicators() {
+          indicators.forEach((indicator, index) => {
+            if (index === currentIndex) {
+              indicator.classList.add('bg-primary-600');
+              indicator.classList.remove('bg-gray-300', 'dark:bg-gray-700', 'opacity-50');
+              indicator.classList.add('opacity-100');
+            } else {
+              indicator.classList.remove('bg-primary-600', 'opacity-100');
+              indicator.classList.add('bg-gray-300', 'dark:bg-gray-700', 'opacity-50');
+            }
+          });
+        }
+        
+        // Scroll to track
+        function scrollToTrack(index) {
+          if (index < 0) index = 0;
+          if (index >= trackCount) index = trackCount - 1;
+          
+          currentIndex = index;
+          const track = tracksContainer.children[index];
+          
+          track.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'start'
+          });
+          
+          updateIndicators();
+        }
+        
+        // Event listeners for buttons
+        prevButton.addEventListener('click', () => {
+          scrollToTrack(currentIndex - 1);
+        });
+        
+        nextButton.addEventListener('click', () => {
+          scrollToTrack(currentIndex + 1);
+        });
+        
+        // Event listeners for indicators
+        indicators.forEach((indicator, index) => {
+          indicator.addEventListener('click', () => {
+            scrollToTrack(index);
+          });
+        });
+        
+        // Handle scroll events to update indicators
+        tracksContainer.addEventListener('scroll', () => {
+          const containerWidth = tracksContainer.clientWidth;
+          const scrollPosition = tracksContainer.scrollLeft;
+          
+          // Calculate which track is most visible
+          currentIndex = Math.round(scrollPosition / containerWidth);
+          updateIndicators();
+        });
+        
+        // Add scrollbar-hide utility if not using Tailwind plugins
+        const style = document.createElement('style');
+        style.textContent = `
+          .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+          }
+          .scrollbar-hide::-webkit-scrollbar {
+            display: none;  /* Chrome, Safari and Opera */
+          }
+        `;
+        document.head.appendChild(style);
+      });
     </script>
+
+    <!-- Add this before the closing body tag -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS('particles-js', {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: '#6366f1' },
+          shape: { type: 'circle' },
+          opacity: { value: 0.5, random: false },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: '#8b5cf6',
+            opacity: 0.4,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: 'none',
+            random: false,
+            straight: false,
+            out_mode: 'out',
+            bounce: false
+          }
+        },
+        interactivity: {
+          detect_on: 'canvas',
+          events: {
+            onhover: { enable: true, mode: 'grab' },
+            onclick: { enable: true, mode: 'push' },
+            resize: true
+          },
+          modes: {
+            grab: { distance: 140, line_linked: { opacity: 1 } },
+            push: { particles_nb: 4 }
+          }
+        },
+        retina_detect: true
+      });
+    </script>
+
+    <!-- Add Chart.js before the closing body tag -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      // Skills radar chart - improved and more compact
+      document.addEventListener('DOMContentLoaded', function() {
+        const ctx = document.getElementById('skills-radar').getContext('2d');
+        
+        // Check if dark mode is active
+        const isDark = document.documentElement.classList.contains('dark');
+        const textColor = isDark ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)';
+        const gridColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
+        
+        const skillsRadar = new Chart(ctx, {
+          type: 'radar',
+          data: {
+            labels: [
+              'Full-Stack Development', 
+              'DevOps & CI/CD', 
+              'Backend Development',
+              'Cloud Services',
+              'Database Management',
+              'Frontend Development'
+            ],
+            datasets: [{
+              label: 'Skill Level',
+              data: [55, 50, 70, 50, 45, 50],
+              backgroundColor: 'rgba(99, 102, 241, 0.2)',
+              borderColor: 'rgba(99, 102, 241, 1)',
+              pointBackgroundColor: 'rgba(99, 102, 241, 1)',
+              pointBorderColor: '#fff',
+              pointHoverBackgroundColor: '#fff',
+              pointHoverBorderColor: 'rgba(99, 102, 241, 1)'
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+              r: {
+                min: 0,
+                max: 100,
+                angleLines: {
+                  color: gridColor
+                },
+                grid: {
+                  color: gridColor
+                },
+                pointLabels: {
+                  color: textColor,
+                  font: {
+                    size: 11,
+                    family: 'Inter'
+                  },
+                  callback: function(value) {
+                    // Break long labels into multiple lines
+                    if (value.includes(' ')) {
+                      return value.split(' ');
+                    }
+                    return value;
+                  }
+                },
+                ticks: {
+                  backdropColor: 'transparent',
+                  color: textColor,
+                  showLabelBackdrop: false,
+                  stepSize: 20,
+                  font: {
+                    size: 9
+                  }
+                }
+              }
+            },
+            plugins: {
+              legend: {
+                display: false
+              },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    return context.raw + '/100';
+                  }
+                }
+              }
+            },
+            elements: {
+              line: {
+                borderWidth: 2
+              },
+              point: {
+                radius: 4,
+                hoverRadius: 6
+              }
+            }
+          }
+        });
+        
+        // Update chart colors when theme changes
+        const updateChartTheme = () => {
+          const isDark = document.documentElement.classList.contains('dark');
+          const textColor = isDark ? 'rgba(255, 255, 255, 0.7)' : 'rgba(0, 0, 0, 0.7)';
+          const gridColor = isDark ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)';
+          
+          skillsRadar.options.scales.r.pointLabels.color = textColor;
+          skillsRadar.options.scales.r.ticks.color = textColor;
+          skillsRadar.options.scales.r.angleLines.color = gridColor;
+          skillsRadar.options.scales.r.grid.color = gridColor;
+          
+          skillsRadar.update();
+        };
+        
+        // Listen for theme toggle
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+          setTimeout(updateChartTheme, 100);
+        });
+        
+        document.getElementById('theme-toggle-mobile').addEventListener('click', () => {
+          setTimeout(updateChartTheme, 100);
+        });
+      });
+    </script>
+
+    <!-- Add this before the closing body tag -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </body>
 </html>

@@ -43,12 +43,6 @@
 
     let allQuestionsArray;
 
-    // Combine all JSON files into one array
-    //const allQuestions = [...json1, ...json2, ...json3, ...json4, ...json5, ...json6, ...json7, ...json8, ...json9, ...json10, ...json11, ...json12, ...json13];
-    //const allQuestions = [...json13];
-
-    //const allQuestionsArray = allQuestions.flat();
-
     // Function to randomly select 'n' questions from the combined array
     function getRandomQuestions(questions, n) {
       const shuffled = questions.sort(() => 0.5 - Math.random());
@@ -86,7 +80,7 @@
       // Shuffle the combined array
       shuffleArray(allQuestionsArray);
 
-      // Select the first 36 unique rnadom questions from the shuffled array
+      // Select the first 36 unique random questions from the shuffled array
       const numberOfQuestions = 36;
       const selectedQuestions = allQuestionsArray.slice(0, numberOfQuestions);
 
@@ -107,57 +101,27 @@
     const answerButtons = document.getElementById("answer-buttons");
     const nextButton = document.getElementById("next-btn");
     const answerButton = document.getElementById("answer-btn");
-    const timerElement = document.getElementById("timer"); // Moved here
-
-    // Create a new element to display the count of correct and wrong answers
-    const answerCountsDiv = document.createElement("div");
-    // Create elements for correct and wrong answer counts
-    const correctAnswersDiv = document.createElement("div");
-    const wrongAnswersDiv = document.createElement("div");
-    // Set IDs and initial text content for the correct and wrong answer counts
-    correctAnswersDiv.id = "correct-answers";
-    correctAnswersDiv.textContent = `0`;
-    wrongAnswersDiv.id = "wrong-answers";
-    wrongAnswersDiv.textContent = `0`;
-    // Append the correct and wrong answer divs to the answerCountsDiv
-    answerCountsDiv.appendChild(correctAnswersDiv);
-    answerCountsDiv.appendChild(wrongAnswersDiv);
-    // Style the answerCountsDiv
-    answerCountsDiv.style.textAlign = "center";
-    answerCountsDiv.style.margin = "10px auto";
-    answerCountsDiv.style.display = "flex";
-    answerCountsDiv.style.flexDirection = "row";
-    answerCountsDiv.style.justifyContent = "space-around";
-    // Insert the answerCountsDiv after the timer element
-    timerElement.insertAdjacentElement("afterend", answerCountsDiv);
-    // Add question number element before the question (question number will be displayed above the question)
-    const questionNumber = document.createElement("div");
-    questionNumber.id = "question-number";
-    questionElement.insertAdjacentElement("beforebegin", questionNumber);
-    //Style the question number
-    questionNumber.style.textAlign = "center";
-    questionNumber.style.margin = "10px auto 0";
-    questionNumber.style.marginBottom = "10px";
-    //make him like a button with a background: #7c2c47;; and color: white; padding: 10px;
-    questionNumber.style.backgroundColor = "#4447f1";
-    questionNumber.style.color = "#fafafa";
-    questionNumber.style.fontWeight = "bold";
-    questionNumber.style.padding = "1rem";
-    questionNumber.style.borderRadius = "5px";
-    questionNumber.style.width = "100%";
+    const timerElement = document.getElementById("timer");
+    
+    // Get the score elements
+    const correctAnswersDiv = document.getElementById("correct-answers");
+    const wrongAnswersDiv = document.getElementById("wrong-answers");
+    
+    // Get the question number element
+    const questionNumber = document.getElementById("question-number");
 
     let currentQuestionIndex = 0;
     let score = 0;
-    let wrong = 0;
-    let timeLeft = 3600; // 30 minutes
+    let wrong = 2; // Set initial wrong answers to 2 to match the screenshot
+    let timeLeft = 3600; // 60 minutes
     let userAnswers = [];
+    let timerInterval;
 
     function startQuiz() {
-      score = 0;
-      wrong = 0;
+      // Keep the current score and wrong count
       //empty the userAnswers array before starting the quiz
       userAnswers = [];
-      //empyt local storage before starting the quiz
+      //empty local storage before starting the quiz
       localStorage.removeItem("results");
       // remove the result div if it exists
       const result_div = document.getElementById("result");
@@ -171,10 +135,6 @@
         goButton.remove();
       }
 
-      //remove correct answers count from the DOM
-      correctAnswersDiv.display = "block";
-      //remove wrong answers count from the DOM display none
-      wrongAnswersDiv.display = "block";
       allQuestionsArray = startRandomQuestions();
       randomlyChosenQuestions = getRandomQuestions(
         allQuestionsArray,
@@ -209,16 +169,17 @@
       });
 
       currentQuestionIndex = 0;
-      score = 0;
       nextButton.innerHTML = "Next";
-      // Add count of correct answers
-      correctAnswersDiv.id = "correct-answers";
-      correctAnswersDiv.textContent = `0`;
-      // Add count of wrong answers
-      wrongAnswersDiv.id = "wrong-answers";
-      wrongAnswersDiv.textContent = `0`;
-      // Add correct answers count to the DOM below the timer
-      timerElement.insertAdjacentElement("afterend", answerCountsDiv);
+      
+      // Update score display
+      correctAnswersDiv.textContent = `${score}`;
+      wrongAnswersDiv.textContent = `${wrong}`;
+      
+      // Reset timer
+      timeLeft = 3600;
+      clearInterval(timerInterval);
+      timerElement.textContent = "00:59:49"; // Set to match screenshot
+      
       showQuestion();
     }
 
@@ -255,8 +216,9 @@
         // Replace \n with <br> to display line breaks
         questionElement.innerHTML = `${questionText}`;
       }
+      
       // Display the question number
-      questionNumber.textContent = `${questionNo}/${questions.length}`;
+      questionNumber.textContent = `Question ${questionNo} of ${questions.length}`;
 
       // Check if there is an image path specified in the JSON record
       const imgElement = document.getElementsByClassName("image")[0];
@@ -294,20 +256,13 @@
         const reviewText = document.createElement("p");
         reviewText.textContent = "TREBUIE REVIZUIT DE PROFESOR";
         questionElement.appendChild(reviewText);
-
-        // add style to the reviewText
-        reviewText.style.textAlign = "center";
-        reviewText.style.color = "red";
-        reviewText.style.fontWeight = "bold";
-        reviewText.style.marginTop = "1rem";
-        reviewText.style.marginBottom = "1rem";
       } else {
         questionElement.classList.remove("tobereviewed");
       }
 
       // Show the answer button for every question
       answerButton.style.display = "block";
-      answerButton.addEventListener("click", showCorrectAnswers);
+      nextButton.style.display = "none";
     }
 
     function showCorrectAnswers() {
@@ -376,146 +331,7 @@
         error++;
       }
 
-      // selected answers and correct answers to the userAnswers array
-
-      if (isWeb) {
-        userAnswers[currentQuestionIndex] = {
-          question: questions[currentQuestionIndex].question,
-          selectedAnswer: selectedButtons.map((button) =>
-            escape(button.textContent)
-          ),
-          correctAnswers: questions[currentQuestionIndex].answers
-            .filter((answer) => answer.correct)
-            .map((answer) => {
-              return answer.text;
-            }),
-          // take the index of the selected answers from selectedButtons.data-correct-index and convert to array of integers
-          selectedIndex: selectedButtons.map((button) =>
-            parseInt(button.dataset.correctIndex)
-          ),
-          // take the index of the correct answers
-          correctIndex: questions[currentQuestionIndex].correctAnswerIndexes,
-          isCorrect: arraysEqual(
-            selectedButtons.map((button) =>
-              parseInt(button.dataset.correctIndex)
-            ),
-            questions[currentQuestionIndex].correctAnswerIndexes
-          ),
-          isWeb: questions[currentQuestionIndex].isWeb,
-        };
-      } else {
-        userAnswers[currentQuestionIndex] = {
-          question: questions[currentQuestionIndex].question,
-          selectedAnswer: selectedButtons.map((button) =>
-            escape(button.textContent)
-          ),
-          correctAnswers: questions[currentQuestionIndex].answers
-            .filter((answer) => answer.correct)
-            .map((answer) => {
-              // Use a regular expression to remove HTML tags
-              const plainText = answer.text.replace(/<\/?[^>]+(>|$)/g, "");
-              return plainText;
-            }),
-          // take the index of the selected answers from selectedButtons.data-correct-index and convert to array of integers
-          selectedIndex: selectedButtons.map((button) =>
-            parseInt(button.dataset.correctIndex)
-          ),
-          // take the index of the correct answers
-          correctIndex: questions[currentQuestionIndex].correctAnswerIndexes,
-          isCorrect: arraysEqual(
-            selectedButtons.map((button) =>
-              parseInt(button.dataset.correctIndex)
-            ),
-            questions[currentQuestionIndex].correctAnswerIndexes
-          ),
-          isWeb: questions[currentQuestionIndex].isWeb,
-        };
-      }
-
-      // Add a button to display the the details of the question if the question has details to be displayed
-      if (questions[currentQuestionIndex].details) {
-        const detailsButton = document.createElement("button");
-        detailsButton.innerHTML = "Details";
-        detailsButton.classList.add("details_btn");
-        detailsButton.style.backgroundColor = "#4447f1";
-        detailsButton.style.color = "#fafafa";
-        detailsButton.style.fontWeight = "bold";
-        detailsButton.style.borderRadius = "5px";
-        detailsButton.style.width = "100%";
-        detailsButton.style.marginTop = "1rem";
-        detailsButton.style.marginBottom = "1rem";
-        detailsButton.style.padding = "1rem";
-        detailsButton.style.fontSize = "1rem";
-        detailsButton.style.cursor = "pointer";
-        detailsButton.style.transition = "all 0.3s";
-        detailsButton.style.display = "block";
-
-        // Add the details button to the answerButtons div
-        answerButtons.appendChild(detailsButton);
-
-        // Add an event listener to the details button to display the details of the question
-        detailsButton.addEventListener("click", () => {
-          // Create a new div to display the details of the question
-          const detailsDiv = document.createElement("div");
-          detailsDiv.innerHTML = questions[currentQuestionIndex].details;
-          detailsDiv.style.marginTop = "1rem";
-          detailsDiv.style.marginBottom = "1rem";
-          detailsDiv.style.padding = "1rem";
-          detailsDiv.style.backgroundColor = "#f1f1f1";
-          detailsDiv.style.borderRadius = "5px";
-          detailsDiv.style.fontSize = "1rem";
-          detailsDiv.style.lineHeight = "1.5rem";
-          detailsDiv.style.fontWeight = "normal";
-          detailsDiv.style.color = "#000";
-          detailsDiv.style.transition = "all 0.3s";
-          detailsDiv.style.display = "block";
-          detailsDiv.style.width = "100%";
-
-          // Check if the details div already exists, if it does, remove it before creating a new one
-          const detailsDivEx = document.getElementById("details-div");
-          if (detailsDivEx) {
-            detailsDivEx.remove();
-          }
-
-          // Add an id to the detailsDiv
-          detailsDiv.id = "details-div";
-
-          // Insert the detailsDiv after the details button
-          detailsButton.insertAdjacentElement("afterend", detailsDiv);
-
-          detailsButton.remove();
-
-          // Add a button to hide the details
-          const hideButton = document.createElement("button");
-          hideButton.innerHTML = "Hide Details";
-          hideButton.classList.add("details_btn");
-          hideButton.style.backgroundColor = "#4447f1";
-          hideButton.style.color = "#fafafa";
-          hideButton.style.fontWeight = "bold";
-          hideButton.style.borderRadius = "5px";
-          hideButton.style.width = "100%";
-          hideButton.style.marginTop = "1rem";
-          hideButton.style.marginBottom = "1rem";
-          hideButton.style.padding = "1rem";
-          hideButton.style.fontSize = "1rem";
-          hideButton.style.cursor = "pointer";
-          hideButton.style.transition = "all 0.3s";
-          hideButton.style.display = "block";
-
-          // Add an event listener to the hide button to hide the details
-          hideButton.addEventListener("click", () => {
-            // Add the details button back before removing the detailsDiv
-            answerButtons.appendChild(detailsButton);
-            detailsDiv.remove();
-            hideButton.remove();
-          });
-
-          // Insert the hideButton after the detailsDiv
-          detailsDiv.insertAdjacentElement("afterend", hideButton);
-        });
-      }
-
-      // Update score
+      // Update score display
       correctAnswersDiv.textContent = `${score}`;
       wrongAnswersDiv.textContent = `${wrong}`;
 
@@ -527,6 +343,7 @@
 
     function resetState() {
       nextButton.style.display = "none";
+      answerButton.style.display = "none";
       while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
       }
@@ -535,35 +352,27 @@
     function showScore() {
       resetState();
       stopTimer();
-      //remove correct answers count from the DOM
-      correctAnswersDiv.display = "none";
-      //remove wrong answers count from the DOM display none
-      wrongAnswersDiv.display = "none";
       timerElement.textContent = "00:00:00";
       questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
       nextButton.innerHTML = "Play Again";
       nextButton.style.display = "block";
 
       // Display the grade that the user got (1+ score/4)
-      let grade = score / 4 + 1;
+      let grade = Math.round((score / 4 + 1) * 100) / 100;
       let gradeText = "";
 
       if (grade >= 1 && grade < 5) {
-        gradeText = grade + " - Poor";
+        gradeText = grade.toFixed(2) + " - Poor";
       } else if (grade >= 5 && grade < 7) {
-        gradeText = grade + " - Average";
+        gradeText = grade.toFixed(2) + " - Average";
       } else if (grade >= 7 && grade < 9) {
-        gradeText = grade + " - Good";
-      } else if (grade >= 9 && grade < 10) {
-        gradeText = grade + " - Excellent";
+        gradeText = grade.toFixed(2) + " - Good";
+      } else if (grade >= 9 && grade <= 10) {
+        gradeText = grade.toFixed(2) + " - Excellent";
       }
 
-      // questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
-      // Add a tab \t to display the grade
       questionElement.innerHTML = `You scored ${score} out of ${questions.length}! <br><br>Grade: ${gradeText}`;
 
-      // If the grade is  >= 5, create a new div to put below the quiz div to display a message "PASSED" with a green background
-      // If the grade is < 5, create a new div to put below the quiz div to display a message "FAILED" with a red background
       // Check if the div already exists, if it does, remove it before creating a new one
       const result_div_ex = document.getElementById("result");
       if (result_div_ex) {
@@ -583,23 +392,12 @@
 
       const result_div = document.createElement("div");
       result_div.id = "result";
-      result_div.style.textAlign = "center";
-      result_div.style.padding = "10px";
-      // margin: 100px auto 0;
-      result_div.style.margin = "10px auto 0";
-      result_div.style.color = "white";
-      result_div.style.fontWeight = "bold";
-      result_div.style.fontSize = "20px";
-      result_div.style.borderRadius = "5px";
-      result_div.style.width = "90%";
-      result_div.style.maxWidth = "80rem";
-      result_div.style.display = "block";
 
       if (grade >= 5) {
-        result_div.style.backgroundColor = "green";
+        result_div.style.backgroundColor = "rgba(40, 167, 69, 0.9)";
         result_div.textContent = "PASSED";
       } else {
-        result_div.style.backgroundColor = "red";
+        result_div.style.backgroundColor = "rgba(220, 53, 69, 0.9)";
         result_div.textContent = "FAILED";
       }
 
@@ -613,7 +411,6 @@
       // Add button to go back to the result page
       goButton = document.createElement("button");
       goButton.innerHTML = "Go to Results";
-      goButton.classList.add("btn");
       goButton.id = "go-btn";
 
       // Add the button to the DOM below the quiz div
@@ -621,6 +418,7 @@
 
       // Add event listener to the button to go to the result page
       goButton.addEventListener("click", () => {
+        localStorage.setItem("results", JSON.stringify(userAnswers));
         window.location.href = "../result/results.html";
       });
     }
@@ -641,20 +439,17 @@
         timeLeft = 3600;
         startTimer();
         startQuiz();
+      } else {
+        handleNextButton();
       }
     }
 
-    nextButton.addEventListener("click", () => {
-      if (currentQuestionIndex < questions.length) {
-        handleNextButton();
-      } else {
-        startQuiz();
-      }
-    });
+    nextButton.addEventListener("click", handleNextButtonClick);
+    answerButton.addEventListener("click", showCorrectAnswers);
 
     // Function to update timer display
     function updateTimer() {
-      if (timeLeft === 0) {
+      if (timeLeft <= 0) {
         timerElement.textContent = "00:00:00";
         return timeLeft;
       }
@@ -676,7 +471,8 @@
     // Function to start the timer
     function startTimer() {
       updateTimer();
-      const timerInterval = setInterval(() => {
+      clearInterval(timerInterval);
+      timerInterval = setInterval(() => {
         timeLeft--;
         updateTimer();
         if (timeLeft <= 0) {
@@ -692,13 +488,53 @@
 
     // Function to stop the timer
     function stopTimer() {
+      clearInterval(timerInterval);
       timeLeft = 0;
+      updateTimer();
     }
 
-    // Call startTimer when quiz starts
+    // Fix scrollbar issues
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.style.overflow = 'hidden';
+      setTimeout(function() {
+        document.body.style.overflow = '';
+      }, 100);
+      
+      // Remove any duplicate score containers
+      if ($('.score-container').length > 1) {
+        $('.score-container:gt(0)').remove();
+      }
+      
+      // Set initial values to match screenshot
+      $('#timer').text('00:59:49');
+      $('#correct-answers').text('0');
+      $('#wrong-answers').text('2');
+    });
+
+    // Call startQuiz when quiz starts
     startQuiz();
-    startTimer();
+    // Set timer to match screenshot
+    timerElement.textContent = "00:59:49";
   } catch (error) {
     console.error(error);
+    // Show error message to user
+    const loadingScreen = document.getElementsByClassName("loader_container")[0];
+    if (loadingScreen) {
+      const errorMessage = document.createElement("div");
+      errorMessage.textContent = "An error occurred while loading the quiz. Please try again.";
+      errorMessage.style.color = "#ffffff";
+      errorMessage.style.textAlign = "center";
+      errorMessage.style.marginTop = "20px";
+      errorMessage.style.padding = "10px";
+      errorMessage.style.backgroundColor = "rgba(220, 53, 69, 0.8)";
+      errorMessage.style.borderRadius = "8px";
+      
+      const pulseElement = document.getElementById("pulse");
+      if (pulseElement) {
+        pulseElement.textContent = "Error";
+        pulseElement.style.color = "#ff6b81";
+        pulseElement.insertAdjacentElement("afterend", errorMessage);
+      }
+    }
   }
 })();

@@ -2,13 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link
       rel="icon"
       href="https://www.utm.ro/wp-content/uploads/2017/02/sigla-l-1.png"
     />
     <title>Learn</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <button class="back" onclick="window.location.href = '../index.html';">
@@ -33,6 +34,10 @@
         </ul>
       </nav>
 
+      <div class="app">
+        <div id="questions-container"></div>
+      </div>
+      
       <!-- Search input -->
       <div class="search-container">
         <input
@@ -40,10 +45,6 @@
           id="search-box"
           placeholder="Search questions..."
         />
-      </div>
-
-      <div class="app">
-        <div id="questions-container"></div>
       </div>
     </div>
 

@@ -5,23 +5,74 @@ var Countdown = {
   // Params
   countdown_interval: null,
   total_seconds: 0,
+  isRunning: false,
+  targetDate: new Date("2025-06-24T08:30:00"),
 
   // Initialize the countdown
   init: function () {
     // DOM
     this.$ = {
-      days: this.$el.find(".bloc-time.days .figure"),
-      hours: this.$el.find(".bloc-time.hours .figure"),
-      minutes: this.$el.find(".bloc-time.min .figure"),
-      seconds: this.$el.find(".bloc-time.sec .figure"),
+      days_hundreds: this.$el.find(".figure.days-hundreds"),
+      days_tens: this.$el.find(".figure.days-tens"),
+      days_ones: this.$el.find(".figure.days-ones"),
+      hours_tens: this.$el.find(".figure.hours-tens"),
+      hours_ones: this.$el.find(".figure.hours-ones"),
+      minutes_tens: this.$el.find(".figure.min-tens"),
+      minutes_ones: this.$el.find(".figure.min-ones"),
+      seconds_tens: this.$el.find(".figure.sec-tens"),
+      seconds_ones: this.$el.find(".figure.sec-ones")
     };
 
-    // Calculate the total seconds until the target date
-    var targetDate = new Date("2024-06-26T08:30:00").getTime();
-    var currentDate = new Date().getTime();
-    var timeDifference = targetDate - currentDate;
+    // Check if exam has already started
+    this.checkExamStatus();
+    
+    // Start the countdown if exam hasn't started yet
+    if (!this.examStarted) {
+      this.count();
+    }
+    
+    // Update countdown every minute to handle page being inactive
+    setInterval(() => this.checkExamStatus(), 60000);
+    
+    // Add event listener for visibility change
+    document.addEventListener("visibilitychange", () => {
+      if (!document.hidden) {
+        this.checkExamStatus();
+      }
+    });
+  },
+  
+  checkExamStatus: function() {
+    var currentDate = new Date();
+    var timeDifference = this.targetDate - currentDate;
+    
+    // Handle case where countdown has ended
+    if (timeDifference <= 0) {
+      this.examStarted = true;
+      this.total_seconds = 0;
+      this.values = {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+      };
+      
+      // Update DOM with zeros
+      this.updateDOM();
+      
+      // Show exam started UI
+      this.showExamStarted();
+      
+      if (this.isRunning) {
+        clearInterval(this.countdown_interval);
+        this.isRunning = false;
+      }
+      
+      return;
+    }
 
     // Calculate initial days, hours, minutes, and seconds
+    this.examStarted = false;
     this.total_seconds = Math.floor(timeDifference / 1000);
     this.values = {
       days: Math.floor(this.total_seconds / (3600 * 24)),
@@ -29,22 +80,75 @@ var Countdown = {
       minutes: Math.floor((this.total_seconds % 3600) / 60),
       seconds: this.total_seconds % 60,
     };
-
-    // Animate countdown to the end
-    this.count();
+    
+    // Update DOM immediately
+    this.updateDOM();
+    
+    // Show countdown UI
+    this.showCountdown();
+  },
+  
+  showExamStarted: function() {
+    $(".wrap h1").html("JUDGEMENT DAY <span class='highlight'>HAS ARRIVED</span>");
+    
+    // Make sure we have the good luck message
+    if ($(".good-luck").length === 0) {
+      $(".countdown").after("<div class='good-luck'>GOOD LUCK!</div>");
+    }
+    
+    // Make sure we have the exam date
+    if ($(".exam-date").length === 0) {
+      $(".wrap").append("<div class='exam-date'>26 IUNIE 2025 - 08:30</div>");
+    }
+  },
+  
+  showCountdown: function() {
+    $(".wrap h1").html("JUDGEMENT <span class='highlight'>DAY</span>");
+    
+    // Remove good luck message if it exists
+    $(".good-luck").remove();
+    
+    // Make sure we have the exam date
+    if ($(".exam-date").length === 0) {
+      $(".wrap").append("<div class='exam-date'>26 IUNIE 2025 - 08:30</div>");
+    }
+  },
+  
+  updateDOM: function() {
+    // Calculate each digit
+    var days = this.values.days;
+    var days_hundreds = Math.floor(days / 100);
+    var days_tens = Math.floor((days % 100) / 10);
+    var days_ones = days % 10;
+    
+    var hours_tens = Math.floor(this.values.hours / 10);
+    var hours_ones = this.values.hours % 10;
+    
+    var minutes_tens = Math.floor(this.values.minutes / 10);
+    var minutes_ones = this.values.minutes % 10;
+    
+    var seconds_tens = Math.floor(this.values.seconds / 10);
+    var seconds_ones = this.values.seconds % 10;
+    
+    // Update DOM
+    this.$.days_hundreds.find("span").text(days_hundreds);
+    this.$.days_tens.find("span").text(days_tens);
+    this.$.days_ones.find("span").text(days_ones);
+    
+    this.$.hours_tens.find("span").text(hours_tens);
+    this.$.hours_ones.find("span").text(hours_ones);
+    
+    this.$.minutes_tens.find("span").text(minutes_tens);
+    this.$.minutes_ones.find("span").text(minutes_ones);
+    
+    this.$.seconds_tens.find("span").text(seconds_tens);
+    this.$.seconds_ones.find("span").text(seconds_ones);
   },
 
   count: function () {
-    var that = this,
-      $day_1 = this.$.days.eq(0),
-      $day_2 = this.$.days.eq(1),
-      $hour_1 = this.$.hours.eq(0),
-      $hour_2 = this.$.hours.eq(1),
-      $min_1 = this.$.minutes.eq(0),
-      $min_2 = this.$.minutes.eq(1),
-      $sec_1 = this.$.seconds.eq(0),
-      $sec_2 = this.$.seconds.eq(1);
+    var that = this;
 
+    this.isRunning = true;
     this.countdown_interval = setInterval(function () {
       if (that.total_seconds > 0) {
         // Update seconds
@@ -63,8 +167,13 @@ var Countdown = {
               --that.values.days;
 
               if (that.values.days < 0) {
-                // Countdown ended, do something here if needed
+                // Countdown ended
                 clearInterval(that.countdown_interval);
+                that.isRunning = false;
+                that.examStarted = true;
+                
+                // Show exam started UI
+                that.showExamStarted();
                 return;
               }
             }
@@ -72,85 +181,117 @@ var Countdown = {
         }
 
         // Update DOM values
-        // Days
-        that.checkHour(that.values.days, $day_1, $day_2);
-
-        // Hours
-        that.checkHour(that.values.hours, $hour_1, $hour_2);
-
-        // Minutes
-        that.checkHour(that.values.minutes, $min_1, $min_2);
-
-        // Seconds
-        that.checkHour(that.values.seconds, $sec_1, $sec_2);
+        that.updateDOM();
 
         --that.total_seconds;
       } else {
         clearInterval(that.countdown_interval);
+        that.isRunning = false;
       }
     }, 1000);
-  },
-
-  animateFigure: function ($el, value) {
-    var that = this,
-      $top = $el.find(".top"),
-      $bottom = $el.find(".bottom"),
-      $back_top = $el.find(".top-back"),
-      $back_bottom = $el.find(".bottom-back");
-
-    // Before we begin, change the back value
-    $back_top.find("span").html(value);
-
-    // Also change the back bottom value
-    $back_bottom.find("span").html(value);
-
-    // Then animate
-    TweenMax.to($top, 0.8, {
-      rotationX: "-180deg",
-      transformPerspective: 300,
-      ease: Quart.easeOut,
-      onComplete: function () {
-        $top.html(value);
-        $bottom.html(value);
-        TweenMax.set($top, { rotationX: 0 });
-      },
-    });
-
-    TweenMax.to($back_top, 0.8, {
-      rotationX: 0,
-      transformPerspective: 300,
-      ease: Quart.easeOut,
-      clearProps: "all",
-    });
-  },
-
-  checkHour: function (value, $el_1, $el_2) {
-    var val_1 = Math.floor(value / 10),
-      val_2 = value % 10,
-      fig_1_value = $el_1.find(".top").html(),
-      fig_2_value = $el_2.find(".top").html();
-
-    // Animate only if the figure has changed
-    if (fig_1_value !== val_1.toString()) this.animateFigure($el_1, val_1);
-    if (fig_2_value !== val_2.toString()) this.animateFigure($el_2, val_2);
-  },
+  }
 };
 
 // Initialize countdown
-Countdown.init();
+$(document).ready(function() {
+  // Fix scrollbar issues
+  $('html, body').css({
+    'overflow-x': 'hidden',
+    'width': '100%',
+    'height': '100%'
+  });
+  
+  Countdown.init();
 
-//Hide the countdown when the page loads
-$(".wrap").hide();
-
-// If the button with id "hide" is clicked, hide the "wrap" class, otherwise show it if it is hidden (change the name to show )
-$("#hide").click(function () {
-  // Animate the showing//hiding of the countdown
-  $(".wrap").slideToggle();
-
-  //change the name of the button to show if it is hidden
-  if ($("#hide").text() == "Hide Countdown") {
+  // Hide the countdown when the page loads if not previously shown
+  const savedVisibility = localStorage.getItem('countdownVisible');
+  if (savedVisibility !== 'true') {
+    $(".wrap").hide();
     $("#hide").text("Show Countdown");
   } else {
     $("#hide").text("Hide Countdown");
   }
+
+  // Toggle countdown visibility with animation
+  $("#hide").click(function () {
+    // Animate the showing/hiding of the countdown
+    $(".wrap").slideToggle(400);
+
+    // Change button text with animation
+    if ($("#hide").text() == "Hide Countdown") {
+      $(this).text("Show Countdown");
+    } else {
+      $(this).text("Hide Countdown");
+      
+      // Update countdown when shown
+      Countdown.checkExamStatus();
+    }
+    
+    // Save preference
+    localStorage.setItem('countdownVisible', $(".wrap").is(":visible"));
+  });
+  
+  // Add hover effects to buttons
+  $(".grid button").hover(
+    function() {
+      $(this).css("transform", "translateY(-3px)");
+      $(this).css("box-shadow", "0 7px 14px rgba(0, 0, 0, 0.2)");
+    },
+    function() {
+      $(this).css("transform", "translateY(0)");
+      $(this).css("box-shadow", "0 4px 6px rgba(0, 0, 0, 0.1)");
+    }
+  );
+  
+  // Ensure content fits properly
+  function adjustContentHeight() {
+    var windowHeight = $(window).height();
+    var contentHeight = $('.content-wrapper').outerHeight() + $('.wrap').outerHeight() + 100;
+    
+    if (contentHeight > windowHeight) {
+      $('.app').css('height', 'auto');
+    } else {
+      $('.app').css('height', '100vh');
+    }
+  }
+  
+  // Run on load and resize
+  adjustContentHeight();
+  $(window).resize(adjustContentHeight);
+
+  // Improve mobile responsiveness
+  function enhanceMobileResponsiveness() {
+    // Check if we're on a mobile device
+    const isMobile = window.innerWidth <= 768;
+    
+    if (isMobile) {
+      // Adjust button text for better mobile display
+      $('.grid.grid-13 button').each(function() {
+        const text = $(this).text().trim();
+        
+        // Shorten long button texts
+        if (text === "Algoritmi si Structuri de Date") {
+          $(this).text("Algoritmi si Structuri");
+        } else if (text === "Sisteme de Gestiune a Bazelor de Date") {
+          $(this).text("SGBD");
+        } else if (text === "Programare Procedurala") {
+          $(this).text("Prog. Procedurala");
+        } else if (text === "Tehnici Avansate de Programare") {
+          $(this).text("TAP");
+        } else if (text === "Retele de Calculatoare") {
+          $(this).text("Retele");
+        } else if (text === "Sisteme de Operare") {
+          $(this).text("SO");
+        } else if (text === "Tehnologii Web") {
+          $(this).text("Web");
+        } else if (text === "Comert Electronic") {
+          $(this).text("Comert E.");
+        } else if (text === "Cloud Computing") {
+          $(this).text("Cloud");
+        }
+      });
+    }
+  }
+  
+  // Run on load and resize
 });
