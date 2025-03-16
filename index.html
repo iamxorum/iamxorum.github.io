@@ -130,6 +130,25 @@
       a, button, input, textarea, .skill-tag, .project-card {
         cursor: none;
       }
+      
+      .wave {
+        animation-name: wave-animation;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        transform-origin: 70% 70%;
+        display: inline-block;
+      }
+      
+      @keyframes wave-animation {
+        0% { transform: rotate( 0.0deg) }
+        10% { transform: rotate(14.0deg) }
+        20% { transform: rotate(-8.0deg) }
+        30% { transform: rotate(14.0deg) }
+        40% { transform: rotate(-4.0deg) }
+        50% { transform: rotate(10.0deg) }
+        60% { transform: rotate( 0.0deg) }
+        100% { transform: rotate( 0.0deg) }
+      }
     </style>
   </head>
   <body class="bg-gray-50 dark:bg-dark-200 text-gray-900 dark:text-white font-sans">
@@ -198,16 +217,20 @@
         <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16">
           <div class="w-full md:w-1/2 animate-fade-in">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Hi, I'm <span class="gradient-text">Andrei Murariu</span>
+              <span class="wave">👋</span> Hi, I'm <span class="gradient-text">Andrei</span>
           </h1>
             <h2 class="text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-6">
               <span id="typing-text"></span><span class="typing-cursor">|</span>
             </h2>
             <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
-              Unleashing the power of code like a <span class="text-primary-500 font-medium">hacker</span> in the 
-              <span class="text-secondary-500 font-medium">Matrix</span>, I delve into the realms of 
-              <span class="text-yellow-500 font-medium">Object-Oriented Programming</span>, crafting intricate 
-              <span class="text-primary-600 font-medium">Full-Stack</span> solutions that push boundaries.
+              Orchestrating <span class="text-primary-500 font-medium">code symphonies</span> by day and 
+              <span class="text-secondary-500 font-medium">mixing beats</span> by night, I blend the precision of 
+              <span class="text-yellow-500 font-medium">algorithms</span> with the creativity of 
+              <span class="text-green-500 font-medium">sound design</span>. From crafting elegant 
+              <span class="text-primary-600 font-medium">Full-Stack</span> architectures to producing 
+              <span class="text-purple-500 font-medium">digital harmonies</span>, I live at the intersection of 
+              <span class="text-blue-500 font-medium">computer science</span> and 
+              <span class="text-red-500 font-medium">musical expression</span>.
             </p>
             <div class="flex flex-wrap gap-4">
               <a href="#contact" class="px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors shadow-lg hover:shadow-xl">
@@ -386,7 +409,6 @@
                   <h4 class="font-semibold">Agile Methodologies</h4>
                 </div>
                 <p class="text-sm text-gray-600 dark:text-gray-400">Experience with agile development</p>
-                </div>
                 </div>
                 </div>
                 </div>
@@ -858,7 +880,7 @@
                   </div>
                   <h5 class="text-lg text-gray-700 dark:text-gray-300 mb-3">Contractor - DIMA Software Technologies Center</h5>
                   <p class="text-gray-600 dark:text-gray-400">
-                    Providing IT support and operations services to various clients, ensuring smooth functioning of their systems and infrastructure.
+                    ...
                   </p>
                 </div>
               </div>
@@ -920,9 +942,31 @@
                 <div class="absolute top-0 left-[-9px] w-4 h-4 rounded-full bg-secondary-600"></div>
                 <div class="bg-gray-50 dark:bg-dark-200 p-6 rounded-xl shadow-lg">
                   <div class="flex flex-wrap justify-between items-center mb-4">
+                    <h4 class="text-xl font-semibold">Master's Degree</h4>
+                    <span class="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 text-sm font-medium rounded-full">2024 - Present</span>
+                  </div>
+                  <h5 class="text-lg font-semibold"> Databases and Software Technologies</h5>
+                  <h5 class="text-lg text-gray-700 dark:text-gray-300 mb-3">Universitatea Bucuresti, Bucharest, Romania</h5>
+                  <p class="text-gray-600 dark:text-gray-400">
+                    ...
+                  </p>
+                  <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Programming</span>
+                    <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Algorithms</span>
+                    <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Web Development</span>
+                    <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Database Systems</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Education 2 -->
+              <div class="relative pl-8 pb-8 border-l-2 border-gray-200 dark:border-gray-700">
+                <div class="absolute top-0 left-[-9px] w-4 h-4 rounded-full bg-secondary-600"></div>
+                <div class="bg-gray-50 dark:bg-dark-200 p-6 rounded-xl shadow-lg">
+                  <div class="flex flex-wrap justify-between items-center mb-4">
                     <h4 class="text-xl font-semibold">Bachelor's Degree in Computer Science</h4>
                     <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-medium rounded-full">2021 - 2024</span>
-                </div>
+                  </div>
                   <h5 class="text-lg text-gray-700 dark:text-gray-300 mb-3">Universitatea Titu Maiorescu, Bucharest, Romania</h5>
                   <p class="text-gray-600 dark:text-gray-400">
                     Studied computer science with a focus on software development, algorithms, data structures, and web technologies.
@@ -932,18 +976,18 @@
                     <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Algorithms</span>
                     <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Web Development</span>
                     <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Database Systems</span>
+                  </div>
                 </div>
               </div>
-                </div>
               
-              <!-- Education 2 -->
+              <!-- Education 3 -->
               <div class="relative pl-8 pb-8 border-l-2 border-gray-200 dark:border-gray-700">
                 <div class="absolute top-0 left-[-9px] w-4 h-4 rounded-full bg-secondary-600"></div>
                 <div class="bg-gray-50 dark:bg-dark-200 p-6 rounded-xl shadow-lg">
                   <div class="flex flex-wrap justify-between items-center mb-4">
                     <h4 class="text-xl font-semibold">Informatics and Economics Diploma</h4>
                     <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 text-sm font-medium rounded-full">2014 - 2019</span>
-                </div>
+                  </div>
                   <h5 class="text-lg text-gray-700 dark:text-gray-300 mb-3">ITEPS Paolo Dagomari, Prato, Italy</h5>
                   <p class="text-gray-600 dark:text-gray-400">
                     Studied informatics and economics, gaining a strong foundation in computer science and business principles.
@@ -953,13 +997,231 @@
                     <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Economics</span>
                     <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">Business</span>
                     <span class="px-2 py-1 bg-gray-100 dark:bg-dark-300 text-gray-800 dark:text-gray-200 text-xs rounded">IT Systems</span>
-                    </div>
                   </div>
                 </div>
               </div>
-                </div>
-                </div>
-                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-16 bg-gray-50 dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-10 text-center text-gray-800 dark:text-white relative">
+          Certifications
+          <span class="block w-20 h-1 bg-blue-600 dark:bg-blue-400 mx-auto mt-4"></span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Certification Item 1 -->
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px]">
+            <div class="h-48 overflow-hidden">
+              <img src="https://www.datacamp.com/datacamp.png" alt="Data Science Associate Certificate" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Data Science Associate</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-3 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                DataCamp
+              </p>
+              <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                <p class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Issued: 2025
+                </p>
+              </div>
+              <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                <p class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                  </svg>
+                  ID: DSA0014448223067
+                </p>
+              </div>
+              <a href="https://www.datacamp.com/certificate/DSA0014448223067" target="_blank" class="inline-block w-full text-center py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300 dark:bg-blue-500 dark:hover:bg-blue-600">
+                View Certificate
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px]">
+            <div class="h-48 overflow-hidden">
+              <img src="https://www.datacamp.com/datacamp.png" alt="Data Engineer Associate Certificate" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Data Engineer Associate</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-3 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                DataCamp
+              </p>
+              <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                <p class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Issued: 2025
+                </p>
+              </div>
+              <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                <p class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                  </svg>
+                  ID: DEA0015462051039
+                </p>
+              </div>
+              <a href="https://www.datacamp.com/certificate/DEA0015462051039" target="_blank" class="inline-block w-full text-center py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300 dark:bg-blue-500 dark:hover:bg-blue-600">
+                View Certificate
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px]">
+            <div class="h-48 overflow-hidden">
+              <img src="https://d1.awsstatic.com/Campaigns/Workforce%20Development/aws-academy_275x135.567fe6bc072dbb6246196e0496ddf74b7ec1655b.jpg" alt="Introduction to Cloud Semester 1" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Introduction to Cloud Semester 1</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-3 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                AWS Academy
+              </p>
+              <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                <p class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Issued: 2024
+                </p>
+              </div>
+              <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                <p class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                  </svg>
+                  ID: 585ef0b2-4986-4f67-a005-6b70a89fa616
+                </p>
+              </div>
+              <a href="https://www.credly.com/badges/585ef0b2-4986-4f67-a005-6b70a89fa616" target="_blank" class="inline-block w-full text-center py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300 dark:bg-blue-500 dark:hover:bg-blue-600">
+                View Certificate
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px]">
+            <div class="h-48 overflow-hidden">
+              <img src="https://d1.awsstatic.com/Campaigns/Workforce%20Development/aws-academy_275x135.567fe6bc072dbb6246196e0496ddf74b7ec1655b.jpg" alt="Introduction to Cloud Semester 2" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Introduction to Cloud Semester 2</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-3 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                AWS Academy
+              </p>
+              <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                <p class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Issued: 2024
+                </p>
+              </div>
+              <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                <p class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                  </svg>
+                  ID: 50683e4a-b0f4-4593-a8cf-ab7fcfb958a8
+                </p>
+              </div>
+              <a href="https://www.credly.com/badges/50683e4a-b0f4-4593-a8cf-ab7fcfb958a8" target="_blank" class="inline-block w-full text-center py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300 dark:bg-blue-500 dark:hover:bg-blue-600">
+                View Certificate
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px]">
+            <div class="h-48 overflow-hidden">
+              <img src="https://d1.awsstatic.com/Campaigns/Workforce%20Development/aws-academy_275x135.567fe6bc072dbb6246196e0496ddf74b7ec1655b.jpg" alt="Machine Learning Foundations" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Machine Learning Foundations</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-3 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                AWS Academy
+              </p>
+              <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                <p class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Issued: 2024
+                </p>
+              </div>
+              <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                <p class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                  </svg>
+                  ID: c1de5063-a7ac-4f53-b73e-d88b9cbbab69
+                </p>
+              </div>
+              <a href="https://www.credly.com/badges/c1de5063-a7ac-4f53-b73e-d88b9cbbab69" target="_blank" class="inline-block w-full text-center py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300 dark:bg-blue-500 dark:hover:bg-blue-600">
+                View Certificate
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:translate-y-[-5px]">
+            <div class="h-48 overflow-hidden">
+              <img src="https://d1.awsstatic.com/Campaigns/Workforce%20Development/aws-academy_275x135.567fe6bc072dbb6246196e0496ddf74b7ec1655b.jpg" alt="Cloud Foundations" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Cloud Foundations</h3>
+              <p class="text-gray-600 dark:text-gray-300 mb-3 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                AWS Academy
+              </p>
+              <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                <p class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  Issued: 2024
+                </p>
+              </div>
+              <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
+                <p class="flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                  </svg>
+                  ID: d4e4ff08-cbd8-410d-837a-1569e3d7798e
+                </p>
+              </div>
+              <a href="https://www.credly.com/badges/d4e4ff08-cbd8-410d-837a-1569e3d7798e" target="_blank" class="inline-block w-full text-center py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-300 dark:bg-blue-500 dark:hover:bg-blue-600">
+                View Certificate
+              </a>
+            </div>
+          </div>
+          
+          <!-- Add more certification items as needed -->
+        </div>
+      </div>
     </section>
 
     <!-- Contact Section -->
@@ -1005,7 +1267,7 @@
             </div>
                 <div class="ml-4">
                   <h4 class="text-lg font-semibold mb-1">LinkedIn</h4>
-                  <a href="https://www.linkedin.com/in/andrei-stefanel-murariu-83317b177/" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Andrei Stefanel Murariu</a>
+                  <a href="https://www.linkedin.com/in/andrei-murariu-83317b177/" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Andrei Stefanel Murariu</a>
           </div>
         </div>
               
